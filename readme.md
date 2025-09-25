@@ -1,51 +1,51 @@
-# 🐍 30 Days Of Python
+# 🐍 30 Günde Python
 
-  <strong>Learn with Asabeneh by joining the upcoming [<em>CODING BOOTCAMP</em>](https://docs.google.com/forms/d/e/1FAIpQLSf0oNIYR9XU1DCctfl-pY36KbWse-SQX5aQaUgetqSinFYnmQ/viewform) </strong>
+  <strong> Yaklaşan [<em>CODING BOOTCAMP</em>](https://docs.google.com/forms/d/e/1FAIpQLSf0oNIYR9XU1DCctfl-pY36KbWse-SQX5aQaUgetqSinFYnmQ/viewform)'e katılarak Asebeneh ile öğren </strong>
 
-|# Day | Topics                                                    |
+|# Gün | Konular                                                    |
 |------|:---------------------------------------------------------:|
-| 01  |  [Introduction](./readme.md)|
-| 02  |  [Variables, Built-in Functions](./02_Day_Variables_builtin_functions/02_variables_builtin_functions.md)|
-| 03  |  [Operators](./03_Day_Operators/03_operators.md)|
-| 04  |  [Strings](./04_Day_Strings/04_strings.md)|
-| 05  |  [Lists](./05_Day_Lists/05_lists.md)|
-| 06  |  [Tuples](./06_Day_Tuples/06_tuples.md)|
-| 07  |  [Sets](./07_Day_Sets/07_sets.md)|
-| 08  |  [Dictionaries](./08_Day_Dictionaries/08_dictionaries.md)|
+| 01  |  [Giriş](./readme.md)|
+| 02  |  [Değişkenler, Built-in Fonksiyonlar](./02_Day_Variables_builtin_functions/02_variables_builtin_functions.md)|
+| 03  |  [Operatörler](./03_Day_Operators/03_operators.md)|
+| 04  |  [Stringler](./04_Day_Strings/04_strings.md)|
+| 05  |  [Listler](./05_Day_Lists/05_lists.md)|
+| 06  |  [Tuplelar](./06_Day_Tuples/06_tuples.md)|
+| 07  |  [Setler](./07_Day_Sets/07_sets.md)|
+| 08  |  [Dictionaryler](./08_Day_Dictionaries/08_dictionaries.md)|
 | 09  |  [Conditionals](./09_Day_Conditionals/09_conditionals.md)|
-| 10  |  [Loops](./10_Day_Loops/10_loops.md)|
-| 11  |  [Functions](./11_Day_Functions/11_functions.md)|
-| 12  |  [Modules](./12_Day_Modules/12_modules.md)|
+| 10  |  [Döngüler](./10_Day_Loops/10_loops.md)|
+| 11  |  [Fonksiyonlar](./11_Day_Functions/11_functions.md)|
+| 12  |  [Modüller](./12_Day_Modules/12_modules.md)|
 | 13  |  [List Comprehension](./13_Day_List_comprehension/13_list_comprehension.md)|
-| 14  |  [Higher Order Functions](./14_Day_Higher_order_functions/14_higher_order_functions.md)|
+| 14  |  [Yüksek Mertebe Fonksiyonlar](./14_Day_Higher_order_functions/14_higher_order_functions.md)|
 | 15  |  [Python Type Errors](./15_Day_Python_type_errors/15_python_type_errors.md)|
 | 16 |  [Python Date time](./16_Day_Python_date_time/16_python_datetime.md) |
 | 17 |  [Exception Handling](./17_Day_Exception_handling/17_exception_handling.md)|
 | 18 |  [Regular Expressions](./18_Day_Regular_expressions/18_regular_expressions.md)|
-| 19 |  [File Handling](./19_Day_File_handling/19_file_handling.md)|
+| 19 |  [Dosya İşlemleri](./19_Day_File_handling/19_file_handling.md)|
 | 20 |  [Python Package Manager](./20_Day_Python_package_manager/20_python_package_manager.md)|
-| 21 |  [Classes and Objects](./21_Day_Classes_and_objects/21_classes_and_objects.md)|
+| 21 |  [Classlar ve Objeler](./21_Day_Classes_and_objects/21_classes_and_objects.md)|
 | 22 |  [Web Scraping](./22_Day_Web_scraping/22_web_scraping.md)|
 | 23 |  [Virtual Environment](./23_Day_Virtual_environment/23_virtual_environment.md)|
-| 24 |  [Statistics](./24_Day_Statistics/24_statistics.md)|
+| 24 |  [İstatistik](./24_Day_Statistics/24_statistics.md)|
 | 25 |  [Pandas](./25_Day_Pandas/25_pandas.md)|
 | 26 |  [Python web](./26_Day_Python_web/26_python_web.md)|
-| 27 |  [Python with MongoDB](./27_Day_Python_with_mongodb/27_python_with_mongodb.md)|
+| 27 |  [MongoDB ile Python](./27_Day_Python_with_mongodb/27_python_with_mongodb.md)|
 | 28 |  [API](./28_Day_API/28_API.md)|
-| 29 |  [Building API](./29_Day_Building_API/29_building_API.md)|
-| 30 |  [Conclusions](./30_Day_Conclusions/30_conclusions.md)|
+| 29 |  [API Oluşturma](./29_Day_Building_API/29_building_API.md)|
+| 30 |  [Kapanış](./30_Day_Conclusions/30_conclusions.md)|
 
-  <strong>Learn with Asabeneh by joining the upcoming [<em>CODING BOOTCAMP</em>](https://docs.google.com/forms/d/e/1FAIpQLSf0oNIYR9XU1DCctfl-pY36KbWse-SQX5aQaUgetqSinFYnmQ/viewform) </strong>
+  <strong> Yaklaşan [<em>CODING BOOTCAMP</em>](https://docs.google.com/forms/d/e/1FAIpQLSf0oNIYR9XU1DCctfl-pY36KbWse-SQX5aQaUgetqSinFYnmQ/viewform)'e katılarak Asebeneh ile öğren </strong>
 
 🧡🧡🧡 HAPPY CODING 🧡🧡🧡
 
 <div>
-<small>Support the <strong>author</strong> to create more educational materials</small> <br />  
+<small>Daha fazla eğitim içeriği için <strong>yazara</strong> destek olun.</small> <br />  
 <a href = "https://www.paypal.me/asabeneh"><img src='./images/paypal_lg.png' alt='Paypal Logo' style="width:10%"/></a>
 </div>
 
 <div align="center">
-  <h1> 30 Days Of Python: Day 1 - Introduction</h1>
+  <h1> 30 Günde Python: 1. Gün - Giriş</h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -53,85 +53,85 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-  <sub>Author:
+  <sub>Yazar:
   <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-  <small> Second Edition: July, 2021</small>
+  <small> Second Edition: Temmuz, 2021</small>
   </sub>
 </div>
 
 🇧🇷 [Portuguese](./Portuguese/README.md)
 🇨🇳 [中文](./Chinese/README.md)
 
-[Day 2 >>](./02_Day_Variables_builtin_functions/02_variables_builtin_functions.md)
+[2. Gün >>](./02_Day_Variables_builtin_functions/02_variables_builtin_functions.md)
 
 ![30DaysOfPython](./images/30DaysOfPython_banner3@2x.png)
 
-- [🐍 30 Days Of Python](#-30-days-of-python)
-- [📘 Day 1](#-day-1)
+- [🐍 30 Günde Python](#-30-days-of-python)
+- [📘 1. Gün](#-day-1)
   - [Welcome](#welcome)
-  - [Introduction](#introduction)
-  - [Why Python ?](#why-python-)
+  - [Giriş](#introduction)
+  - [Neden Python ?](#why-python-)
   - [Environment Setup](#environment-setup)
-    - [Installing Python](#installing-python)
+    - [Python'u Yükleme](#installing-python)
     - [Python Shell](#python-shell)
     - [Installing Visual Studio Code](#installing-visual-studio-code)
       - [How to use visual studio code](#how-to-use-visual-studio-code)
   - [Basic Python](#basic-python)
-    - [Python Syntax](#python-syntax)
+    - [Python Sözdizimi](#python-syntax)
     - [Python Indentation](#python-indentation)
     - [Comments](#comments)
-    - [Data types](#data-types)
-      - [Number](#number)
+    - [Veri Tipleri](#data-types)
+      - [Sayılar](#number)
       - [String](#string)
       - [Booleans](#booleans)
       - [List](#list)
       - [Dictionary](#dictionary)
       - [Tuple](#tuple)
       - [Set](#set)
-    - [Checking Data types](#checking-data-types)
+    - [Veri Tiplerini Kontrol Etme](#checking-data-types)
     - [Python File](#python-file)
   - [💻 Exercises - Day 1](#-exercises---day-1)
     - [Exercise: Level 1](#exercise-level-1)
     - [Exercise: Level 2](#exercise-level-2)
     - [Exercise: Level 3](#exercise-level-3)
 
-# 📘 Day 1
+# 📘 1. Gün
 
 ## Welcome
 
-**Congratulations** for deciding to participate in a _30 days of Python_ programming challenge. In this challenge, you will learn everything you need to be a python programmer and the whole concept of programming. At the end of the challenge, you will get a _30DaysOfPython_ programming challenge certificate.
+_30 günde Python_ programlama challenge'a katılmaya karar verdiğiniz için **tebrikler!** . Bu challenge'da Python programcısı olmak için gerekli olan her şeyi ve programlamanın temel konseptlerini öğreneceksiniz. Challenge sonunda, _30GündePython_ programlama challenge sertifikasını edineceksiniz.
 
-If you would like to actively engage in the challenge, you may join the [30DaysOfPython challenge](https://t.me/ThirtyDaysOfPython) telegram group.  
+Eğer challenge’a aktif şekilde dahil olmak ve etkileşimde bulunmak isterseniz [30DaysOfPython challenge](https://t.me/ThirtyDaysOfPython) telegram grubuna katılabilirsiniz.  
 
-## Introduction
+## Giriş
 
-Python is a high-level programming language for general-purpose programming. It is an open source, interpreted, objected-oriented programming language. Python was created by a Dutch programmer, Guido van Rossum. The name of the Python programming language was derived from a British sketch comedy series, *Monty Python's Flying Circus*.  The first version was released on February 20, 1991. This 30 days of Python challenge will help you learn the latest version of Python, Python 3 step by step. The topics are broken down into 30 days, where each day contains several topics with easy-to-understand explanations, real-world examples, and many hands on exercises and projects.
+Python is a high-level programming language for general-purpose programming. Python Hollandalı programcı Guido van Rossum tarafından yaratılan açık kaynak, yorumlanan(interpreted), nesne yönelimli bir yazılım dilidir. Python programlama dilinin adı, Britanya yapımı bir skeç komedi dizisi olan *Monty Python's Flying Circus*'tan türetilmiştir. İlk versiyonu 20 Şubat 1991'de yayımlandı. 30 günde Python challenge Python'un en yeni versiyonu Python 3'ü adım adım öğrenmenize yardımcı olacak. The topics are broken down into 30 days, where each day contains several topics with easy-to-understand explanations, real-world examples, and many hands on exercises and projects.
 
-This challenge is designed for beginners and professionals who want to learn python programming language. It may take 30 to 100 days to complete the challenge. People who actively participate in the telegram group have a high probability of completing the challenge.
+Bu challenge python programlama dilini öğrenmek isteyen yeni başlayanlar ve profesyoneller için tasarlandı. Challenge’ı tamamlamak 30 ila 100 gün sürebilir. Telegram grubuna aktif olarak katılan kişilerin challenge’ı tamamlama olasılığı oldukça yüksektir.
 
-This challenge is easy to read, written in conversational English, engaging, motivating and at the same time, it is very demanding. You need to allocate much time to finish this challenge. If you are a visual learner, you may get the video lesson on <a href="https://www.youtube.com/channel/UC7PNRuno1rzYPb1xLa4yktw"> Washera</a> YouTube channel. You may start from [Python for Absolute Beginners video](https://youtu.be/OCCWZheOesI). Subscribe the channel, comment and ask questions on YouTube vidoes and be proactive, the author will eventually notice you.
+This challenge is easy to read, written in conversational English, engaging, motivating and at the same time, it is very demanding. You need to allocate much time to finish this challenge.Eğer görsel bir öğreniciysen, video dersine şu adresten ulaşabilirsin: <a href="https://www.youtube.com/channel/UC7PNRuno1rzYPb1xLa4yktw"> Washera</a> YouTube kanalı. You may start from [Python for Absolute Beginners video](https://youtu.be/OCCWZheOesI). Subscribe the channel, comment and ask questions on YouTube vidoes and be proactive, the author will eventually notice you.
 
 The author likes to hear your opinion about the challenge, share the author by expressing your thoughts about the 30DaysOfPython challenge. You can leave your testimonial on this [link](https://www.asabeneh.com/testimonials)
 
-## Why Python ?
+## Neden Python ?
 
 It is a programming language which is very close to human language and because of that, it is easy to learn and use.
 Python is used by various industries and companies (including Google). It has been used to develop web applications, desktop applications, system administration, and machine learning libraries. Python is a highly embraced language in the data science and machine learning community. I hope this is enough to convince you to start learning Python. Python is eating the world and you are killing it before it eats you.
 
 ## Environment Setup
 
-### Installing Python
+### Python'u Yükleme
 
 To run a python script you need to install python. Let's [download](https://www.python.org/) python.
-If your are a windows user. Click the button encircled in red.
+Windows kullanıcısı iseniz. Click the button encircled in red.
 
 [![installing on Windows](./images/installing_on_windows.png)](https://www.python.org/)
 
-If you are a macOS user. Click the button encircled in red.
+macOS kullanıcısı iseniz. Click the button encircled in red.
 
 [![installing on Windows](./images/installing_on_macOS.png)](https://www.python.org/)
 
-To check if python is installed write the following command on your device terminal.
+Python’un cihazınıza yüklü olup olmadığını kontrol etmek için, terminalinize aşağıdaki komutu yazın.
 
 ```shell
 python --version
@@ -184,7 +184,7 @@ Let us practice more how to use Python interactive shell. Go to your terminal or
 
 The Python interactive shell is opened. Let us do some basic mathematical operations (addition, subtraction, multiplication, division, modulus,  exponential).
 
-Let us do some maths first before we write any Python code:
+Herhangi bir Python kodu yazmadan önce önce biraz matematik işlemi yapalım:
 
 - 2 + 3 is 5
 - 3 - 2 is 1
@@ -203,8 +203,8 @@ A _comment_ is a part of the code which is not executed by python. So we can lea
 This is how you write a comment in python
 
 ```shell
- # comment starts with hash
- # this is a python comment, because it starts with a (#) symbol
+ # yorumlar # işareti ile başlar
+ # bu bir python yorumu çünkü (#) işareti ile başlıyor
 ```
 
 ![Maths on python shell](./images/maths_on_python_shell.png)
@@ -213,7 +213,7 @@ Before we move on to the next section, let us practice more on the Python intera
 
 ![Writing String on python shell](./images/writing_string_on_shell.png)
 
-### Installing Visual Studio Code
+### Visual Studio Code'u yükleme
 
 The Python interactive shell is good to try and test small script codes but it will not be for a big project. In real work environment, developers use different code editors to write codes. In this 30 days of Python programming challenge we will use visual studio code. Visual studio code is a very popular open source text editor. I am a fan of vscode and I would recommend to [download](https://code.visualstudio.com/) visual studio code, but if you are in favor of other editors, feel free to follow with what you have.
 
@@ -222,7 +222,7 @@ The Python interactive shell is good to try and test small script codes but it w
 If you installed visual studio code, let us see how to use it.
 If you prefer a video, you can follow this Visual Studio Code for Python [Video tutorial](https://www.youtube.com/watch?v=bn7Cx4z-vSo)
 
-#### How to use visual studio code
+#### Visual Studio Code nasıl kullanılır?
 
 Open the visual studio code by double clicking the visual studio icon. When you open it you will get this kind of interface. Try to interact with the labeled icons.
 
@@ -244,9 +244,9 @@ After a long day of coding, you want to close your code editor, right? This is h
 
 Congratulations, you have finished setting up the development environment. Let us start coding.
 
-## Basic Python
+## Python Temelleri
 
-### Python Syntax
+### Python Sözdizimi
 
 A Python script can be written in Python interactive shell or in the code editor. A Python file has an extension .py.
 
@@ -256,75 +256,75 @@ An indentation is a white space in a text. Indentation in many languages is used
 
 ![Indentation Error](./images/indentation.png)
 
-### Comments
+### Yorumlar
 
 Comments play a crucial role in enhancing code readability and allowing developers to leave notes within their code. In Python, any text preceded by a hash (#) symbol is considered a comment and is not executed when the code runs.
 
 **Example: Single Line Comment**
 
 ```shell
-    # This is the first comment
-    # This is the second comment
+    # Bu birinci yorum
+    # Bu ikinci yorum
     # Python is eating the world
 ```
 
-**Example: Multiline Comment**
+**Example: Çok Satırlı Yorumlar**
 
 Triple quote can be used for multiline comment if it is not assigned to a variable
 
 ```shell
-"""This is multiline comment
-multiline comment takes multiple lines.
+"""Bu bir çok satırlı
+yorum. Birden çok satırı kapsıyor.
 python is eating the world
 """
 ```
 
-### Data types
+### Veri Tipleri
 
 In Python there are several types of data types. Let us get started with the most common ones. Different data types will be covered in detail in other sections. For the time being, let us just go through the different data types and get familiar with them. You do not have to have a clear understanding now.
 
-#### Number
+#### Sayılar
 
-- Integer: Integer(negative, zero and positive) numbers
-    Example:
+- Integer: Tam sayılar(negatif, sıfır ve pozitif tam sayılar)
+    Örnek:
     ... -3, -2, -1, 0, 1, 2, 3 ...
-- Float: Decimal number
-    Example
+- Float: Ondalıklı sayılar
+    Örnek:
     ... -3.5, -2.25, -1.0, 0.0, 1.1, 2.2, 3.5 ...
 - Complex
-    Example
+    Örnek
     1 + j, 2 + 4j
 
 #### String
 
 A collection of one or more characters under a single or double quote. If a string is more than one sentence then we use a triple quote.
 
-**Example:**
+**Örnek:**
 
 ```py
 'Asabeneh'
 'Finland'
 'Python'
-'I love teaching'
-'I hope you are enjoying the first day of 30DaysOfPython Challenge'
+'Öğretmeyi seviyorum'
+'Umarım 30DaysOfPython Challengeın ilk gününden keyif alıyorsunuzdur '
 ```
 
 #### Booleans
 
 A boolean data type is either a True or False value. T and F should be always uppercase.
 
-**Example:**
+**Örnek:**
 
 ```python
-    True  #  Is the light on? If it is on, then the value is True
-    False # Is the light on? If it is off, then the value is False
+    True  #  Işık açık mı? Açıksa, then the value is True
+    False # Işık açık mı? Kapalıysa, then the value is False
 ```
 
 #### List
 
 Python list is an ordered collection which allows to store different data type items. A list is similar to an array in JavaScript.
 
-**Example:**
+**Örnek:**
 
 ```py
 [0, 1, 2, 3, 4, 5]  # all are the same data types - a list of numbers
@@ -337,7 +337,7 @@ Python list is an ordered collection which allows to store different data type i
 
 A Python dictionary object is an unordered collection of data in a key value pair format.
 
-**Example:**
+**Örnek:**
 
 ```py
 {
@@ -354,54 +354,54 @@ A Python dictionary object is an unordered collection of data in a key value pai
 
 A tuple is an ordered collection of different data types like list but tuples can not be modified once they are created. They are immutable.
 
-**Example:**
+**Örnek:**
 
 ```py
 ('Asabeneh', 'Pawel', 'Brook', 'Abraham', 'Lidiya') # Names
 ```
 
 ```py
-('Earth', 'Jupiter', 'Neptune', 'Mars', 'Venus', 'Saturn', 'Uranus', 'Mercury') # planets
+('Earth', 'Jupiter', 'Neptune', 'Mars', 'Venus', 'Saturn', 'Uranus', 'Mercury') # gezegenler
 ```
 
 #### Set
 
 A set is a collection of data types similar to list and tuple. Unlike list and tuple, set is not an ordered collection of items. Like in Mathematics, set in Python stores only unique items.
 
-In later sections, we will go in detail about each and every Python data type.
+İlerleyen kısımlarda bütün Python veri tiplerini detaylıca göreceğiz.
 
-**Example:**
+**Örnek:**
 
 ```py
 {2, 4, 3, 5}
 {3.14, 9.81, 2.7} # order is not important in set
 ```
 
-### Checking Data types
+### Veri Tiplerini Kontrol Etme
 
-To check the data type of certain data/variable we use the **type** function. In the following terminal you will see different python data types:
+Bir verinin/değişkenin veri tipini kontrol etmek için **type** fonksiyonunu kullanırız. In the following terminal you will see different python data types:
 
 ![Checking Data types](./images/checking_data_types.png)
 
 ### Python File
 
-First open your project folder, 30DaysOfPython. If you don't have this folder, create a folder name called 30DaysOfPython. Inside this folder, create a file called helloworld.py. Now, let's do what we did on python interactive shell using visual studio code.
+Öncelikle 30GündePython klasörünüzü açın. If you don't have this folder, 30GündePython adında bir klasör oluşturun. Inside this folder, create a file called helloworld.py. Now, let's do what we did on python interactive shell using visual studio code.
 
 The Python interactive shell was printing without using **print** but on visual studio code to see our result we should use a built in function _print(). The _print()_ built-in function takes one or more arguments as follows _print('arument1', 'argument2', 'argument3')_. See the examples below.
 
-**Example:**
+**Örnek:**
 
 The file name is helloworld.py
 
 ```py
 # Day 1 - 30DaysOfPython Challenge
 
-print(2 + 3)             # addition(+)
-print(3 - 1)             # subtraction(-)
-print(2 * 3)             # multiplication(*)
-print(3 / 2)             # division(/)
-print(3 ** 2)            # exponential(**)
-print(3 % 2)             # modulus(%)
+print(2 + 3)             # toplama(+)
+print(3 - 1)             # çıkarma(-)
+print(2 * 3)             # çarpma(*)
+print(3 / 2)             # bölme(/)
+print(3 ** 2)            # üs alma(**)
+print(3 % 2)             # mod alma(%)
 print(3 // 2)            # Floor division operator(//)
 
 # Checking data types
@@ -419,9 +419,9 @@ To run the python file check the image below. You can run the python file either
 
 ![Running python script](./images/running_python_script.png)
 
-🌕  You are amazing. You have just completed day 1 challenge and you are on your way to greatness. Now do some exercises for your brain and muscles.
+🌕  Harikasınız. You have just completed day 1 challenge and you are on your way to greatness. Now do some exercises for your brain and muscles.
 
-## 💻 Exercises - Day 1
+## 💻 Exercises - 1. Gün
 
 ### Exercise: Level 1
 
@@ -451,13 +451,13 @@ To run the python file check the image below. You can run the python file either
 
 ### Exercise: Level 2
 
-1. Create a folder named day_1 inside 30DaysOfPython folder. Inside day_1 folder, create a python file helloworld.py and repeat questions 1, 2, 3 and 4. Remember to use _print()_ when you are working on a python file. Navigate to the directory where you have saved your file, and run it.
+1. 30GündePython klasörünün içinde gün_1 adlı bir klasör oluşturun . gün_1 klasöründe helloworld.py adında bir python dosyası oluşturun ve repeat questions 1, 2, 3 and 4. Remember to use _print()_ when you are working on a python file. Navigate to the directory where you have saved your file, ve çalıştırın.
 
 ### Exercise: Level 3
 
-1. Write an example for different Python data types such as Number(Integer, Float, Complex), String, Boolean, List, Tuple, Set and Dictionary.
-2. Find an [Euclidian distance](https://en.wikipedia.org/wiki/Euclidean_distance#:~:text=In%20mathematics%2C%20the%20Euclidean%20distance,being%20called%20the%20Pythagorean%20distance.) between (2, 3) and (10, 8)
+1. Farklı Python veri tipleri için örnekler yazın (Integer, Float, Complex, String, Boolean, List, Tuple, Set ve Dictionary).
+2. Find an [Euclidian distance](https://en.wikipedia.org/wiki/Euclidean_distance#:~:text=In%20mathematics%2C%20the%20Euclidean%20distance,being%20called%20the%20Pythagorean%20distance.) (2, 3) ve (10, 8) arasındaki 
 
-🎉 CONGRATULATIONS ! 🎉
+🎉 TEBRİKLER ! 🎉
 
-[Day 2 >>](./02_Day_Variables_builtin_functions/02_variables_builtin_functions.md)
+[2. Gün >>](./02_Day_Variables_builtin_functions/02_variables_builtin_functions.md)

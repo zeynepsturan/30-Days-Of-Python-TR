@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> 30 Days Of Python: Day 11 - Functions</h1>
+  <h1> 30 Günde Python: 11. Gün - Fonksiyonlar</h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -7,24 +7,24 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-<sub>Author:
+<sub>Yazar:
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Second Edition: July, 2021</small>
+<small> Second Edition: Temmuz, 2021</small>
 </sub>
 
 </div>
 
-[<< Day 10](../10_Day_Loops/10_loops.md) | [Day 12 >>](../12_Day_Modules/12_modules.md)
+[<< 10. Gün](../10_Day_Loops/10_loops.md) | [12. Gün >>](../12_Day_Modules/12_modules.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
-- [📘 Day 11](#-day-11)
-  - [Functions](#functions)
+- [📘 11. Gün](#-day-11)
+  - [Fonksiyonlar](#functions)
     - [Defining a Function](#defining-a-function)
     - [Declaring and Calling a Function](#declaring-and-calling-a-function)
-    - [Function without Parameters](#function-without-parameters)
+    - [Parametresiz Fonksiyonlar](#function-without-parameters)
     - [Function Returning a Value - Part 1](#function-returning-a-value---part-1)
-    - [Function with Parameters](#function-with-parameters)
+    - [Parametreli Fonksiyonlar](#function-with-parameters)
     - [Passing Arguments with Key and Value](#passing-arguments-with-key-and-value)
     - [Function Returning a Value - Part 2](#function-returning-a-value---part-2)
     - [Function with Default Parameters](#function-with-default-parameters)
@@ -37,9 +37,9 @@
     - [Exercises: Level 2](#exercises-level-2)
     - [Exercises: Level 3](#exercises-level-3)
 
-# 📘 Day 11
+# 📘 11. Gün
 
-## Functions
+## Fonksiyonlar
 
 So far we have seen many built-in Python functions. In this section, we will focus on custom functions. What is a function? Before we start making functions, let us learn what a function is and why we need them?
 
@@ -54,26 +54,26 @@ When we make a function, we call it declaring a function. When we start using th
 ```py
 # syntax
 # Declaring a function
-def function_name():
+def fonksiyon_adı():
     codes
     codes
 # Calling a function
-function_name()
+fonksiyon_adı()
 ```
 
-### Function without Parameters
+### Parametresiz Fonksiyonlar
 
 Function can be declared without parameters.
 
-**Example:**
+**Örnek:**
 
 ```py
 def generate_full_name ():
-    first_name = 'Asabeneh'
-    last_name = 'Yetayeh'
-    space = ' '
-    full_name = first_name + space + last_name
-    print(full_name)
+    ad = 'Asabeneh'
+    soyad = 'Yetayeh'
+    bosluk = ' '
+    tam_ad = first_name + space + last_name
+    print(tam_ad)
 generate_full_name () # calling a function
 
 def add_two_numbers ():
@@ -105,7 +105,7 @@ def add_two_numbers ():
 print(add_two_numbers())
 ```
 
-### Function with Parameters
+### Parametreli Fonksiyonlar
 
 In a function we can pass different data types(number, string, boolean, list, tuple, dictionary or set) as a parameter
 
@@ -114,14 +114,14 @@ In a function we can pass different data types(number, string, boolean, list, tu
 ```py
   # syntax
   # Declaring a function
-  def function_name(parameter):
-    codes
-    codes
-  # Calling function
-  print(function_name(argument))
+  def fonksiyon_adı(parameter):
+    kod
+    kod
+  # Fonksiyonu çağırma
+  print(fonksiyon_adı(argument))
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 def greetings (name):
@@ -159,20 +159,20 @@ print(sum_of_numbers(100)) # 5050
 ```py
   # syntax
   # Declaring a function
-  def function_name(para1, para2):
+  def fonksiyon_adı(para1, para2):
     codes
     codes
   # Calling function
-  print(function_name(arg1, arg2))
+  print(fonksiyon_adı(arg1, arg2))
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 def generate_full_name (first_name, last_name):
-    space = ' '
-      full_name = first_name + space + last_name
-      return full_name
+    bosluk = ' '
+      tam_ad = first_name + space + last_name
+      return tam_ad
 print('Full Name: ', generate_full_name('Asabeneh','Yetayeh'))
 
 def sum_two_numbers (num_one, num_two):
@@ -181,10 +181,10 @@ def sum_two_numbers (num_one, num_two):
 print('Sum of two numbers: ', sum_two_numbers(1, 9))
 
 def calculate_age (current_year, birth_year):
-    age = current_year - birth_year
-    return age;
+    yas = current_year - birth_year
+    return yas;
 
-print('Age: ', calculate_age(2021, 1819))
+print('Yaş: ', calculate_age(2021, 1819))
 
 def weight_of_object (mass, gravity):
     weight = str(mass * gravity)+ ' N' # the value has to be changed to a string first
@@ -199,14 +199,14 @@ If we pass the arguments with key and value, the order of the arguments does not
 ```py
 # syntax
 # Declaring a function
-def function_name(para1, para2):
-    codes
-    codes
-# Calling function
-print(function_name(para1 = 'John', para2 = 'Doe')) # the order of arguments does not matter here
+def fonksiyon_adı(para1, para2):
+    kod
+    kod
+# Fonksiyonu çağırma
+print(fonksiyon_adı(para1 = 'John', para2 = 'Doe')) # the order of arguments does not matter here
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 def print_fullname(firstname, lastname):
@@ -226,7 +226,7 @@ print(add_two_numbers(num2 = 3, num1 = 2)) # Order does not matter
 If we do not return a value with a function, then our function is returning _None_ by default. To return a value with a function we use the keyword _return_ followed by the variable we are returning. We can return any kind of data types from a function.
 
 - Returning a string:
-**Example:**
+**Örnek:**
 
 ```py
 def print_name(firstname):
@@ -242,7 +242,7 @@ print_full_name(firstname='Asabeneh', lastname='Yetayeh')
 
 - Returning a number:
 
-**Example:**
+**Örnek:**
 
 ```py
 def add_two_numbers (num1, num2):
@@ -251,18 +251,18 @@ def add_two_numbers (num1, num2):
 print(add_two_numbers(2, 3))
 
 def calculate_age (current_year, birth_year):
-    age = current_year - birth_year
-    return age;
-print('Age: ', calculate_age(2019, 1819))
+    yas = current_year - birth_year
+    return yas;
+print('Yaş: ', calculate_age(2019, 1819))
 ```
 
 - Returning a boolean:
-  **Example:**
+  **Örnek:**
 
 ```py
 def is_even (n):
     if n % 2 == 0:
-        print('even')
+        print('çift')
         return True    # return stops further execution of the function, similar to break 
     return False
 print(is_even(10)) # True
@@ -270,7 +270,7 @@ print(is_even(7)) # False
 ```
 
 - Returning a list:
-  **Example:**
+  **Örnek:**
 
 ```py
 def find_even_numbers(n):
@@ -289,15 +289,15 @@ Sometimes we pass default values to parameters, when we invoke the function. If 
 ```py
 # syntax
 # Declaring a function
-def function_name(param = value):
-    codes
-    codes
+def fonksiyon_adı(param = value):
+    kod
+    kod
 # Calling function
-function_name()
-function_name(arg)
+fonksiyon_adı()
+fonksiyon_adı(arg)
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 def greetings (name = 'Peter'):
@@ -333,14 +333,14 @@ If we do not know the number of arguments we pass to our function, we can create
 ```py
 # syntax
 # Declaring a function
-def function_name(*args):
-    codes
-    codes
+def fonksiyon_adı(*args):
+    kod
+    kod
 # Calling function
-function_name(param1, param2, param3,..)
+fonksiyon_adı(param1, param2, param3,..)
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 def sum_all_nums(*nums):
@@ -378,7 +378,7 @@ print(do_something(square_number, 3)) # 27
 
 Now it is time to express your thoughts about the Author and 30DaysOfPython. You can leave your testimonial on this [link](https://testimonial-s3sw.onrender.com/)
 
-## 💻 Exercises: Day 11
+## 💻 Exercises: 11. Gün
 
 ### Exercises: Level 1
 
@@ -445,7 +445,7 @@ print(sum_of_numbers(100)) # 5050
 
 ### Exercises: Level 3
 
-1. Write a function called is_prime, which checks if a number is prime.
+1. Bir sayının asal olup olmadığını kontrol eden is_prime adlı bir fonksiyon yazın.
 1. Write a functions which checks if all items are unique in the list.
 1. Write a function which checks if all the items of the list are of the same data type.
 1. Write a function which check if provided variable is a valid python variable
@@ -454,6 +454,6 @@ print(sum_of_numbers(100)) # 5050
 - Create a function called the most_spoken_languages in the world. It should return 10 or 20 most spoken languages in the world in descending order
 - Create a function called the most_populated_countries. It should return 10 or 20 most populated countries in descending order.
 
-🎉 CONGRATULATIONS ! 🎉
+🎉 TEBRİKLER ! 🎉
 
-[<< Day 10](../10_Day_Loops/10_loops.md) | [Day 12 >>](../12_Day_Modules/12_modules.md)
+[<< 10. Gün](../10_Day_Loops/10_loops.md) | [12. Gün >>](../12_Day_Modules/12_modules.md)

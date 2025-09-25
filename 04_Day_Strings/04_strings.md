@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> 30 Days Of Python: Day 4 - Strings</h1>
+  <h1> 30 Günde Python: 4. Gün - Stringler</h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -7,22 +7,22 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-<sub>Author:
+<sub>Yazar:
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Second Edition: July, 2021</small>
+<small> Second Edition: Temmuz, 2021</small>
 </sub>
 
 </div>
 
-[<< Day 3](../03_Day_Operators/03_operators.md) | [Day 5 >>](../05_Day_Lists/05_lists.md)
+[<< 3. Gün](../03_Day_Operators/03_operators.md) | [5. Gün >>](../05_Day_Lists/05_lists.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
-- [Day 4](#day-4)
-  - [Strings](#strings)
+- [4. Gün](#day-4)
+  - [Stringler](#strings)
     - [Creating a String](#creating-a-string)
     - [String Concatenation](#string-concatenation)
-    - [Escape Sequences in Strings](#escape-sequences-in-strings)
+    - [Stringlerde Kaçış Dizileri](#escape-sequences-in-strings)
     - [String formatting](#string-formatting)
       - [Old Style String Formatting (% Operator)](#old-style-string-formatting--operator)
       - [New Style String Formatting (str.format)](#new-style-string-formatting-strformat)
@@ -33,12 +33,12 @@
       - [Slicing Python Strings](#slicing-python-strings)
       - [Reversing a String](#reversing-a-string)
       - [Skipping Characters While Slicing](#skipping-characters-while-slicing)
-    - [String Methods](#string-methods)
-  - [💻 Exercises - Day 4](#-exercises---day-4)
+    - [String Metodları](#string-methods)
+  - [💻 Exercises - 4. Gün](#-exercises---day-4)
 
-# Day 4
+# 4. Gün
 
-## Strings
+## Stringler
 
 Text is a string data type. Any data type written as text is a string. Any data under single, double or triple quote are strings. There are different string methods and built-in functions to deal with string data types. To check the length of a string use the len() method.
 
@@ -87,36 +87,36 @@ print(len(first_name) > len(last_name)) # True
 print(len(full_name)) # 16
 ```
 
-### Escape Sequences in Strings
+### Stringlerde Kaçış Dizileri
 
-In Python and other programming languages \ followed by a character is an escape sequence. Let us see the most common escape characters:
+Python ve diğer programlama dillerinde \ ve sonrasında gelen bir karakter kaçış dizisidir. Let us see the most common escape characters:
 
-- \n: new line
+- \n: yeni satır
 - \t: Tab means(8 spaces)
 - \\\\: Back slash
-- \\': Single quote (')
-- \\": Double quote (")
+- \\': Tek tırnak (')
+- \\": Çift tırnak (")
 
 Now, let us see the use of the above escape sequences with examples.
 
 ```py
-print('I hope everyone is enjoying the Python Challenge.\nAre you ?') # line break
-print('Days\tTopics\tExercises') # adding tab space or 4 spaces 
-print('Day 1\t5\t5')
-print('Day 2\t6\t20')
-print('Day 3\t5\t23')
-print('Day 4\t1\t35')
+print('Umarım herkes Python Challenge'dan keyif alıyordur.\nAre you ?') # line break
+print('Günler\tKonular\tExercises') # adding tab space or 4 spaces 
+print('1. Gün\t5\t5')
+print('2. Gün\t6\t20')
+print('3. Gün\t5\t23')
+print('4. Gün\t1\t35')
 print('This is a backslash  symbol (\\)') # To write a backslash
 print('In every programming language it starts with \"Hello, World!\"') # to write a double quote inside a single quote
 
-# output
-I hope every one is enjoying the Python Challenge.
+# çıktı
+Umarım herkes Python Challenge'dan keyif alıyordur.
 Are you ?
-Days	Topics	Exercises
-Day 1	5	    5
-Day 2	6	    20
-Day 3	5	    23
-Day 4	1	    35
+Günler	Konular	Exercises
+1. Gün	5	    5
+2. Gün	6	    20
+3. Gün	5	    23
+4. Gün	1	    35
 This is a backslash  symbol (\)
 In every programming language it starts with "Hello, World!"
 ```
@@ -135,16 +135,16 @@ The "%" operator is used to format a set of variables enclosed in a "tuple" (a f
 
 ```py
 # Strings only
-first_name = 'Asabeneh'
-last_name = 'Yetayeh'
-language = 'Python'
+ad = 'Asabeneh'
+soyad = 'Yetayeh'
+dil = 'Python'
 formated_string = 'I am %s %s. I teach %s' %(first_name, last_name, language)
 print(formated_string)
 
 # Strings  and numbers
-radius = 10
+yaricap = 10
 pi = 3.14
-area = pi * radius ** 2
+alan = pi * yaricap ** 2
 formated_string = 'The area of circle with a radius %d is %.2f.' %(radius, area) # 2 refers the 2 significant digits after the point
 
 python_libraries = ['Django', 'Flask', 'NumPy', 'Matplotlib','Pandas']
@@ -158,9 +158,9 @@ This formatting is introduced in Python version 3.
 
 ```py
 
-first_name = 'Asabeneh'
-last_name = 'Yetayeh'
-language = 'Python'
+ad = 'Asabeneh'
+soyad = 'Yetayeh'
+dil = 'Python'
 formated_string = 'I am {} {}. I teach {}'.format(first_name, last_name, language)
 print(formated_string)
 a = 4
@@ -174,7 +174,7 @@ print('{} % {} = {}'.format(a, b, a % b))
 print('{} // {} = {}'.format(a, b, a // b))
 print('{} ** {} = {}'.format(a, b, a ** b))
 
-# output
+# çıktı
 4 + 3 = 7
 4 - 3 = 1
 4 * 3 = 12
@@ -183,10 +183,10 @@ print('{} ** {} = {}'.format(a, b, a ** b))
 4 // 3 = 1
 4 ** 3 = 64
 
-# Strings  and numbers
-radius = 10
+# Stringler ve sayılar
+yaricap = 10
 pi = 3.14
-area = pi * radius ** 2
+alan = pi * yaricap ** 2
 formated_string = 'The area of a circle with a radius {} is {:.2f}.'.format(radius, area) # 2 digits after decimal
 print(formated_string)
 
@@ -215,7 +215,7 @@ Python strings are sequences of characters, and share their basic methods of acc
 #### Unpacking Characters
 
 ```
-language = 'Python'
+dil = 'Python'
 a,b,c,d,e,f = language # unpacking sequence characters into variables
 print(a) # P
 print(b) # y
@@ -232,7 +232,7 @@ In programming counting starts from zero. Therefore the first letter of a string
 ![String index](../images/string_index.png)
 
 ```py
-language = 'Python'
+dil = 'Python'
 first_letter = language[0]
 print(first_letter) # P
 second_letter = language[1]
@@ -245,7 +245,7 @@ print(last_letter) # n
 If we want to start from right end we can use negative indexing. -1 is the last index.
 
 ```py
-language = 'Python'
+dil = 'Python'
 last_letter = language[-1]
 print(last_letter) # n
 second_last = language[-2]
@@ -257,12 +257,12 @@ print(second_last) # o
 In python we can slice strings into substrings.
 
 ```py
-language = 'Python'
+dil = 'Python'
 first_three = language[0:3] # starts at zero index and up to 3 but not include 3
 print(first_three) #Pyt
 last_three = language[3:6]
 print(last_three) # hon
-# Another way
+# Diğer bir yöntem
 last_three = language[-3:]
 print(last_three)   # hon
 last_three = language[3:]
@@ -274,8 +274,8 @@ print(last_three)   # hon
 We can easily reverse strings in python.
 
 ```py
-greeting = 'Hello, World!'
-print(greeting[::-1]) # !dlroW ,olleH
+selam = 'Merhaba, Dünya!'
+print(selam[::-1]) # !dlroW ,olleH
 ```
 
 #### Skipping Characters While Slicing
@@ -283,7 +283,7 @@ print(greeting[::-1]) # !dlroW ,olleH
 It is possible to skip characters while slicing by passing step argument to slice method.
 
 ```py
-language = 'Python'
+dil = 'Python'
 pto = language[0:6:2] #
 print(pto) # Pto
 ```
@@ -352,11 +352,11 @@ country = 'Finland'
 sentence = 'I am {} {}. I am a {}. I am {} years old. I live in {}.'.format(first_name, last_name, age, job, country)
 print(sentence) # I am Asabeneh Yetayeh. I am 250 years old. I am a teacher. I live in Finland.
 
-radius = 10
+yaricap = 10
 pi = 3.14
-area = pi * radius ** 2
-result = 'The area of a circle with radius {} is {}'.format(str(radius), str(area))
-print(result) # The area of a circle with radius 10 is 314
+alan = pi * yaricap ** 2
+sonuc = 'The area of a circle with radius {} is {}'.format(str(radius), str(area))
+print(sonuc) # The area of a circle with radius 10 is 314
 ```
 
 - index(): Returns the lowest index of a substring, additional arguments indicate starting and ending index (default 0 and string length - 1). If the substring is not found it raises a valueError. 
@@ -532,7 +532,7 @@ print(challenge.startswith('thirty')) # False
 
 🌕 You are an extraordinary person and you have a remarkable potential. You have just completed day 4 challenges and you are four steps a head in to your way to greatness. Now do some exercises for your brain and muscles.
 
-## 💻 Exercises - Day 4
+## 💻 Exercises - 4. Gün
 
 1. Concatenate the string 'Thirty', 'Days', 'Of', 'Python' to a single string, 'Thirty Days Of Python'.
 2. Concatenate the string 'Coding', 'For' , 'All' to a single string, 'Coding For All'.
@@ -598,8 +598,8 @@ The area of a circle with radius 10 is 314 meters square.
 8 ** 6 = 262144
 ```
 
-🎉 CONGRATULATIONS ! 🎉
+🎉 TEBRİKLER ! 🎉
 
-[<< Day 3](../03_Day_Operators/03_operators.md) | [Day 5 >>](../05_Day_Lists/05_lists.md)
+[<< 3. Gün](../03_Day_Operators/03_operators.md) | [5. Gün >>](../05_Day_Lists/05_lists.md)
 
 

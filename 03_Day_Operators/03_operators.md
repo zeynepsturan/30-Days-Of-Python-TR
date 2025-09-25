@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> 30 Days Of Python: Day 3 - Operators</h1>
+  <h1> 30 Günde Python: 3. Gün - Operatörler</h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -7,26 +7,26 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-<sub>Author:
+<sub>Yazar:
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Second Edition: July, 2021</small>
+<small> Second Edition: Temmuz, 2021</small>
 </sub>
 </div>
 
-[<< Day 2](../02_Day_Variables_builtin_functions/02_variables_builtin_functions.md) | [Day 4 >>](../04_Day_Strings/04_strings.md)
+[<< 2. Gün](../02_Day_Variables_builtin_functions/02_variables_builtin_functions.md) | [Day 4 >>](../04_Day_Strings/04_strings.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
-- [📘 Day 3](#-day-3)
+- [📘 3. Gün](#-day-3)
   - [Boolean](#boolean)
-  - [Operators](#operators)
-    - [Assignment Operators](#assignment-operators)
-    - [Arithmetic Operators:](#arithmetic-operators)
-    - [Comparison Operators](#comparison-operators)
-    - [Logical Operators](#logical-operators)
-  - [💻 Exercises - Day 3](#-exercises---day-3)
+  - [Operatörler](#operators)
+    - [Atama Operatörleri](#assignment-operators)
+    - [Aritmetik Operatörler:](#arithmetic-operators)
+    - [Karşılaştırma Operatörleri](#comparison-operators)
+    - [Mantıksal Operatörler](#logical-operators)
+  - [💻 Exercises - 3. Gün](#-exercises---day-3)
 
-# 📘 Day 3
+# 📘 3. Gün
 
 ## Boolean
 
@@ -38,55 +38,55 @@ print(True)
 print(False)
 ```
 
-## Operators
+## Operatörler
 
 Python language supports several types of operators. In this section, we will focus on few of them.
 
-### Assignment Operators
+### Atama Operatörleri
 
-Assignment operators are used to assign values to variables. Let us take = as an example. Equal sign in mathematics shows that two values are equal, however in Python it means we are storing a value in a certain variable and we call it assignment or a assigning value to a variable. The table below shows the different types of python assignment operators, taken from [w3school](https://www.w3schools.com/python/python_operators.asp).
+Atama operatörleri, değişkenlere değer atamak için kullanılır. Let us take = as an example. Equal sign in mathematics shows that two values are equal, however in Python it means we are storing a value in a certain variable and we call it assignment or a assigning value to a variable. The table below shows the different types of python assignment operators, [w3school](https://www.w3schools.com/python/python_operators.asp)'dan alınmıştır.
 
 ![Assignment Operators](../images/assignment_operators.png)
 
-### Arithmetic Operators:
+### Aritmetik Operatörler:
 
-- Addition(+): a + b
-- Subtraction(-): a - b
-- Multiplication(*): a * b
-- Division(/): a / b
-- Modulus(%): a % b
+- Toplama(+): a + b
+- Çıkarma(-): a - b
+- Çarpma(*): a * b
+- Bölme(/): a / b
+- Mod alma(%): a % b
 - Floor division(//): a // b
-- Exponentiation(**): a ** b
+- Üs alma(**): a ** b
 
 ![Arithmetic Operators](../images/arithmetic_operators.png)
 
-**Example:Integers**
+**Örnek:Integerlar**
 
 ```py
 # Arithmetic Operations in Python
 # Integers
 
-print('Addition: ', 1 + 2)        # 3
-print('Subtraction: ', 2 - 1)     # 1
-print('Multiplication: ', 2 * 3)  # 6
-print ('Division: ', 4 / 2)       # 2.0  Division in Python gives floating number
-print('Division: ', 6 / 2)        # 3.0         
-print('Division: ', 7 / 2)        # 3.5
-print('Division without the remainder: ', 7 // 2)   # 3,  gives without the floating number or without the remaining
-print ('Division without the remainder: ',7 // 3)   # 2
-print('Modulus: ', 3 % 2)         # 1, Gives the remainder
-print('Exponentiation: ', 2 ** 3) # 9 it means 2 * 2 * 2
+print('Toplama: ', 1 + 2)        # 3
+print('Çıkarma: ', 2 - 1)     # 1
+print('Çarpma: ', 2 * 3)  # 6
+print ('Bölme: ', 4 / 2)       # 2.0  Python'da bölme floating sayı döner
+print('Bölme: ', 6 / 2)        # 3.0         
+print('Bölme: ', 7 / 2)        # 3.5
+print('Kalansız bölme: ', 7 // 2)   # 3,  gives without the floating number or without the remaining
+print ('Kalansız bölme: ',7 // 3)   # 2
+print('Mod alma: ', 3 % 2)         # 1, Kalanı verir
+print('Üs alma: ', 2 ** 3) # 9 it means 2 * 2 * 2
 ```
 
-**Example:Floats**
+**Örnek:Floatlar**
 
 ```py
-# Floating numbers
+# Floating sayılar
 print('Floating Point Number, PI', 3.14)
 print('Floating Point Number, gravity', 9.81)
 ```
 
-**Example:Complex numbers**
+**Örnek:Complex(Karmaşık sayılar)**
 
 ```py
 # Complex numbers
@@ -96,7 +96,7 @@ print('Multiplying complex numbers: ',(1 + 1j) * (1 - 1j))
 
 Let's declare a variable and assign a number data type. I am going to use single character variable but remember do not develop a habit of declaring such types of variables. Variable names should be all the time mnemonic.
 
-**Example:**
+**Örnek:**
 
 ```python
 # Declaring the variable at the top first
@@ -105,26 +105,26 @@ a = 3 # a is a variable name and 3 is an integer data type
 b = 2 # b is a variable name and 3 is an integer data type
 
 # Arithmetic operations and assigning the result to a variable
-total = a + b
-diff = a - b
-product = a * b
-division = a / b
-remainder = a % b
+toplam = a + b
+fark = a - b
+carpim = a * b
+bolum = a / b
+kalan = a % b
 floor_division = a // b
 exponential = a ** b
 
 # I should have used sum instead of total but sum is a built-in function - try to avoid overriding built-in functions
 print(total) # if you do not label your print with some string, you never know where the result is coming from
-print('a + b = ', total)
-print('a - b = ', diff)
-print('a * b = ', product)
-print('a / b = ', division)
-print('a % b = ', remainder)
+print('a + b = ', toplam)
+print('a - b = ', fark)
+print('a * b = ', carpim)
+print('a / b = ', bolum)
+print('a % b = ', kalan)
 print('a // b = ', floor_division)
 print('a ** b = ', exponentiation)
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 print('== Addition, Subtraction, Multiplication, Division, Modulus ==')
@@ -133,65 +133,65 @@ print('== Addition, Subtraction, Multiplication, Division, Modulus ==')
 num_one = 3
 num_two = 4
 
-# Arithmetic operations
-total = num_one + num_two
-diff = num_two - num_one
-product = num_one * num_two
-div = num_two / num_one
-remainder = num_two % num_one
+# Aritmetik operasyonlar
+toplam = num_one + num_two
+fark = num_two - num_one
+carpim = num_one * num_two
+bolum = num_two / num_one
+kalan = num_two % num_one
 
 # Printing values with label
-print('total: ', total)
-print('difference: ', diff)
-print('product: ', product)
-print('division: ', div)
-print('remainder: ', remainder)
+print('toplam: ', total)
+print('fark: ', diff)
+print('carpim: ', product)
+print('bolum: ', div)
+print('kalan: ', remainder)
 ```
 
 Let us start start connecting the dots and start making use of what we already know to calculate (area, volume,density,  weight, perimeter, distance, force).
 
-**Example:**
+**Örnek:**
 
 ```py
-# Calculating area of a circle
-radius = 10                                 # radius of a circle
-area_of_circle = 3.14 * radius ** 2         # two * sign means exponent or power
+# Dairenin alanını hesaplama
+yaricap = 10                                 # dairenin yarıçapı
+daire_alani = 3.14 * radius ** 2         # two * sign means exponent or power
 print('Area of a circle:', area_of_circle)
 
-# Calculating area of a rectangle
-length = 10
-width = 20
-area_of_rectangle = length * width
-print('Area of rectangle:', area_of_rectangle)
+# Dikdörtgenin alanını hesaplama
+uzunluk = 10
+genislik = 20
+dikdortgen_alani = uzunluk * genislik
+print('Dikdörtgenin alanı:', dikdortgen_alani)
 
-# Calculating a weight of an object
-mass = 75
-gravity = 9.81
-weight = mass * gravity
-print(weight, 'N')                         # Adding unit to the weight
+# Bir nesnenin ağırlığını hesaplama
+kutle = 75
+yercekimi = 9.81
+agirlik = kutle * yercekimi
+print(agirlik, 'N')                         # Adding unit to the weight
 
-# Calculate the density of a liquid
-mass = 75 # in Kg
-volume = 0.075 # in cubic meter
-density = mass / volume # 1000 Kg/m^3
+# Bir sıvının yoğunluğunu hesaplama
+kutle = 75 # in Kg
+hacim = 0.075 # in cubic meter
+yogunluk = kutle / hacim # 1000 Kg/m^3
 
 ```
 
-### Comparison Operators
+### Karşılaştırma Operatörleri
 
 In programming we compare values, we use comparison operators to compare two values. We check if a value is greater or less or equal to other value. The following table shows Python comparison operators which was taken from [w3shool](https://www.w3schools.com/python/python_operators.asp).
 
 ![Comparison Operators](../images/comparison_operators.png)
-**Example: Comparison Operators**
+**Örnek: Karşılaştırma Operatörleri**
 
 ```py
-print(3 > 2)     # True, because 3 is greater than 2
-print(3 >= 2)    # True, because 3 is greater than 2
-print(3 < 2)     # False,  because 3 is greater than 2
-print(2 < 3)     # True, because 2 is less than 3
-print(2 <= 3)    # True, because 2 is less than 3
-print(3 == 2)    # False, because 3 is not equal to 2
-print(3 != 2)    # True, because 3 is not equal to 2
+print(3 > 2)     # True, çünkü 3 is greater than 2
+print(3 >= 2)    # True, çünkü 3 is greater than 2
+print(3 < 2)     # False,  çünkü 3 is greater than 2
+print(2 < 3)     # True, çünkü 2 is less than 3
+print(2 <= 3)    # True, çünkü 2 is less than 3
+print(3 == 2)    # False, çünkü 3 is not equal to 2
+print(3 != 2)    # True, çünkü 3 is not equal to 2
 print(len('mango') == len('avocado'))  # False
 print(len('mango') != len('avocado'))  # True
 print(len('mango') < len('avocado'))   # True
@@ -225,7 +225,7 @@ print('a in an:', 'a' in 'an')      # True
 print('4 is 2 ** 2:', 4 is 2 ** 2)   # True
 ```
 
-### Logical Operators
+### Mantıksal Operatörler
 
 Unlike other programming languages python uses keywords _and_, _or_ and _not_ for logical operators. Logical operators are used to combine conditional statements:
 
@@ -250,7 +250,7 @@ print(not not False) # False
 
 🌕 You have boundless energy. You have just completed day 3 challenges and you are three steps ahead on your way to greatness. Now do some exercises for your brain and your muscles.
 
-## 💻 Exercises - Day 3
+## 💻 Exercises - 3. Gün
 
 1. Declare your age as integer variable
 2. Declare your height as a float variable
@@ -312,6 +312,6 @@ You have lived for 3153600000 seconds.
 5 1 5 25 125
 ```
 
-🎉 CONGRATULATIONS ! 🎉
+🎉 TEBRİKLER ! 🎉
 
-[<< Day 2](../02_Day_Variables_builtin_functions/02_variables_builtin_functions.md) | [Day 4 >>](../04_Day_Strings/04_strings.md)
+[<< 2. Gün](../02_Day_Variables_builtin_functions/02_variables_builtin_functions.md) | [4. Gün >>](../04_Day_Strings/04_strings.md)

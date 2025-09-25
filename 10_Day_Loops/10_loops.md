@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> 30 Days Of Python: Day 10 - Loops</h1>
+  <h1> 30 Günde Python: 10. Gün - Döngüler</h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -7,24 +7,24 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-<sub>Author:
+<sub>Yazar:
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Second Edition: July, 2021</small>
+<small> Second Edition: Temmuz, 2021</small>
 </sub>
 </div>
 
-[<< Day 9](../09_Day_Conditionals/09_conditionals.md) | [Day 11 >>](../11_Day_Functions/11_functions.md)
+[<< 9. Gün](../09_Day_Conditionals/09_conditionals.md) | [11. Gün >>](../11_Day_Functions/11_functions.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
-- [📘 Day 10](#-day-10)
-  - [Loops](#loops)
-    - [While Loop](#while-loop)
-    - [Break and Continue - Part 1](#break-and-continue---part-1)
-    - [For Loop](#for-loop)
-    - [Break and Continue - Part 2](#break-and-continue---part-2)
+- [📘 10. Gün](#-day-10)
+  - [Döngüler](#loops)
+    - [While Döngüsü](#while-loop)
+    - [Break ve Continue - 1. Kısım](#break-and-continue---part-1)
+    - [For Döngüsü](#for-loop)
+    - [Break ve Continue - 2. Kısım](#break-and-continue---part-2)
     - [The Range Function](#the-range-function)
-    - [Nested For Loop](#nested-for-loop)
+    - [İçiçe For Döngüsü](#nested-for-loop)
     - [For Else](#for-else)
     - [Pass](#pass)
   - [💻 Exercises: Day 10](#-exercises-day-10)
@@ -32,16 +32,16 @@
     - [Exercises: Level 2](#exercises-level-2)
     - [Exercises: Level 3](#exercises-level-3)
 
-# 📘 Day 10
+# 📘 10. Gün
 
-## Loops
+## Döngüler
 
-Life is full of routines. In programming we also do lots of repetitive tasks. In order to handle repetitive task programming languages use loops. Python programming language also provides the following types of two loops:
+Life is full of routines. Programlamada da sık sık tekrarlayan tasklar yaparız. In order to handle repetitive task programlama dilleri döngüleri kullanır. Python programlama dili aşağıdaki iki döngüyü sağlar:
 
-1. while loop
-2. for loop
+1. while döngüsü
+2. for döngüsü
 
-### While Loop
+### While Döngüsü
 
 We use the reserved word _while_ to make a while loop. It is used to execute a block of statements repeatedly until a given condition is satisfied. When the condition becomes false, the lines of code after the loop will be continued to be executed.
 
@@ -51,7 +51,7 @@ while condition:
     code goes here
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 count = 0
@@ -72,7 +72,7 @@ else:
     code goes here
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 count = 0
@@ -86,7 +86,7 @@ else:
 The above loop condition will be false when count is 5 and the loop stops, and execution starts the else statement. As a result 5 will be printed.
 
 
-### Break and Continue - Part 1
+### Break ve Continue - 1. Kısım
 
 - Break: We use break when we like to get out of or stop the loop.
 
@@ -98,7 +98,7 @@ while condition:
         break
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 count = 0
@@ -121,7 +121,7 @@ while condition:
         continue
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 count = 0
@@ -135,7 +135,7 @@ while count < 5:
 
 The above while loop only prints 0, 1, 2 and 4 (skips 3).
 
-### For Loop
+### For Döngüsü
 
 A _for_ keyword is used to make a for loop, similar with other programming languages, but with some syntax differences. Loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
 
@@ -147,11 +147,11 @@ for iterator in lst:
     code goes here
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
-numbers = [0, 1, 2, 3, 4, 5]
-for number in numbers: # number is temporary name to refer to the list's items, valid only inside this loop
+sayiler = [0, 1, 2, 3, 4, 5]
+for sayi in sayilar: # number is temporary name to refer to the list's items, valid only inside this loop
     print(number)       # the numbers will be printed line by line, from 0 to 5
 ```
 
@@ -163,10 +163,10 @@ for iterator in string:
     code goes here
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
-language = 'Python'
+dil = 'Python'
 for letter in language:
     print(letter)
 
@@ -183,10 +183,10 @@ for iterator in tpl:
     code goes here
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
-numbers = (0, 1, 2, 3, 4, 5)
+sayilar = (0, 1, 2, 3, 4, 5)
 for number in numbers:
     print(number)
 ```
@@ -200,18 +200,18 @@ for iterator in dct:
     code goes here
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 person = {
-    'first_name':'Asabeneh',
-    'last_name':'Yetayeh',
-    'age':250,
-    'country':'Finland',
-    'is_marred':True,
-    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
-    'address':{
-        'street':'Space street',
+    'ad':'Asabeneh',
+    'soyad':'Yetayeh',
+    'yas':250,
+    'ulke':'Finland',
+    'evli_mi':True,
+    'beceriler':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'adres':{
+        'sokak':'Space street',
         'zipcode':'02210'
     }
 }
@@ -230,7 +230,7 @@ for iterator in st:
     code goes here
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 it_companies = {'Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'}
@@ -238,7 +238,7 @@ for company in it_companies:
     print(company)
 ```
 
-### Break and Continue - Part 2
+### Break ve Continue - 2. Kısım
 
 Short reminder:
 _Break_: We use break when we like to stop our loop before it is completed.
@@ -273,7 +273,7 @@ for iterator in sequence:
         continue
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 numbers = (0,1,2,3,4,5)
@@ -287,9 +287,9 @@ print('outside the loop')
 
 In the example above, if the number equals 3, the step *after* the condition (but inside the loop) is skipped and the execution of the loop continues if there are any iterations left.
 
-### The Range Function
+### The Range Fonksiyonu
 
-The _range()_ function is used list of numbers. The _range(start, end, step)_ takes three parameters: starting, ending and increment. By default it starts from 0 and the increment is 1. The range sequence needs at least 1 argument (end).
+_range()_ fonksiyonu is used list of numbers. _range(start, end, step)_ 3 parametre alır: starting, ending and increment. Varsayılan olarak 0'dan başlar ve 1'er 1'er artar. The range sequence needs at least 1 argument (end).
 Creating sequences using range
 
 ```py
@@ -309,14 +309,14 @@ print(st) #  {0, 2, 4, 6, 8, 10}
 for iterator in range(start, end, step):
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 for number in range(11):
     print(number)   # prints 0 to 10, not including 11
 ```
 
-### Nested For Loop
+### İçiçe For Döngüsü
 
 We can write loops inside a loop.
 
@@ -327,7 +327,7 @@ for x in y:
         print(t)
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 person = {
@@ -360,7 +360,7 @@ else:
     print('The loop ended')
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 for number in range(11):
@@ -373,7 +373,7 @@ else:
 
 In python when statement is required (after semicolon), but we don't like to execute any code there, we can write the word _pass_ to avoid errors. Also we can use it as a placeholder, for future statements.
 
-**Example:**
+**Örnek:**
 
 ```py
 for number in range(6):
@@ -456,6 +456,6 @@ for number in range(6):
    2. Find the ten most spoken languages from the data
    3. Find the 10 most populated countries in the world
 
-🎉 CONGRATULATIONS ! 🎉
+🎉 TEBRİKLER ! 🎉
 
-[<< Day 9](../09_Day_Conditionals/09_conditionals.md) | [Day 11 >>](../11_Day_Functions/11_functions.md)
+[<< 9. Gün](../09_Day_Conditionals/09_conditionals.md) | [11. Gün >>](../11_Day_Functions/11_functions.md)

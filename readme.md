@@ -1,6 +1,6 @@
 # 🐍 30 Günde Python
 
-  <strong> Yaklaşan [<em>CODING BOOTCAMP</em>](https://docs.google.com/forms/d/e/1FAIpQLSf0oNIYR9XU1DCctfl-pY36KbWse-SQX5aQaUgetqSinFYnmQ/viewform)'e katılarak Asebeneh ile öğren </strong>
+  <strong> Yaklaşan [<em>CODING BOOTCAMP</em>](https://docs.google.com/forms/d/e/1FAIpQLSf0oNIYR9XU1DCctfl-pY36KbWse-SQX5aQaUgetqSinFYnmQ/viewform) 'e katılarak Asebeneh ile öğren </strong>
 
 |# Gün | Konular                                                    |
 |------|:---------------------------------------------------------:|
@@ -12,7 +12,7 @@
 | 06  |  [Tuplelar](./06_Day_Tuples/06_tuples.md)|
 | 07  |  [Setler](./07_Day_Sets/07_sets.md)|
 | 08  |  [Dictionaryler](./08_Day_Dictionaries/08_dictionaries.md)|
-| 09  |  [Conditionals](./09_Day_Conditionals/09_conditionals.md)|
+| 09  |  [Koşullu İfadeler](./09_Day_Conditionals/09_conditionals.md)|
 | 10  |  [Döngüler](./10_Day_Loops/10_loops.md)|
 | 11  |  [Fonksiyonlar](./11_Day_Functions/11_functions.md)|
 | 12  |  [Modüller](./12_Day_Modules/12_modules.md)|
@@ -20,13 +20,13 @@
 | 14  |  [Yüksek Mertebe Fonksiyonlar](./14_Day_Higher_order_functions/14_higher_order_functions.md)|
 | 15  |  [Python Veri Tipi Hataları](./15_Day_Python_type_errors/15_python_type_errors.md)|
 | 16 |  [Python'da Tarih ve Zaman](./16_Day_Python_date_time/16_python_datetime.md) |
-| 17 |  [Exception Handling](./17_Day_Exception_handling/17_exception_handling.md)|
-| 18 |  [Regular Expressions](./18_Day_Regular_expressions/18_regular_expressions.md)|
+| 17 |  [İstisna Yakalama](./17_Day_Exception_handling/17_exception_handling.md)|
+| 18 |  [Düzenli İfadeler](./18_Day_Regular_expressions/18_regular_expressions.md)|
 | 19 |  [Dosya İşlemleri](./19_Day_File_handling/19_file_handling.md)|
-| 20 |  [Python Package Manager](./20_Day_Python_package_manager/20_python_package_manager.md)|
+| 20 |  [Python Paket Yöneticisi](./20_Day_Python_package_manager/20_python_package_manager.md)|
 | 21 |  [Classlar ve Objeler](./21_Day_Classes_and_objects/21_classes_and_objects.md)|
 | 22 |  [Web Scraping](./22_Day_Web_scraping/22_web_scraping.md)|
-| 23 |  [Virtual Environment](./23_Day_Virtual_environment/23_virtual_environment.md)|
+| 23 |  [Sanal Ortam](./23_Day_Virtual_environment/23_virtual_environment.md)|
 | 24 |  [İstatistik](./24_Day_Statistics/24_statistics.md)|
 | 25 |  [Pandas](./25_Day_Pandas/25_pandas.md)|
 | 26 |  [Python web](./26_Day_Python_web/26_python_web.md)|
@@ -35,9 +35,9 @@
 | 29 |  [API Oluşturma](./29_Day_Building_API/29_building_API.md)|
 | 30 |  [Kapanış](./30_Day_Conclusions/30_conclusions.md)|
 
-  <strong> Yaklaşan [<em>CODING BOOTCAMP</em>](https://docs.google.com/forms/d/e/1FAIpQLSf0oNIYR9XU1DCctfl-pY36KbWse-SQX5aQaUgetqSinFYnmQ/viewform)'e katılarak Asebeneh ile öğren </strong>
+  <strong> Yaklaşan [<em>CODING BOOTCAMP</em>](https://docs.google.com/forms/d/e/1FAIpQLSf0oNIYR9XU1DCctfl-pY36KbWse-SQX5aQaUgetqSinFYnmQ/viewform) 'e katılarak Asebeneh ile öğren </strong>
 
-🧡🧡🧡 HAPPY CODING 🧡🧡🧡
+🧡🧡🧡 İYİ KODLAMALAR 🧡🧡🧡
 
 <div>
 <small>Daha fazla eğitim içeriği için <strong>yazara</strong> destek olun.</small> <br />  
@@ -55,7 +55,7 @@
 
   <sub>Yazar:
   <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-  <small> Second Edition: Temmuz, 2021</small>
+  <small> İkinci Versiyon: Temmuz, 2021</small>
   </sub>
 </div>
 
@@ -68,7 +68,7 @@
 
 - [🐍 30 Günde Python](#-30-days-of-python)
 - [📘 1. Gün](#-day-1)
-  - [Hoşgeldiniz](#welcome)
+  - [Hoşgeldin](#welcome)
   - [Giriş](#introduction)
   - [Neden Python?](#why-python-)
   - [Geliştirme Ortamının Kurulumu](#environment-setup)
@@ -76,63 +76,64 @@
     - [Python Shell](#python-shell)
     - [Visual Studio Code'u yükleme](#installing-visual-studio-code)
       - [Visual Studio Code nasıl kullanılır?](#how-to-use-visual-studio-code)
-  - [Basic Python](#basic-python)
+  - [Python Temelleri](#basic-python)
     - [Python Sözdizimi](#python-syntax)
-    - [Python Indentation](#python-indentation)
+    - [Python Girintileri](#python-indentation)
     - [Yorumlar](#comments)
     - [Veri Tipleri](#data-types)
       - [Sayılar](#number)
       - [String](#string)
-      - [Booleans](#booleans)
+      - [Boolean](#booleans)
       - [List](#list)
       - [Dictionary](#dictionary)
       - [Tuple](#tuple)
       - [Set](#set)
     - [Veri Tiplerini Kontrol Etme](#checking-data-types)
-    - [Python File](#python-file)
-  - [💻 Exercises - Day 1](#-exercises---day-1)
-    - [Exercise: Level 1](#exercise-level-1)
-    - [Exercise: Level 2](#exercise-level-2)
-    - [Exercise: Level 3](#exercise-level-3)
+    - [Python Dosyası Oluşturma](#python-file)
+  - [💻 Alıştırmalar - 1. Gün](#-exercises---day-1)
+    - [Alıştırma: 1. Seviye](#exercise-level-1)
+    - [Alıştırma: 2. Seviye](#exercise-level-2)
+    - [Alıştırma: 3. Seviye](#exercise-level-3)
 
 # 📘 1. Gün
 
-## Hoşgeldiniz
+## Hoşgeldin
 
-_30 günde Python_ programlama challenge'a katılmaya karar verdiğiniz için **tebrikler!** . Bu challenge'da Python programcısı olmak için gerekli olan her şeyi ve programlamanın temel konseptlerini öğreneceksiniz. Challenge sonunda, _30GündePython_ programlama challenge sertifikasını edineceksiniz.
+_30 günde Python_ programlama challenge'a katılmaya karar verdiğin için **tebrikler!** Bu challenge'da Python programcısı olmak için gerekli olan her şeyi ve programlamanın temel konseptlerini öğreneceksin. Challenge sonunda, _30GündePython_ programlama challenge sertifikasını edineceksin.
 
-Eğer challenge’a aktif şekilde dahil olmak ve etkileşimde bulunmak isterseniz [30DaysOfPython challenge](https://t.me/ThirtyDaysOfPython) telegram grubuna katılabilirsiniz.  
+Eğer challenge’a aktif şekilde dahil olmak ve etkileşimde bulunmak istersen [30DaysOfPython challenge](https://t.me/ThirtyDaysOfPython) telegram grubuna katılabilirsin. 
+
+Bu GitHub repository'sinin orijinal dili İngilizce'dir ve [zeynepsturan](https://github.com/zeynepsturan) tarafından Türkçeye çevirilmiştir. Bu yüzden challenge'daki kaynakların ve örnek kodların tamamı İngilizce içeriklidir. 
 
 ## Giriş
 
-Python, genel amaçlı programlama için kullanılan yüksek seviyeli(high-level) bir programlama dilidir. Python Hollandalı programcı Guido van Rossum tarafından yaratılan açık kaynak, yorumlanan(interpreted), nesne yönelimli bir yazılım dilidir. Dilin adı, Britanya yapımı bir skeç komedi dizisi olan *Monty Python's Flying Circus*'tan türetilmiştir ve ilk versiyonu 20 Şubat 1991'de yayımlanmıştır. 30 günde Python challenge Python'un en yeni versiyonu Python 3'ü adım adım öğrenmenize yardımcı olacak. Konu başlıkları 30 güne bölünmüştür ve her bir gün; kolay anlaşılır açıklamalar, gerçek dünya örnekleri, uygulamalı alıştırmalar ve projeler içeren birden fazla bölümden oluşur.
+Python, genel amaçlı programlama için kullanılan yüksek seviyeli (high-level) bir programlama dilidir. Python Hollandalı programcı Guido van Rossum tarafından yaratılan açık kaynak, yorumlanan (interpreted), nesne yönelimli bir yazılım dilidir. Dilin adı, Britanya yapımı bir skeç komedi dizisi olan *Monty Python's Flying Circus*'tan türetilmiştir ve ilk versiyonu 20 Şubat 1991'de yayımlanmıştır. 30 günde Python challenge Python'un en yeni versiyonu Python 3'ü adım adım öğrenmene yardımcı olacak. Konu başlıkları 30 güne bölünmüştür ve her bir gün; kolay anlaşılır açıklamalar, gerçek dünya örnekleri, uygulamalı alıştırmalar ve projeler içeren birden fazla bölümden oluşur.
 
 Bu challenge python programlama dilini öğrenmek isteyen yeni başlayanlar ve profesyoneller için tasarlandı. Challenge’ı tamamlamak 30 ila 100 gün sürebilir. Telegram grubuna aktif olarak katılan kişilerin challenge’ı tamamlama olasılığı oldukça yüksektir.
 
-Bu challenge, okuması kolay, sohbet tarzı bir dille yazılmış, ilgi çekici, motive edici ve aynı zamanda oldukça zorlayıcıdır. Bu challengeı tamamlamak için oldukça bolca zaman ayırmalısınız. Eğer görsel bir öğreniciyseniz, video dersine şu adresten ulaşabilirsiniz: <a href="https://www.youtube.com/channel/UC7PNRuno1rzYPb1xLa4yktw"> Washera</a> YouTube kanalı. You may start from [Python for Absolute Beginners video](https://youtu.be/OCCWZheOesI). Kanalı abone olun, YouTube videolarına yorumlar yapın ve sorular sorup aktif olun; yazar sonunda sizi fark edecektir.
+Bu challenge, okuması kolay, sohbet tarzı bir dille yazılmış, ilgi çekici, motive edici ve aynı zamanda oldukça zorlayıcıdır. Bu challenge'ı tamamlamak için oldukça bolca zaman ayırmalısın. Eğer görsel bir öğreniciysen, video dersine şu adresten ulaşabilirsin: <a href="https://www.youtube.com/channel/UC7PNRuno1rzYPb1xLa4yktw"> Washera</a> YouTube kanalı. Bu videodan başlayabilirsin: [Sıfırdan Başlayanlar için Python video](https://youtu.be/OCCWZheOesI). Kanalı abone ol, YouTube videolarına yorumlar yap ve sorular sorup aktif ol; yazar sonunda seni fark edecektir.
 
-Yazar, bu challenge hakkındaki görüşlerinizi duymaktan memnuniyet duyar.
-30GündePython challengeı hakkında düşüncelerinizi paylaşarak yazara destek olun. Görüşlerinizi/deneyimlerinizi bu [bağlantı](https://www.asabeneh.com/testimonials) ile iletebilirsiniz.
+Yazar, bu challenge hakkındaki görüşlerini duymaktan memnuniyet duyar.
+30GündePython challenge'ı hakkında düşüncelerini paylaşarak yazara destek ol. Görüşlerini/deneyimlerini bu [bağlantı](https://www.asabeneh.com/testimonials) ile iletebilirsin.
 
 ## Neden Python?
 
-Konuşma diline çok yakın bir dil olduğu için öğrenmesi ve uygulaması kolay bir dildir. Python çeşitli endüstriler ve şirketlerde(Google dahil olmak üzere) sıkça kullanılır.
-It has been used to develop web applications, desktop applications, system administration, and machine learning libraries. Python is a highly embraced language in the data science and machine learning community. Umarım bu bilgiler sizi Python öğrenmeye ikna etmiştir. Python is eating the world and you are killing it before it eats you.
+Konuşma diline çok yakın bir dil olduğu için öğrenmesi ve uygulaması kolay bir dildir. Python çeşitli endüstriler ve şirketlerde (Google dahil olmak üzere) sıkça kullanılır. Web uygulamaları, masaüstü uygulamaları, sistem yönetimi ve makine öğrenimi kütüphanelerini geliştirmek için kullanılmıştır. Python veri bilimi ve makine öğrenmesi topluluklarında iyice benimsenmiş bir dildir. Umarım bu bilgiler seni Python öğrenmeye ikna etmiştir. Python dünyayı ele geçiriyor ve sen, Python seni ele geçirmeden onu etkili bir şekilde kullanıyorsun.
 
 ## Geliştirme Ortamının Kurulumu
 
 ### Python'u Yükleme
 
-Bir Python kodunu çalıştırabilmek için Python'u yüklemelisiniz. Hadi Python'u [yükleyelim](https://www.python.org/).
-Windows kullanıcısı iseniz kırmızı içine alınan butona tıklayınız.
+Bir Python kodunu çalıştırabilmek için önce Python'u yüklemelisin. Hadi Python'u [yükleyelim](https://www.python.org/).
+Windows kullanıcısı isen kırmızı içine alınan butona tıkla.
 
 [![installing on Windows](./images/installing_on_windows.png)](https://www.python.org/)
 
-macOS kullanıcısı iseniz kırmızı içine alınan butona tıklayınız.
+macOS kullanıcısı isen kırmızı içine alınan butona tıkla.
 
 [![installing on Windows](./images/installing_on_macOS.png)](https://www.python.org/)
 
-Python’un cihazınıza yüklü olup olmadığını kontrol etmek için, terminalinize aşağıdaki komutu yazın.
+Python’un cihazında yüklü olup olmadığını kontrol etmek için, terminaline aşağıdaki komutu yaz.
 
 ```shell
 python --version
@@ -140,14 +141,14 @@ python --version
 
 ![Python Version](./images/python_versio.png)
 
-Terminalde de göründüğü üzere şu an _Python 3.7.5_ sürümünü kullanıyorum. Sizin versiyonunuz benimkinden farklı olabilir ama 3.6 veya daha üstü olmalı. Python versiyonunu görebildiyseniz tebrikler, Python makinenize yüklendi. Sonraki bölüme geçebilirsiniz.
+Terminalde de göründüğü üzere şu an _Python 3.7.5_ sürümünü kullanıyorum. Senin versiyonun benimkinden farklı olabilir ama 3.6 veya daha üstü olmalı. Python versiyonunu görebildiysen tebrikler, Python makinene yüklendi. Sonraki bölüme geçebilirsin.
 
 ### Python Shell
 
-Python yorumlanan(interpreted) bir dildir ve derlenmeye ihtiyaç duymaz. Yani kodu satır satır yorumlayıp çalıştırır. Python, _Python Shell (Python Interactive Shell)_ ile gelir. Python Shell, tek satırlık bir Python kodunu çalıştırıp sonucu elde etmek için kullanılır.
+Python yorumlanan (interpreted) bir dildir ve derlenmeye ihtiyaç duymaz. Yani kodu satır satır yorumlayıp çalıştırır. Python, _Python Shell (Python Interactive Shell)_ ile gelir. Python Shell, tek satırlık bir Python kodunu çalıştırıp sonucu elde etmek için kullanılır.
 
-Python Shell kullanıcıdan Python kodu girmesini bekler. Kodu girdiğinizde, kodu yorumlar ve sonucu sonraki satırda gösterir.
-Terminalinizi ya da komut satırınızı(cmd) açıp bunu yazın:
+Python Shell kullanıcıdan Python kodu girmesini bekler. Kodu girdiğinde, kodu yorumlar ve sonucu sonraki satırda gösterir.
+Terminalini ya da komut satırını (cmd) açıp bunu yaz:
 
 ```shell
 python
@@ -155,30 +156,31 @@ python
 
 ![Python Scripting Shell](./images/opening_python_shell.png)
 
-Python interactive shell açıldı ve Python kodunuzu(Python script) yazmanızı bekliyor. >>> sembolünün yanına Python script'inizi yazıp Enter'a basarak kodunuzu çalıştırmalısınız.
+Python interactive shell açıldı ve Python kodunu (Python script) yazmanı bekliyor. >>> sembolünün yanına Python script'ini yazıp Enter'a basarak kodunu çalıştırmalısın.
 Şimdi Python Shell'deki ilk kodumuzu yazalım.
 
 ![Python script on Python shell](./images/adding_on_python_shell.png)
 
-Tebrikler, Python Interactive Shell'deki ilk kodunuzu yazdınız. How do we close the Python interactive shell ?
-Shell'i kapamak için >> sembolünün yanına **exit()** komutunu yazıp Enter'a basın.
+Tebrikler, Python Interactive Shell'deki ilk kodunu yazdın. Peki Python interactive shell nasıl kapatılır?
+Shell'i kapamak için >> sembolünün yanına **exit()** komutunu yazıp Enter'a bas.
+
 ![Exit from python shell](./images/exit_from_shell.png)
 
-Now, you know how to open the Python interactive shell and how to exit from it.
+Artık Python Shell'i açmayı ve kapamayı biliyorsun.
 
-Python will give you results if you write scripts that Python understands, if not it returns errors. Let's make a deliberate mistake and see what Python will return.
+Python, kodu doğru biçimde yazdığında sonucunu döner. Aksi takdirde ise hatalar döner. Şimdi kasıtlı bir hata yapalım ve Python'un ne döneceğini görelim.
 
 ![Invalid Syntax Error](./images/invalid_syntax_error.png)
 
-As you can see from the returned error, Python is so clever that it knows the mistake we made and which was _Syntax Error: invalid syntax_. Using x as multiplication in Python is a syntax error because (x) is not a valid syntax in Python. Instead of (**x**) we use asterisk (*) for multiplication. The returned error clearly shows what to fix.
+Dönen hatada gördüğün üzere Python bir hata yaptığımızı ve bunun _Syntax Error: invalid syntax_ olduğunu anlayacak kadar zekidir. Çarpma için x kullanmak Python'da bir söz dizimi hatasıdır çünkü (x) Python'da geçerli bir fonksiyon değildir. Çarpma için (**x**) yerine yıldız işareti (*) kullanırız. Dönen hata, neyin düzeltilmesi gerektiğini açıkça gösterir.
 
-The process of identifying and removing errors from a program is called _debugging_. Let us debug it by putting * in place of **x**.
+Bir programdaki hataları tespit edip ortadan kaldırmaya _debugging (hata ayıklama)_ denir. Şimdi **x** yerine * koyarak hatamızı debug edelim.
 
 ![Fixing Syntax Error](./images/fixing_syntax_error.png)
 
-Our bug was fixed, the code ran and we got a result we were expecting. As a programmer you will see such kind of errors on daily basis. It is good to know how to debug. To be good at debugging you should understand what kind of errors you are facing. Some of the Python errors you may encounter are _SyntaxError_, _IndexError_, _NameError_, _ModuleNotFoundError_, _KeyError_, _ImportError_, _AttributeError_, _TypeError_, _ValueError_, _ZeroDivisionError_ etc. We will see more about different Python **_error types_** in later sections.
+Hatamız düzeldi, kod çalıştı ve beklediğimiz sonucu aldık. Bir programcı olarak bu tür hataları günlük hayatta göreceksin. Hataları debug etmeyi bilmek önemlidir. Debugging'de iyi olmak için ne tarz hatalarla yüzleştiğini anlayabilmelisin. Karşılaşabileceğin bazı hatalar  _Sözdizimi Hatası(SyntaxError)_, _İndeks Hatası(IndexError)_, _İsim Hatası(NameError)_, _Modül Bulunamadı Hatası(ModuleNotFoundError)_, _Key Hatası(KeyError)_, _İçe Aktarma Hatası(ImportError)_, _Özellik Hatası(AttributeError)_, _Veri Tipi Hatası(TypeError)_, _Değer Hatası(ValueError)_, _Sıfıra Bölme Hatası(ZeroDivisionError)_ vb. İleriki bölümlerde farklı Python **_hatalarını_** detaylı göreceğiz. 
 
-Let us practice more how to use Python interactive shell. Go to your terminal or command prompt and write the word **python**.
+Şimdi Python interactive shell'i kullanmak için biraz daha pratik yapalım. Terminalini veya komut istemcini (cmd) aç ve **python** kelimesini yaz.
 
 ![Python Scripting Shell](./images/opening_python_shell.png)
 
@@ -190,14 +192,14 @@ Python interactive shell açıldı. Şimdi herhangi bir Python kodu yazmadan ön
 - 3 / 2 1.5'tir
 - 3 ** 2 ile 3 * 3 aynı şeydir
 
-In python we have the following additional operations:
+Python'da bu ekstra operasyonlar mevcut:
 
-- 3 % 2 = 1 => which means finding the remainder
-- 3 // 2 = 1 => which means removing the remainder
+- 3 % 2 = 1 => kalanı bulmak için kullanılır
+- 3 // 2 = 1 => kalanı atarak bölme için kullanılır (tam bölme)
 
-Şimdi yukarıdaki işlemleri Python koduna çevirelim. The Python shell has been opened and let us write a comment at the very beginning of the shell.
+Şimdi yukarıdaki işlemleri Python koduna çevirelim. Önce shell'in başına bir yorum yazalım.
 
-_Yorumlar_ is a part of the code which is not executed by python. Yani kodumuzun daha okunaklı olması için açıklayıcı yorumlar bırakabiliriz. Python does not run the comment part. Python'da yorumlar # sembolüyle başlar.
+_Yorumlar_ kodun bir parçasıdır ve python tarafından çalıştırılmaz. Yani kodumuzun daha okunaklı olması için açıklayıcı yorumlar bırakabiliriz. Python yorumları görmezden gelir. Python'da yorumlar # sembolüyle başlar.
 Python'da yorumlar işte bu şekilde yazılır
 
 ```shell
@@ -207,58 +209,60 @@ Python'da yorumlar işte bu şekilde yazılır
 
 ![Maths on python shell](./images/maths_on_python_shell.png)
 
-Sonraki bölüme geçmeden önce, Python interactive shell'de biraz alıştırma yapalım. Shell'i kapamak için _exit()_ komutunu yazın ve sonrasında tekrar açın. let us practice how to write text on the Python shell.
+Sonraki bölüme geçmeden önce, Python interactive shell'de biraz alıştırma yapalım. Shell'i kapamak için _exit()_ komutunu yaz ve sonrasında tekrar aç. Şimdi Python shell'de metin yazma pratiği yapalım.
 
 ![Writing String on python shell](./images/writing_string_on_shell.png)
 
 ### Visual Studio Code'u yükleme
 
-Python interactive shell ufak kodları denemek için uygundur ama büyük projeler için kullanılmaz. Gerkçek iş ortamlarında, geliştiriciler kod yazmak için farklı kod editörleri kullanır. 30 günde Python programlama challenge'ında Visual Studio Code kullanıyor olacağız. Visual studio code is a very popular open source text editor. I am a fan of vscode and I would recommend to [download](https://code.visualstudio.com/) visual studio code, but farklı editörler kullanmak istiyorsanız kendi editörünüzle de devam edebilirsiniz.
+Python interactive shell ufak kodları denemek için uygundur ama büyük projeler için kullanılmaz. Gerkçek iş ortamlarında, geliştiriciler kod yazmak için farklı kod editörleri kullanır. 30 günde Python programlama challenge'ında Visual Studio Code kullanıyor olacağız. Visual Studio Code çok popüler, açık kaynak bir text editor'dür. Ben de bir VS Code hayranıyım ve Visual Studio Code'u [indirmeni](https://code.visualstudio.com/) öneririm ama farklı editörler kullanmak istiyorsan kendi editörünle de devam edebilirsin.
 
 [![Visual Studio Code](./images/vscode.png)](https://code.visualstudio.com/)
 
-If you installed visual studio code, let us see how to use it.
-If you prefer a video, you can follow this Visual Studio Code for Python [Video tutorial](https://www.youtube.com/watch?v=bn7Cx4z-vSo)
+Visual Studio Code'u indirdiysen nasıl kullanıldığına bakalım.
+Videolu anlatımı tercih ediyorsan bu Python için Visual Studio Code [Video öğreticiyi](https://www.youtube.com/watch?v=bn7Cx4z-vSo) takip edebilirsin.
 
 #### Visual Studio Code nasıl kullanılır?
 
-Open the visual studio code by double clicking the visual studio icon. When you open it you will get this kind of interface. Try to interact with the labeled icons.
+Visual Studio ikonuna çift tıklayarak programı açtığında bu tarz bir arayüz göreceksin. Simgelere tıklayarak arayüzü öğrenmeyi dene.
 
 ![Visual studio Code](./images/vscode_ui.png)
 
-Create a folder named 30DaysOfPython on your desktop. Then open it using visual studio code.
+Masaüstünde 30GundePython adlı bir klasör oluştur ve Visual Studio Code kullanarak klasörü aç.
 
 ![Opening Project on Visual studio](./images/how_to_open_project_on_vscode.png)
 
 ![Opening a project](./images/opening_project.png)
 
-After opening it dosya ve klasör oluşturmak için kısayollar göreceksiniz. inside of 30GündePython project's directory. As you can see below, I have created the very first file, helloworld.py. You can do the same.
+Klasörü açtıktan sonra dosya ve klasör oluşturmak için kısayollar göreceksin. Aşağıda da gördüğün gibi ilk dosyamı,helloworld.py, oluşturdum. Sen de aynısını yapabilirsin.
 
 ![Creating a python file](./images/helloworld.png)
 
-Kodlamayla dolu uzun bir günden sonra editörü kapatmak isteyeceksiniz, değil mi? This is how you will close the opened project.
+Kodlamayla dolu uzun bir günden sonra editörü kapatmak isteyeceksin, değil mi? Açık proje böyle kapatılır:
 
 ![Closing project](./images/closing_opened_project.png)
 
-Congratulations, you have finished setting up the development environment. Let us start coding.
+Tebrikler, geliştirme ortamını kurmayı tamamladın. Şimdi kodlamaya başlayalım.
 
 ## Python Temelleri
 
 ### Python Sözdizimi
 
-A Python script can be written in Python interactive shell or in the code editor. A Python file has an extension .py.
+Bir Python script'i, Python interactive shell'de veya bir kod editöründe yazılabilir. Python dosyalarının .py uzantısı vardır.
 
-### Python Indentation
+### Python Girintileri
 
-An indentation is a white space in a text. Indentation in many languages is used to increase code readability; however, Python uses indentation to create blocks of code. In other programming languages, curly brackets are used to create code blocks instead of indentation. One of the common bugs when writing Python code is incorrect indentation.
+Girinti (Indentation), bir metindeki boşluktur. Birçok programlama dilinde girinti, kod okunabilirliğini artırmak için kullanılır; ancak Python’da kod blokları oluşturmak için girinti kullanılır.
+Diğer programlama dillerinde kod blokları oluşturmak için girinti yerine genellikle küme parantezler {} kullanılır. Python kodu yazarken en yaygın hatalardan biri yanlış girinti kullanımıdır.
 
 ![Indentation Error](./images/indentation.png)
 
 ### Yorumlar
 
-Comments play a crucial role in enhancing code readability and allowing developers to leave notes within their code. In Python, any text preceded by a hash (#) symbol is considered a comment and is not executed when the code runs.
+Yorumlar (Comments), kodun okunabilirliğini artırmada ve geliştiricilerin kod içinde notlar bırakabilmesinde önemli bir rol oynar.
+Python’da # (hash) işareti ile başlayan herhangi bir metin, yorum olarak kabul edilir ve kod çalıştırıldığında görmezden gelinir.
 
-**Example: Single Line Comment**
+**Örnek: Tek Satırlık Yorumlar**
 
 ```shell
     # Bu birinci yorum
@@ -266,9 +270,9 @@ Comments play a crucial role in enhancing code readability and allowing develope
     # Python is eating the world
 ```
 
-**Example: Çok Satırlı Yorumlar**
+**Örnek: Çok Satırlı Yorumlar**
 
-Triple quote can be used for multiline comment if it is not assigned to a variable
+Üçlü tırnak (''' veya """), bir değişkene atanmadığı sürece çok satırlı yorum olarak kullanılabilir.
 
 ```shell
 """Bu bir çok satırlı
@@ -280,6 +284,9 @@ python is eating the world
 ### Veri Tipleri
 
 In Python there are several types of data types. Let us get started with the most common ones. Different data types will be covered in detail in other sections. For the time being, let us just go through the different data types and get familiar with them. You do not have to have a clear understanding now.
+
+Python’da birden fazla veri tipi (data type) vardır. Farklı veri türleri diğer bölümlerde detaylı olarak ele alınacaktır. Şu anda hepsini tam olarak anlamak zorunda değilsiniz.
+Şimdilik sadece farklı veri türlerine göz atalım ve onlarla tanışalım. Hadi en yaygın olanlarla başlayalım.
 
 #### Sayılar
 
@@ -296,6 +303,7 @@ In Python there are several types of data types. Let us get started with the mos
 #### String
 
 A collection of one or more characters under a single or double quote. If a string is more than one sentence then we use a triple quote.
+Tek veya çift tırnak içinde bir veya daha fazla karakterin bir araya gelmiş hâlidir. Eğer bir string birden fazla satır içeriyorsa, üçlü tırnak kullanılır.
 
 **Örnek:**
 
@@ -304,23 +312,22 @@ A collection of one or more characters under a single or double quote. If a stri
 'Finland'
 'Python'
 'Öğretmeyi seviyorum'
-'Umarım 30DaysOfPython Challengeın ilk gününden keyif alıyorsunuzdur '
+'Umarım 30DaysOfPython Challenge ilk günden keyif alıyorsunuzdur'
 ```
 
-#### Booleans
+#### Booleanlar
 
-A boolean data type is either a True or False value. T and F should be always uppercase.
-
+Boolean veri tipi, yalnızca True (Doğru) veya False (Yanlış) değerini alabilir. T ve F her zaman büyük harf ile yazılmalıdır.
 **Örnek:**
 
 ```python
-    True  #  Işık açık mı? Açıksa, then the value is True
-    False # Işık açık mı? Kapalıysa, then the value is False
+    True  #  Işık açık mı? Açıksa değer True
+    False #  Işık açık mı? Kapalıysa değer False
 ```
 
 #### List
 
-Python list is an ordered collection which allows to store different data type items. A list is similar to an array in JavaScript.
+Python'da list, sıralı bir veri koleksiyondur ve farklı veri türlerinden öğeleri saklamaya olanak tanır. Bir list, JavaScript’teki dizi (array) ile benzerdir.
 
 **Örnek:**
 
@@ -381,7 +388,7 @@ Bir verinin/değişkenin veri tipini kontrol etmek için **type** fonksiyonunu k
 
 ![Checking Data types](./images/checking_data_types.png)
 
-### Python File
+### Python Dosyası Oluşturma
 
 Öncelikle 30GündePython klasörünüzü açın. If you don't have this folder, 30GündePython adında bir klasör oluşturun. Inside this folder, create a file called helloworld.py. Now, let's do what we did on python interactive shell using visual studio code.
 

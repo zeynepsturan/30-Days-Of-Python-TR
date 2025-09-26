@@ -16,10 +16,10 @@
 | 10  |  [Döngüler](./10_Day_Loops/10_loops.md)|
 | 11  |  [Fonksiyonlar](./11_Day_Functions/11_functions.md)|
 | 12  |  [Modüller](./12_Day_Modules/12_modules.md)|
-| 13  |  [List Comprehension](./13_Day_List_comprehension/13_list_comprehension.md)|
+| 13  |  [List Oluşturma Kısayolu](./13_Day_List_comprehension/13_list_comprehension.md)|
 | 14  |  [Yüksek Mertebe Fonksiyonlar](./14_Day_Higher_order_functions/14_higher_order_functions.md)|
-| 15  |  [Python Type Errors](./15_Day_Python_type_errors/15_python_type_errors.md)|
-| 16 |  [Python Date time](./16_Day_Python_date_time/16_python_datetime.md) |
+| 15  |  [Python Veri Tipi Hataları](./15_Day_Python_type_errors/15_python_type_errors.md)|
+| 16 |  [Python'da Tarih ve Zaman](./16_Day_Python_date_time/16_python_datetime.md) |
 | 17 |  [Exception Handling](./17_Day_Exception_handling/17_exception_handling.md)|
 | 18 |  [Regular Expressions](./18_Day_Regular_expressions/18_regular_expressions.md)|
 | 19 |  [Dosya İşlemleri](./19_Day_File_handling/19_file_handling.md)|
@@ -68,18 +68,18 @@
 
 - [🐍 30 Günde Python](#-30-days-of-python)
 - [📘 1. Gün](#-day-1)
-  - [Welcome](#welcome)
+  - [Hoşgeldiniz](#welcome)
   - [Giriş](#introduction)
-  - [Neden Python ?](#why-python-)
-  - [Environment Setup](#environment-setup)
+  - [Neden Python?](#why-python-)
+  - [Geliştirme Ortamının Kurulumu](#environment-setup)
     - [Python'u Yükleme](#installing-python)
     - [Python Shell](#python-shell)
-    - [Installing Visual Studio Code](#installing-visual-studio-code)
-      - [How to use visual studio code](#how-to-use-visual-studio-code)
+    - [Visual Studio Code'u yükleme](#installing-visual-studio-code)
+      - [Visual Studio Code nasıl kullanılır?](#how-to-use-visual-studio-code)
   - [Basic Python](#basic-python)
     - [Python Sözdizimi](#python-syntax)
     - [Python Indentation](#python-indentation)
-    - [Comments](#comments)
+    - [Yorumlar](#comments)
     - [Veri Tipleri](#data-types)
       - [Sayılar](#number)
       - [String](#string)
@@ -97,7 +97,7 @@
 
 # 📘 1. Gün
 
-## Welcome
+## Hoşgeldiniz
 
 _30 günde Python_ programlama challenge'a katılmaya karar verdiğiniz için **tebrikler!** . Bu challenge'da Python programcısı olmak için gerekli olan her şeyi ve programlamanın temel konseptlerini öğreneceksiniz. Challenge sonunda, _30GündePython_ programlama challenge sertifikasını edineceksiniz.
 
@@ -105,29 +105,30 @@ Eğer challenge’a aktif şekilde dahil olmak ve etkileşimde bulunmak istersen
 
 ## Giriş
 
-Python is a high-level programming language for general-purpose programming. Python Hollandalı programcı Guido van Rossum tarafından yaratılan açık kaynak, yorumlanan(interpreted), nesne yönelimli bir yazılım dilidir. Python programlama dilinin adı, Britanya yapımı bir skeç komedi dizisi olan *Monty Python's Flying Circus*'tan türetilmiştir. İlk versiyonu 20 Şubat 1991'de yayımlandı. 30 günde Python challenge Python'un en yeni versiyonu Python 3'ü adım adım öğrenmenize yardımcı olacak. The topics are broken down into 30 days, where each day contains several topics with easy-to-understand explanations, real-world examples, and many hands on exercises and projects.
+Python, genel amaçlı programlama için kullanılan yüksek seviyeli(high-level) bir programlama dilidir. Python Hollandalı programcı Guido van Rossum tarafından yaratılan açık kaynak, yorumlanan(interpreted), nesne yönelimli bir yazılım dilidir. Dilin adı, Britanya yapımı bir skeç komedi dizisi olan *Monty Python's Flying Circus*'tan türetilmiştir ve ilk versiyonu 20 Şubat 1991'de yayımlanmıştır. 30 günde Python challenge Python'un en yeni versiyonu Python 3'ü adım adım öğrenmenize yardımcı olacak. Konu başlıkları 30 güne bölünmüştür ve her bir gün; kolay anlaşılır açıklamalar, gerçek dünya örnekleri, uygulamalı alıştırmalar ve projeler içeren birden fazla bölümden oluşur.
 
 Bu challenge python programlama dilini öğrenmek isteyen yeni başlayanlar ve profesyoneller için tasarlandı. Challenge’ı tamamlamak 30 ila 100 gün sürebilir. Telegram grubuna aktif olarak katılan kişilerin challenge’ı tamamlama olasılığı oldukça yüksektir.
 
-This challenge is easy to read, written in conversational English, engaging, motivating and at the same time, it is very demanding. You need to allocate much time to finish this challenge.Eğer görsel bir öğreniciysen, video dersine şu adresten ulaşabilirsin: <a href="https://www.youtube.com/channel/UC7PNRuno1rzYPb1xLa4yktw"> Washera</a> YouTube kanalı. You may start from [Python for Absolute Beginners video](https://youtu.be/OCCWZheOesI). Subscribe the channel, comment and ask questions on YouTube vidoes and be proactive, the author will eventually notice you.
+Bu challenge, okuması kolay, sohbet tarzı bir dille yazılmış, ilgi çekici, motive edici ve aynı zamanda oldukça zorlayıcıdır. Bu challengeı tamamlamak için oldukça bolca zaman ayırmalısınız. Eğer görsel bir öğreniciyseniz, video dersine şu adresten ulaşabilirsiniz: <a href="https://www.youtube.com/channel/UC7PNRuno1rzYPb1xLa4yktw"> Washera</a> YouTube kanalı. You may start from [Python for Absolute Beginners video](https://youtu.be/OCCWZheOesI). Kanalı abone olun, YouTube videolarına yorumlar yapın ve sorular sorup aktif olun; yazar sonunda sizi fark edecektir.
 
-The author likes to hear your opinion about the challenge, share the author by expressing your thoughts about the 30DaysOfPython challenge. You can leave your testimonial on this [link](https://www.asabeneh.com/testimonials)
+Yazar, bu challenge hakkındaki görüşlerinizi duymaktan memnuniyet duyar.
+30GündePython challengeı hakkında düşüncelerinizi paylaşarak yazara destek olun. Görüşlerinizi/deneyimlerinizi bu [bağlantı](https://www.asabeneh.com/testimonials) ile iletebilirsiniz.
 
-## Neden Python ?
+## Neden Python?
 
-It is a programming language which is very close to human language and because of that, it is easy to learn and use.
-Python is used by various industries and companies (including Google). It has been used to develop web applications, desktop applications, system administration, and machine learning libraries. Python is a highly embraced language in the data science and machine learning community. I hope this is enough to convince you to start learning Python. Python is eating the world and you are killing it before it eats you.
+Konuşma diline çok yakın bir dil olduğu için öğrenmesi ve uygulaması kolay bir dildir. Python çeşitli endüstriler ve şirketlerde(Google dahil olmak üzere) sıkça kullanılır.
+It has been used to develop web applications, desktop applications, system administration, and machine learning libraries. Python is a highly embraced language in the data science and machine learning community. Umarım bu bilgiler sizi Python öğrenmeye ikna etmiştir. Python is eating the world and you are killing it before it eats you.
 
-## Environment Setup
+## Geliştirme Ortamının Kurulumu
 
 ### Python'u Yükleme
 
-To run a python script you need to install python. Let's [download](https://www.python.org/) python.
-Windows kullanıcısı iseniz. Click the button encircled in red.
+Bir Python kodunu çalıştırabilmek için Python'u yüklemelisiniz. Hadi Python'u [yükleyelim](https://www.python.org/).
+Windows kullanıcısı iseniz kırmızı içine alınan butona tıklayınız.
 
 [![installing on Windows](./images/installing_on_windows.png)](https://www.python.org/)
 
-macOS kullanıcısı iseniz. Click the button encircled in red.
+macOS kullanıcısı iseniz kırmızı içine alınan butona tıklayınız.
 
 [![installing on Windows](./images/installing_on_macOS.png)](https://www.python.org/)
 
@@ -139,14 +140,14 @@ python --version
 
 ![Python Version](./images/python_versio.png)
 
-As you can see from the terminal, I am using _Python 3.7.5_ version at the moment. Your version of Python might be different from mine by but it should be 3.6 or above. If you mange to see the python version, well done. Python has been installed on your machine. Continue to the next section.
+Terminalde de göründüğü üzere şu an _Python 3.7.5_ sürümünü kullanıyorum. Sizin versiyonunuz benimkinden farklı olabilir ama 3.6 veya daha üstü olmalı. Python versiyonunu görebildiyseniz tebrikler, Python makinenize yüklendi. Sonraki bölüme geçebilirsiniz.
 
 ### Python Shell
 
-Python is an interpreted scripting language, so it does not need to be compiled. It means it executes the code line by line. Python comes with a _Python Shell (Python Interactive Shell)_. It is used to execute a single python command and get the result.
+Python yorumlanan(interpreted) bir dildir ve derlenmeye ihtiyaç duymaz. Yani kodu satır satır yorumlayıp çalıştırır. Python, _Python Shell (Python Interactive Shell)_ ile gelir. Python Shell, tek satırlık bir Python kodunu çalıştırıp sonucu elde etmek için kullanılır.
 
-Python Shell waits for the Python code from the user. When you enter the code, it interprets the code and shows the result in the next line.
-Open your terminal or command prompt(cmd) and write:
+Python Shell kullanıcıdan Python kodu girmesini bekler. Kodu girdiğinizde, kodu yorumlar ve sonucu sonraki satırda gösterir.
+Terminalinizi ya da komut satırınızı(cmd) açıp bunu yazın:
 
 ```shell
 python
@@ -154,14 +155,13 @@ python
 
 ![Python Scripting Shell](./images/opening_python_shell.png)
 
-The Python interactive shell is opened and it is waiting for you to write Python code(Python script). You will write your Python script next to this symbol >>> and then click Enter.
-Let us write our very first script on the Python scripting shell.
+Python interactive shell açıldı ve Python kodunuzu(Python script) yazmanızı bekliyor. >>> sembolünün yanına Python script'inizi yazıp Enter'a basarak kodunuzu çalıştırmalısınız.
+Şimdi Python Shell'deki ilk kodumuzu yazalım.
 
 ![Python script on Python shell](./images/adding_on_python_shell.png)
 
-Well done, you wrote your first Python script on Python interactive shell. How do we close the Python interactive shell ?
-To close the shell, next to this symbol >> write **exit()** command and press Enter.
-
+Tebrikler, Python Interactive Shell'deki ilk kodunuzu yazdınız. How do we close the Python interactive shell ?
+Shell'i kapamak için >> sembolünün yanına **exit()** komutunu yazıp Enter'a basın.
 ![Exit from python shell](./images/exit_from_shell.png)
 
 Now, you know how to open the Python interactive shell and how to exit from it.
@@ -182,25 +182,23 @@ Let us practice more how to use Python interactive shell. Go to your terminal or
 
 ![Python Scripting Shell](./images/opening_python_shell.png)
 
-The Python interactive shell is opened. Let us do some basic mathematical operations (addition, subtraction, multiplication, division, modulus,  exponential).
+Python interactive shell açıldı. Şimdi herhangi bir Python kodu yazmadan önce basit matematik işlemleri (toplama, çıkarma, çarpma, bölme, mod alma, üs alma) yapalım:
 
-Herhangi bir Python kodu yazmadan önce önce biraz matematik işlemi yapalım:
-
-- 2 + 3 is 5
-- 3 - 2 is 1
-- 3 \* 2 is 6
-- 3 / 2 is 1.5
-- 3 ** 2 is the same as 3 * 3
+- 2 + 3 5'tir
+- 3 - 2 1'dir
+- 3 \* 2 6'dır
+- 3 / 2 1.5'tir
+- 3 ** 2 ile 3 * 3 aynı şeydir
 
 In python we have the following additional operations:
 
 - 3 % 2 = 1 => which means finding the remainder
 - 3 // 2 = 1 => which means removing the remainder
 
-Let us change the above mathematical expressions to Python code. The Python shell has been opened and let us write a comment at the very beginning of the shell.
+Şimdi yukarıdaki işlemleri Python koduna çevirelim. The Python shell has been opened and let us write a comment at the very beginning of the shell.
 
-A _comment_ is a part of the code which is not executed by python. So we can leave some text in our code to make our code more readable. Python does not run the comment part. A comment in python starts with hash(#) symbol.
-This is how you write a comment in python
+_Yorumlar_ is a part of the code which is not executed by python. Yani kodumuzun daha okunaklı olması için açıklayıcı yorumlar bırakabiliriz. Python does not run the comment part. Python'da yorumlar # sembolüyle başlar.
+Python'da yorumlar işte bu şekilde yazılır
 
 ```shell
  # yorumlar # işareti ile başlar
@@ -209,13 +207,13 @@ This is how you write a comment in python
 
 ![Maths on python shell](./images/maths_on_python_shell.png)
 
-Before we move on to the next section, let us practice more on the Python interactive shell. Close the opened shell by writing _exit()_ on the shell and open it again and let us practice how to write text on the Python shell.
+Sonraki bölüme geçmeden önce, Python interactive shell'de biraz alıştırma yapalım. Shell'i kapamak için _exit()_ komutunu yazın ve sonrasında tekrar açın. let us practice how to write text on the Python shell.
 
 ![Writing String on python shell](./images/writing_string_on_shell.png)
 
 ### Visual Studio Code'u yükleme
 
-The Python interactive shell is good to try and test small script codes but it will not be for a big project. In real work environment, developers use different code editors to write codes. In this 30 days of Python programming challenge we will use visual studio code. Visual studio code is a very popular open source text editor. I am a fan of vscode and I would recommend to [download](https://code.visualstudio.com/) visual studio code, but if you are in favor of other editors, feel free to follow with what you have.
+Python interactive shell ufak kodları denemek için uygundur ama büyük projeler için kullanılmaz. Gerkçek iş ortamlarında, geliştiriciler kod yazmak için farklı kod editörleri kullanır. 30 günde Python programlama challenge'ında Visual Studio Code kullanıyor olacağız. Visual studio code is a very popular open source text editor. I am a fan of vscode and I would recommend to [download](https://code.visualstudio.com/) visual studio code, but farklı editörler kullanmak istiyorsanız kendi editörünüzle de devam edebilirsiniz.
 
 [![Visual Studio Code](./images/vscode.png)](https://code.visualstudio.com/)
 
@@ -234,11 +232,11 @@ Create a folder named 30DaysOfPython on your desktop. Then open it using visual 
 
 ![Opening a project](./images/opening_project.png)
 
-After opening it you will see shortcuts for creating files and folders inside of 30DaysOfPython project's directory. As you can see below, I have created the very first file, helloworld.py. You can do the same.
+After opening it dosya ve klasör oluşturmak için kısayollar göreceksiniz. inside of 30GündePython project's directory. As you can see below, I have created the very first file, helloworld.py. You can do the same.
 
 ![Creating a python file](./images/helloworld.png)
 
-After a long day of coding, you want to close your code editor, right? This is how you will close the opened project.
+Kodlamayla dolu uzun bir günden sonra editörü kapatmak isteyeceksiniz, değil mi? This is how you will close the opened project.
 
 ![Closing project](./images/closing_opened_project.png)
 
@@ -394,7 +392,7 @@ The Python interactive shell was printing without using **print** but on visual 
 The file name is helloworld.py
 
 ```py
-# Day 1 - 30DaysOfPython Challenge
+# 1. Gün - 30GündePython Challenge
 
 print(2 + 3)             # toplama(+)
 print(3 - 1)             # çıkarma(-)
@@ -404,10 +402,10 @@ print(3 ** 2)            # üs alma(**)
 print(3 % 2)             # mod alma(%)
 print(3 // 2)            # Floor division operator(//)
 
-# Checking data types
+# Veri tiplerini kontrol etme
 print(type(10))          # Int
 print(type(3.14))        # Float
-print(type(1 + 3j))      # Complex number
+print(type(1 + 3j))      # Complex (karmaşık sayı)
 print(type('Asabeneh'))  # String
 print(type([1, 2, 3]))   # List
 print(type({'name':'Asabeneh'})) # Dictionary
@@ -419,11 +417,11 @@ To run the python file check the image below. You can run the python file either
 
 ![Running python script](./images/running_python_script.png)
 
-🌕  Harikasınız. You have just completed day 1 challenge and you are on your way to greatness. Now do some exercises for your brain and muscles.
+🌕  Harikasınız. Challenge'ın ilk gününü tamamladınız ve başarıya doğru ilerliyorsunuz. Now do some exercises for your brain and muscles.
 
 ## 💻 Exercises - 1. Gün
 
-### Exercise: Level 1
+### Alıştırma: Level 1
 
 1. Check the python version you are using
 2. Open the python interactive shell and do the following operations. The operands are 3 and 4.
@@ -449,11 +447,11 @@ To run the python file check the image below. You can run the python file either
    - Your family name
    - Your country
 
-### Exercise: Level 2
+### Alıştırma: Level 2
 
 1. 30GündePython klasörünün içinde gün_1 adlı bir klasör oluşturun . gün_1 klasöründe helloworld.py adında bir python dosyası oluşturun ve repeat questions 1, 2, 3 and 4. Remember to use _print()_ when you are working on a python file. Navigate to the directory where you have saved your file, ve çalıştırın.
 
-### Exercise: Level 3
+### Alıştırma: Level 3
 
 1. Farklı Python veri tipleri için örnekler yazın (Integer, Float, Complex, String, Boolean, List, Tuple, Set ve Dictionary).
 2. Find an [Euclidian distance](https://en.wikipedia.org/wiki/Euclidean_distance#:~:text=In%20mathematics%2C%20the%20Euclidean%20distance,being%20called%20the%20Pythagorean%20distance.) (2, 3) ve (10, 8) arasındaki 

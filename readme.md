@@ -40,7 +40,7 @@
 🧡🧡🧡 İYİ KODLAMALAR 🧡🧡🧡
 
 <div>
-<small>Daha fazla eğitim içeriği için <strong>yazara</strong> destek olun.</small> <br />  
+<small>Daha fazla eğitim içeriği için <strong>yazara</strong> destek ol.</small> <br />  
 <a href = "https://www.paypal.me/asabeneh"><img src='./images/paypal_lg.png' alt='Paypal Logo' style="width:10%"/></a>
 </div>
 
@@ -283,8 +283,6 @@ python is eating the world
 
 ### Veri Tipleri
 
-In Python there are several types of data types. Let us get started with the most common ones. Different data types will be covered in detail in other sections. For the time being, let us just go through the different data types and get familiar with them. You do not have to have a clear understanding now.
-
 Python’da birden fazla veri tipi (data type) vardır. Farklı veri türleri diğer bölümlerde detaylı olarak ele alınacaktır. Şu anda hepsini tam olarak anlamak zorunda değilsiniz.
 Şimdilik sadece farklı veri türlerine göz atalım ve onlarla tanışalım. Hadi en yaygın olanlarla başlayalım.
 
@@ -302,7 +300,6 @@ Python’da birden fazla veri tipi (data type) vardır. Farklı veri türleri di
 
 #### String
 
-A collection of one or more characters under a single or double quote. If a string is more than one sentence then we use a triple quote.
 Tek veya çift tırnak içinde bir veya daha fazla karakterin bir araya gelmiş hâlidir. Eğer bir string birden fazla satır içeriyorsa, üçlü tırnak kullanılır.
 
 **Örnek:**
@@ -327,20 +324,20 @@ Boolean veri tipi, yalnızca True (Doğru) veya False (Yanlış) değerini alabi
 
 #### List
 
-Python'da list, sıralı bir veri koleksiyondur ve farklı veri türlerinden öğeleri saklamaya olanak tanır. Bir list, JavaScript’teki dizi (array) ile benzerdir.
+Python'da list, sıralı bir veri koleksiyondur ve farklı veri tiplerinden öğeleri saklamaya olanak tanır. Bir list, JavaScript’teki dizi (array) ile benzerdir.
 
 **Örnek:**
 
 ```py
-[0, 1, 2, 3, 4, 5]  # all are the same data types - a list of numbers
-['Banana', 'Orange', 'Mango', 'Avocado'] # all the same data types - a list of strings (fruits)
-['Finland','Estonia', 'Sweden','Norway'] # all the same data types - a list of strings (countries)
-['Banana', 10, False, 9.81] # different data types in the list - string, integer, boolean and float
+[0, 1, 2, 3, 4, 5]  # hepsi aynı veri tipi - sayılar listesi
+['Banana', 'Orange', 'Mango', 'Avocado'] # hepsi aynı veri tipi - string listesi (meyveler)
+['Finland','Estonia', 'Sweden','Norway'] # hepsi aynı veri tipi - string listesi (ülkeler)
+['Banana', 10, False, 9.81] # farklı veri tipleri içeren list - string, integer, boolean ve float
 ```
 
 #### Dictionary
 
-A Python dictionary object is an unordered collection of data in a key value pair format.
+Python dictionary, anahtar-değer (key-value) formatında sırasız bir veri koleksiyonudur.
 
 **Örnek:**
 
@@ -357,12 +354,12 @@ A Python dictionary object is an unordered collection of data in a key value pai
 
 #### Tuple
 
-A tuple is an ordered collection of different data types like list but tuples can not be modified once they are created. They are immutable.
+Tuple, listler gibi farklı veri tiplerinden oluşan sıralı bir koleksiyondur ancak oluşturulduktan sonra değiştirilemezler. Yani **immutable'dır (değiştirilemez).**
 
 **Örnek:**
 
 ```py
-('Asabeneh', 'Pawel', 'Brook', 'Abraham', 'Lidiya') # Names
+('Asabeneh', 'Pawel', 'Brook', 'Abraham', 'Lidiya') # isimler
 ```
 
 ```py
@@ -371,7 +368,7 @@ A tuple is an ordered collection of different data types like list but tuples ca
 
 #### Set
 
-A set is a collection of data types similar to list and tuple. Unlike list and tuple, set is not an ordered collection of items. Like in Mathematics, set in Python stores only unique items.
+Set, list ve tuple’a benzer bir veri koleksiyonudur. Liste ve tuple’dan farklı olarak, set sıralı bir koleksiyon değildir. Matematikteki kümeler gibi, Python’daki set yalnızca benzersiz (unique) öğeleri saklar.
 
 İlerleyen kısımlarda bütün Python veri tiplerini detaylıca göreceğiz.
 
@@ -379,24 +376,25 @@ A set is a collection of data types similar to list and tuple. Unlike list and t
 
 ```py
 {2, 4, 3, 5}
-{3.14, 9.81, 2.7} # order is not important in set
+{3.14, 9.81, 2.7} # set'te sıra önemli değil
 ```
 
 ### Veri Tiplerini Kontrol Etme
 
-Bir verinin/değişkenin veri tipini kontrol etmek için **type** fonksiyonunu kullanırız. In the following terminal you will see different python data types:
+Bir verinin/değişkenin veri tipini kontrol etmek için **type** fonksiyonunu kullanırız. Aşağıdaki terminalde farklı python veri tipleri göreceksin:
 
 ![Checking Data types](./images/checking_data_types.png)
 
 ### Python Dosyası Oluşturma
 
-Öncelikle 30GündePython klasörünüzü açın. If you don't have this folder, 30GündePython adında bir klasör oluşturun. Inside this folder, create a file called helloworld.py. Now, let's do what we did on python interactive shell using visual studio code.
+Öncelikle 30GundePython klasörünü aç. Klasör henüz yoksa 30GundePython adında bir klasör oluştur. Klasörün içinde helloworld.py adlı bir dosya oluştur. Şimdi şu ana kadar Shell'de yaptıklarımızı Visual Studio Code kullanarak yapalım.
 
-The Python interactive shell was printing without using **print** but on visual studio code to see our result we should use a built in function _print(). The _print()_ built-in function takes one or more arguments as follows _print('arument1', 'argument2', 'argument3')_. See the examples below.
+Python interactive shell, print kullanmadan çıktı verebiliyordu; ancak Visual Studio Code’da sonucu görmek için built-in print() fonksiyonunu kullanmamız gerekir.
+print() fonksiyonu, bir veya daha fazla argümanı şu şekilde alır: print('argument1', 'argument2', 'argument3')
 
 **Örnek:**
 
-The file name is helloworld.py
+Dosya adı: helloworld.py
 
 ```py
 # 1. Gün - 30GündePython Challenge
@@ -420,48 +418,50 @@ print(type({9.8, 3.14, 2.7}))    # Set
 print(type((9.8, 3.14, 2.7)))    # Tuple
 ```
 
-To run the python file check the image below. You can run the python file either by running the green button on Visual Studio Code or by typing _python helloworld.py_ in the terminal .
-
+Python dosyasını çalıştırmak için aşağıdaki görsele bak. Dosyayo Visual Studio Code’daki yeşil butona tıklayarak veya terminalde _python helloworld.py_ yazarak çalıştırabilirsin.
 ![Running python script](./images/running_python_script.png)
 
-🌕  Harikasınız. Challenge'ın ilk gününü tamamladınız ve başarıya doğru ilerliyorsunuz. Now do some exercises for your brain and muscles.
+🌕  Harikasın. Challenge'ın ilk gününü tamamladın ve başarıya doğru ilerliyorsun. Şimdi beynin ve kasların için biraz alıştırma yapalım.
 
-## 💻 Exercises - 1. Gün
+## 💻 Alıştırmalar - 1. Gün
 
-### Alıştırma: Level 1
+### Alıştırma: 1. Seviye
 
-1. Check the python version you are using
-2. Open the python interactive shell and do the following operations. The operands are 3 and 4.
-   - addition(+)
-   - subtraction(-)
-   - multiplication(\*)
-   - modulus(%)
-   - division(/)
-   - exponential(\*\*)
-   - floor division operator(//)
-3. Write strings on the python interactive shell. The strings are the following:
-   - Your name
-   - Your family name
-   - Your country
+1. Kullandığın python versiyonunu kontrol et
+2. 
+3. Python interactive shell'i aç ve aşağıdaki operasyonları 3 ve 4 sayıları için uygula.
+   - toplama(+)
+   - çıkarma(-)
+   - çarpma(\*)
+   - mod alma(%)
+   - bölme(/)
+   - üs alma(\*\*)
+   - tam(kalansız) bölme(//)
+   - 
+4. Aşağıdaki stringleri python interactive shell'de yaz.
+   - Adın
+   - Soyadın
+   - Ülken
    - I am enjoying 30 days of python
-4. Check the data types of the following data:
+   - 
+5. Aşağıdaki verilerin veri tiplerini kontrol et.
    - 10
    - 9.8
    - 3.14
    - 4 - 4j
    - ['Asabeneh', 'Python', 'Finland']
-   - Your name
-   - Your family name
-   - Your country
+   - Adın
+   - Soyadın
+   - Ülken
 
-### Alıştırma: Level 2
+### Alıştırma: 2. Seviye
 
-1. 30GündePython klasörünün içinde gün_1 adlı bir klasör oluşturun . gün_1 klasöründe helloworld.py adında bir python dosyası oluşturun ve repeat questions 1, 2, 3 and 4. Remember to use _print()_ when you are working on a python file. Navigate to the directory where you have saved your file, ve çalıştırın.
+1. 30GundePython klasörünün içinde gun_1 adlı bir klasör oluştur. gun_1 klasöründe helloworld.py adında bir python dosyası oluştur ve 1, 2, 3 and 4. soruları tekrarla. Python dosyasında çalışırken print() fonksiyonunu kullanmayı unutma. Dosyanı kaydettiğin klasörü aç ve çalıştır
 
-### Alıştırma: Level 3
+### Alıştırma: 3. Seviye
 
-1. Farklı Python veri tipleri için örnekler yazın (Integer, Float, Complex, String, Boolean, List, Tuple, Set ve Dictionary).
-2. Find an [Euclidian distance](https://en.wikipedia.org/wiki/Euclidean_distance#:~:text=In%20mathematics%2C%20the%20Euclidean%20distance,being%20called%20the%20Pythagorean%20distance.) (2, 3) ve (10, 8) arasındaki 
+1. Farklı Python veri tipleri için örnekler yaz (Integer, Float, Complex, String, Boolean, List, Tuple, Set ve Dictionary)
+2. (2, 3) ve (10, 8) arasındaki [Öklid uzaklığını](https://en.wikipedia.org/wiki/Euclidean_distance#:~:text=In%20mathematics%2C%20the%20Euclidean%20distance,being%20called%20the%20Pythagorean%20distance.) bul
 
 🎉 TEBRİKLER ! 🎉
 

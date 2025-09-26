@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> 30 Days Of Python: Day 14 - Higher Order Functions</h1>
+  <h1> 30 Günde Python: 14. Gün - Yüksek Mertebe Fonksiyonlar</h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -7,37 +7,37 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-  <sub>Author:
+  <sub>Yazar:
   <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-  <small>Second Edition: July, 2021</small>
+  <small>Second Edition: Temmuz, 2021</small>
   </sub>
 </div>
 </div>
 
-[<< Day 13](../13_Day_List_comprehension/13_list_comprehension.md) | [Day 15>>](../15_Day_Python_type_errors/15_python_type_errors.md)
+[<< 13. Gün](../13_Day_List_comprehension/13_list_comprehension.md) | [15. Gün>>](../15_Day_Python_type_errors/15_python_type_errors.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
-- [📘 Day 14](#-day-14)
-  - [Higher Order Functions](#higher-order-functions)
-    - [Function as a Parameter](#function-as-a-parameter)
-    - [Function as a Return Value](#function-as-a-return-value)
+- [📘 14. Gün](#-day-14)
+  - [Yüksek Mertebe Fonksiyonlar](#higher-order-functions)
+    - [Parametre Olarak Fonksiyon](#function-as-a-parameter)
+    - [Dönüş Değeri Olarak Fonksiyon](#function-as-a-return-value)
   - [Python Closures](#python-closures)
-  - [Python Decorators](#python-decorators)
+  - [Python Decoratorler](#python-decorators)
     - [Creating Decorators](#creating-decorators)
     - [Applying Multiple Decorators to a Single Function](#applying-multiple-decorators-to-a-single-function)
     - [Accepting Parameters in Decorator Functions](#accepting-parameters-in-decorator-functions)
-  - [Built-in Higher Order Functions](#built-in-higher-order-functions)
-    - [Python - Map Function](#python---map-function)
-    - [Python - Filter Function](#python---filter-function)
-    - [Python - Reduce Function](#python---reduce-function)
-  - [💻 Exercises: Day 14](#-exercises-day-14)
-    - [Exercises: Level 1](#exercises-level-1)
-    - [Exercises: Level 2](#exercises-level-2)
-    - [Exercises: Level 3](#exercises-level-3)
+  - [Built-in Yüksek Mertebe Fonksiyonlar](#built-in-higher-order-functions)
+    - [Python - Map Fonksiyonu](#python---map-function)
+    - [Python - Filter Fonksiyonu](#python---filter-function)
+    - [Python - Reduce Fonksiyonu](#python---reduce-function)
+  - [💻 Alıştırmalar: 14. Gün](#-exercises-day-14)
+    - [Alıştırmalar: Level 1](#exercises-level-1)
+    - [Alıştırmalar: Level 2](#exercises-level-2)
+    - [Alıştırmalar: Level 3](#exercises-level-3)
 
-# 📘 Day 14
+# 📘 14. Gün
 
-## Higher Order Functions
+## Yüksek Mertebe Fonksiyonlar
 
 In Python functions are treated as first class citizens, allowing you to perform the following operations on functions:
 
@@ -259,7 +259,7 @@ print(list(names_upper_cased))    # ['ASABENEH', 'LIDIYA', 'ERMIAS', 'ABRAHAM']
 
 What actually map does is iterating over a list. For instance, it changes the names to upper case and returns a new list.
 
-### Python - Filter Function
+### Python - Filter Fonksiyonu
 
 The filter() function calls the specified function which returns boolean for each item of the specified iterable (list). It filters the items that satisfy the filtering criteria.
 
@@ -309,7 +309,7 @@ long_names = filter(is_name_long, names)
 print(list(long_names))         # ['Asabeneh']
 ```
 
-### Python - Reduce Function
+### Python - Reduce Fonksiyonu
 
 The _reduce()_ function is defined in the functools module and we should import it from this module. Like map and filter it takes two parameters, a function and an iterable. However, it does not return another iterable, instead it returns a single value.
 **Example:1**
@@ -323,7 +323,7 @@ total = reduce(add_two_nums, numbers_str)
 print(total)    # 15
 ```
 
-## 💻 Exercises: Day 14
+## 💻 Alıştırmalar: 14. Gün
 
 ```py
 countries = ['Estonia', 'Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
@@ -331,7 +331,7 @@ names = ['Asabeneh', 'Lidiya', 'Ermias', 'Abraham']
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-### Exercises: Level 1
+### Alıştırmalar: Level 1
 
 1. Explain the difference between map, filter, and reduce.
 2. Explain the difference between higher order function, closure and decorator
@@ -340,7 +340,7 @@ numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 5. Use for to print each name in the names list.
 6. Use for to print each number in the numbers list.
 
-### Exercises: Level 2
+### Alıştırmalar: Level 2
 
 1. Use map to create a new list by changing each country to uppercase in the countries list
 1. Use map to create a new list by changing each number to its square in the numbers list
@@ -358,13 +358,13 @@ numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 2. Declare a get_first_ten_countries function - it returns a list of first ten countries from the countries.js list in the data folder.
 1. Declare a get_last_ten_countries function that returns the last ten countries in the countries list.
 
-### Exercises: Level 3
+### Alıştırmalar: Level 3
 
 1. Use the countries_data.py (https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries-data.py) file and follow the tasks below:
    - Sort countries by name, by capital, by population
    - Sort out the ten most spoken languages by location.
    - Sort out the ten most populated countries.
 
-🎉 CONGRATULATIONS ! 🎉
+🎉 TEBRİKLER ! 🎉
 
-[<< Day 13](../13_Day_List_comprehension/13_list_comprehension.md) | [Day 15>>](../15_Day_Python_type_errors/15_python_type_errors.md)
+[<< 13. Gün](../13_Day_List_comprehension/13_list_comprehension.md) | [15. Gün>>](../15_Day_Python_type_errors/15_python_type_errors.md)

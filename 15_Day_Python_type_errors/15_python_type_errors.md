@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> 30 Days Of Python: Day 15 - Python Type Errors </h1>
+  <h1> 30 Günde Python: 15. Gün - Python Hataları </h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -7,41 +7,41 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-  <sub>Author:
+  <sub>Yazar:
   <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-  <small> Second Edition: July, 2021</small>
+  <small> Second Edition: Temmuz, 2021</small>
   </sub>
 </div>
 </div>
 
-[<< Day 14](../14_Day_Higher_order_functions/14_higher_order_functions.md) | [Day 16 >>](../16_Day_Python_date_time/16_python_datetime.md)
+[<< 14. Gün](../14_Day_Higher_order_functions/14_higher_order_functions.md) | [16. Gün >>](../16_Day_Python_date_time/16_python_datetime.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
-- [📘 Day 15](#-day-15)
-  - [Python Error Types](#python-error-types)
-    - [SyntaxError](#syntaxerror)
-    - [NameError](#nameerror)
-    - [IndexError](#indexerror)
+- [📘 15. Gün](#-day-15)
+  - [Python Veri Tipi Hataları](#python-error-types)
+    - [Sözdizimi Hatası(SyntaxError)](#syntaxerror)
+    - [İsim Hatası(NameError)](#nameerror)
+    - [İndeks Hatası(IndexError)](#indexerror)
     - [ModuleNotFoundError](#modulenotfounderror)
     - [AttributeError](#attributeerror)
     - [KeyError](#keyerror)
-    - [TypeError](#typeerror)
+    - [Veri Tipi Hatası(TypeError)](#typeerror)
     - [ImportError](#importerror)
-    - [ValueError](#valueerror)
-    - [ZeroDivisionError](#zerodivisionerror)
+    - [Değer Hatası(ValueError)](#valueerror)
+    - [Sıfıra Bölme Hatası(ZeroDivisionError)](#zerodivisionerror)
   - [💻 Exercises: Day 15](#-exercises-day-15)
 
-# 📘 Day 15
+# 📘 15. Gün
 
-## Python Error Types
+## Python Hataları
 
 When we write code it is common that we make a typo or some other common error. If our code fails to run, the Python interpreter will display a message, containing feedback with information on where the problem occurs and the type of an error. It will also sometimes gives us suggestions on a possible fix. Understanding different types of errors in programming languages will help us to debug our code quickly and also it makes us better at what we do.
 
 Let us see the most common error types one by one. First let us open our Python interactive shell. Go to your you computer terminal and write 'python'. The python interactive shell will be opened.
 
-### SyntaxError
+### Sözdizimi Hatası(SyntaxError)
 
-**Example 1: SyntaxError**
+**Örnek 1: SyntaxError**
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -75,9 +75,9 @@ hello world
 
 The error was a _SyntaxError_. After the fix our code was executed without a hitch. Let see more error types.
 
-### NameError
+### İsim Hatası(NameError)
 
-**Example 1: NameError**
+**Örnek 1: NameError**
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -110,9 +110,9 @@ NameError: name 'age' is not defined
 
 The type of error was a _NameError_. We debugged the error by defining the variable name.
 
-### IndexError
+### İndeks Hatası(IndexError)
 
-**Example 1: IndexError**
+**Örnek 1: IndexError**
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -131,7 +131,7 @@ In the example above, Python raised an _IndexError_, because the list has only i
 
 ### ModuleNotFoundError
 
-**Example 1: ModuleNotFoundError**
+**Örnek 1: ModuleNotFoundError**
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -164,7 +164,7 @@ We fixed it, so let's use some of the functions from the math module.
 
 ### AttributeError
 
-**Example 1: AttributeError**
+**Örnek 1: AttributeError**
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -208,7 +208,7 @@ Now, when we call pi from the math module we got the result.
 
 ### KeyError
 
-**Example 1: KeyError**
+**Örnek 1: KeyError**
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -246,9 +246,9 @@ KeyError: 'county'
 
 We debugged the error, our code ran and we got the value.
 
-### TypeError
+### Veri Tipi Hatası(TypeError)
 
-**Example 1: TypeError**
+**Örnek 1: TypeError**
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -262,7 +262,7 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'
 >>>
 ```
 
-In the example above, a TypeError is raised because we cannot add a number to a string. First solution would be to convert the string to int or float. Another solution would be converting the number to a string (the result then would be '43'). Let us follow the first fix.
+Yukarıdaki örnekte bir TypeError döndü çünkü bir sayıya string ekleyemeyiz. First solution would be to convert the string to int or float. Another solution would be converting the number to a string (the result then would be '43'). Şimdi sorunu çözelim.
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -280,11 +280,11 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'
 >>>
 ```
 
-Error removed and we got the result we expected.
+Hata ortadan kaldırıldı ve beklediğimiz sonucu elde ettik.
 
 ### ImportError
 
-**Example 1: TypeError**
+**Örnek 1: ImportError**
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -298,7 +298,7 @@ ImportError: cannot import name 'power' from 'math'
 >>>
 ```
 
-There is no function called power in the math module, it goes with a different name: _pow_. Let's correct it:
+Math modülünde power adlı bir fonksiyon yok. Doğrusu _pow_. Düzeltilmiş hali:
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -315,7 +315,7 @@ ImportError: cannot import name 'power' from 'math'
 >>>
 ```
 
-### ValueError
+### Değer Hatası(ValueError)
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -331,7 +331,7 @@ ValueError: invalid literal for int() with base 10: '12a'
 
 In this case we cannot change the given string to a number, because of the 'a' letter in it.
 
-### ZeroDivisionError
+### Sıfıra Bölme Hatası(ZeroDivisionError)
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -345,17 +345,17 @@ ZeroDivisionError: division by zero
 >>>
 ```
 
-We cannot divide a number by zero.
+Bir sayıyı sıfıra bölemeyiz.
 
-We have covered some of the python error types, if you want to check more about it check the python documentation about python error types.
+Python hata türlerinden bazılarını işledik. Eğer daha fazlasını öğrenmek istiyorsanız Python dokümantasyonundan Python hatalarını inceleyin. 
 If you are good at reading the error types then you will be able to fix your bugs fast and you will also become a better programmer.
 
-🌕 You are excelling. You made it to half way to your way to greatness. Now do some exercises for your brain and for your muscle.
+🌕 Çok iyi ilerliyorsunuz. Challenge'ın 15. gününü tamamladınız ve başarıya giden yolun yarısını tamamladınız.You made it to half way to your way to greatness. Şimdi beyin ve kaslarınız için biraz akıştırma yapın.
 
-## 💻 Exercises: Day 15
+## 💻 Alıştırmalar: 15. Gün
 
-1. Open you python interactive shell and try all the examples covered in this section.
+1. Python interactive shell'inizi açın ve bu bölümde işlenen tüm hataları deneyin.
 
-🎉 CONGRATULATIONS ! 🎉
+🎉 TEBRİKLER ! 🎉
 
-[<< Day 14](../14_Day_Higher_order_functions/14_higher_order_functions.md) | [Day 16 >>](../16_Day_Python_date_time/16_python_datetime.md)
+[<< 14. Gün](../14_Day_Higher_order_functions/14_higher_order_functions.md) | [16. Gün >>](../16_Day_Python_date_time/16_python_datetime.md)

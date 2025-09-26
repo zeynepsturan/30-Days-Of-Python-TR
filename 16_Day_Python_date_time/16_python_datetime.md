@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> 30 Days Of Python: Day 16 - Python Date time </h1>
+  <h1> 30 Günde Python: Day 16 - Python datetime </h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -7,31 +7,31 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-  <sub>Author:
+  <sub>Yazar:
   <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-  <small>Second Edition: July, 2021</small>
+  <small>Second Edition: Temmuz, 2021</small>
   </sub>
 
 </div>
 
-[<< Day 15](../15_Day_Python_type_errors/15_python_type_errors.md) | [Day 17 >>](../17_Day_Exception_handling/17_exception_handling.md)
+[<< 15. Gün](../15_Day_Python_type_errors/15_python_type_errors.md) | [17. Gün >>](../17_Day_Exception_handling/17_exception_handling.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
-- [📘 Day 16](#-day-16)
+- [📘 16. Gün](#-day-16)
   - [Python *datetime*](#python-datetime)
     - [Getting *datetime* Information](#getting-datetime-information)
-    - [Formatting Date Output Using *strftime*](#formatting-date-output-using-strftime)
-    - [String to Time Using *strptime*](#string-to-time-using-strptime)
-    - [Using *date* from *datetime*](#using-date-from-datetime)
+    - [*strftime* Kullanarak Tarih Çıktısını Formatlamak](#formatting-date-output-using-strftime)
+    - [*strptime* Kullanarak String'i Zamana Çevirmek](#string-to-time-using-strptime)
+    - [*datetime* Modülünden *date*'i Kullanmak](#using-date-from-datetime)
     - [Time Objects to Represent Time](#time-objects-to-represent-time)
     - [Difference Between Two Points in Time Using](#difference-between-two-points-in-time-using)
     - [Difference Between Two Points in Time Using *timedelta*](#difference-between-two-points-in-time-using-timedelta)
-  - [💻 Exercises: Day 16](#-exercises-day-16)
-# 📘 Day 16
+  - [💻 Alıştırmalar: 16. Gün](#-exercises-day-16)
+# 📘 16. Gün
 
 ## Python *datetime*
 
-Python has got _datetime_ module to handle date and time.
+Python'da tarih ve zaman işlemleri için _datetime_ modülü kullanılır.
 
 ```py
 import datetime
@@ -78,7 +78,7 @@ print(f'{day}/{month}/{year}, {hour}:{minute}')  # 1/1/2020, 0:0
 
 ```
 
-Formatting date time using *strftime* method and the documentation can be found [here](https://strftime.org/).
+*strftime* Kullanarak Tarih Çıktısını Formatlama dokümantasyonuna [buradan](https://strftime.org/) erişebilirsiniz.
 
 ```py
 from datetime import datetime
@@ -104,8 +104,8 @@ Here are all the _strftime_ symbols we use to format time. An example of all the
 
 ![strftime](../images/strftime.png)
 
-### String to Time Using *strptime*
-Here is a [documentation](https://www.programiz.com/python-programming/datetime/strptimet) hat helps to understand the format. 
+### *strptime* Kullanarak String'i Zamana Çevirmek
+Bu [dokümantasyon](https://www.programiz.com/python-programming/datetime/strptimet) formatı anlamanıza yardımcı olacaktır. 
 
 ```py
 from datetime import datetime
@@ -120,7 +120,7 @@ date_string = 5 December, 2019
 date_object = 2019-12-05 00:00:00
 ```
 
-### Using *date* from *datetime*
+### *datetime* Modülünden *date*'i Kullanmak
 
 ```py
 from datetime import date
@@ -191,18 +191,18 @@ print("t3 =", t3)
 
 🌕 You are an extraordinary. You are 16 steps a head to your way to greatness. Now do some exercises for your brain and muscles.
 
-## 💻 Exercises: Day 16
+## 💻 Alıştırmalar: 16. Gün
 
-1. Get the current day, month, year, hour, minute and timestamp from datetime module
-1. Format the current date using this format: "%m/%d/%Y, %H:%M:%S")
-1. Today is 5 December, 2019. Change this time string to time.
-1. Calculate the time difference between now and new year.
-1. Calculate the time difference between 1 January 1970 and now.
-1. Think, what can you use the datetime module for? Examples:
+1. datetime modülünden timestamp'ı kullanarak şu anki gün, ay, yıl, saat, dakika bilgisini elde edin.
+1. Şu anki tarihi "%m/%d/%Y, %H:%M:%S" formatına getirin.
+1. Bugün 5 Aralık 2019(5 December, 2019). Bu tarih stringini time'a çevirin.
+1. Yeni yıl ve bugün arasındaki tarih farkını bulun.
+1. Bugün ve 1 Ocak 1970 arasındaki tarih farkını bulun.
+1. datetime modülünü ne için kullanabileceğinizi düşünün. Örnekler:
    - Time series analysis
    - To get a timestamp of any activities in an application
    - Adding posts on a blog 
 
-🎉 CONGRATULATIONS ! 🎉
+🎉 TEBRİKLER ! 🎉
 
-[<< Day 15](../15_Day_Python_type_errors/15_python_type_errors.md) | [Day 17 >>](../17_Day_Exception_handling/17_exception_handling.md)
+[<< 15. Gün](../15_Day_Python_type_errors/15_python_type_errors.md) | [17. Gün >>](../17_Day_Exception_handling/17_exception_handling.md)

@@ -9,29 +9,30 @@
 
 <sub>Yazar:
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Second Edition: Temmuz, 2021</small>
+<small> İkinci Versiyon: Temmuz, 2021</small>
 </sub>
 </div>
 
-[<< 2. Gün](../02_Day_Variables_builtin_functions/02_variables_builtin_functions.md) | [Day 4 >>](../04_Day_Strings/04_strings.md)
+[<< 2. Gün](../02_Day_Variables_builtin_functions/02_variables_builtin_functions.md) | [4. Gün >>](../04_Day_Strings/04_strings.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
 - [📘 3. Gün](#-day-3)
-  - [Boolean](#boolean)
+  - [Booleanlar](#boolean)
   - [Operatörler](#operators)
     - [Atama Operatörleri](#assignment-operators)
     - [Aritmetik Operatörler:](#arithmetic-operators)
     - [Karşılaştırma Operatörleri](#comparison-operators)
     - [Mantıksal Operatörler](#logical-operators)
-  - [💻 Exercises - 3. Gün](#-exercises---day-3)
+  - [💻 Alıştırmalar - 3. Gün](#-exercises---day-3)
 
 # 📘 3. Gün
 
-## Boolean
+## Booleanlar
 
-A boolean data type represents one of the two values: _True_ or _False_. The use of these data types will be clear once we start using the comparison operator. The first letter **T** for True and **F** for False should be capital unlike JavaScript.
-**Example: Boolean Values**
+Boolean veri tipi _True (doğru)_ veya _False (yanlış)_ değerini alır. Bu veri tiplerinin kullanımını karşılaştırma operatörlerini kullanmaya başlayınca daha iyi anlayacaksın. JavaScript'in aksine Python'da True ve False değerlerinin baş harfleri **T** ve **F** büyük harf olmak zorundadır.
+
+**Example: Boolean Değerler**
 
 ```py
 print(True)
@@ -40,11 +41,11 @@ print(False)
 
 ## Operatörler
 
-Python language supports several types of operators. In this section, we will focus on few of them.
+Python farklı çeşitlerde operatörleri destekler. Bu bölümde bunlardan bazılarına odaklanacağız.
 
 ### Atama Operatörleri
 
-Atama operatörleri, değişkenlere değer atamak için kullanılır. Let us take = as an example. Equal sign in mathematics shows that two values are equal, however in Python it means we are storing a value in a certain variable and we call it assignment or a assigning value to a variable. The table below shows the different types of python assignment operators, [w3school](https://www.w3schools.com/python/python_operators.asp)'dan alınmıştır.
+Atama operatörleri, değişkenlere değer atamak için kullanılır. = operatörünü örnek alalım. Matematikte eşittir işareti (=), iki değerin eşit olduğunu gösterir; ancak Python’da bir değeri belirli bir değişkene atadığımızı ifade eder. Buna atama (assignment) veya değeri bir değişkene atama denir. Aşağıdaki tablo farklı python atama operatörlerini gösteriyor. Tablo, [w3school](https://www.w3schools.com/python/python_operators.asp)'dan alınmıştır.
 
 ![Assignment Operators](../images/assignment_operators.png)
 
@@ -55,7 +56,7 @@ Atama operatörleri, değişkenlere değer atamak için kullanılır. Let us tak
 - Çarpma(*): a * b
 - Bölme(/): a / b
 - Mod alma(%): a % b
-- Floor division(//): a // b
+- Tam/kalansız bölme (floor division)(//): a // b
 - Üs alma(**): a ** b
 
 ![Arithmetic Operators](../images/arithmetic_operators.png)
@@ -63,19 +64,19 @@ Atama operatörleri, değişkenlere değer atamak için kullanılır. Let us tak
 **Örnek:Integerlar**
 
 ```py
-# Arithmetic Operations in Python
-# Integers
+# Python'da aritmetik operatörler
+# Integerlar
 
-print('Toplama: ', 1 + 2)        # 3
-print('Çıkarma: ', 2 - 1)     # 1
-print('Çarpma: ', 2 * 3)  # 6
-print ('Bölme: ', 4 / 2)       # 2.0  Python'da bölme floating sayı döner
-print('Bölme: ', 6 / 2)        # 3.0         
-print('Bölme: ', 7 / 2)        # 3.5
-print('Kalansız bölme: ', 7 // 2)   # 3,  gives without the floating number or without the remaining
-print ('Kalansız bölme: ',7 // 3)   # 2
-print('Mod alma: ', 3 % 2)         # 1, Kalanı verir
-print('Üs alma: ', 2 ** 3) # 9 it means 2 * 2 * 2
+print('Addition: ', 1 + 2)        # 3
+print('Subtraction: ', 2 - 1)     # 1
+print('Multiplication: ', 2 * 3)  # 6
+print ('Division: ', 4 / 2)       # 2.0  Python'da bölme floating sayı döner
+print('Division: ', 6 / 2)        # 3.0         
+print('Division: ', 7 / 2)        # 3.5
+print('Floor divsiion: ', 7 // 2)   # 3,  kalan olmadan tam sayı bölümü verir
+print ('Floor divsiion: ',7 // 3)   # 2
+print('Modulus: ', 3 % 2)         # 1, Kalanı verir
+print('Exponention: ', 2 ** 3) # 9  2 * 2 * 2 demek
 ```
 
 **Örnek:Floatlar**
@@ -94,32 +95,32 @@ print('Complex number: ', 1 + 1j)
 print('Multiplying complex numbers: ',(1 + 1j) * (1 - 1j))
 ```
 
-Let's declare a variable and assign a number data type. I am going to use single character variable but remember do not develop a habit of declaring such types of variables. Variable names should be all the time mnemonic.
+Bir değişken tanımlayalım ve ona bir sayı (number) veri tipi atayalım. Ben tek karakterli bir değişken kullanacağım, ancak unutmayın: Bu tür değişkenler tanımlama alışkanlığı edinmeyin. Değişken adları her zaman hatırlatıcı (mnemonic) olmalıdır.
 
 **Örnek:**
 
 ```python
-# Declaring the variable at the top first
+# Değişkenleri tanımlama
 
-a = 3 # a is a variable name and 3 is an integer data type
-b = 2 # b is a variable name and 3 is an integer data type
+a = 3 # a bir değişken ismi ve 3 bir integer veri tipi
+b = 2 # b bir değişken ismi ve 2 bir integer veri tipi
 
-# Arithmetic operations and assigning the result to a variable
-toplam = a + b
-fark = a - b
-carpim = a * b
-bolum = a / b
-kalan = a % b
+# Aritmetik işlemlerin sonuçlarını değişkenlere atama
+total = a + b
+diff = a - b
+product = a * b
+division = a / b
+reminder = a % b
 floor_division = a // b
 exponential = a ** b
 
 # I should have used sum instead of total but sum is a built-in function - try to avoid overriding built-in functions
 print(total) # if you do not label your print with some string, you never know where the result is coming from
-print('a + b = ', toplam)
-print('a - b = ', fark)
-print('a * b = ', carpim)
-print('a / b = ', bolum)
-print('a % b = ', kalan)
+print('a + b = ', total)
+print('a - b = ', diff)
+print('a * b = ', product)
+print('a / b = ', division)
+print('a % b = ', reminder)
 print('a // b = ', floor_division)
 print('a ** b = ', exponentiation)
 ```
@@ -148,50 +149,49 @@ print('bolum: ', div)
 print('kalan: ', remainder)
 ```
 
-Let us start start connecting the dots and start making use of what we already know to calculate (area, volume,density,  weight, perimeter, distance, force).
-
+Noktalardan birleştirmeye başlayalım ve bildiklerimizi kullanarak alan, hacim, yoğunluk, ağırlık, çevre, mesafe, kuvvet hesaplamaları yapalım.
 **Örnek:**
 
 ```py
 # Dairenin alanını hesaplama
-yaricap = 10                                 # dairenin yarıçapı
-daire_alani = 3.14 * radius ** 2         # two * sign means exponent or power
+radius = 10                                 # dairenin yarıçapı
+area_of_circle = 3.14 * radius ** 2         # ** işareti üs alma demek
 print('Area of a circle:', area_of_circle)
 
 # Dikdörtgenin alanını hesaplama
-uzunluk = 10
-genislik = 20
-dikdortgen_alani = uzunluk * genislik
-print('Dikdörtgenin alanı:', dikdortgen_alani)
+height = 10
+width = 20
+area_of_rectangle = height * width
+print('Area of a rectangle:', area_of_rectangle)
 
 # Bir nesnenin ağırlığını hesaplama
-kutle = 75
-yercekimi = 9.81
-agirlik = kutle * yercekimi
-print(agirlik, 'N')                         # Adding unit to the weight
-
+mass = 75
+gravity = 9.81
+weight = mass * gravity
+print(weight, 'N')                         # Ağırlığı birimiyle yazdırma
 # Bir sıvının yoğunluğunu hesaplama
-kutle = 75 # in Kg
-hacim = 0.075 # in cubic meter
-yogunluk = kutle / hacim # 1000 Kg/m^3
+mass = 75 # Kg cinsinden
+volume = 0.075 # metreküp
+density = mass / volume # 1000 Kg/m^3
 
 ```
 
 ### Karşılaştırma Operatörleri
 
-In programming we compare values, we use comparison operators to compare two values. We check if a value is greater or less or equal to other value. The following table shows Python comparison operators which was taken from [w3shool](https://www.w3schools.com/python/python_operators.asp).
+Programlamada sıkça değerleri karşılaştırırız ve iki değeri karşılaştırmak için karşılaştırma operatörlerini (comparison operators) kullanırız.
+Bir değerin diğer değerden büyük, küçük veya eşit olup olmadığını kontrol ederiz. Aşağıdaki tablo, Python karşılaştırma operatörlerini göstermektedir ve [w3shool](https://www.w3schools.com/python/python_operators.asp)’dan alınmıştır. 
 
 ![Comparison Operators](../images/comparison_operators.png)
 **Örnek: Karşılaştırma Operatörleri**
 
 ```py
-print(3 > 2)     # True, çünkü 3 is greater than 2
-print(3 >= 2)    # True, çünkü 3 is greater than 2
-print(3 < 2)     # False,  çünkü 3 is greater than 2
-print(2 < 3)     # True, çünkü 2 is less than 3
-print(2 <= 3)    # True, çünkü 2 is less than 3
-print(3 == 2)    # False, çünkü 3 is not equal to 2
-print(3 != 2)    # True, çünkü 3 is not equal to 2
+print(3 > 2)     # True, çünkü 3, 2'den büyük
+print(3 >= 2)    # True, çünkü 3, 2'den büyük
+print(3 < 2)     # False, çünkü 3, 2'den büyük
+print(2 < 3)     # True, çünkü 2, 3'ten küçük
+print(2 <= 3)    # True, çünkü 2, 3'ten küçük
+print(3 == 2)    # False, çünkü 3, 2'ye eşit değil
+print(3 != 2)    # True, çünkü 3, 2'ye eşit değil
 print(len('mango') == len('avocado'))  # False
 print(len('mango') != len('avocado'))  # True
 print(len('mango') < len('avocado'))   # True
@@ -201,33 +201,33 @@ print(len('tomato') == len('potato'))  # True
 print(len('python') > len('dragon'))   # False
 
 
-# Comparing something gives either a True or False
+# Bir şeyleri karşılaştırmak True veya False değerini verir.
 
 print('True == True: ', True == True)
 print('True == False: ', True == False)
 print('False == False:', False == False)
 ```
 
-In addition to the above comparison operator Python uses:
+Python, karşılaştırma operatörlerine ek olarak bunları kullanır:
 
-- _is_: Returns true if both variables are the same object(x is y)
-- _is not_: Returns true if both variables are not the same object(x is not y)
-- _in_: Returns True if the queried list contains a certain item(x in y)
-- _not in_: Returns True if the queried list doesn't have a certain item(x in y)
+- _is_: İki değişken de aynı objeyse true döner (x is y)
+- _is not_: Değişkenler aynı obje değilse true döner(x is not y)
+- _in_: Sorgulanan list belirli bir öğeyi içeriyorsa true döner (x in y)
+- _not in_: Sorgulanan liste belirli bir öğeyi içermiyorsa true döner (x not in y)
 
 ```py
-print('1 is 1', 1 is 1)                   # True - because the data values are the same
-print('1 is not 2', 1 is not 2)           # True - because 1 is not 2
+print('1 is 1', 1 is 1)                   # True - çünkü veri değerleri aynı
+print('1 is not 2', 1 is not 2)           # True - çünkü 1, 2 değil
 print('A in Asabeneh', 'A' in 'Asabeneh') # True - A found in the string
 print('B in Asabeneh', 'B' in 'Asabeneh') # False - there is no uppercase B
-print('coding' in 'coding for all') # True - because coding for all has the word coding
+print('coding' in 'coding for all') # True - çünkü coding for all içinde coding kelimesi var
 print('a in an:', 'a' in 'an')      # True
 print('4 is 2 ** 2:', 4 is 2 ** 2)   # True
 ```
 
 ### Mantıksal Operatörler
 
-Unlike other programming languages python uses keywords _and_, _or_ and _not_ for logical operators. Logical operators are used to combine conditional statements:
+Diğer programlama dillerinin aksine python mantıksal operatörler için _and_, _or_ and _not_ kelimelerini kullanır. Mantıksal operatörler, mantıksal ifadeleri bağlamak için kullanılır.
 
 ![Logical Operators](../images/logical_operators.png)
 
@@ -248,14 +248,14 @@ print(not not False) # False
 
 ```
 
-🌕 You have boundless energy. You have just completed day 3 challenges and you are three steps ahead on your way to greatness. Now do some exercises for your brain and your muscles.
+🌕 Sınırsız enerjin var. 3. günün challenge’larını tamamladın ve mükemmellik yolunda üç adım ileridesin. Şimdi beynin ve kasların için biraz alıştırma yapalım.
 
-## 💻 Exercises - 3. Gün
+## 💻 Alıştırmalar - 3. Gün
 
-1. Declare your age as integer variable
-2. Declare your height as a float variable
-3. Declare a variable that store a complex number
-4. Write a script that prompts the user to enter base and height of the triangle and calculate an area of this triangle (area = 0.5 x b x h).
+1. Yaşını bir integer değişken olarak ata
+2. Boyunu bir float değişken olarak ata
+3. Karmaşık sayılar tutan bir değişken tanımla
+4. Kullanıcıdan üçgenin tabanını ve yüksekliğini alıp alanını hesaplayan kodu yaz (alan = taban * yükseklik / 2)
 
 ```py
     Enter base: 20
@@ -263,7 +263,7 @@ print(not not False) # False
     The area of the triangle is 100
 ```
 
-5. Write a script that prompts the user to enter side a, side b, and side c of the triangle. Calculate the perimeter of the triangle (perimeter = a + b + c).
+5. Kullanıcıdan bir üçgenin a, b ve c kenarlarını girdi alıp çevresini hesaplayan kodu yaz (çevre = a + b + c)
 
 ```py
 Enter side a: 5
@@ -272,22 +272,22 @@ Enter side c: 3
 The perimeter of the triangle is 12
 ```
 
-6. Get length and width of a rectangle using prompt. Calculate its area (area = length x width) and perimeter (perimeter = 2 x (length + width))
-7. Get radius of a circle using prompt. Calculate the area (area = pi x r x r) and circumference (c = 2 x pi x r) where pi = 3.14.
-8. Calculate the slope, x-intercept and y-intercept of y = 2x -2
-9. Slope is (m = y2-y1/x2-x1). Find the slope and [Euclidean distance](https://en.wikipedia.org/wiki/Euclidean_distance#:~:text=In%20mathematics%2C%20the%20Euclidean%20distance,being%20called%20the%20Pythagorean%20distance.) between point (2, 2) and point (6,10) 
-10. Compare the slopes in tasks 8 and 9.
-11. Calculate the value of y (y = x^2 + 6x + 9). Try to use different x values and figure out at what x value y is going to be 0.
-12. Find the length of 'python' and 'dragon' and make a falsy comparison statement.
-13. Use _and_ operator to check if 'on' is found in both 'python' and 'dragon'
-14. _I hope this course is not full of jargon_. Use _in_ operator to check if _jargon_ is in the sentence.
-15. There is no 'on' in both dragon and python
-16. Find the length of the text _python_ and convert the value to float and convert it to string
-17. Even numbers are divisible by 2 and the remainder is zero. How do you check if a number is even or not using python?
-18. Check if the floor division of 7 by 3 is equal to the int converted value of 2.7.
+6. Kullanıcıdan bir dikdörtgenin enini ve boyunu girdi alıp alanını ve çevresini hesaplayan kodu yaz (alan = en x boy) ve (çevre = 2 x (en + boy)
+7. Kullanıcıdan bir dairenin yarıçapını girmesini isteyen bir script yaz. Ardından dairenin alanını ve çevresini hesapla (alan = pi x r x r) ve (çevre = 2 x pi x r), pi = 3.14
+8. y = 2x - 2 doğrusu için eğim , x eksenini kestiği nokta ve y eksenini kestiği nokta değerlerini hesaplayın.
+9. Eğim formülü (m = y2-y1/x2-x1). (2, 2) ve (6,10) noktalarının eğimini ve [Öklid uzaklığını](https://en.wikipedia.org/wiki/Euclidean_distance#:~:text=In%20mathematics%2C%20the%20Euclidean%20distance,being%20called%20the%20Pythagorean%20distance.)  bul
+10. 8. ve 9. alıştırmadaki eğimleri kıyasla
+11. (y = x^2 + 6x + 9) y değerini hesapla. Farklı x değerleri deneyerek hangi x değerinin y'yi 0 yaptığını bul
+12. 'python' ve 'dragon' değerlerinin uzunluklarını hesapla ve yanlış bir karşılaştırma ifadesi yaz
+13. and operatörünü kullanarak 'on' ifadesinin hem 'python' hem de 'dragon' içinde bulunup bulunmadığını kontrol et
+14. _I hope this course is not full of jargon_.cümlesinde in operatörünü kullanarak _jargon_ kelimesinin cümlede olup olmadığını kontrol edin.
+15. 'on' ifadesi ne 'dragon' ne de 'python' içinde yoktur anlamına gelen mantıksal ifadeyi yaz
+16. _python_ metninin uzunluğunu bul, ardından değeri float’a çevir ve daha sonra string’e dönüştür
+17. Çift sayılar 2’ye bölündüğünde kalan 0’dır. Python kullanarak bir sayının çift olup olmadığını nasıl kontrol edersin?
+18. 7 sayısının 3’e bölünmesinin taban bölmesi (floor division) değerinin, 2.7’nin int’e çevrilmiş değerine eşit olup olmadığını kontrol et
 19. Check if type of '10' is equal to type of 10
-20. Check if int('9.8') is equal to 10
-21. Writ a script that prompts the user to enter hours and rate per hour. Calculate pay of the person?
+20. '10' değerinin tipi ile 10 değerinin tipinin eşit olup olmadığını kontrol et
+21. Kullanıcıdan çalışma saatini ve saat başı ücreti girmesini isteyen bir Python scripti yaz ve kişinin maaşını hesapla
 
 ```py
 Enter hours: 40
@@ -295,14 +295,14 @@ Enter rate per hour: 28
 Your weekly earning is 1120
 ```
 
-22. Write a script that prompts the user to enter number of years. Calculate the number of seconds a person can live. Assume a person can live hundred years
+22. Kullanıcıdan kaç yıl yaşadığını girdi alan bir kod yaz. Bu kişinin kaç yıl yaşadığını hesapla.
 
 ```py
 Enter number of years you have lived: 100
 You have lived for 3153600000 seconds.
 ```
 
-23. Write a Python script that displays the following table
+23. Aşağıdaki tabloyu yazdıran bir Python kodu yazın
 
 ```py
 1 1 1 1 1

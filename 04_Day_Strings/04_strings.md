@@ -9,7 +9,7 @@
 
 <sub>Yazar:
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Second Edition: Temmuz, 2021</small>
+<small> İkinci Versiyon: Temmuz, 2021</small>
 </sub>
 
 </div>
@@ -20,42 +20,42 @@
 
 - [4. Gün](#day-4)
   - [Stringler](#strings)
-    - [Creating a String](#creating-a-string)
-    - [String Concatenation](#string-concatenation)
+    - [String Oluşturmak](#creating-a-string)
+    - [Stringleri Birleştirme (Concatenation)](#string-concatenation)
     - [Stringlerde Kaçış Dizileri](#escape-sequences-in-strings)
-    - [String formatting](#string-formatting)
-      - [Old Style String Formatting (% Operator)](#old-style-string-formatting--operator)
-      - [New Style String Formatting (str.format)](#new-style-string-formatting-strformat)
-      - [String Interpolation / f-Strings (Python 3.6+)](#string-interpolation--f-strings-python-36)
-    - [Python Strings as Sequences of Characters](#python-strings-as-sequences-of-characters)
+    - [String Formatlama](#string-formatting)
+      - [Eski Yöntemle String Formatlama (% Operatörü)](#old-style-string-formatting--operator)
+      - [Yeni Yöntemle String Formatlama (str.format)](#new-style-string-formatting-strformat)
+      - [Stringe Değer Yerleştirme / f-Stringler (Python 3.6+)](#string-interpolation--f-strings-python-36)
+    - [Karakter Dizileri Olarak Python Stringleri](#python-strings-as-sequences-of-characters)
       - [Unpacking Characters](#unpacking-characters)
-      - [Accessing Characters in Strings by Index](#accessing-characters-in-strings-by-index)
-      - [Slicing Python Strings](#slicing-python-strings)
-      - [Reversing a String](#reversing-a-string)
-      - [Skipping Characters While Slicing](#skipping-characters-while-slicing)
+      - [Stringdeki Karakterlere Indeksle Erişmek](#accessing-characters-in-strings-by-index)
+      - [Python Stringlerini Bölme (Slicing)](#slicing-python-strings)
+      - [Bir String'i Tersine Çevirme](#reversing-a-string)
+      - [Stringi Bölerken Karakterleri Atlama](#skipping-characters-while-slicing)
     - [String Metodları](#string-methods)
-  - [💻 Exercises - 4. Gün](#-exercises---day-4)
+  - [💻 Alıştırmalar - 4. Gün](#-exercises---day-4)
 
 # 4. Gün
 
 ## Stringler
 
-Text is a string data type. Any data type written as text is a string. Any data under single, double or triple quote are strings. There are different string methods and built-in functions to deal with string data types. To check the length of a string use the len() method.
+Metinler string veri tipidir. Metin olarak yazılmış her şey stringdir. Tek, çift veya üçlü tırnak içinde yazılmış her veri stringdir. String verileri işlemek için farklı metodlar ve built-in fonksiyonlar vardır. Bir stringin uzunluğunu elde etmek için len() metodu kullanılır.
 
-### Creating a String
+### String Oluşturmak
 
 ```py
-letter = 'P'                # A string could be a single character or a bunch of texts
+letter = 'P'                # Stringler tek bir karakter veya uzun metinler olabilir
 print(letter)               # P
 print(len(letter))          # 1
-greeting = 'Hello, World!'  # String could be made using a single or double quote,"Hello, World!"
+greeting = 'Hello, World!'  # Stringler tek veya çift tırnakla oluşturulabilir. "Hello, World!"
 print(greeting)             # Hello, World!
 print(len(greeting))        # 13
 sentence = "I hope you are enjoying 30 days of Python Challenge"
 print(sentence)
 ```
 
-Multiline string is created by using triple single (''') or triple double quotes ("""). See the example below.
+Çok satırlı stringler üçlü tek tırnak (''') veya üçlü çift tırnak (""") kullanarak oluşturulur. Aşağıdaki örneğe bakalım
 
 ```py
 multiline_string = '''I am a teacher and enjoy teaching.
@@ -63,16 +63,16 @@ I didn't find anything as rewarding as empowering people.
 That is why I created 30 days of python.'''
 print(multiline_string)
 
-# Another way of doing the same thing
+# Aynısını oluşturmanın farklı bir yolu
 multiline_string = """I am a teacher and enjoy teaching.
 I didn't find anything as rewarding as empowering people.
 That is why I created 30 days of python."""
 print(multiline_string)
 ```
 
-### String Concatenation
+### Stringleri Birleştirme (Concatenation)
 
-We can connect strings together. Merging or connecting strings is called concatenation. See the example below:
+Stringleri birbirine bağlayabiliriz. Stringleri birleştirmeye veya bağlamaya concatenation denir. Aşağıdaki örnekteki gibi:
 
 ```py
 first_name = 'Asabeneh'
@@ -80,7 +80,7 @@ last_name = 'Yetayeh'
 space = ' '
 full_name = first_name  +  space + last_name
 print(full_name) # Asabeneh Yetayeh
-# Checking the length of a string using len() built-in function
+# Stringin uzunluğunu len() built-in fonksiyonuyla bulma
 print(len(first_name))  # 8
 print(len(last_name))   # 7
 print(len(first_name) > len(last_name)) # True
@@ -97,18 +97,17 @@ Python ve diğer programlama dillerinde \ ve sonrasında gelen bir karakter kaç
 - \\': Tek tırnak (')
 - \\": Çift tırnak (")
 
-Now, let us see the use of the above escape sequences with examples.
+Şimdi bu kaçış dizilerini örnekleriyle görelim:
 
 ```py
-print('Umarım herkes Python Challenge'dan keyif alıyordur.\nAre you ?') # line break
-print('Günler\tKonular\tExercises') # adding tab space or 4 spaces 
+print('Umarım herkes Python Challenge'dan keyif alıyordur.\nAre you ?') # yeni satır
+print('Günler\tKonular\tExercises') # tab boşluğu yani 4 boşluk ekleme 
 print('1. Gün\t5\t5')
 print('2. Gün\t6\t20')
 print('3. Gün\t5\t23')
 print('4. Gün\t1\t35')
-print('This is a backslash  symbol (\\)') # To write a backslash
-print('In every programming language it starts with \"Hello, World!\"') # to write a double quote inside a single quote
-
+print('This is a backslash  symbol (\\)') # ters çizgi yazabilmek için
+print('In every programming language it starts with \"Hello, World!\"') # tek tırnakların içine çift tırnak yazabilmek için
 # çıktı
 Umarım herkes Python Challenge'dan keyif alıyordur.
 Are you ?
@@ -121,40 +120,39 @@ This is a backslash  symbol (\)
 In every programming language it starts with "Hello, World!"
 ```
 
-### String formatting
+### String Formatlama
 
-#### Old Style String Formatting (% Operator)
+#### Eski Yöntemle String Formatlama (% Operatörü)
 
-In Python there are many ways of formatting strings. In this section, we will cover some of them.
-The "%" operator is used to format a set of variables enclosed in a "tuple" (a fixed size list), together with a format string, which contains normal text together with "argument specifiers", special symbols like "%s", "%d", "%f", "%.<small>number of digits</small>f".
+Python’da stringleri biçimlendirmenin birçok yolu vardır. Bu bölümde bazı yöntemleri ele alacağız. % operatörü, tuple (sabit boyutlu list) içinde yer alan değişkenleri, bir format string ile birlikte biçimlendirmek için kullanılır. Format string, normal metin ile birlikte “argüman belirleyicileri” (argument specifiers) içerir. Bu özel semboller şunlardır: %s, %d, %f, %. <small>basamak sayısı></small>f
 
-- %s - String (or any object with a string representation, like numbers)
+- %s - String
 - %d - Integers
 - %f - Floating point numbers
-- "%.<small>number of digits</small>f" - Floating point numbers with fixed precision
+- "%.<small>basamak sayısı</small>f" - belirli bir ondalık basamak sayısıyla floating point numbers
 
 ```py
-# Strings only
+# Sadece string
 ad = 'Asabeneh'
 soyad = 'Yetayeh'
 dil = 'Python'
 formated_string = 'I am %s %s. I teach %s' %(first_name, last_name, language)
 print(formated_string)
 
-# Strings  and numbers
-yaricap = 10
+# Stringler ve sayılar
+radius = 10
 pi = 3.14
-alan = pi * yaricap ** 2
-formated_string = 'The area of circle with a radius %d is %.2f.' %(radius, area) # 2 refers the 2 significant digits after the point
+area = pi * radius ** 2
+formated_string = 'The area of circle with a radius %d is %.2f.' %(radius, area) # virgülden sonra 2 basamak
 
 python_libraries = ['Django', 'Flask', 'NumPy', 'Matplotlib','Pandas']
 formated_string = 'The following are python libraries:%s' % (python_libraries)
 print(formated_string) # "The following are python libraries:['Django', 'Flask', 'NumPy', 'Matplotlib','Pandas']"
 ```
 
-#### New Style String Formatting (str.format)
+#### Yeni Yöntemle String Formatlama (str.format)
 
-This formatting is introduced in Python version 3.
+Bu yöntem Python version 3'te tanıtıldı.
 
 ```py
 
@@ -169,7 +167,7 @@ b = 3
 print('{} + {} = {}'.format(a, b, a + b))
 print('{} - {} = {}'.format(a, b, a - b))
 print('{} * {} = {}'.format(a, b, a * b))
-print('{} / {} = {:.2f}'.format(a, b, a / b)) # limits it to two digits after decimal
+print('{} / {} = {:.2f}'.format(a, b, a / b)) # virgülden sonra iki basamak sınırlandırır
 print('{} % {} = {}'.format(a, b, a % b))
 print('{} // {} = {}'.format(a, b, a // b))
 print('{} ** {} = {}'.format(a, b, a ** b))
@@ -187,14 +185,14 @@ print('{} ** {} = {}'.format(a, b, a ** b))
 yaricap = 10
 pi = 3.14
 alan = pi * yaricap ** 2
-formated_string = 'The area of a circle with a radius {} is {:.2f}.'.format(radius, area) # 2 digits after decimal
+formated_string = 'The area of a circle with a radius {} is {:.2f}.'.format(radius, area) # virgülden sonra 2 basamak
 print(formated_string)
 
 ```
 
-#### String Interpolation / f-Strings (Python 3.6+)
+#### Stringe Değer Yerleştirme/ f-Stringler (Python 3.6+)
 
-Another new string formatting is string interpolation, f-strings. Strings start with f and we can inject the data in their corresponding positions.
+Bir diğer yeni string biçimlendirme yöntemi string interpolasyonu (f-string)’tir. F-string’ler f harfi ile başlar ve verileri ilgili konumlarına yerleştirebiliriz.
 
 ```py
 a = 4
@@ -208,15 +206,15 @@ print(f'{a} // {b} = {a // b}')
 print(f'{a} ** {b} = {a ** b}')
 ```
 
-### Python Strings as Sequences of Characters
+### Karakter Dizileri Olarak Python Stringleri
 
-Python strings are sequences of characters, and share their basic methods of access with other Python ordered sequences of objects – lists and tuples. The simplest way of extracting single characters from strings (and individual members from any sequence) is to unpack them into corresponding variables.
+Python string’leri, karakter dizileri (sequences of characters) şeklindedir ve temel erişim yöntemlerini, diğer Python sıralı nesne dizileri (listler ve tuplelar) ile aynıdır. String’lerden tek bir karakteri (veya herhangi bir dizideki bireysel öğeyi) çıkarmanın en basit yolu, bunları **ilgili değişkenlere açmak (unpack)**tır.
 
 #### Unpacking Characters
 
 ```
-dil = 'Python'
-a,b,c,d,e,f = language # unpacking sequence characters into variables
+language = 'Python'
+a,b,c,d,e,f = language # karakter dizisini değişkenlere unpacking etme
 print(a) # P
 print(b) # y
 print(c) # t
@@ -225,14 +223,14 @@ print(e) # o
 print(f) # n
 ```
 
-#### Accessing Characters in Strings by Index
+#### Stringdeki Karakterlere Indeksle Erişmek
 
-In programming counting starts from zero. Therefore the first letter of a string is at zero index and the last letter of a string is the length of a string minus one.
+Programlamada saymaya sıfırdan başlanır. Bu yüzden stringin ilk harfi 0. indekstedir ve son harfi string uzunluğunun 1 eksiği indekstedir.
 
 ![String index](../images/string_index.png)
 
 ```py
-dil = 'Python'
+language = 'Python'
 first_letter = language[0]
 print(first_letter) # P
 second_letter = language[1]
@@ -242,7 +240,7 @@ last_letter = language[last_index]
 print(last_letter) # n
 ```
 
-If we want to start from right end we can use negative indexing. -1 is the last index.
+Sağdan başlamak istersek negatif indeksleme kullanabiliriz. -1 son indeksi temsil eder.
 
 ```py
 dil = 'Python'
@@ -252,13 +250,13 @@ second_last = language[-2]
 print(second_last) # o
 ```
 
-#### Slicing Python Strings
+#### Python Stringlerini Bölme (Slicing)
 
-In python we can slice strings into substrings.
+Python'da stringleri alt stringlere (substring) bölebiliriz.
 
 ```py
 dil = 'Python'
-first_three = language[0:3] # starts at zero index and up to 3 but not include 3
+first_three = language[0:3] # 0. indeksten başlayıp 3. indekse kadar devam eder ama 3.yü dahil etmez
 print(first_three) #Pyt
 last_three = language[3:6]
 print(last_three) # hon
@@ -269,18 +267,18 @@ last_three = language[3:]
 print(last_three)   # hon
 ```
 
-#### Reversing a String
+#### Bir String'i Tersine Çevirme
 
-We can easily reverse strings in python.
+Python'da bir stringi kolayca tersine çevirebiliriz.
 
 ```py
-selam = 'Merhaba, Dünya!'
-print(selam[::-1]) # !dlroW ,olleH
+greeting = 'Hello, World!'
+print(greeting[::-1]) # !dlroW ,olleH
 ```
 
-#### Skipping Characters While Slicing
+#### Stringi Bölerken Karakterleri Atlama
 
-It is possible to skip characters while slicing by passing step argument to slice method.
+Slice yöntemine adım (step) argümanı vererek karakterleri atlayarak seçmek mümkündür.
 
 ```py
 dil = 'Python'
@@ -288,18 +286,18 @@ pto = language[0:6:2] #
 print(pto) # Pto
 ```
 
-### String Methods
+### String Metodları
 
-There are many string methods which allow us to format strings. See some of the string methods in the following example:
+Stringleri biçimlendirmemize olanak tanıyan birçok string yöntemi vardır. Aşağıdaki örnekte bazı string yöntemlerini görebilirsiniz:
 
-- capitalize(): Converts the first character of the string to capital letter
+- capitalize(): Stringin ilk karakterini büyük harfe dönüştürür.
 
 ```py
 challenge = 'thirty days of python'
 print(challenge.capitalize()) # 'Thirty days of python'
 ```
 
-- count(): returns occurrences of substring in string, count(substring, start=.., end=..). The start is a starting indexing for counting and end is the last index to count.
+- count(): Bir string içinde bir alt string’in (substring) kaç kez geçtiğini döner: count(substring, start=.., end=..): start saymaya başlanan indeks, end saymanın bittiği son indekstir.
 
 ```py
 challenge = 'thirty days of python'
@@ -308,7 +306,7 @@ print(challenge.count('y', 7, 14)) # 1,
 print(challenge.count('th')) # 2`
 ```
 
-- endswith(): Checks if a string ends with a specified ending
+- endswith(): Stringin belli bir şekilde bitip bitmediğini kontrol eder
 
 ```py
 challenge = 'thirty days of python'
@@ -316,7 +314,7 @@ print(challenge.endswith('on'))   # True
 print(challenge.endswith('tion')) # False
 ```
 
-- expandtabs(): Replaces tab character with spaces, default tab size is 8. It takes tab size argument
+- expandtabs(): Tab karakterini boşluk ile değiştirir. Varsayılan tab boyutu 8'dir. Argüman olarak tab boyutu alır.
 
 ```py
 challenge = 'thirty\tdays\tof\tpython'
@@ -324,7 +322,7 @@ print(challenge.expandtabs())   # 'thirty  days    of      python'
 print(challenge.expandtabs(10)) # 'thirty    days      of        python'
 ```
 
-- find(): Returns the index of the first occurrence of a substring, if not found returns -1
+- find(): Bir alt stringin (substring) ilk geçtiği indeks’i döner, bulunmuyorsa -1 döner.
 
 ```py
 challenge = 'thirty days of python'
@@ -332,7 +330,7 @@ print(challenge.find('y'))  # 5
 print(challenge.find('th')) # 0
 ```
 
-- rfind(): Returns the index of the last occurrence of a substring, if not found returns -1
+- rfind(): Bir alt stringin (substring) son geçtiği indeks’i döner, bulunmuyorsa -1 döner.
 
 ```py
 challenge = 'thirty days of python'
@@ -340,8 +338,7 @@ print(challenge.rfind('y'))  # 16
 print(challenge.rfind('th')) # 17
 ```
 
-- format(): formats string into a nicer output  
-   More about string formatting check this [link](https://www.programiz.com/python-programming/methods/string/format)
+- format(): Stringi daha düzgün bir çıktıya formatlar. String biçimlendirme hakkında daha fazla bilgi için şuraya bakın:[bağlantı (https://www.programiz.com/python-programming/methods/string/format)
 
 ```py
 first_name = 'Asabeneh'
@@ -352,33 +349,33 @@ country = 'Finland'
 sentence = 'I am {} {}. I am a {}. I am {} years old. I live in {}.'.format(first_name, last_name, age, job, country)
 print(sentence) # I am Asabeneh Yetayeh. I am 250 years old. I am a teacher. I live in Finland.
 
-yaricap = 10
+radius = 10
 pi = 3.14
-alan = pi * yaricap ** 2
-sonuc = 'The area of a circle with radius {} is {}'.format(str(radius), str(area))
-print(sonuc) # The area of a circle with radius 10 is 314
+area = pi * radius ** 2
+result = 'The area of a circle with radius {} is {}'.format(str(radius), str(area))
+print(result) # The area of a circle with radius 10 is 314
 ```
 
-- index(): Returns the lowest index of a substring, additional arguments indicate starting and ending index (default 0 and string length - 1). If the substring is not found it raises a valueError. 
+- index(): Bir alt stringin (substring) en düşük indeksini döner. Ek argümanlar, başlangıç ve bitiş indekslerini belirtir (varsayılan değerler: 0 ve string uzunluğu - 1). Eğer alt string bulunamazsa, ValueError hatası verir.
 
 ```py
 challenge = 'thirty days of python'
 sub_string = 'da'
 print(challenge.index(sub_string))  # 7
-print(challenge.index(sub_string, 9)) # error
+print(challenge.index(sub_string, 9)) # hata
 ```
 
-- rindex(): Returns the highest index of a substring, additional arguments indicate starting and ending index (default 0 and string length - 1)
+- rindex(): Bir alt stringin (substring) en yüksek indeksini döner., Ek argümanlar, başlangıç ve bitiş indekslerini belirtir (varsayılan değerler: 0 ve string uzunluğu - 1)
 
 ```py
 challenge = 'thirty days of python'
 sub_string = 'da'
 print(challenge.rindex(sub_string))  # 7
-print(challenge.rindex(sub_string, 9)) # error
+print(challenge.rindex(sub_string, 9)) # hata
 print(challenge.rindex('on', 8)) # 19
 ```
 
-- isalnum(): Checks alphanumeric character
+- isalnum(): Alfanumerik karakterleri kontrol eder
 
 ```py
 challenge = 'ThirtyDaysPython'
@@ -388,24 +385,24 @@ challenge = '30DaysPython'
 print(challenge.isalnum()) # True
 
 challenge = 'thirty days of python'
-print(challenge.isalnum()) # False, space is not an alphanumeric character
+print(challenge.isalnum()) # False, boşluk bir alfanumerik karakter değildir
 
 challenge = 'thirty days of python 2019'
 print(challenge.isalnum()) # False
 ```
 
-- isalpha(): Checks if all string elements are alphabet characters (a-z and A-Z)
+- isalpha(): Stringdeki tüm karakterlerin harf olup olmadığını kontrol eder (a-z ve A-Z)
 
 ```py
 challenge = 'thirty days of python'
-print(challenge.isalpha()) # False, space is once again excluded
+print(challenge.isalpha()) # False, boşluk harf değildir
 challenge = 'ThirtyDaysPython'
 print(challenge.isalpha()) # True
 num = '123'
 print(num.isalpha())      # False
 ```
 
-- isdecimal(): Checks if all characters in a string are decimal (0-9)
+- isdecimal(): Stringdeki tüm karakterlerin rakam olup olmadığını kontrol eder (0-9)
 
 ```py
 challenge = 'thirty days of python'
@@ -415,10 +412,10 @@ print(challenge.isdecimal())  # True
 challenge = '\u00B2'
 print(challenge.isdigit())   # False
 challenge = '12 3'
-print(challenge.isdecimal())  # False, space not allowed
+print(challenge.isdecimal())  # False, boşluk rakam değildir
 ```
 
-- isdigit(): Checks if all characters in a string are numbers (0-9 and some other unicode characters for numbers)
+- isdigit(): Bir stringdeki tüm karakterlerin sayı (0-9 ve bazı diğer unicode sayı karakterleri) olup olmadığını kontrol eder.
 
 ```py
 challenge = 'Thirty'
@@ -429,7 +426,7 @@ challenge = '\u00B2'
 print(challenge.isdigit())   # True
 ```
 
-- isnumeric(): Checks if all characters in a string are numbers or number related (just like isdigit(), just accepts more symbols, like ½)
+- isnumeric(): Bir stringdeki tüm karakterlerin sayılar veya sayı ile ilgili semboller (örneğin ½) olup olmadığını kontrol eder. isdigit() yöntemine benzer, ancak daha fazla sembolü kabul eder.
 
 ```py
 num = '10'
@@ -440,16 +437,16 @@ num = '10.5'
 print(num.isnumeric()) # False
 ```
 
-- isidentifier(): Checks for a valid identifier - it checks if a string is a valid variable name
+- isidentifier(): Geçerli bir identifier (tanımlayıcı) olup olmadığını kontrol eder – yani bir stringin geçerli bir değişken adı olup olmadığını denetler.
 
 ```py
 challenge = '30DaysOfPython'
-print(challenge.isidentifier()) # False, because it starts with a number
+print(challenge.isidentifier()) # False, çünkü sayıyla başlıyor
 challenge = 'thirty_days_of_python'
 print(challenge.isidentifier()) # True
 ```
 
-- islower(): Checks if all alphabet characters in the string are lowercase
+- islower(): Stringdeki tüm karakterlerin küçük harf olup olmadığını kontrol eder
 
 ```py
 challenge = 'thirty days of python'
@@ -458,7 +455,7 @@ challenge = 'Thirty days of python'
 print(challenge.islower()) # False
 ```
 
-- isupper(): Checks if all alphabet characters in the string are uppercase
+- isupper(): Stringdeki tüm karakterlerin büyük harf olup olmadığını kontrol eder
 
 ```py
 challenge = 'thirty days of python'
@@ -467,7 +464,7 @@ challenge = 'THIRTY DAYS OF PYTHON'
 print(challenge.isupper()) # True
 ```
 
-- join(): Returns a concatenated string
+- join(): Birleştirilmiş stringi döner
 
 ```py
 web_tech = ['HTML', 'CSS', 'JavaScript', 'React']
@@ -481,21 +478,21 @@ result = '# '.join(web_tech)
 print(result) # 'HTML# CSS# JavaScript# React'
 ```
 
-- strip(): Removes all given characters starting from the beginning and end of the string
+- strip(): Stringin başından ve sonundan verilen tüm karakterleri kaldırır.
 
 ```py
 challenge = 'thirty days of pythoonnn'
 print(challenge.strip('noth')) # 'irty days of py'
 ```
 
-- replace(): Replaces substring with a given string
+- replace(): Bir alt stringi (substring) verilen başka bir string ile değiştirir.
 
 ```py
 challenge = 'thirty days of python'
 print(challenge.replace('python', 'coding')) # 'thirty days of coding'
 ```
 
-- split(): Splits the string, using given string or space as a separator
+- split(): Stringi, verilen string veya boşluk karakterini ayırıcı (separator) olarak kullanarak böler.
 
 ```py
 challenge = 'thirty days of python'
@@ -504,14 +501,14 @@ challenge = 'thirty, days, of, python'
 print(challenge.split(', ')) # ['thirty', 'days', 'of', 'python']
 ```
 
-- title(): Returns a title cased string
+- title(): Stringi her kelimenin baş harfini büyük harf yaparak döner
 
 ```py
 challenge = 'thirty days of python'
 print(challenge.title()) # Thirty Days Of Python
 ```
 
-- swapcase(): Converts all uppercase characters to lowercase and all lowercase characters to uppercase characters
+- swapcase(): Tüm büyük harfleri küçük harfe, tüm küçük harfleri büyük harfe dönüştürür.
 
 ```py
 challenge = 'thirty days of python'
@@ -520,7 +517,7 @@ challenge = 'Thirty Days Of Python'
 print(challenge.swapcase())  # tHIRTY dAYS oF pYTHON
 ```
 
-- startswith(): Checks if String Starts with the Specified String
+- startswith(): String’in belirtilen string ile başlayıp başlamadığını kontrol eder.
 
 ```py
 challenge = 'thirty days of python'
@@ -530,55 +527,54 @@ challenge = '30 days of python'
 print(challenge.startswith('thirty')) # False
 ```
 
-🌕 You are an extraordinary person and you have a remarkable potential. You have just completed day 4 challenges and you are four steps a head in to your way to greatness. Now do some exercises for your brain and muscles.
+🌕 Olağanüstü birisin ve dikkate değer bir potansiyele sahipsin. 4. günün challenge’larını tamamladın ve mükemmellik yolunda dört adım ilerledin. Şimdi beynin ve kasların için biraz alıştırma yapalım.
 
-## 💻 Exercises - 4. Gün
+## 💻 Alıştırmalar - 4. Gün
 
-1. Concatenate the string 'Thirty', 'Days', 'Of', 'Python' to a single string, 'Thirty Days Of Python'.
-2. Concatenate the string 'Coding', 'For' , 'All' to a single string, 'Coding For All'.
-3. Declare a variable named company and assign it to an initial value "Coding For All".
-4. Print the variable company using _print()_.
-5. Print the length of the company string using _len()_ method and _print()_.
-6. Change all the characters to uppercase letters using _upper()_ method.
-7. Change all the characters to lowercase letters using _lower()_ method.
-8. Use capitalize(), title(), swapcase() methods to format the value of the string _Coding For All_.
-9. Cut(slice) out the first word of _Coding For All_ string.
-10. Check if _Coding For All_ string contains a word Coding using the method index, find or other methods.
-11. Replace the word coding in the string 'Coding For All' to Python.
-12. Change Python for Everyone to Python for All using the replace method or other methods.
-13. Split the string 'Coding For All' using space as the separator (split()) .
-14. "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" split the string at the comma.
-15. What is the character at index 0 in the string _Coding For All_.
-16. What is the last index of the string _Coding For All_.
-17. What character is at index 10 in "Coding For All" string.
-18. Create an acronym or an abbreviation for the name 'Python For Everyone'.
-19. Create an acronym or an abbreviation for the name 'Coding For All'.
-20. Use index to determine the position of the first occurrence of C in Coding For All.
-21. Use index to determine the position of the first occurrence of F in Coding For All.
-22. Use rfind to determine the position of the last occurrence of l in Coding For All People.
-23. Use index or find to find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-24. Use rindex to find the position of the last occurrence of the word because in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-25. Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-26. Find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-27. Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-28. Does '\'Coding For All' start with a substring _Coding_?
-29. Does 'Coding For All' end with a substring _coding_?
-30. '&nbsp;&nbsp; Coding For All &nbsp;&nbsp;&nbsp; &nbsp;' &nbsp;, remove the left and right trailing spaces in the given string.
-31. Which one of the following variables return True when we use the method isidentifier():
+1. 'Thirty', 'Days', 'Of', 'Python' stringlerini birleştirerek tek bir string oluştur: 'Thirty Days Of Python'
+2. 'Coding', 'For', 'All' stringlerini birleştirerek tek bir string oluştur: 'Coding For All'
+3. company adında bir değişken tanımlayın ve başlangıç değeri olarak "Coding For All" ata
+4. company değişkenini _print()_ ile yazdır
+5. company stringinin uzunluğunu _len()_ yöntemi ile bul ve _print()_ ile yazdır
+6. Tüm karakterleri büyük harf yapmak için _upper()_ yöntemini kullan
+7. Tüm karakterleri küçük harf yapmak için _lower()_ yöntemini kullan
+8. _Coding For All_ stringinin değerini capitalize(), title(), swapcase() yöntemleri ile biçimlendir
+9. _Coding For All_ stringinin ilk kelimesini kesip (slice) çıkar
+10. _Coding For All_ stringinde "Coding" kelimesinin olup olmadığını index, find veya diğer yöntemlerle kontrol et
+11. 'Coding For All' stringindeki "Coding" kelimesini "Python" ile değiştir
+12. "Python for Everyone" ifadesini "Python for All" olarak replace veya diğer yöntemlerle değiştir
+13. 'Coding For All' stringini boşluk karakterini ayırıcı olarak kullanarak böl(split())
+14. "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" stringini virgül karakterini ayırıcı olarak kullanarak böl
+15. _Coding For All_ stringinde 0. indeksteki karakter nedir?
+16. _Coding For All_ stringinin son indeksi nedir?
+17. "Coding For All" stringinde 10. indeksteki karakter nedir?
+18. 'Python For Everyone' ifadesi için bir kısaltma (abbreviation) oluştur
+19. 'Coding For All' ifadesi için bir kısaltma (abbreviation) oluştur
+20. "Coding For All" stringinde C harfinin ilk geçtiği pozisyonu bulmak için index yöntemini kullan
+21. "Coding For All" stringinde F harfinin ilk geçtiği pozisyonu bulmak için index yöntemini kullan
+22. "Coding For All People" stringinde l harfinin son geçtiği pozisyonu bulmak için rfind yöntemini kullan
+23. 'You cannot end a sentence with because because because is a conjunction' cümlesinde 'because' kelimesinin ilk geçtiği pozisyonu bulmak için index veya find yöntemini kullan
+24. 'You cannot end a sentence with because because because is a conjunction' cümlesinde 'because' kelimesinin son geçtiği pozisyonu bulmak için rindex yöntemini kullan
+25. 'You cannot end a sentence with because because because is a conjunction' cümlesinden 'because because because' ifadesini kesip (slice) çıkar
+26. 'You cannot end a sentence with because because because is a conjunction' cümlesinde 'because' kelimesinin ilk geçtiği pozisyonu bul
+27. 'Coding For All' stringi Coding substringi ile başlıyor mu?
+28. 'Coding For All' stringi coding substringi ile bitiyor mu?
+29. '&nbsp;&nbsp; Coding For All &nbsp;&nbsp;&nbsp; &nbsp;' &nbsp; stringinin başındaki ve sonundaki boşlukları (trailing spaces) kaldırın.
+30. Aşağıdaki değişkenlerden hangisi isidentifier() yöntemi kullanıldığında True döner?
     - 30DaysOfPython
     - thirty_days_of_python
-32. The following list contains the names of some of python libraries: ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']. Join the list with a hash with space string.
-33. Use the new line escape sequence to separate the following sentences.
+31. Bu liste Python kütüphanelerinin isimlerini içeriyor: ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']. Listeyi boşluk ve hash (#) ile birleştir (join).
+32. Aşağıdaki cümleleri yeni satır kaçış karakteri kullanarak ayır
     ```py
     I am enjoying this challenge.
     I just wonder what is next.
     ```
-34. Use a tab escape sequence to write the following lines.
+33. Aşağıdaki satırları yazmak için tab kaçış karakteri kullan
     ```py
     Name      Age     Country   City
     Asabeneh  250     Finland   Helsinki
     ```
-35. Use the string formatting method to display the following:
+34. Aşağıdakileri string biçimlendirme (string formatting) yöntemi kullanarak görüntüle
 
 ```sh
 radius = 10
@@ -586,7 +582,7 @@ area = 3.14 * radius ** 2
 The area of a circle with radius 10 is 314 meters square.
 ```
 
-36. Make the following using string formatting methods:
+35. String formatlama metodlarını kullanarak aşağıdakileri yap:
 
 ```sh
 8 + 6 = 14

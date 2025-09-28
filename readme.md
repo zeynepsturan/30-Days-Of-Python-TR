@@ -443,7 +443,7 @@ Python dosyasını çalıştırmak için aşağıdaki görsele bak. Dosyayo Visu
    - Soyadın
    - Ülken
    - I am enjoying 30 days of python
-   - 
+     
 5. Aşağıdaki verilerin veri tiplerini kontrol et.
    - 10
    - 9.8

@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> 30 Days Of Python: Day 5 - Lists</h1>
+  <h1> 30 Günde Python: 5. Gün - Listler</h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -7,45 +7,45 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-<sub>Author:
+<sub>Yazar:
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Second Edition: July - 2021</small>
+<small> İkinci Versiyon: Temmuz, 2021</small>
 </sub>
 
 </div>
 
-[<< Day 4](../04_Day_Strings/04_strings.md) | [Day 6 >>](../06_Day_Tuples/06_tuples.md)
+[<< 4. Gün](../04_Day_Strings/04_strings.md) | [6. Gün >>](../06_Day_Tuples/06_tuples.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
-- [Day 5](#day-5)
-  - [Lists](#lists)
-    - [How to Create a List](#how-to-create-a-list)
-    - [Accessing List Items Using Positive Indexing](#accessing-list-items-using-positive-indexing)
-    - [Accessing List Items Using Negative Indexing](#accessing-list-items-using-negative-indexing)
-    - [Unpacking List Items](#unpacking-list-items)
+- [5. Gün](#day-5)
+  - [Listler](#lists)
+    - [List Nasıl Oluşturulur?](#how-to-create-a-list)
+    - [Pozitif İndeksleme Kullanarak List İtemlerine Erişme](#accessing-list-items-using-positive-indexing)
+    - [Negatif İndeksleme Kullanarak List İtemlerine Erişme](#accessing-list-items-using-negative-indexing)
+    - [List Itemlerini Unpacking Etme](#unpacking-list-items)
     - [Slicing Items from a List](#slicing-items-from-a-list)
-    - [Modifying Lists](#modifying-lists)
+    - [Listleri Modifiye Etme](#modifying-lists)
     - [Checking Items in a List](#checking-items-in-a-list)
-    - [Adding Items to a List](#adding-items-to-a-list)
-    - [Inserting Items into a List](#inserting-items-into-a-list)
-    - [Removing Items from a List](#removing-items-from-a-list)
+    - [Listin Sonuna Item Ekleme](#adding-items-to-a-list)
+    - [Listin Arasına Item Ekleme](#inserting-items-into-a-list)
+    - [Listten İtem Silme](#removing-items-from-a-list)
     - [Removing Items Using Pop](#removing-items-using-pop)
     - [Removing Items Using Del](#removing-items-using-del)
     - [Clearing List Items](#clearing-list-items)
-    - [Copying a List](#copying-a-list)
-    - [Joining Lists](#joining-lists)
+    - [Listi Kopyalama](#copying-a-list)
+    - [Listleri Birleştirme](#joining-lists)
     - [Counting Items in a List](#counting-items-in-a-list)
-    - [Finding Index of an Item](#finding-index-of-an-item)
-    - [Reversing a List](#reversing-a-list)
-    - [Sorting List Items](#sorting-list-items)
-  - [💻 Exercises: Day 5](#-exercises-day-5)
-    - [Exercises: Level 1](#exercises-level-1)
-    - [Exercises: Level 2](#exercises-level-2)
+    - [Bir İtemin İndeksini Bulma](#finding-index-of-an-item)
+    - [Listi Tersine Çevirme](#reversing-a-list)
+    - [List İtemlerini Sıralama](#sorting-list-items)
+  - [💻 Alıştırmalar: 5. Gün](#-exercises-day-5)
+    - [Alıştırmalar: 1. Seviye](#exercises-level-1)
+    - [Alıştırmalar: 2. Seviye](#exercises-level-2)
 
-# Day 5
+# 5. Gün
 
-## Lists
+## Listler
 
 There are four collection data types in Python :
 
@@ -63,37 +63,37 @@ In Python we can create lists in two ways:
 - Using list built-in function
 
 ```py
-# syntax
+# sözdizimi
 lst = list()
 ```
 
 ```py
-empty_list = list() # this is an empty list, no item in the list
+empty_list = list() # bu boş bir list, listte item yok
 print(len(empty_list)) # 0
 ```
 
-- Using square brackets, []
+- Köşeli parantez [] kullanarak
 
 ```py
-# syntax
+# sözdizimi
 lst = []
 ```
 
 ```py
-empty_list = [] # this is an empty list, no item in the list
+empty_list = [] # bu boş bir list, listte item yok
 print(len(empty_list)) # 0
 ```
 
 Lists with initial values. We use _len()_ to find the length of a list.
 
 ```py
-fruits = ['banana', 'orange', 'mango', 'lemon']                     # list of fruits
-vegetables = ['Tomato', 'Potato', 'Cabbage','Onion', 'Carrot']      # list of vegetables
+fruits = ['banana', 'orange', 'mango', 'lemon']                     # meyve listi
+vegetables = ['Tomato', 'Potato', 'Cabbage','Onion', 'Carrot']      # sebze listi
 animal_products = ['milk', 'meat', 'butter', 'yoghurt']             # list of animal products
 web_techs = ['HTML', 'CSS', 'JS', 'React','Redux', 'Node', 'MongDB'] # list of web technologies
-countries = ['Finland', 'Estonia', 'Denmark', 'Sweden', 'Norway']
+countries = ['Finland', 'Estonia', 'Denmark', 'Sweden', 'Norway'] # ülke listi
 
-# Print the lists and its length
+# listleri ve uzunluklarını yazdırma
 print('Fruits:', fruits)
 print('Number of fruits:', len(fruits))
 print('Vegetables:', vegetables)

@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> 30 Days Of Python: Day 9 - Conditionals</h1>
+  <h1> 30 Günde Python: 9. Gün - Koşullu İfadeler</h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -7,74 +7,78 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-<sub>Author:
+<sub>Yazar:
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Second Edition: July, 2021</small>
+<small> İkinci Versiyon: Temmuz, 2021</small>
 </sub>
 
 </div>
 
-[<< Day 8](../08_Day_Dictionaries/08_dictionaries.md) | [Day 10 >>](../10_Day_Loops/10_loops.md)
+[<< 8. Gün](../08_Day_Dictionaries/08_dictionaries.md) | [10. Gün >>](../10_Day_Loops/10_loops.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
-- [📘 Day 9](#-day-9)
-  - [Conditionals](#conditionals)
-    - [If Condition](#if-condition)
+- [📘 9. Gün](#-day-9)
+  - [Koşullu İfadeler](#conditionals)
+    - [If Koşulu](#if-condition)
     - [If Else](#if-else)
     - [If Elif Else](#if-elif-else)
-    - [Short Hand](#short-hand)
-    - [Nested Conditions](#nested-conditions)
-    - [If Condition and Logical Operators](#if-condition-and-logical-operators)
-    - [If and Or Logical Operators](#if-and-or-logical-operators)
-  - [💻 Exercises: Day 9](#-exercises-day-9)
-    - [Exercises: Level 1](#exercises-level-1)
-    - [Exercises: Level 2](#exercises-level-2)
-    - [Exercises: Level 3](#exercises-level-3)
+    - [Short Hand (Kısaltılmış Koşul)](#short-hand)
+    - [İç İçe Koşullar](#nested-conditions)
+    - [If Koşulu ve And Mantıksal Operatörü](#if-condition-and-logical-operators)
+    - [If Koşulu ve Or Mantıksal Operatörü](#if-and-or-logical-operators)
+  - [💻 Alıştırmalar: 9. Gün](#-exercises-day-9)
+    - [Alıştırmalar: 1. Seviye](#exercises-level-1)
+    - [Alıştırmalar: 2. Seviye](#exercises-level-2)
+    - [Alıştırmalar: 3. Seviye](#exercises-level-3)
 
-# 📘 Day 9
+# 📘 9. Gün
 
-## Conditionals
+## Koşullu İfadeler
 
-By default, statements in Python script are executed sequentially from top to bottom. If the processing logic require so, the sequential flow of execution can be altered in two way:
+Varsayılan olarak, Python scriptindeki ifadeler üstten alta doğru sıralı şekilde çalıştırılır. Eğer işleme mantığı bunu gerektiriyorsa, yürütme sırasının akışı iki şekilde değiştirilebilir:
 
-- Conditional execution: a block of one or more statements will be executed if a certain expression is true
-- Repetitive execution: a block of one or more statements will be repetitively executed as long as a certain expression is true. In this section, we will cover _if_, _else_, _elif_ statements. The comparison and logical operators we learned in previous sections will be useful here.
+- Koşullu yürütme (Conditional execution): Belirli bir ifade doğruysa, bir veya daha fazla ifadenin bulunduğu bir blok çalıştırılır.
+- Tekrarlı yürütme (Repetitive execution): Belirli bir ifade doğru olduğu sürece, bir veya daha fazla ifadenin bulunduğu bir blok tekrarlı olarak çalıştırılır.
 
-### If Condition
+Bu bölümde if, else, elif ifadelerini öğreneceğiz. Önceki bölümlerde öğrendiğimiz karşılaştırma (comparison) ve mantıksal (logical) operatörler burada faydalı olacaktır.
 
-In python and other programming languages the key word _if_ is used to check if a condition is true and to execute the block code. Remember the indentation after the colon.
+### If Koşulu
+
+Python ve diğer programlama dillerinde _if_ anahtar kelimesi, bir koşulun doğru olup olmadığını kontrol etmek ve koşul doğruysa blok kodunu çalıştırmak için kullanılır. İki noktadan (:) sonra girintiye (indentation) dikkat edin.
 
 ```py
-# syntax
-if condition:
-    this part of code runs for truthy conditions
+# sözdizimi
+if koşulu:
+    koşul doğruysa bu
+    kod bloğu çalışır
 ```
 
-**Example: 1**
+**Örnek:**
 
 ```py
 a = 3
 if a > 0:
     print('A is a positive number')
-# A is a positive number
+# A bir pozitif sayıdır
 ```
 
-As you can see in the example above, 3 is greater than 0. The condition was true and the block code was executed. However, if the condition is false, we do not see the result. In order to see the result of the falsy condition, we should have another block, which is going to be _else_.
+Yukarıdaki örnekte gördüğün gibi, 3, 0’dan büyüktür. Koşul doğru olduğu için blok kodu çalıştırıldı.
+Ancak koşul yanlış olsaydı, sonucu göremezdik. Yanlış bir koşulun sonucunu görmek için başka bir blok gerekir; bu blok _else_ olacaktır.
 
 ### If Else
 
-If condition is true the first block will be executed, if not the else condition will run.
+Koşul doğruysa ilk blok çalıştırılır, değilse else bloğu çalışır
 
 ```py
-# syntax
-if condition:
-    this part of code runs for truthy conditions
+# sözdizimi
+if koşulu:
+    koşul doğruysa kodun bu kısmı çalışır
 else:
-     this part of code runs for false conditions
+     koşul yanlışsa kodun bu kısmı çalışır
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 a = 3
@@ -84,24 +88,24 @@ else:
     print('A is a positive number')
 ```
 
-The condition above proves false, therefore the else block was executed. How about if our condition is more than two? We could use _elif_.
+Üstteki koşul yanlış, bu yüzden else bloğu çalışır. Peki ya ikiden fazla koşulumuz varsa? O  _elif_ kullanırız
 
 ### If Elif Else
 
-In our daily life, we make decisions on daily basis. We make decisions not by checking one or two conditions but multiple conditions. As similar to life, programming is also full of conditions. We use _elif_ when we have multiple conditions.
+Günlük hayatımızda, her gün kararlar alırız. Kararları sadece bir veya iki koşulu kontrol ederek değil, birden fazla koşulu değerlendirerek veririz. Hayata benzer şekilde, programlama da koşullarla doludur. Birden fazla koşul olduğunda _elif_ kullanırız.
 
 ```py
-# syntax
-if condition:
+# sözdizimi
+if koşulu:
     code
-elif condition:
+elif koşulu:
     code
 else:
     code
 
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 a = 0
@@ -113,33 +117,33 @@ else:
     print('A is zero')
 ```
 
-### Short Hand
+### Short Hand (Kısaltılmış Koşul)
 
 ```py
-# syntax
+# sözdizimi
 code if condition else code
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 a = 3
-print('A is positive') if a > 0 else print('A is negative') # first condition met, 'A is positive' will be printed
+print('A is positive') if a > 0 else print('A is negative') # ilk koşul sağlandı, 'A is positive' yazdırılacak
 ```
 
-### Nested Conditions
+### İç İçe Koşullar
 
-Conditions can be nested
+Koşullar iç içe olabilir
 
 ```py
-# syntax
-if condition:
+# sözdizimi
+if koşulu:
     code
-    if condition:
+    if koşulu:
     code
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 a = 0
@@ -155,17 +159,17 @@ else:
 
 ```
 
-We can avoid writing nested condition by using logical operator _and_.
+Mantıksal _and_ operatörünü kullanarak iç içe koşullardan kaçınabiliriz
 
-### If Condition and Logical Operators
+### If Koşulu ve And Mantıksal Operatörü
 
 ```py
-# syntax
-if condition and condition:
+# sözdizimi
+if koşul1 and koşul2:
     code
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 a = 0
@@ -179,15 +183,15 @@ else:
     print('A is negative')
 ```
 
-### If and Or Logical Operators
+### If Koşulu ve Or Mantıksal Operatörü
 
 ```py
-# syntax
-if condition or condition:
+# sözdizimi
+if koşul1 or koşul2:
     code
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 user = 'James'
@@ -198,13 +202,13 @@ else:
     print('Access denied!')
 ```
 
-🌕 You are doing great.Never give up because great things take time. You have just completed day 9 challenges and you are 9 steps a head in to your way to greatness. Now do some exercises for your brain and muscles.
+🌕 Harika gidiyorsun. Asla pes etme çünkü güzel şeyler zaman alır. 9. günün challenge’larını tamamladın ve mükemmellik yolunda 9 adım ileridesin. Şimdi beynin ve kasların için biraz alıştırma yapalım.
 
-## 💻 Exercises: Day 9
+## 💻 Alıştırmalar: 9. Gün
 
-### Exercises: Level 1
+### Alıştırmalar: 1. Seviye
 
-1. Get user input using input(“Enter your age: ”). If user is 18 or older, give feedback: You are old enough to drive. If below 18 give feedback to wait for the missing amount of years. Output:
+1. Kullanıcıdan input(“Enter your age: ”) ile yaşını al. Eğer kullanıcı 18 veya daha büyükse, geri bildirim ver: You are old enough to drive. Eğer 18’den küçükse, eksik yıl sayısı kadar beklemesi gerektiğini bildir. Çıktıt:
 
     ```sh
     Enter your age: 30
@@ -214,14 +218,14 @@ else:
     You need 3 more years to learn to drive.
     ```
 
-2. Compare the values of my_age and your_age using if … else. Who is older (me or you)? Use input(“Enter your age: ”) to get the age as input. You can use a nested condition to print 'year' for 1 year difference in age, 'years' for bigger differences, and a custom text if my_age = your_age. Output:
+2. my_age ve your_age değerlerini if … else ile karşılaştır. Kim daha yaşlı (ben mi sen mi)? Yaşı girdi olarak almak için input(“Enter your age: ”) kullan. Yaş farkı için nested condition kullanarak: 1 yıl fark varsa "year", Daha büyük fark varsa "years", my_age = your_age ise özel bir metin yazdır Çıktı:
 
     ```sh
     Enter your age: 30
     You are 5 years older than me.
     ```
 
-3. Get two numbers from the user using input prompt. If a is greater than b return a is greater than b, if a is less b return a is smaller than b, else a is equal to b. Output:
+3. Kullanıcıdan input ile iki sayı al. a, b'den büyükse "a is greater than b", a, b'den küçükse "a is smaller than b", eşitlerse "a is equal to b" döndür. Çıktı:
 
 ```sh
 Enter number one: 4
@@ -229,9 +233,9 @@ Enter number two: 3
 4 is greater than 3
 ```
 
-### Exercises: Level 2
+### Alıştırmalar: 2. Seviye
 
-   1. Write a code which gives grade to students according to theirs scores:
+   1. Öğrencilerin notuna göre harf notunu veren kodu yaz:
 
         ```sh
         80-100, A
@@ -241,22 +245,23 @@ Enter number two: 3
         0-49, F
         ```
 
-   1. Check if the season is Autumn, Winter, Spring or Summer. If the user input is:
-    September, October or November, the season is Autumn.
-    December, January or February, the season is Winter.
-    March, April or May, the season is Spring
-    June, July or August, the season is Summer
-   2. The following list contains some fruits:
+   1. Mevsimin Autumn, Winter, Spring veya Summer olduğunu kontrol et. Kullanıcı inputu:
+    September, October or November ise mevsim Autumn.
+    December, January veya February ise mevsim Winter.
+    March, April or May ise mevsim Spring
+    June, July or August ise mevsim Summer
+   
+   2. Aşağıdaki list bazı meyveleri içeriyor:
 
     ```sh
     fruits = ['banana', 'orange', 'mango', 'lemon']
     ```
 
-    If a fruit doesn't exist in the list add the fruit to the list and print the modified list. If the fruit exists print('That fruit already exist in the list')
+  Eğer bir meyve listede yoksa, meyveyi listeye ekle ve güncellenmiş listeyi yazdır. Eğer meyve zaten varsa: print('That fruit already exist in the list')
 
-### Exercises: Level 3
+### Alıştırmalar: 3. Seviye
 
-   1. Here we have a person dictionary. Feel free to modify it!
+   1. Burada bir person sözlüğü var. Dilediğin gibi değiştirebilirsin!
 
 ```py
         person={
@@ -273,15 +278,15 @@ Enter number two: 3
     }
 ```
 
-     * Check if the person dictionary has skills key, if so print out the middle skill in the skills list.
-     * Check if the person dictionary has skills key, if so check if the person has 'Python' skill and print out the result.
-     * If a person skills has only JavaScript and React, print('He is a front end developer'), if the person skills has Node, Python, MongoDB, print('He is a backend developer'), if the person skills has React, Node and MongoDB, Print('He is a fullstack developer'), else print('unknown title') - for more accurate results more conditions can be nested!
-     * If the person is married and if he lives in Finland, print the information in the following format:
+  * Person sözlüğünde skills keyi varsa, skills listinin ortadaki itemini yazdır.
+  * Person sözlüğünde skills keyi varsa, kişinin 'Python' becerisine sahip olup olmadığını kontrol et ve sonucu yazdır.
+  * Eğer kişinin skillsi sadece JavaScript ve React ise: print('He is a front end developer'). Eğer kişinin skillsi içinde Node, Python, MongoDB varsa:   print('He is a backend developer'). Eğer kişinin skills içinde React, Node, MongoDB varsa: print('He is a fullstack developer'). Aksi takdirde print('unknown title'). (Daha doğru sonuçlar için daha fazla koşul iç içe (nested) kullanılabilir)
+  * Eğer kişi evli ise ve Finlandiya’da yaşıyorsa, bilgileri aşağıdaki formatta yazdır.
 
 ```py
     Asabeneh Yetayeh lives in Finland. He is married.
 ```
 
-🎉 CONGRATULATIONS ! 🎉
+🎉 TEBRİKLER ! 🎉
 
-[<< Day 8](../08_Day_Dictionaries/08_dictionaries.md) | [Day 10 >>](../10_Day_Loops/10_loops.md)
+[<< 8. Gün](../08_Day_Dictionaries/08_dictionaries.md) | [10. Gün >>](../10_Day_Loops/10_loops.md)

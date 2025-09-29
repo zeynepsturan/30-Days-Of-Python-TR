@@ -26,15 +26,15 @@
     - [Item Bulma](#checking-an-item)
     - [Sete İtem Ekleme](#adding-items-to-a-set)
     - [Setten İtem Silme](#removing-items-from-a-set)
-    - [Clearing Items in a Set](#clearing-items-in-a-set)
+    - [Set İtemlerini Silme](#clearing-items-in-a-set)
     - [Seti Silme](#deleting-a-set)
-    - [Converting List to Set](#converting-list-to-set)
-    - [Joining Sets](#joining-sets)
-    - [Finding Intersection Items](#finding-intersection-items)
-    - [Checking Subset and Super Set](#checking-subset-and-super-set)
-    - [Checking the Difference Between Two Sets](#checking-the-difference-between-two-sets)
-    - [Finding Symmetric Difference Between Two Sets](#finding-symmetric-difference-between-two-sets)
-    - [Joining Sets](#joining-sets-1)
+    - [Listi Sete Dönüştürme](#converting-list-to-set)
+    - [Setleri Birleştirme](#joining-sets)
+    - [Kesişen İtemleri Bulma](#finding-intersection-items)
+    - [Subset ve Super Set Bulma](#checking-subset-and-super-set)
+    - [İki Set Arasındaki Farkı Bulma](#checking-the-difference-between-two-sets)
+    - [İki Set Arasındaki Simetrik Farkı Bulma](#finding-symmetric-difference-between-two-sets)
+    - [Setleri Birleştirme](#joining-sets-1)
   - [💻 Alıştırmalar: 7. Gün](#-exercises-day-7)
     - [Alıştırmalar: 1. Seviye](#exercises-level-1)
     - [Alıştırmalar: 2. Seviye](#exercises-level-2)
@@ -44,11 +44,11 @@
 
 ## Setler
 
-Set is a collection of items. Let me take you back to your elementary or high school Mathematics lesson. The Mathematics definition of a set can be applied also in Python. Set is a collection of unordered and un-indexed distinct elements. In Python set is used to store unique items, and it is possible to find the _union_, _intersection_, _difference_, _symmetric difference_, _subset_, _super set_ and _disjoint set_ among sets.
+Set, bir itemler koleksiyonudur. Sizi ilkokul ya da lise matematik derslerinize geri götüreyim: Matematikteki küme tanımı Python’da da geçerlidir. Python’da set (küme), sırasız (unordered) ve indekslenemez (un-indexed) benzersiz elemanlar topluluğudur. Bir set, benzersiz (her itemden bir adet) itemleri saklar ve kümeler arasında _union (birleşim)_, _intersection (kesişim)_, _difference (fark)_, _symmetric difference (simetrik fark)_, _subset (alt küme)_, _super set (üst küme)_ ve _disjoint set (ayrık küme)_ gibi işlemleri yapmak mümkündür.
 
 ### Set Oluşturma
 
-We use the _set()_ built-in function.
+Built-in _set()_ fonksiyonuyla set oluştururuz.
 
 - Boş tuple oluşturma
 
@@ -73,10 +73,10 @@ fruits = {'banana', 'orange', 'mango', 'lemon'}
 
 ### Set Uzunluğunu Bulma
 
-We use **len()** method to find the length of a set.
+Bir setin uzunluğunu bulmak için **len()** metodunu kullanırız.
 
 ```py
-# syntax
+# sözdizimi
 st = {'item1', 'item2', 'item3', 'item4'}
 len(st)
 ```
@@ -88,18 +88,18 @@ fruits = {'banana', 'orange', 'mango', 'lemon'}
 len(fruits)
 ```
 
-### Accessing Items in a Set
+### Set Itemlerine Erişme
 
-We use loops to access items. We will see this in loop section
+Set itemlerine erişmek için döngüleri kullanırız. Bunu döngüler bölümünde göreceğiz
 
-### Checking an Item
+### Item Bulma
 
-To check if an item exist in a list we use _in_ membership operator.
+Bir itemin sette olup olmadığını kontrol etmek için _in_ operatörünü kullanırız
 
 ```py
-# syntax
+# sözdizimi
 st = {'item1', 'item2', 'item3', 'item4'}
-print("Does set st contain item3? ", 'item3' in st) # Does set st contain item3? True
+print("Does set st contain item3? ", 'item3' in st) # Set item3 itemini içeriyor mu? True
 ```
 
 **Örnek:**
@@ -109,14 +109,14 @@ fruits = {'banana', 'orange', 'mango', 'lemon'}
 print('mango' in fruits ) # True
 ```
 
-### Adding Items to a Set
+### Sete İtem Ekleme
 
-Once a set is created we cannot change any items and we can also add additional items.
+Set oluşturulduktan sonra itemler değiştirilemez ama yeni itemler eklenebilir
 
-- Add one item using _add()_
+- _add()_ kullanarak tek item eklemek
 
 ```py
-# syntax
+# sözdizimi
 st = {'item1', 'item2', 'item3', 'item4'}
 st.add('item5')
 ```
@@ -128,11 +128,11 @@ fruits = {'banana', 'orange', 'mango', 'lemon'}
 fruits.add('lime')
 ```
 
-- Add multiple items using _update()_
-  The _update()_ allows to add multiple items to a set. The _update()_ takes a list argument.
+-  _update()_ metoduyla birden fazla item eklemek
+  _update()_ sete birden fazla item eklemeye izin verir. Argüman olarak list alır
 
 ```py
-# syntax
+# sözdizimi
 st = {'item1', 'item2', 'item3', 'item4'}
 st.update(['item5','item6','item7'])
 ```
@@ -145,39 +145,39 @@ vegetables = ('tomato', 'potato', 'cabbage','onion', 'carrot')
 fruits.update(vegetables)
 ```
 
-### Removing Items from a Set
+### Setten İtem Silme
 
-We can remove an item from a set using _remove()_ method. If the item is not found _remove()_ method will raise errors, so it is good to check if the item exist in the given set. However, _discard()_ method doesn't raise any errors.
+Bir setten bir itemi _remove()_ metodu ile kaldırabiliriz. Eğer item bulunmazsa _remove()_ metodu hata verir, bu yüzden itemin verilen sette olup olmadığını kontrol etmek iyidir. Ancak, _discard()_ metodu hiçbir hata vermez.
 
 ```py
-# syntax
+# sözdizimi
 st = {'item1', 'item2', 'item3', 'item4'}
 st.remove('item2')
 ```
 
-The pop() methods remove a random item from a list and it returns the removed item.
+pop() metodu setten rastgele bir item siler ve silinen itemi döner
 
 **Örnek:**
 
 ```py
 fruits = {'banana', 'orange', 'mango', 'lemon'}
-fruits.pop()  # removes a random item from the set
+fruits.pop()  # setten rastgele bir item siler
 
 ```
 
-If we are interested in the removed item.
+Eğer silinen itemi bilmek istiyorsak
 
 ```py
 fruits = {'banana', 'orange', 'mango', 'lemon'}
 removed_item = fruits.pop() 
 ```
 
-### Clearing Items in a Set
+### Set İtemlerini Silme
 
-If we want to clear or empty the set we use _clear_ method.
+Seti temizlemek için _clear_ metodunu kullanırız
 
 ```py
-# syntax
+# sözdizimi
 st = {'item1', 'item2', 'item3', 'item4'}
 st.clear()
 ```
@@ -190,12 +190,12 @@ fruits.clear()
 print(fruits) # set()
 ```
 
-### Deleting a Set
+### Seti Silme
 
-If we want to delete the set itself we use _del_ operator.
+Setin kendisini silmek istersek _del_ operatörünü kullanırız
 
 ```py
-# syntax
+# sözdizimi
 st = {'item1', 'item2', 'item3', 'item4'}
 del st
 ```
@@ -207,12 +207,12 @@ fruits = {'banana', 'orange', 'mango', 'lemon'}
 del fruits
 ```
 
-### Converting List to Set
+### Listi Sete Dönüştürme
 
-We can convert list to set and set to list. Converting list to set removes duplicates and only unique items will be reserved.
+Bir listi sete ve bir seti liste dönüştürebiliriz. Listi sete dönüştürürken tekrarlanan itemler kaldırılır ve sadece benzersiz (unique) itemler kalır.
 
 ```py
-# syntax
+# sözdizimi
 lst = ['item1', 'item2', 'item3', 'item4', 'item1']
 st = set(lst)  # {'item2', 'item4', 'item1', 'item3'} - the order is random, because sets in general are unordered
 ```
@@ -224,15 +224,15 @@ fruits = ['banana', 'orange', 'mango', 'lemon','orange', 'banana']
 fruits = set(fruits) # {'mango', 'lemon', 'banana', 'orange'}
 ```
 
-### Joining Sets
+### Setleri Birleştirme
 
-We can join two sets using the _union()_ or _update()_ method.
+İki seti _union()_ veya _update()_ metodlarıyla birleştirebiliriz
 
 - Union
-  This method returns a new set
+  Bu metod yeni bir set döner
 
 ```py
-# syntax
+# sözdizimi
 st1 = {'item1', 'item2', 'item3', 'item4'}
 st2 = {'item5', 'item6', 'item7', 'item8'}
 st3 = st1.union(st2)
@@ -247,10 +247,10 @@ print(fruits.union(vegetables)) # {'lemon', 'carrot', 'tomato', 'banana', 'mango
 ```
 
 - Update
-  This method inserts a set into a given set
+Bu yöntem, bir sete başka bir seti ekler
 
 ```py
-# syntax
+# sözdizimi
 st1 = {'item1', 'item2', 'item3', 'item4'}
 st2 = {'item5', 'item6', 'item7', 'item8'}
 st1.update(st2) # st2 contents are added to st1
@@ -265,12 +265,12 @@ fruits.update(vegetables)
 print(fruits) # {'lemon', 'carrot', 'tomato', 'banana', 'mango', 'orange', 'cabbage', 'potato', 'onion'}
 ```
 
-### Finding Intersection Items
+### Kesişen İtemleri Bulma
 
-Intersection returns a set of items which are in both the sets. See the example
+Kesişim (intersection) iki sette de ortak olan itemleri döner
 
 ```py
-# syntax
+# sözdizimi
 st1 = {'item1', 'item2', 'item3', 'item4'}
 st2 = {'item3', 'item2'}
 st1.intersection(st2) # {'item3', 'item2'}
@@ -288,15 +288,15 @@ dragon = {'d', 'r', 'a', 'g', 'o','n'}
 python.intersection(dragon)     # {'o', 'n'}
 ```
 
-### Checking Subset and Super Set
+### Subset ve Super Set Bulma
 
-A set can be a subset or super set of other sets:
+Bir set, diğer setlerin alt kümesi (subset) veya üst kümesi (super set) olabilir:
 
 - Subset: _issubset()_
 - Super set: _issuperset_
 
 ```py
-# syntax
+# sözdizimi
 st1 = {'item1', 'item2', 'item3', 'item4'}
 st2 = {'item2', 'item3'}
 st2.issubset(st1) # True
@@ -308,7 +308,7 @@ st1.issuperset(st2) # True
 ```py
 whole_numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 even_numbers = {0, 2, 4, 6, 8, 10}
-whole_numbers.issubset(even_numbers) # False, because it is a super set
+whole_numbers.issubset(even_numbers) # False, çünkü üst küme
 whole_numbers.issuperset(even_numbers) # True
 
 python = {'p', 'y', 't', 'h', 'o','n'}
@@ -316,12 +316,12 @@ dragon = {'d', 'r', 'a', 'g', 'o','n'}
 python.issubset(dragon)     # False
 ```
 
-### Checking the Difference Between Two Sets
+### İki Set Arasındaki Farkı Bulma
 
-It returns the difference between two sets.
+İki setin farkını döner
 
 ```py
-# syntax
+# sözdizimi
 st1 = {'item1', 'item2', 'item3', 'item4'}
 st2 = {'item2', 'item3'}
 st2.difference(st1) # set()
@@ -337,16 +337,17 @@ whole_numbers.difference(even_numbers) # {1, 3, 5, 7, 9}
 
 python = {'p', 'y', 't', 'o','n'}
 dragon = {'d', 'r', 'a', 'g', 'o','n'}
-python.difference(dragon)     # {'p', 'y', 't'}  - the result is unordered (characteristic of sets)
+python.difference(dragon)     # {'p', 'y', 't'}  - sonuç sırasız döner (setin karakteristik bir özelliği)
 dragon.difference(python)     # {'d', 'r', 'a', 'g'}
 ```
 
-### Finding Symmetric Difference Between Two Sets
+### İki Set Arasındaki Simetrik Farkı Bulma
 
-It returns the symmetric difference between two sets. It means that it returns a set that contains all items from both sets, except items that are present in both sets, mathematically: (A\B) ∪ (B\A)
+İki küme arasındaki simetrik farkı döner. Yani her iki kümede bulunan ortak elemanlar hariç, her iki kümeden de tüm elemanları içeren bir küme verir.
+Matematiksel gösterimi: (A\B) ∪ (B\A)
 
 ```py
-# syntax
+# sözdizimi
 st1 = {'item1', 'item2', 'item3', 'item4'}
 st2 = {'item2', 'item3'}
 # it means (A\B)∪(B\A)
@@ -367,10 +368,10 @@ python.symmetric_difference(dragon)  # {'r', 't', 'p', 'y', 'g', 'a', 'd', 'h'}
 
 ### Joining Sets
 
-If two sets do not have a common item or items we call them disjoint sets. We can check if two sets are joint or disjoint using _isdisjoint()_ method.
+İki setin ortak itemi yoksa onlara disjoint sets (ayrık kümeler) deriz. İki setin ayrık küme olup olmadığını _isdisjoint()_ metoduyla kontrol ederiz
 
 ```py
-# syntax
+# sözdizimi
 st1 = {'item1', 'item2', 'item3', 'item4'}
 st2 = {'item2', 'item3'}
 st2.isdisjoint(st1) # False
@@ -381,14 +382,14 @@ st2.isdisjoint(st1) # False
 ```py
 even_numbers = {0, 2, 4 ,6, 8}
 odd_numbers = {1, 3, 5, 7, 9}
-even_numbers.isdisjoint(odd_numbers) # True, because no common item
+even_numbers.isdisjoint(odd_numbers) # True, çünkü ortak item yok
 
 python = {'p', 'y', 't', 'h', 'o','n'}
 dragon = {'d', 'r', 'a', 'g', 'o','n'}
-python.isdisjoint(dragon)  # False, there are common items {'o', 'n'}
+python.isdisjoint(dragon)  # False, ortak itemler var {'o', 'n'}
 ```
 
-🌕 You are a rising star . You have just completed day 7 challenges and you are 7 steps ahead in to your way to greatness. Now do some exercises for your brain and muscles.
+🌕 Yükselen bir yıldızsın. 7. günün challenge’larını tamamladın ve mükemmelliğe giden yolda 7 adım ilerledin. Şimdi beynin ve kasların için biraz alıştırma yapalım.
 
 ## 💻 Alıştırmalar: 7. Gün
 
@@ -420,9 +421,9 @@ age = [22, 19, 24, 25, 26, 24, 25, 24]
 
 ### Alıştırmalar: 3. Seviye
 
-1. Convert the ages to a set and compare the length of the list and the set, which one is bigger?
-1. Explain the difference between the following data types: string, list, tuple and set
-2. _I am a teacher and I love to inspire and teach people._ How many unique words have been used in the sentence? Use the split methods and set to get the unique words.
+1. Ages listini bir sete çevir, listin ve setin uzunluğunu karşılaştır, hangisi daha büyük?
+2. Şu veri tipleri arasındaki farkı açıkla: string, list, tuple ve set
+3. _I am a teacher and I love to inspire and teach people._ cümlesinde kaç benzersiz (unique) kelime kullanılmış? Benzersiz kelimeleri bulmak için split ve set yöntemlerini kullan.
 
 🎉 TEBRİKLER ! 🎉
 

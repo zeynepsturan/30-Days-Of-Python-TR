@@ -9,7 +9,7 @@
 
 <sub>Yazar:
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Second Edition: Temmuz, 2021</small>
+<small> İkinci Versiyon: Temmuz, 2021</small>
 </sub>
 </div>
 
@@ -23,32 +23,32 @@
     - [Break ve Continue - 1. Kısım](#break-and-continue---part-1)
     - [For Döngüsü](#for-loop)
     - [Break ve Continue - 2. Kısım](#break-and-continue---part-2)
-    - [The Range Function](#the-range-function)
-    - [İçiçe For Döngüsü](#nested-for-loop)
+    - [Range Fonksiyonu](#the-range-function)
+    - [İç İçe For Döngüsü](#nested-for-loop)
     - [For Else](#for-else)
     - [Pass](#pass)
-  - [💻 Exercises: Day 10](#-exercises-day-10)
-    - [Exercises: Level 1](#exercises-level-1)
-    - [Exercises: Level 2](#exercises-level-2)
-    - [Exercises: Level 3](#exercises-level-3)
+  - [💻 Alıştırmalar: 10. Gün](#-exercises-day-10)
+    - [Alıştırmalar: 1. Seviye](#exercises-level-1)
+    - [Alıştırmalar: 2. Seviye](#exercises-level-2)
+    - [Alıştırmalar: 3. Seviye](#exercises-level-3)
 
 # 📘 10. Gün
 
 ## Döngüler
 
-Life is full of routines. Programlamada da sık sık tekrarlayan tasklar yaparız. In order to handle repetitive task programlama dilleri döngüleri kullanır. Python programlama dili aşağıdaki iki döngüyü sağlar:
+Hayat rutinlerle dolu. Programlamada da sık sık tekrarlayan tasklar yaparız. Tekrarlayan görevleri gerçekleştirmek için programlama dilleri döngüleri kullanır. Python programlama dili aşağıdaki iki döngüyü sağlar:
 
 1. while döngüsü
 2. for döngüsü
 
 ### While Döngüsü
 
-We use the reserved word _while_ to make a while loop. It is used to execute a block of statements repeatedly until a given condition is satisfied. When the condition becomes false, the lines of code after the loop will be continued to be executed.
+While döngüsü kurmak için _while_ rezerve kelimesini kullanırız. Belirli bir koşul sağlanana kadar bir blok ifadeyi tekrar tekrar çalıştırmak için kullanılır. Koşul False olduğunda döngü sonrası kod satırlarının yürütülmesine devam edilir.
 
 ```py
-  # syntax
-while condition:
-    code goes here
+  # sözdizimi
+while koşulu:
+    kod
 ```
 
 **Örnek:**
@@ -65,11 +65,11 @@ In the above while loop, the condition becomes false when count is 5. That is wh
 If we are interested to run block of code once the condition is no longer true, we can use _else_.
 
 ```py
-  # syntax
-while condition:
-    code goes here
+  # sözdizimi
+while koşulu:
+    kod
 else:
-    code goes here
+    kod
 ```
 
 **Örnek:**
@@ -83,18 +83,18 @@ else:
     print(count)
 ```
 
-The above loop condition will be false when count is 5 and the loop stops, and execution starts the else statement. As a result 5 will be printed.
+Yukarıdaki döngü koşulu, count 5 olduğunda False olacak ve döngü duracaktır; ardından yürütme else bloğuna geçer. Sonuç olarak 5 yazdırılır.
 
 
 ### Break ve Continue - 1. Kısım
 
-- Break: We use break when we like to get out of or stop the loop.
+- Break: Döngüden çıkmak istediğimizde break kullanırız
 
 ```py
-# syntax
-while condition:
-    code goes here
-    if another_condition:
+# sözdizimi
+while koşul:
+    kod
+    if başka koşul:
         break
 ```
 
@@ -114,10 +114,10 @@ The above while loop only prints 0, 1, 2, but when it reaches 3 it stops.
 - Continue: With the continue statement we can skip the current iteration, and continue with the next:
 
 ```py
-  # syntax
-while condition:
-    code goes here
-    if another_condition:
+  # sözdizimi
+while koşul:
+    kod
+    if başka koşul:
         continue
 ```
 
@@ -142,31 +142,31 @@ A _for_ keyword is used to make a for loop, similar with other programming langu
 - For loop with list
 
 ```py
-# syntax
+# sözdizimi
 for iterator in lst:
-    code goes here
+    kod
 ```
 
 **Örnek:**
 
 ```py
-sayiler = [0, 1, 2, 3, 4, 5]
-for sayi in sayilar: # number is temporary name to refer to the list's items, valid only inside this loop
+numbers = [0, 1, 2, 3, 4, 5]
+for number in numbers: # number is temporary name to refer to the list's items, valid only inside this loop
     print(number)       # the numbers will be printed line by line, from 0 to 5
 ```
 
 - For loop with string
 
 ```py
-# syntax
+# sözdizimi
 for iterator in string:
-    code goes here
+    kod
 ```
 
 **Örnek:**
 
 ```py
-dil = 'Python'
+language = 'Python'
 for letter in language:
     print(letter)
 
@@ -178,15 +178,15 @@ for i in range(len(language)):
 - For loop with tuple
 
 ```py
-# syntax
+# sözdizimi
 for iterator in tpl:
-    code goes here
+    kod
 ```
 
 **Örnek:**
 
 ```py
-sayilar = (0, 1, 2, 3, 4, 5)
+numbers = (0, 1, 2, 3, 4, 5)
 for number in numbers:
     print(number)
 ```
@@ -195,9 +195,9 @@ for number in numbers:
   Looping through a dictionary gives you the key of the dictionary.
 
 ```py
-  # syntax
+  # sözdizimi
 for iterator in dct:
-    code goes here
+    kod
 ```
 
 **Örnek:**
@@ -225,9 +225,9 @@ for key, value in person.items():
 - Loops in set
 
 ```py
-# syntax
+# sözdizimi
 for iterator in st:
-    code goes here
+    kod
 ```
 
 **Örnek:**
@@ -244,10 +244,10 @@ Short reminder:
 _Break_: We use break when we like to stop our loop before it is completed.
 
 ```py
-# syntax
+# sözdizimi
 for iterator in sequence:
-    code goes here
-    if condition:
+    kod
+    if koşulu:
         break
 ```
 
@@ -266,10 +266,10 @@ In the above example, the loop stops when it reaches 3.
 Continue: We use continue when we like to skip some of the steps in the iteration of the loop.
 
 ```py
-  # syntax
+  # sözdizimi
 for iterator in sequence:
-    code goes here
-    if condition:
+    kod
+    if koşulu:
         continue
 ```
 
@@ -287,7 +287,7 @@ print('outside the loop')
 
 In the example above, if the number equals 3, the step *after* the condition (but inside the loop) is skipped and the execution of the loop continues if there are any iterations left.
 
-### The Range Fonksiyonu
+### Range Fonksiyonu
 
 _range()_ fonksiyonu is used list of numbers. _range(start, end, step)_ 3 parametre alır: starting, ending and increment. Varsayılan olarak 0'dan başlar ve 1'er 1'er artar. The range sequence needs at least 1 argument (end).
 Creating sequences using range
@@ -305,7 +305,7 @@ print(st) #  {0, 2, 4, 6, 8, 10}
 ```
 
 ```py
-# syntax
+# sözdizimi
 for iterator in range(start, end, step):
 ```
 
@@ -316,12 +316,12 @@ for number in range(11):
     print(number)   # prints 0 to 10, not including 11
 ```
 
-### İçiçe For Döngüsü
+### İç İçe For Döngüsü
 
 We can write loops inside a loop.
 
 ```py
-# syntax
+# sözdizimi
 for x in y:
     for t in x:
         print(t)
@@ -353,9 +353,9 @@ for key in person:
 If we want to execute some message when the loop ends, we use else.
 
 ```py
-# syntax
+# sözdizimi
 for iterator in range(start, end, step):
-    do something
+    bir şeyler yap
 else:
     print('The loop ended')
 ```
@@ -380,15 +380,15 @@ for number in range(6):
     pass
 ```
 
-🌕 You established a big milestone, you are unstoppable. Keep going! You have just completed day 10 challenges and you are 10 steps a head in to your way to greatness. Now do some exercises for your brain and muscles.
+🌕 Büyük bir dönüm noktasına ulaştın, durdurulamazsın. Devam et! 10. günün challengelarını tamamladın ve mükemmelliğe giden yolda 10 adım ilerledin.  Şimdi beynin ve kasların için biraz alıştırma yapalım.
 
-## 💻 Exercises: Day 10
+## 💻 Alıştırmalar: 10. Gün
 
-### Exercises: Level 1
+### Alıştırmalar: 1. Seviye
 
-1. Iterate 0 to 10 using for loop, do the same using while loop.
-2. Iterate 10 to 0 using for loop, do the same using while loop.
-3. Write a loop that makes seven calls to print(), so we get on the output the following triangle:
+1. 0’dan 10’a kadar iterate etmek için for döngüsü kullan, aynı işlemi while döngüsü ile yap.
+2. 10’dan 0’a kadar iterate etmek için for döngüsü kullan, aynı işlemi while döngüsü ile yap.
+3. Yedi kez print() çağıran bir döngü yaz, böylece çıktı olarak aşağıdaki üçgen elde edilir:
 
    ```py
      #
@@ -400,7 +400,7 @@ for number in range(6):
      #######
    ```
 
-4. Use nested loops to create the following:
+4. Aşağıdakini oluşturmak için iç içe döngüler yaz:
 
    ```sh
    # # # # # # # #
@@ -413,7 +413,7 @@ for number in range(6):
    # # # # # # # #
    ```
 
-5. Print the following pattern:
+5. Aşağıdaki örüntüyü yazdır:
 
    ```sh
    0 x 0 = 0
@@ -430,27 +430,27 @@ for number in range(6):
    ```
 
 6. Iterate through the list, ['Python', 'Numpy','Pandas','Django', 'Flask'] using a for loop and print out the items.
-7. Use for loop to iterate from 0 to 100 and print only even numbers
-8. Use for loop to iterate from 0 to 100 and print only odd numbers
+7. 0’dan 100’e kadar iterate etmek için for döngüsü kullan ve sadece çift sayıları yazdır
+8. 0’dan 100’e kadar iterate etmek için for döngüsü kullan ve sadece tek sayıları yazdır
    
-### Exercises: Level 2
+### Alıştırmalar: 2. Seviye
     
-1.  Use for loop to iterate from 0 to 100 and print the sum of all numbers.
+1.  0’dan 100’e kadar iterate etmek için for döngüsü kullan ve sayıların toplamını yazdır
 
    ```sh
    The sum of all numbers is 5050.
    ```
 
-1. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+1. 0’dan 100’e kadar iterate etmek için for döngüsü kullan ve  çift sayıların toplamı ile tek sayıların toplamını ayrı ayrı yazdır
 
     ```sh
     The sum of all evens is 2550. And the sum of all odds is 2500.
     ```
 
-### Exercises: Level 3
+### Alıştırmalar: 3. Seviye
 
-1. Go to the data folder and use the [countries.py](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries.py) file. Loop through the countries and extract all the countries containing the word _land_.
-1. This is a fruit list, ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop.
+1. data klasörüne git ve and use the [countries.py](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries.py) file. Loop through the countries and extract all the countries containing the word _land_.
+1. Bu bir meyve listi, ['banana', 'orange', 'mango', 'lemon']. Döngü kullanarak listi tersine çevir
 2. Go to the data folder and use the [countries_data.py](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries-data.py) file. 
    1. What are the total number of languages in the data
    2. Find the ten most spoken languages from the data

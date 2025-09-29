@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> 30 Days Of Python: Day 6 - Tuples</h1>
+  <h1> 30 Günde Python: 6. Gün - Tuplelar</h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -7,57 +7,57 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-<sub>Author:
+<sub>Yazar:
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Second Edition: July, 2021</small>
+<small> İkinci Versiyon: Temmuz, 2021</small>
 </sub>
 
 </div>
 
-[<< Day 5](../05_Day_Lists/05_lists.md) | [Day 7 >>](../07_Day_Sets/07_sets.md)
+[<< 5. Gün](../05_Day_Lists/05_lists.md) | [7. Gün >>](../07_Day_Sets/07_sets.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
-- [Day 6:](#day-6)
-  - [Tuples](#tuples)
-    - [Creating a Tuple](#creating-a-tuple)
-    - [Tuple length](#tuple-length)
-    - [Accessing Tuple Items](#accessing-tuple-items)
-    - [Slicing tuples](#slicing-tuples)
-    - [Changing Tuples to Lists](#changing-tuples-to-lists)
-    - [Checking an Item in a Tuple](#checking-an-item-in-a-tuple)
-    - [Joining Tuples](#joining-tuples)
-    - [Deleting Tuples](#deleting-tuples)
-  - [💻 Exercises: Day 6](#-exercises-day-6)
-    - [Exercises: Level 1](#exercises-level-1)
-    - [Exercises: Level 2](#exercises-level-2)
+- [6. Gün](#day-6)
+  - [Tuplelar](#tuples)
+    - [Tuple Oluşturma](#creating-a-tuple)
+    - [Tuple Uzunluğu](#tuple-length)
+    - [Tuple İtemlerine Erişme](#accessing-tuple-items)
+    - [Tupleları Bölme](#slicing-tuples)
+    - [Tupleı Liste Dönüştürme](#changing-tuples-to-lists)
+    - [Tupleda İtem Arama](#checking-an-item-in-a-tuple)
+    - [Tupleları Birleştirme](#joining-tuples)
+    - [Tupleı Silme](#deleting-tuples)
+  - [💻 Alıştırmalar: 6. Gün](#-exercises-day-6)
+    - [Alıştırmalar: 1. Seviye](#exercises-level-1)
+    - [Alıştırmalar: 2. Seviye](#exercises-level-2)
 
-# Day 6:
+# 6. Gün
 
-## Tuples
+## Tuplelar
 
-A tuple is a collection of different data types which is ordered and unchangeable (immutable). Tuples are written with round brackets, (). Once a tuple is created, we cannot change its values. We cannot use add, insert, remove methods in a tuple because it is not modifiable (mutable). Unlike list, tuple has few methods. Methods related to tuples:
+Bir tuple, farklı veri tiplerinden oluşan, sıralı ve değiştirilemez (immutable) bir koleksiyondur. Tuple’lar parantez () ile yazılır. Bir tuple oluşturulduktan sonra içindeki değerler değiştirilemez. Tuple üzerinde add, insert, remove gibi yöntemler kullanılamaz çünkü değiştirilebilir (mutable) değildir. Liste kıyasla tupleın çok az metodu vardır. Tuple ile ilgili yöntemler şunlardır:
 
-- tuple(): to create an empty tuple
-- count(): to count the number of a specified item in a tuple
-- index(): to find the index of a specified item in a tuple
-- + operator: to join two or more tuples and to create a new tuple
+- tuple(): boş tuple oluşturmak için
+- count(): bir itemden tupleda kaç tane olduğunu bulmak için
+- index(): topledaki bir itemin indeksini bulmak için
+- + operator: birden fazla tupleı birleştirip yeni tuple oluşturmak için
 
-### Creating a Tuple
+### Tuple Oluşturma
 
-- Empty tuple: Creating an empty tuple
+- Boş tuple oluşturma
   
   ```py
-  # syntax
+  # sözdizimi
   empty_tuple = ()
   # or using the tuple constructor
   empty_tuple = tuple()
   ```
 
-- Tuple with initial values
+- Başlangıç değerli tuple
   
   ```py
-  # syntax
+  # sözdizimi
   tpl = ('item1', 'item2','item3')
   ```
 
@@ -65,24 +65,24 @@ A tuple is a collection of different data types which is ordered and unchangeabl
   fruits = ('banana', 'orange', 'mango', 'lemon')
   ```
 
-### Tuple length
+### Tuple Uzunluğu
 
 We use the _len()_ method to get the length of a tuple.
 
 ```py
-# syntax
+# sözdizimi
 tpl = ('item1', 'item2', 'item3')
 len(tpl)
 ```
 
-### Accessing Tuple Items
+### Tuple İtemlerine Erişme
 
-- Positive Indexing
+- Positif indeksleme
   Similar to the list data type we use positive or negative indexing to access tuple items.
   ![Accessing tuple items](../images/tuples_index.png)
 
   ```py
-  # Syntax
+  # sözdizimi
   tpl = ('item1', 'item2', 'item3')
   first_item = tpl[0]
   second_item = tpl[1]
@@ -96,7 +96,7 @@ len(tpl)
   last_fruit = fruits[las_index]
   ```
 
-- Negative indexing
+- Negatif indeksleme
   Negative indexing means beginning from the end, -1 refers to the last item, -2 refers to the second last and the negative of the list/tuple length refers to the first item.
   ![Tuple Negative indexing](../images/tuple_negative_indexing.png)
 
@@ -121,7 +121,7 @@ We can slice out a sub-tuple by specifying a range of indexes where to start and
 - Range of Positive Indexes
 
   ```py
-  # Syntax
+  # sözdizimi
   tpl = ('item1', 'item2', 'item3','item4')
   all_items = tpl[0:4]         # all items
   all_items = tpl[0:]         # all items
@@ -139,7 +139,7 @@ We can slice out a sub-tuple by specifying a range of indexes where to start and
 - Range of Negative Indexes
 
   ```py
-  # Syntax
+  # sözdizimi
   tpl = ('item1', 'item2', 'item3','item4')
   all_items = tpl[-4:]         # all items
   middle_two_items = tpl[-3:-1]  # does not include item at index 3 (-1)
@@ -152,12 +152,12 @@ We can slice out a sub-tuple by specifying a range of indexes where to start and
   orange_to_the_rest = fruits[-3:]
   ```
 
-### Changing Tuples to Lists
+### Tupleı Liste Dönüştürme
 
-We can change tuples to lists and lists to tuples. Tuple is immutable if we want to modify a tuple we should change it to a list.
+Tupleları liste, listleri de tuplea çevirebiliriz. Tuple değiştirilemez (immutable) olduğu için, bir tupleı değiştirmek istiyorsak önce liste çevirmeliyiz.
 
 ```py
-# Syntax
+# sözdizimi
 tpl = ('item1', 'item2', 'item3','item4')
 lst = list(tpl)
 ```
@@ -171,12 +171,12 @@ fruits = tuple(fruits)
 print(fruits)     # ('apple', 'orange', 'mango', 'lemon')
 ```
 
-### Checking an Item in a Tuple
+### Tupleda İtem Arama
 
-We can check if an item exists or not in a tuple using _in_, it returns a boolean.
+Bir öğenin tuple içinde var olup olmadığını in kullanarak kontrol edebiliriz, sonuç boolean (True/False) olarak döner
 
 ```py
-# Syntax
+# sözdizimi
 tpl = ('item1', 'item2', 'item3','item4')
 'item2' in tpl # True
 ```
@@ -185,15 +185,15 @@ tpl = ('item1', 'item2', 'item3','item4')
 fruits = ('banana', 'orange', 'mango', 'lemon')
 print('orange' in fruits) # True
 print('apple' in fruits) # False
-fruits[0] = 'apple' # TypeError: 'tuple' object does not support item assignment
+fruits[0] = 'apple' # TypeError: 'tuple' tuplelara item atanmaz
 ```
 
-### Joining Tuples
+### Tupleları Birleştirme
 
-We can join two or more tuples using + operator
+Birden fazla tupleı + operatörüyle birleştirebiliriz
 
 ```py
-# syntax
+# sözdizimi
 tpl1 = ('item1', 'item2', 'item3')
 tpl2 = ('item4', 'item5','item6')
 tpl3 = tpl1 + tpl2
@@ -205,12 +205,12 @@ vegetables = ('Tomato', 'Potato', 'Cabbage','Onion', 'Carrot')
 fruits_and_vegetables = fruits + vegetables
 ```
 
-### Deleting Tuples
+### Tupleı Silme
 
-It is not possible to remove a single item in a tuple but it is possible to delete the tuple itself using _del_.
+Bir tuple’dan tek bir öğeyi silmek mümkün değildir, ancak tüm tuple’ı _del_ kullanarak silebilirsin.
 
 ```py
-# syntax
+# sözdizimi
 tpl1 = ('item1', 'item2', 'item3')
 del tpl1
 
@@ -221,34 +221,35 @@ fruits = ('banana', 'orange', 'mango', 'lemon')
 del fruits
 ```
 
-🌕 You are so brave, you made it to this far. You have just completed day 6 challenges and you are 6 steps a head in to your way to greatness. Now do some exercises for your brain and for your muscle.
+🌕 Çok cesursun, bu noktaya kadar geldin. 6. günün challenge’larını tamamladın ve mükemmelliğe giden yolda 6 adım ilerledin. Şimdi beynin ve kasların için biraz alıştırma yapalım.
 
-## 💻 Exercises: Day 6
+## 💻 Alıştırmalar: 6. Gün
 
-### Exercises: Level 1
+### Alıştırmalar: 1. Seviye
 
-1. Create an empty tuple
-2. Create a tuple containing names of your sisters and your brothers (imaginary siblings are fine)
-3. Join brothers and sisters tuples and assign it to siblings
-4. How many siblings do you have?
-5. Modify the siblings tuple and add the name of your father and mother and assign it to family_members
+1. Boş bir tuple oluştur
+2. Kız ve erkek kardeşlerinin isimlerini içeren bir tuple oluştur (hayali kardeşler de olabilir)
+3. Kardeşlerin tuple’larını birleştir ve siblings değişkenine ata
+4. Kaç kardeşin olduğunu bul
+5. siblings tuple’ını değiştirerek anne ve babanın isimlerini ekle ve family_members değişkenine ata
 
-### Exercises: Level 2
+### Alıştırmalar: 2. Seviye
 
-1. Unpack siblings and parents from family_members
-1. Create fruits, vegetables and animal products tuples. Join the three tuples and assign it to a variable called food_stuff_tp.
-1. Change the about food_stuff_tp  tuple to a food_stuff_lt list
-1. Slice out the middle item or items from the food_stuff_tp tuple or food_stuff_lt list.
-1. Slice out the first three items and the last three items from food_staff_lt list
-1. Delete the food_staff_tp tuple completely
-1. Check if an item exists in  tuple:
+1. family_members tuple’ından siblings ve parents değişkenlerini unpack et
+2. Fruits, vegetables ve animal products tuple’larını oluştur, üç tuple’ı birleştir ve food_stuff_tp değişkenine ata
+3. food_stuff_tp tuple’ını food_stuff_lt listine çevir
+4. food_stuff_tp tuple’ından veya food_stuff_lt listinden ortadaki itemi veya öğeleri böl (slice)
+5. food_stuff_lt listinden ilk üç ve son üç itemi böl (slice)
+6. food_stuff_tp tuple’ını tamamen sil
+7. Aşağıdaki itemlerin tuple’da olup olmadığını kontrol et:
 
-- Check if 'Estonia' is a nordic country
-- Check if 'Iceland' is a nordic country
+- 'Estonia'nın bir Nordik ülkesi olup olmadığını kontrol et
+- 'Iceland'ın bir Nordik ülkesi olup olmadığını kontrol et
 
   ```py
   nordic_countries = ('Denmark', 'Finland','Iceland', 'Norway', 'Sweden')
   ```
+  
+🎉 TEBRİKLER ! 🎉
 
-
-[<< Day 5](../05_Day_Lists/05_lists.md) | [Day 7 >>](../07_Day_Sets/07_sets.md)
+[<< 5. Gün](../05_Day_Lists/05_lists.md) | [7. Gün >>](../07_Day_Sets/07_sets.md)

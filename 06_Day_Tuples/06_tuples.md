@@ -50,7 +50,7 @@ Bir tuple, farklı veri tiplerinden oluşan, sıralı ve değiştirilemez (immut
   ```py
   # sözdizimi
   empty_tuple = ()
-  # or using the tuple constructor
+  # tuple constructorunu kullanarak oluşturma
   empty_tuple = tuple()
   ```
 
@@ -67,7 +67,7 @@ Bir tuple, farklı veri tiplerinden oluşan, sıralı ve değiştirilemez (immut
 
 ### Tuple Uzunluğu
 
-We use the _len()_ method to get the length of a tuple.
+_len()_ metoduyla tuple uzunluğunu buluruz
 
 ```py
 # sözdizimi
@@ -78,7 +78,7 @@ len(tpl)
 ### Tuple İtemlerine Erişme
 
 - Positif indeksleme
-  Similar to the list data type we use positive or negative indexing to access tuple items.
+ List veri tipine benzer şekilde tuple itemlerine erişmek için pozitif veya negatif indeksleme kullanılır.
   ![Accessing tuple items](../images/tuples_index.png)
 
   ```py
@@ -97,11 +97,11 @@ len(tpl)
   ```
 
 - Negatif indeksleme
-  Negative indexing means beginning from the end, -1 refers to the last item, -2 refers to the second last and the negative of the list/tuple length refers to the first item.
+  Negatif indeksleme, listenin veya tuple’ın sonundan başlamayı ifade eder;-1 son itemi, 2 sondan bir önceki itemi, tupleın uzunluğunun negatif değeri ise   ilk itemi gösterir.
   ![Tuple Negative indexing](../images/tuple_negative_indexing.png)
 
   ```py
-  # Syntax
+  # sözdizimi
   tpl = ('item1', 'item2', 'item3','item4')
   first_item = tpl[-4]
   second_item = tpl[-3]
@@ -114,41 +114,41 @@ len(tpl)
   last_fruit = fruits[-1]
   ```
 
-### Slicing tuples
+### Tupleları Bölme
 
-We can slice out a sub-tuple by specifying a range of indexes where to start and where to end in the tuple, the return value will be a new tuple with the specified items.
+Subtuple oluşturmak için, başlangıç ve bitiş indekslerini belirterek bölme (slice) yapabiliriz; dönen değer, belirtilen itemleri içeren yeni bir tuple olur.
 
-- Range of Positive Indexes
+- Pozitif İndeks Aralığı
 
   ```py
   # sözdizimi
   tpl = ('item1', 'item2', 'item3','item4')
-  all_items = tpl[0:4]         # all items
-  all_items = tpl[0:]         # all items
-  middle_two_items = tpl[1:3]  # does not include item at index 3
+  all_items = tpl[0:4]         # tüm itemler
+  all_items = tpl[0:]         # tüm itemler
+  middle_two_items = tpl[1:3]  # 3. indeksteki item dahil değil
   ```
 
   ```py
   fruits = ('banana', 'orange', 'mango', 'lemon')
-  all_fruits = fruits[0:4]    # all items
-  all_fruits= fruits[0:]      # all items
-  orange_mango = fruits[1:3]  # doesn't include item at index 3
+  all_fruits = fruits[0:4]    # tüm itemler
+  all_fruits= fruits[0:]      # tüm itemler
+  orange_mango = fruits[1:3]  # 3. indeksteki item dahil değil
   orange_to_the_rest = fruits[1:]
   ```
 
-- Range of Negative Indexes
+- Negatif İndeks Aralığı
 
   ```py
   # sözdizimi
   tpl = ('item1', 'item2', 'item3','item4')
-  all_items = tpl[-4:]         # all items
-  middle_two_items = tpl[-3:-1]  # does not include item at index 3 (-1)
+  all_items = tpl[-4:]         # tüm itemler
+  middle_two_items = tpl[-3:-1]  # 3. (-1) indeksteki item dahil değil 
   ```
 
   ```py
   fruits = ('banana', 'orange', 'mango', 'lemon')
-  all_fruits = fruits[-4:]    # all items
-  orange_mango = fruits[-3:-1]  # doesn't include item at index 3
+  all_fruits = fruits[-4:]    # tüm itemler
+  orange_mango = fruits[-3:-1]  # 3. indeksteki item dahil değil
   orange_to_the_rest = fruits[-3:]
   ```
 

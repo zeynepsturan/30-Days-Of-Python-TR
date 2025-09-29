@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> 30 Days Of Python: Day 7 - Sets</h1>
+  <h1> 30 Günde Python: 7. Gün - Setler</h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -7,27 +7,27 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-<sub>Author:
+<sub>Yazar:
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Second Edition: July, 2021</small>
+<small> İkinci Versiyon: Temmuz, 2021</small>
 </sub>
 
 </div>
 
-[<< Day 6](../06_Day_Tuples/06_tuples.md) | [Day 8 >>](../08_Day_Dictionaries/08_dictionaries.md)
+[<< 6. Gün](../06_Day_Tuples/06_tuples.md) | [8. Gün >>](../08_Day_Dictionaries/08_dictionaries.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
-- [📘 Day 7](#-day-7)
-  - [Sets](#sets)
-    - [Creating a Set](#creating-a-set)
-    - [Getting Set's Length](#getting-sets-length)
-    - [Accessing Items in a Set](#accessing-items-in-a-set)
-    - [Checking an Item](#checking-an-item)
-    - [Adding Items to a Set](#adding-items-to-a-set)
-    - [Removing Items from a Set](#removing-items-from-a-set)
+- [📘 7. Gün](#-day-7)
+  - [Setler](#sets)
+    - [Set Oluşturma](#creating-a-set)
+    - [Set Uzunluğunu Bulma](#getting-sets-length)
+    - [Set Itemlerine Erişme](#accessing-items-in-a-set)
+    - [Item Bulma](#checking-an-item)
+    - [Sete İtem Ekleme](#adding-items-to-a-set)
+    - [Setten İtem Silme](#removing-items-from-a-set)
     - [Clearing Items in a Set](#clearing-items-in-a-set)
-    - [Deleting a Set](#deleting-a-set)
+    - [Seti Silme](#deleting-a-set)
     - [Converting List to Set](#converting-list-to-set)
     - [Joining Sets](#joining-sets)
     - [Finding Intersection Items](#finding-intersection-items)
@@ -35,43 +35,43 @@
     - [Checking the Difference Between Two Sets](#checking-the-difference-between-two-sets)
     - [Finding Symmetric Difference Between Two Sets](#finding-symmetric-difference-between-two-sets)
     - [Joining Sets](#joining-sets-1)
-  - [💻 Exercises: Day 7](#-exercises-day-7)
-    - [Exercises: Level 1](#exercises-level-1)
-    - [Exercises: Level 2](#exercises-level-2)
-    - [Exercises: Level 3](#exercises-level-3)
+  - [💻 Alıştırmalar: 7. Gün](#-exercises-day-7)
+    - [Alıştırmalar: 1. Seviye](#exercises-level-1)
+    - [Alıştırmalar: 2. Seviye](#exercises-level-2)
+    - [Alıştırmalar: 3. Seviye](#exercises-level-3)
 
-# 📘 Day 7
+# 📘 7. Gün
 
-## Sets
+## Setler
 
 Set is a collection of items. Let me take you back to your elementary or high school Mathematics lesson. The Mathematics definition of a set can be applied also in Python. Set is a collection of unordered and un-indexed distinct elements. In Python set is used to store unique items, and it is possible to find the _union_, _intersection_, _difference_, _symmetric difference_, _subset_, _super set_ and _disjoint set_ among sets.
 
-### Creating a Set
+### Set Oluşturma
 
 We use the _set()_ built-in function.
 
-- Creating an empty set
+- Boş tuple oluşturma
 
 ```py
-# syntax
+# sözdizimi
 st = set()
 ```
 
-- Creating a set with initial items
+- Başlangıç değerli set oluşturma
 
 ```py
-# syntax
+# sözdizimi
 st = {'item1', 'item2', 'item3', 'item4'}
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
-# syntax
+# sözdizimi
 fruits = {'banana', 'orange', 'mango', 'lemon'}
 ```
 
-### Getting Set's Length
+### Set Uzunluğunu Bulma
 
 We use **len()** method to find the length of a set.
 
@@ -81,7 +81,7 @@ st = {'item1', 'item2', 'item3', 'item4'}
 len(st)
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 fruits = {'banana', 'orange', 'mango', 'lemon'}
@@ -102,7 +102,7 @@ st = {'item1', 'item2', 'item3', 'item4'}
 print("Does set st contain item3? ", 'item3' in st) # Does set st contain item3? True
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 fruits = {'banana', 'orange', 'mango', 'lemon'}
@@ -121,7 +121,7 @@ st = {'item1', 'item2', 'item3', 'item4'}
 st.add('item5')
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 fruits = {'banana', 'orange', 'mango', 'lemon'}
@@ -137,7 +137,7 @@ st = {'item1', 'item2', 'item3', 'item4'}
 st.update(['item5','item6','item7'])
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 fruits = {'banana', 'orange', 'mango', 'lemon'}
@@ -157,7 +157,7 @@ st.remove('item2')
 
 The pop() methods remove a random item from a list and it returns the removed item.
 
-**Example:**
+**Örnek:**
 
 ```py
 fruits = {'banana', 'orange', 'mango', 'lemon'}
@@ -182,7 +182,7 @@ st = {'item1', 'item2', 'item3', 'item4'}
 st.clear()
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 fruits = {'banana', 'orange', 'mango', 'lemon'}
@@ -200,7 +200,7 @@ st = {'item1', 'item2', 'item3', 'item4'}
 del st
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 fruits = {'banana', 'orange', 'mango', 'lemon'}
@@ -217,7 +217,7 @@ lst = ['item1', 'item2', 'item3', 'item4', 'item1']
 st = set(lst)  # {'item2', 'item4', 'item1', 'item3'} - the order is random, because sets in general are unordered
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 fruits = ['banana', 'orange', 'mango', 'lemon','orange', 'banana']
@@ -238,7 +238,7 @@ st2 = {'item5', 'item6', 'item7', 'item8'}
 st3 = st1.union(st2)
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 fruits = {'banana', 'orange', 'mango', 'lemon'}
@@ -256,7 +256,7 @@ st2 = {'item5', 'item6', 'item7', 'item8'}
 st1.update(st2) # st2 contents are added to st1
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 fruits = {'banana', 'orange', 'mango', 'lemon'}
@@ -276,7 +276,7 @@ st2 = {'item3', 'item2'}
 st1.intersection(st2) # {'item3', 'item2'}
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 whole_numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
@@ -303,7 +303,7 @@ st2.issubset(st1) # True
 st1.issuperset(st2) # True
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 whole_numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
@@ -328,7 +328,7 @@ st2.difference(st1) # set()
 st1.difference(st2) # {'item1', 'item4'} => st1\st2
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 whole_numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
@@ -353,7 +353,7 @@ st2 = {'item2', 'item3'}
 st2.symmetric_difference(st1) # {'item1', 'item4'}
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 whole_numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
@@ -376,7 +376,7 @@ st2 = {'item2', 'item3'}
 st2.isdisjoint(st1) # False
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 even_numbers = {0, 2, 4 ,6, 8}
@@ -390,40 +390,40 @@ python.isdisjoint(dragon)  # False, there are common items {'o', 'n'}
 
 🌕 You are a rising star . You have just completed day 7 challenges and you are 7 steps ahead in to your way to greatness. Now do some exercises for your brain and muscles.
 
-## 💻 Exercises: Day 7
+## 💻 Alıştırmalar: 7. Gün
 
 ```py
-# sets
+# setler
 it_companies = {'Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'}
 A = {19, 22, 24, 20, 25, 26}
 B = {19, 22, 20, 25, 26, 24, 28, 27}
 age = [22, 19, 24, 25, 26, 24, 25, 24]
 ```
 
-### Exercises: Level 1
+### Alıştırmalar: 1. Seviye
 
-1. Find the length of the set it_companies
-2. Add 'Twitter' to it_companies
-3. Insert multiple IT companies at once to the set it_companies
-4. Remove one of the companies from the set it_companies
-5. What is the difference between remove and discard
+1. it_companies setinin uzunluğunu bul
+2. it_companies setine 'Twitter' ekle
+3. it_companies setine birden fazla IT şirketini aynı anda ekle
+4. it_companies setinden bir şirketi sil
+5. remove ve discard arasındaki fark nedir?
 
-### Exercises: Level 2
+### Alıştırmalar: 2. Seviye
 
-1. Join A and B
-1. Find A intersection B
-1. Is A subset of B
-1. Are A and B disjoint sets
-1. Join A with B and B with A
-1. What is the symmetric difference between A and B
-1. Delete the sets completely
+1. A ve B'yi birleştir
+2. A ve B'nin kesişimini bul
+3. A, B'nin alt kümesi mi?
+4. A ve B kümeleri disjoint mi? (ortak elemanları yok mu?) kontrol et
+5. A ve B kümelerini birleştir (A ∪ B ve B ∪ A)
+6. A ve B kümeleri arasındaki simetrik farkı bul (sadece birinde olan elemanlar)
+7. Kümeleri tamamen sil
 
-### Exercises: Level 3
+### Alıştırmalar: 3. Seviye
 
 1. Convert the ages to a set and compare the length of the list and the set, which one is bigger?
 1. Explain the difference between the following data types: string, list, tuple and set
 2. _I am a teacher and I love to inspire and teach people._ How many unique words have been used in the sentence? Use the split methods and set to get the unique words.
 
-🎉 CONGRATULATIONS ! 🎉
+🎉 TEBRİKLER ! 🎉
 
-[<< Day 6](../06_Day_Tuples/06_tuples.md) | [Day 8 >>](../08_Day_Dictionaries/08_dictionaries.md)
+[<< 6. Gün](../06_Day_Tuples/06_tuples.md) | [8. Gün >>](../08_Day_Dictionaries/08_dictionaries.md)

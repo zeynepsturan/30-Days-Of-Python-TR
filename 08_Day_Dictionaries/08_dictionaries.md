@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> 30 Days Of Python: Day 8 - Dictionaries</h1>
+  <h1> 30 Günde Python: 8. Gün - Dictionaryler</h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -7,52 +7,52 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-<sub>Author:
+<sub>Yazar:
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Second Edition: July, 2021</small>
+<small> İkinci Versiyon: Temmuz, 2021</small>
 </sub>
 
 </div>
 
-[<< Day 7 ](../07_Day_Sets/07_sets.md) | [Day 9 >>](../09_Day_Conditionals/09_conditionals.md)
+[<< 7. Gün ](../07_Day_Sets/07_sets.md) | [9. Gün >>](../09_Day_Conditionals/09_conditionals.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
-- [📘 Day 8](#-day-8)
-  - [Dictionaries](#dictionaries)
-    - [Creating a Dictionary](#creating-a-dictionary)
-    - [Dictionary Length](#dictionary-length)
-    - [Accessing Dictionary Items](#accessing-dictionary-items)
-    - [Adding Items to a Dictionary](#adding-items-to-a-dictionary)
-    - [Modifying Items in a Dictionary](#modifying-items-in-a-dictionary)
-    - [Checking Keys in a Dictionary](#checking-keys-in-a-dictionary)
-    - [Removing Key and Value Pairs from a Dictionary](#removing-key-and-value-pairs-from-a-dictionary)
-    - [Changing Dictionary to a List of Items](#changing-dictionary-to-a-list-of-items)
-    - [Clearing a Dictionary](#clearing-a-dictionary)
-    - [Deleting a Dictionary](#deleting-a-dictionary)
-    - [Copy a Dictionary](#copy-a-dictionary)
-    - [Getting Dictionary Keys as a List](#getting-dictionary-keys-as-a-list)
-    - [Getting Dictionary Values as a List](#getting-dictionary-values-as-a-list)
-  - [💻 Exercises: Day 8](#-exercises-day-8)
+- [📘 8. Gün](#-day-8)
+  - [Dictionaryler](#dictionaries)
+    - [Dictionary Oluşturma](#creating-a-dictionary)
+    - [Dictionary Uzunluğu](#dictionary-length)
+    - [Dictionary İtemlerine Erişme](#accessing-dictionary-items)
+    - [Dictionaryye İtem Ekleme](#adding-items-to-a-dictionary)
+    - [Dictionary İtemlerini Modifiye Etme](#modifying-items-in-a-dictionary)
+    - [Dictionaryde Key Bulma](#checking-keys-in-a-dictionary)
+    - [Dictionaryden Key-Value Çiftlerini Kaldırma](#removing-key-and-value-pairs-from-a-dictionary)
+    - [Dictionaryyi İtem Listine Dönüştürme](#changing-dictionary-to-a-list-of-items)
+    - [Dictionaryyi Temizleme](#clearing-a-dictionary)
+    - [Dictionaryyi Silme](#deleting-a-dictionary)
+    - [Dictionaryyi Kopyalama](#copy-a-dictionary)
+    - [Dictionary Keylerini List Olarak Alma](#getting-dictionary-keys-as-a-list)
+    - [Dictionary Valuelerini List Olarak Alma](#getting-dictionary-values-as-a-list)
+  - [💻 Alıştırmalar: 8. Gün](#-exercises-day-8)
 
-# 📘 Day 8
+# 📘 8. Gün
 
-## Dictionaries
+## Dictionaryler
 
 A dictionary is a collection of unordered, modifiable(mutable) paired (key: value) data type.
 
-### Creating a Dictionary
+### Dictionary Oluşturma
 
 To create a dictionary we use curly brackets, {} or the *dict()* built-in function.
 
 ```py
-# syntax
+# sözdizimi
 empty_dict = {}
 # Dictionary with data values
 dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 person = {
@@ -71,17 +71,17 @@ person = {
 
 The dictionary above shows that a value could be any data types:string, boolean, list, tuple, set or a dictionary.
 
-### Dictionary Length
+### Dictionary Uzunluğu
 
 It checks the number of 'key: value' pairs in the dictionary.
 
 ```py
-# syntax
+# sözdizimi
 dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
 print(len(dct)) # 4
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 person = {
@@ -100,18 +100,18 @@ print(len(person)) # 7
 
 ```
 
-### Accessing Dictionary Items
+### Dictionary İtemlerine Erişme
 
 We can access Dictionary items by referring to its key name.
 
 ```py
-# syntax
+# sözdizimi
 dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
 print(dct['key1']) # value1
 print(dct['key4']) # value4
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 person = {
@@ -154,17 +154,17 @@ print(person.get('skills')) #['HTML','CSS','JavaScript', 'React', 'Node', 'Mongo
 print(person.get('city'))   # None
 ```
 
-### Adding Items to a Dictionary
+### Dictionaryye İtem Ekleme
 
-We can add new key and value pairs to a dictionary
+Dictionaryye yeni key*value pairs çiftleri ekleyebiliriz 
 
 ```py
-# syntax
+# sözdizimi
 dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
 dct['key5'] = 'value5'
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 person = {
@@ -184,17 +184,17 @@ person['skills'].append('HTML')
 print(person)
 ```
 
-### Modifying Items in a Dictionary
+### Dictionary İtemlerini Modifiye Etme
 
-We can modify items in a dictionary
+Dictionarydeki itemleri değiştirebiliriz
 
 ```py
-# syntax
+# sözdizimi
 dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
 dct['key1'] = 'value-one'
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 person = {
@@ -213,33 +213,33 @@ person['first_name'] = 'Eyob'
 person['age'] = 252
 ```
 
-### Checking Keys in a Dictionary
+### Dictionaryde Key Bulma
 
-We use the _in_ operator to check if a key exist in a dictionary
+Bir keyin dictionaryde olup olmadığını kontrol etmek için _in_ operatörünü kullanırız
 
 ```py
-# syntax
+# sözdizimi
 dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
 print('key2' in dct) # True
 print('key5' in dct) # False
 ```
 
-### Removing Key and Value Pairs from a Dictionary
+### Dictionaryden Key-Value Çiftlerini Kaldırma
 
-- _pop(key)_: removes the item with the specified key name:
-- _popitem()_: removes the last item
-- _del_: removes an item with specified key name
+- _pop(key)_: belli bir key ismindeki itemi kaldırır
+- _popitem()_: son itemi kaldırır
+- _del_: belli bir key ismindeki itemi kaldırır
 
 ```py
-# syntax
+# sözdizimi
 dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
-dct.pop('key1') # removes key1 item
+dct.pop('key1') # key1 itemini kaldırır
 dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
-dct.popitem() # removes the last item
-del dct['key2'] # removes key2 item
+dct.popitem() # son itemi kaldırır
+del dct['key2'] # key2 itemini kaldırır
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 person = {
@@ -254,89 +254,89 @@ person = {
         'zipcode':'02210'
     }
     }
-person.pop('first_name')        # Removes the firstname item
-person.popitem()                # Removes the address item
-del person['is_married']        # Removes the is_married item
+person.pop('first_name')        # firstname itemini siler
+person.popitem()                # address itemini siler
+del person['is_married']        # is_married itemini siler
 ```
 
-### Changing Dictionary to a List of Items
+### Dictionaryyi İtem Listine Dönüştürme
 
-The _items()_ method changes dictionary to a list of tuples.
+items() metodu, sözlüğü tuplelardan oluşan bir liste dönüştürür.
 
 ```py
-# syntax
+# sözdizimi
 dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
 print(dct.items()) # dict_items([('key1', 'value1'), ('key2', 'value2'), ('key3', 'value3'), ('key4', 'value4')])
 ```
 
-### Clearing a Dictionary
+### Dictionaryyi Temizleme
 
-If we don't want the items in a dictionary we can clear them using _clear()_ method
+Bir sözlükteki itemleri istemiyorsak _clear()_ metodu ile temizleyebiliriz.
 
 ```py
-# syntax
+# sözdizimi
 dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
 print(dct.clear()) # None
 ```
 
-### Deleting a Dictionary
+### Dictionaryyi Silme
 
-If we do not use the dictionary we can delete it completely
+Dictionaryyi kullanmıyorsak tamamen silebiliriz
 
 ```py
-# syntax
+# sözdizimi
 dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
 del dct
 ```
 
-### Copy a Dictionary
+### Dictionary Kopyalama
 
-We can copy a dictionary using a _copy()_ method. Using copy we can avoid mutation of the original dictionary.
+_copy()_ metodunu kullanarak bir dictionaryyi kopyalayabiliriz. copy yöntemini kullanarak orijinal sözlüğün değişmesini (mutation) önleyebiliriz.
 
 ```py
-# syntax
+# sözdizimi
 dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
 dct_copy = dct.copy() # {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
 ```
 
-### Getting Dictionary Keys as a List
+### Dictionary Keylerini List Olarak Alma
 
-The _keys()_ method gives us all the keys of a a dictionary as a list.
+_keys_ metodu dictionarydeki tüm valueleri list olarak döner
 
 ```py
-# syntax
+# sözdizimi
 dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
 keys = dct.keys()
 print(keys)     # dict_keys(['key1', 'key2', 'key3', 'key4'])
 ```
 
-### Getting Dictionary Values as a List
+### Dictionary Valuelerini List Olarak Alma
 
-The _values_ method gives us all the values of a a dictionary as a list.
+_values_ metodu dictionarydeki tüm valueleri list olarak döner
 
 ```py
-# syntax
+# sözdizimi
 dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
 values = dct.values()
 print(values)     # dict_values(['value1', 'value2', 'value3', 'value4'])
 ```
 
-🌕 You are astonishing. Now, you are super charged with the power of dictionaries. You have just completed day 8 challenges and you are 8 steps a head in to your way to greatness. Now do some exercises for your brain and  muscles.
+🌕 Gerçekten şaşırtıcısın. Artık dictionarylerin gücüyle tam anlamıyla süper güçlüsün. 8. günün challenge’larını tamamladın ve mükemmellik yolunda 8 adım ilerledin. Şimdi beynin ve kasların için biraz alıştırma yapalım.
 
-## 💻 Exercises: Day 8
+## 💻 Alıştırmalar: 8. Gün
 
-1. Create  an empty dictionary called dog
-2. Add name, color, breed, legs, age to the dog dictionary
-3. Create a student dictionary and add first_name, last_name, gender, age, marital status, skills, country, city and address as keys for the dictionary
-4. Get the length of the student dictionary
-5. Get the value of skills and check the data type, it should be a list
-6. Modify the skills values by adding one or two skills
-7. Get the dictionary keys as a list
-8. Get the dictionary values as a list
-9. Change the dictionary to a list of tuples using _items()_ method
-10. Delete one of the items in the dictionary
-11. Delete one of the dictionaries
+1. dog adında boş bir dictionary (sözlük) oluştur
+2. dog sözlüğüne name, color, breed, legs, age keylerini ekle
+3. student adında bir sözlük oluştur ve şu keyleri ekle: first_name, last_name, gender, age, marital status, skills, country, city, address
+4. student sözlüğünün uzunluğunu al
+5. skills keyinin değerini al ve veri tipini kontrol et, list olmalı
+6. skills valuesine bir veya iki beceri daha ekleyerek değiştir
+7. Dictionary keylerini list olarak al
+8. Dictionary valuelerini list olarak al
+9. Sözlüğü items() metodu ile tuplelardan oluşan bir liste çevir
+10. Sözlükteki bir öğeyi sil
+11. Sözlüklerden birini sil
 
-🎉 CONGRATULATIONS ! 🎉
+🎉 TEBRİKLER ! 🎉
 
-[<< Day 7 ](../07_Day_Sets/07_sets.md) | [Day 9 >>](../09_Day_Conditionals/09_conditionals.md)
+[<< 7. Gün ](../07_Day_Sets/07_sets.md) | [9. Gün >>](../09_Day_Conditionals/09_conditionals.md)

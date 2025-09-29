@@ -24,18 +24,18 @@
     - [Pozitif İndeksleme Kullanarak List İtemlerine Erişme](#accessing-list-items-using-positive-indexing)
     - [Negatif İndeksleme Kullanarak List İtemlerine Erişme](#accessing-list-items-using-negative-indexing)
     - [List Itemlerini Unpacking Etme](#unpacking-list-items)
-    - [Slicing Items from a List](#slicing-items-from-a-list)
+    - [Listten İtem Bölme](#slicing-items-from-a-list)
     - [Listleri Modifiye Etme](#modifying-lists)
-    - [Checking Items in a List](#checking-items-in-a-list)
+    - [Listte İtem Kontrolü](#checking-items-in-a-list)
     - [Listin Sonuna Item Ekleme](#adding-items-to-a-list)
     - [Listin Arasına Item Ekleme](#inserting-items-into-a-list)
     - [Listten İtem Silme](#removing-items-from-a-list)
-    - [Removing Items Using Pop](#removing-items-using-pop)
-    - [Removing Items Using Del](#removing-items-using-del)
-    - [Clearing List Items](#clearing-list-items)
+    - [Pop Kullanarak İtem Silme](#removing-items-using-pop)
+    - [Del Kullanarak İtem Silme](#removing-items-using-del)
+    - [List İtemlerini Temizleme](#clearing-list-items)
     - [Listi Kopyalama](#copying-a-list)
     - [Listleri Birleştirme](#joining-lists)
-    - [Counting Items in a List](#counting-items-in-a-list)
+    - [List İtemlerini Sayma](#counting-items-in-a-list)
     - [Bir İtemin İndeksini Bulma](#finding-index-of-an-item)
     - [Listi Tersine Çevirme](#reversing-a-list)
     - [List İtemlerini Sıralama](#sorting-list-items)
@@ -47,20 +47,20 @@
 
 ## Listler
 
-There are four collection data types in Python :
+Python’da veri gruplarını saklamak için kullanılan dört temel koleksiyon yapısı vardır:
 
-- List: is a collection which is ordered and changeable(modifiable). Allows duplicate members.
-- Tuple: is a collection which is ordered and unchangeable or unmodifiable(immutable). Allows duplicate members.
-- Set: is a collection which is unordered, un-indexed and unmodifiable, but we can add new items to the set. Duplicate members are not allowed.
-- Dictionary: is a collection which is unordered, changeable(modifiable) and indexed. No duplicate members.
+- List: Sıralı ve değiştirilebilir (modifiable) bir koleksiyondur. Tekrarlanan elemanlara izin verir.
+- Tuple: Sıralı ama değiştirilemez (immutable) bir koleksiyondur. Tekrarlanan elemanlara izin verir.
+- Set: Sırasız, indekslenemez ve değiştirilemez bir koleksiyondur fakat sete yeni eleman ekleyebiliriz. Tekrarlanan elemanlara izin verilmez.
+- Dictionary: Sırasız, değiştirilebilir (modifiye edilebilir) ve indekslenebilir bir koleksiyondur. Tekrarlanan elemanlara izin verilmez.
 
-A list is collection of different data types which is ordered and modifiable(mutable). A list can be empty or it may have different data type items.
+List, farklı veri tiplerinden oluşan, sıralı ve değiştirilebilir (mutable) bir koleksiyondur. Bir list boş olabilir veya farklı veri tiplerinden öğeler içerebilir.
 
-### How to Create a List
+### List Nasıl Oluşturulur?
 
-In Python we can create lists in two ways:
+Python'da iki farklı şekilde list oluşturabiliiriz:
 
-- Using list built-in function
+- list built-in Fonksiyonunu Kullanarak
 
 ```py
 # sözdizimi
@@ -84,13 +84,13 @@ empty_list = [] # bu boş bir list, listte item yok
 print(len(empty_list)) # 0
 ```
 
-Lists with initial values. We use _len()_ to find the length of a list.
+Başlangıç değerli listler oluşturalım ve _len()_ fonksiyonuyla list uzunluğunu bulalım
 
 ```py
 fruits = ['banana', 'orange', 'mango', 'lemon']                     # meyve listi
 vegetables = ['Tomato', 'Potato', 'Cabbage','Onion', 'Carrot']      # sebze listi
-animal_products = ['milk', 'meat', 'butter', 'yoghurt']             # list of animal products
-web_techs = ['HTML', 'CSS', 'JS', 'React','Redux', 'Node', 'MongDB'] # list of web technologies
+animal_products = ['milk', 'meat', 'butter', 'yoghurt']             # hayvansal gıda listi
+web_techs = ['HTML', 'CSS', 'JS', 'React','Redux', 'Node', 'MongDB'] # web teknolojileri listi
 countries = ['Finland', 'Estonia', 'Denmark', 'Sweden', 'Norway'] # ülke listi
 
 # listleri ve uzunluklarını yazdırma
@@ -107,7 +107,7 @@ print('Number of countries:', len(countries))
 ```
 
 ```sh
-output
+çıktı
 Fruits: ['banana', 'orange', 'mango', 'lemon']
 Number of fruits: 4
 Vegetables: ['Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot']
@@ -120,20 +120,21 @@ Countries: ['Finland', 'Estonia', 'Denmark', 'Sweden', 'Norway']
 Number of countries: 5
 ```
 
-- Lists can have items of different data types
+- Listler farklı veri tiplerinden veriler içerebilir
 
 ```py
- lst = ['Asabeneh', 250, True, {'country':'Finland', 'city':'Helsinki'}] # list containing different data types
+ lst = ['Asabeneh', 250, True, {'country':'Finland', 'city':'Helsinki'}] # farklı veri tipleri içeren list
 ```
 
-### Accessing List Items Using Positive Indexing
+### Pozitif İndeksleme Kullanarak List İtemlerine Erişme
 
-We access each item in a list using their index. A list index starts from 0. The picture below shows clearly where the index starts
+Listdeki her bir iteme indekslerini kullanarak erişiriz. List indeksleri 0’dan başlar. Aşağıdaki resim, indekslemeyi açıkça gösterir.
+
 ![List index](../images/list_index.png)
 
 ```py
 fruits = ['banana', 'orange', 'mango', 'lemon']
-first_fruit = fruits[0] # we are accessing the first item using its index
+first_fruit = fruits[0] # indeksini kullanarak ilk iteme erişme
 print(first_fruit)      # banana
 second_fruit = fruits[1]
 print(second_fruit)     # orange
@@ -144,9 +145,9 @@ last_index = len(fruits) - 1
 last_fruit = fruits[last_index]
 ```
 
-### Accessing List Items Using Negative Indexing
+### Negatif İndeksleme Kullanarak List İtemlerine Erişme
 
-Negative indexing means beginning from the end, -1 refers to the last item, -2 refers to the second last item.
+Negatif indeksleme, listin sonundan başlamayı ifade eder; -1 son öğeyi, -2 sondan bir önceki itemi gösterir.
 
 ![List negative indexing](../images/list_negative_indexing.png)
 
@@ -160,7 +161,7 @@ print(last_fruit)       # lemon
 print(second_last)      # mango
 ```
 
-### Unpacking List Items
+### List Itemlerini Unpacking Etme
 
 ```py
 lst = ['item1','item2','item3', 'item4', 'item5']
@@ -173,21 +174,23 @@ print(rest)           # ['item4', 'item5']
 ```
 
 ```py
-# First Example
+# ilk örnek
 fruits = ['banana', 'orange', 'mango', 'lemon','lime','apple']
 first_fruit, second_fruit, third_fruit, *rest = fruits 
 print(first_fruit)     # banana
 print(second_fruit)    # orange
 print(third_fruit)     # mango
 print(rest)           # ['lemon','lime','apple']
-# Second Example about unpacking list
+
+# ikinci örnek
 first, second, third,*rest, tenth = [1,2,3,4,5,6,7,8,9,10]
 print(first)          # 1
 print(second)         # 2
 print(third)          # 3
 print(rest)           # [4,5,6,7,8,9]
 print(tenth)          # 10
-# Third Example about unpacking list
+
+# üçüncü örnek
 countries = ['Germany', 'France','Belgium','Sweden','Denmark','Finland','Norway','Iceland','Estonia']
 gr, fr, bg, sw, *scandic, es = countries
 print(gr)
@@ -198,33 +201,33 @@ print(scandic)
 print(es)
 ```
 
-### Slicing Items from a List
+### Listten İtem Bölme
 
-- Positive Indexing: We can specify a range of positive indexes by specifying the start, end and step, the return value will be a new list. (default values for start = 0, end = len(lst) - 1 (last item), step = 1)
+- Pozitif İndeksleme: Pozitif indekslerin bir aralığını başlangıç (start), bitiş (end) ve adım (step) değerlerini belirterek seçebiliriz; dönen değer yeni bir list olur. (Varsayılan değerler: start = 0, end = len(lst) - 1 (son öğe), step = 1)
 
 ```py
 fruits = ['banana', 'orange', 'mango', 'lemon']
-all_fruits = fruits[0:4] # it returns all the fruits
-# this will also give the same result as the one above
-all_fruits = fruits[0:] # if we don't set where to stop it takes all the rest
-orange_and_mango = fruits[1:3] # it does not include the first index
+all_fruits = fruits[0:4] # tüm meyveleri döner
+# üsttekiyle aynı sonucu verir
+all_fruits = fruits[0:] # stop değeri vermezsek kalan tüm itemleri alır
+orange_and_mango = fruits[1:3] # ilk indeksi dahil etmez
 orange_mango_lemon = fruits[1:]
-orange_and_lemon = fruits[::2] # here we used a 3rd argument, step. It will take every 2cnd item - ['banana', 'mango']
+orange_and_lemon = fruits[::2] # burada 3. argüman olan step'i kullandık. It will take every 2cnd item - ['banana', 'mango']
 ```
 
-- Negative Indexing: We can specify a range of negative indexes by specifying the start, end and step, the return value will be a new list.
+- Negatif İndeksleme: Negatif indekslerin bir aralığını başlangıç (start), bitiş (end) ve adım (step) değerlerini belirleyerek seçebiliriz; dönen değer yeni bir list olur.
 
 ```py
 fruits = ['banana', 'orange', 'mango', 'lemon']
-all_fruits = fruits[-4:] # it returns all the fruits
-orange_and_mango = fruits[-3:-1] # it does not include the last index,['orange', 'mango']
-orange_mango_lemon = fruits[-3:] # this will give starting from -3 to the end,['orange', 'mango', 'lemon']
-reverse_fruits = fruits[::-1] # a negative step will take the list in reverse order,['lemon', 'mango', 'orange', 'banana']
+all_fruits = fruits[-4:] # tüm meyveleri döner
+orange_and_mango = fruits[-3:-1] # son indeksi dahil etmez,['orange', 'mango']
+orange_mango_lemon = fruits[-3:] # -3 indeksinden başlayarak sona kadar olan öğeleri verir,['orange', 'mango', 'lemon']
+reverse_fruits = fruits[::-1] # Negatif bir adım (step), listenin ters sırayla alınmasını sağlar,['lemon', 'mango', 'orange', 'banana']
 ```
 
-### Modifying Lists
+### Listleri Modifiye Etme
 
-List is a mutable or modifiable ordered collection of items. Lets modify the fruit list.
+List değiştirilebilir (modifiable) bir koleksiyondur. Meyve listini modifiye edelim
 
 ```py
 fruits = ['banana', 'orange', 'mango', 'lemon']
@@ -237,7 +240,7 @@ fruits[last_index] = 'lime'
 print(fruits)        #  ['avocado', 'apple', 'mango', 'lime']
 ```
 
-### Checking Items in a List
+### Listte İtem Kontrolü
 
 Checking an item if it is a member of a list using *in* operator. See the example below.
 
@@ -249,7 +252,7 @@ does_exist = 'lime' in fruits
 print(does_exist)  # False
 ```
 
-### Adding Items to a List
+### Listin Sonuna Item Ekleme
 
 To add item to the end of an existing list we use the method *append()*.
 
@@ -267,7 +270,7 @@ fruits.append('lime')   # ['banana', 'orange', 'mango', 'lemon', 'apple', 'lime'
 print(fruits)
 ```
 
-### Inserting Items into a List
+### Listin Arasına Item Ekleme
 
 We can use *insert()* method to insert a single item at a specified index in a list. Note that other items are shifted to the right. The *insert()* methods takes two arguments:index and an item to insert.
 
@@ -285,7 +288,7 @@ fruits.insert(3, 'lime')   # ['banana', 'orange', 'apple', 'lime', 'mango', 'lem
 print(fruits)
 ```
 
-### Removing Items from a List
+### Listten İtem Silme
 
 The remove method removes a specified item from a list
 
@@ -303,7 +306,7 @@ fruits.remove('lemon')
 print(fruits)  # ['orange', 'mango', 'banana']
 ```
 
-### Removing Items Using Pop
+### Pop Kullanarak İtem Silme
 
 The *pop()* method removes the specified index, (or the last item if index is not specified):
 
@@ -323,7 +326,7 @@ fruits.pop(0)
 print(fruits)       # ['orange', 'mango']
 ```
 
-### Removing Items Using Del
+### Del Kullanarak İtem Silme
 
 The *del* keyword removes the specified index and it can also be used to delete items within index range. It can also delete the list completely
 
@@ -346,7 +349,7 @@ del fruits
 print(fruits)       # This should give: NameError: name 'fruits' is not defined
 ```
 
-### Clearing List Items
+### List İtemlerini Temizleme
 
 The *clear()* method empties the list:
 
@@ -526,36 +529,36 @@ To sort lists we can use _sort()_ method or _sorted()_ built-in functions. The _
 
 🌕 You are diligent and you have already achieved quite a lot. You have just completed day 5 challenges and you are 5 steps a head in to your way to greatness. Now do some exercises for your brain and muscles.
 
-## 💻 Exercises: Day 5
+## 💻 Alıştırmalar: 5. Gün
 
-### Exercises: Level 1
+### Alıştırmalar: 1. Seviye
 
-1. Declare an empty list
-2. Declare a list with more than 5 items
-3. Find the length of your list
-4. Get the first item, the middle item and the last item of the list
-5. Declare a list called mixed_data_types, put your(name, age, height, marital status, address)
-6. Declare a list variable named it_companies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon.
-7. Print the list using _print()_
-8. Print the number of companies in the list
-9. Print the first, middle and last company
-10. Print the list after modifying one of the companies
-11. Add an IT company to it_companies
-12. Insert an IT company in the middle of the companies list
-13. Change one of the it_companies names to uppercase (IBM excluded!)
-14. Join the it_companies with a string '#;&nbsp; '
-15. Check if a certain company exists in the it_companies list.
-16. Sort the list using sort() method
-17. Reverse the list in descending order using reverse() method
-18. Slice out the first 3 companies from the list
-19. Slice out the last 3 companies from the list
-20. Slice out the middle IT company or companies from the list
-21. Remove the first IT company from the list
-22. Remove the middle IT company or companies from the list
-23. Remove the last IT company from the list
-24. Remove all IT companies from the list
-25. Destroy the IT companies list
-26. Join the following lists:
+1. Boş bir list tanımla
+2. 5’ten fazla iteme sahip bir list tanımla
+3. Listin uzunluğunu bul
+4. Listin ilk, orta ve son öğesini bul
+5. mixed_data_types adında bir list tanımla ve içine (name, age, height, marital status, address) bilgilerini koy
+6. it_companies adında bir list değişkeni tanımla ve başlangıç değerleri olarak Facebook, Google, Microsoft, Apple, IBM, Oracle ve Amazon ekle
+7. Listeyi print() kullanarak yazdır
+8. Listdeki şirketlerin sayısını yazdır
+9. Listin ilk, orta ve son şirketini yazdır
+10. Şirketlerden birini değiştirerek listi tekrar yazdır
+11. it_companies listine yeni bir IT şirketi ekle
+12. Şirketler listinin ortasına bir IT şirketi ekle
+13. IBM hariç olmak üzere it_companies listindeki şirketlerden birinin adını büyük harfe çevir
+14. it_companies listini '#' stringi ile birleştir 
+15. Belirli bir şirketin it_companies listinde olup olmadığını kontrol et
+16. Listi sort() metodu ile sırala
+17. Listi reverse() metodu ile azalan düzende (ters) sırala
+18. Listdeki ilk 3 şirketi böl (slice)
+19. Listdeki son 3 şirketi böl (slice)
+20. Listin ortasındaki IT şirketini böl (slice)
+21. Listdeki ilk IT şirketini sil
+22. Listin ortasındaki IT şirketini sil
+23. Listdeki son IT şirketini sil
+24. Listdeki tüm IT şirketlerini kaldır
+25. it_companies listini tamamen sil
+26. Aşağıdaki listleri birleştir
 
     ```py
     front_end = ['HTML', 'CSS', 'JS', 'React', 'Redux']
@@ -564,7 +567,7 @@ To sort lists we can use _sort()_ method or _sorted()_ built-in functions. The _
 
 27. After joining the lists in question 26. Copy the joined list and assign it to a variable full_stack, then insert Python and SQL after Redux.
 
-### Exercises: Level 2
+### Alıştırmalar: 2. Seviye
 
 1. The following is a list of 10 students ages:
 
@@ -572,17 +575,17 @@ To sort lists we can use _sort()_ method or _sorted()_ built-in functions. The _
 ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
 ```
 
-- Sort the list and find the min and max age
-- Add the min age and the max age again to the list
-- Find the median age (one middle item or two middle items divided by two)
-- Find the average age (sum of all items divided by their number )
-- Find the range of the ages (max minus min)
-- Compare the value of (min - average) and (max - average), use _abs()_ method
+- Listi sırala ve en küçük ile en büyük yaşı bul
+- En küçük ve en büyük yaşları tekrar liste ekle
+- Yaşların medyanını bul (ortadaki yaş)
+- Ortalama yaşı bul
+- Yaşların aralığını bul (en büyük yaş – en küçük yaş)
+- (en küçük yaş – ortalama yaş) ve (en büyük yaş – ortalama yaş) değerlerini karşılaştır, _abs()_ metodunu kullan
 
 1. Find the middle country(ies) in the [countries list](https://github.com/Asabeneh/30-Days-Of-Python/tree/master/data/countries.py)
 1. Divide the countries list into two equal lists if it is even if not one more country for the first half.
 1. ['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']. Unpack the first three countries and the rest as scandic countries.
 
-🎉 CONGRATULATIONS ! 🎉
+🎉 TEBRİKLER ! 🎉
 
-[<< Day 4](../04_Day_Strings/04_strings.md) | [Day 6 >>](../06_Day_Tuples/06_tuples.md)
+[<< 4. Gün](../04_Day_Strings/04_strings.md) | [6. Gün >>](../06_Day_Tuples/06_tuples.md)

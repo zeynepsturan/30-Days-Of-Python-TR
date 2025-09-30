@@ -61,8 +61,8 @@ while count < 5:
 #prints from 0 to 4
 ```
 
-In the above while loop, the condition becomes false when count is 5. That is when the loop stops.
-If we are interested to run block of code once the condition is no longer true, we can use _else_.
+Yukarıdaki while döngüsünde, koşul count = 5 olduğunda false olur. Bu noktada döngü durur.
+Koşul artık doğru olmadığında bir kod bloğunu bir kez çalıştırmak istiyorsak, _else_ ifadesini kullanabiliriz.
 
 ```py
   # sözdizimi
@@ -84,7 +84,6 @@ else:
 ```
 
 Yukarıdaki döngü koşulu, count 5 olduğunda False olacak ve döngü duracaktır; ardından yürütme else bloğuna geçer. Sonuç olarak 5 yazdırılır.
-
 
 ### Break ve Continue - 1. Kısım
 
@@ -109,9 +108,9 @@ while count < 5:
         break
 ```
 
-The above while loop only prints 0, 1, 2, but when it reaches 3 it stops.
+Yukarıdaki while döngüsü yalnızca 0, 1, 2 yazdırır, 3’e ulaştığında durur.
 
-- Continue: With the continue statement we can skip the current iteration, and continue with the next:
+- Continue: continue ifadesiyle mevcut iterasyonu atlayabilir ve bir sonraki iterasyona devam edebiliriz:
 
 ```py
   # sözdizimi
@@ -133,13 +132,13 @@ while count < 5:
     count = count + 1
 ```
 
-The above while loop only prints 0, 1, 2 and 4 (skips 3).
+Yukarıdaki while döngüsü yalnızca 0, 1, 2 ve 4 yazdırır, 3’ü atlar.
 
 ### For Döngüsü
 
-A _for_ keyword is used to make a for loop, similar with other programming languages, but with some syntax differences. Loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
+_for_ anahtar kelimesi, bir for döngüsü oluşturmak için kullanılır. Diğer programlama dillerine benzerdir ancak bazı sözdizimi farklılıkları vardır. Döngü, list,  tuple, dictionary, set veya string gibi bir dizi (sequence) üzerinde yineleme (iteration) yapmak için kullanılır.
 
-- For loop with list
+- List ile for döngüsü
 
 ```py
 # sözdizimi
@@ -155,7 +154,7 @@ for number in numbers: # number is temporary name to refer to the list's items, 
     print(number)       # the numbers will be printed line by line, from 0 to 5
 ```
 
-- For loop with string
+- String ile for döngüsü
 
 ```py
 # sözdizimi
@@ -175,7 +174,7 @@ for i in range(len(language)):
     print(language[i])
 ```
 
-- For loop with tuple
+- Tuple ile for döngüsü
 
 ```py
 # sözdizimi
@@ -191,7 +190,7 @@ for number in numbers:
     print(number)
 ```
 
-- For loop with dictionary
+- Dictionary ile for döngüsü
   Looping through a dictionary gives you the key of the dictionary.
 
 ```py
@@ -222,7 +221,7 @@ for key, value in person.items():
     print(key, value) # this way we get both keys and values printed out
 ```
 
-- Loops in set
+- Set ile döngüler
 
 ```py
 # sözdizimi
@@ -240,7 +239,7 @@ for company in it_companies:
 
 ### Break ve Continue - 2. Kısım
 
-Short reminder:
+Hatırlatma:
 _Break_: We use break when we like to stop our loop before it is completed.
 
 ```py
@@ -289,8 +288,8 @@ In the example above, if the number equals 3, the step *after* the condition (bu
 
 ### Range Fonksiyonu
 
-_range()_ fonksiyonu is used list of numbers. _range(start, end, step)_ 3 parametre alır: starting, ending and increment. Varsayılan olarak 0'dan başlar ve 1'er 1'er artar. The range sequence needs at least 1 argument (end).
-Creating sequences using range
+_range()_ fonksiyonu bir sayı listesi (dizi) oluşturmak için kullanılır. _range(start, end, step)_ 3 parametre alır: start, end ve increment. Varsayılan olarak 0'dan başlar ve 1'er 1'er artar. Bir range dizisi en az 1 argüman (end) gerektirir.
+range kullanarak sayı dizileri oluşturma örneği:
 
 ```py
 lst = list(range(11)) 

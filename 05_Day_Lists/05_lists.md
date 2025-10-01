@@ -242,7 +242,7 @@ print(fruits)        #  ['avocado', 'apple', 'mango', 'lime']
 
 ### Listte İtem Kontrolü
 
-Checking an item if it is a member of a list using *in* operator. See the example below.
+List içinde bir itemin olup olmadığını kontrol etmek için _in_ operatörü kullanılır. Aşağıdaki örneğe bakalım
 
 ```py
 fruits = ['banana', 'orange', 'mango', 'lemon']
@@ -254,10 +254,10 @@ print(does_exist)  # False
 
 ### Listin Sonuna Item Ekleme
 
-To add item to the end of an existing list we use the method *append()*.
+Mevcut bir listin sonuna item eklemek için _append()_ metodunu kullanırız.
 
 ```py
-# syntax
+# sözdizimi
 lst = list()
 lst.append(item)
 ```
@@ -272,10 +272,10 @@ print(fruits)
 
 ### Listin Arasına Item Ekleme
 
-We can use *insert()* method to insert a single item at a specified index in a list. Note that other items are shifted to the right. The *insert()* methods takes two arguments:index and an item to insert.
+Bir liste belirli bir indekste tek bir item eklemek için _insert()_ yöntemini kullanabiliriz. Diğer itemlerin sağa kaydırıldığını unutma. _insert()_ yöntemi iki argüman alır: indeks ve eklenecek item.
 
 ```py
-# syntax
+# sözdizimi
 lst = ['item1', 'item2']
 lst.insert(index, item)
 ```
@@ -290,10 +290,10 @@ print(fruits)
 
 ### Listten İtem Silme
 
-The remove method removes a specified item from a list
+remove metodu listten istenen itemi siler
 
 ```py
-# syntax
+# sözdizimi
 lst = ['item1', 'item2']
 lst.remove(item)
 ```
@@ -301,19 +301,19 @@ lst.remove(item)
 ```py
 fruits = ['banana', 'orange', 'mango', 'lemon', 'banana']
 fruits.remove('banana')
-print(fruits)  # ['orange', 'mango', 'lemon', 'banana'] - this method removes the first occurrence of the item in the list
+print(fruits)  # ['orange', 'mango', 'lemon', 'banana'] - bu metod itemin ilk bulunduğu yerdeki itemi siler, aynı itemden daha fazla varsa onlara dokunmaz
 fruits.remove('lemon')
 print(fruits)  # ['orange', 'mango', 'banana']
 ```
 
 ### Pop Kullanarak İtem Silme
 
-The *pop()* method removes the specified index, (or the last item if index is not specified):
+_pop()_ metodu belirtilen indeksteki itemi siler (eğer indeks belirtilmezse son itemi siler):
 
 ```py
-# syntax
+# sözdizimi
 lst = ['item1', 'item2']
-lst.pop()       # last item
+lst.pop()       # son item
 lst.pop(index)
 ```
 
@@ -328,13 +328,13 @@ print(fruits)       # ['orange', 'mango']
 
 ### Del Kullanarak İtem Silme
 
-The *del* keyword removes the specified index and it can also be used to delete items within index range. It can also delete the list completely
+_del_ anahtar sözcüğü belirtilen indeksteki itemi siler. Bir indeks aralığındaki itemleri silmek için de kullanılabilir. Listi tamamen silebilir.
 
 ```py
-# syntax
+# sözdizimi
 lst = ['item1', 'item2']
 del lst[index] # only a single item
-del lst        # to delete the list completely
+del lst        # listi tamamen silmek için
 ```
 
 ```py
@@ -343,18 +343,18 @@ del fruits[0]
 print(fruits)       # ['orange', 'mango', 'lemon', 'kiwi', 'lime']
 del fruits[1]
 print(fruits)       # ['orange', 'lemon', 'kiwi', 'lime']
-del fruits[1:3]     # this deletes items between given indexes, so it does not delete the item with index 3!
+del fruits[1:3]     # verilen indeks aralığındaki itemleri siler, 3. indeksteki itemi silmez
 print(fruits)       # ['orange', 'lime']
 del fruits
-print(fruits)       # This should give: NameError: name 'fruits' is not defined
+print(fruits)       # Şu hatayı verir: NameError: name 'fruits' is not defined
 ```
 
 ### List İtemlerini Temizleme
 
-The *clear()* method empties the list:
+*clear()* metodu listi boşaltır:
 
 ```py
-# syntax
+# sözdizimi
 lst = ['item1', 'item2']
 lst.clear()
 ```
@@ -365,12 +365,12 @@ fruits.clear()
 print(fruits)       # []
 ```
 
-### Copying a List
+### Listi Kopyalama
 
-It is possible to copy a list by reassigning it to a new variable in the following way: list2 = list1. Now, list2 is a reference of list1, any changes we make in list2 will also modify the original, list1. But there are lots of case in which we do not like to modify the original instead we like to have a different copy. One of way of avoiding the problem above is using _copy()_.
+Bir listi kopyalamak, onu yeni bir değişkene yeniden atayarak mümkündür: list2 = list1. Şimdi list2, list1’in bir referansıdır; list2 üzerinde yaptığımız herhangi bir değişiklik aynı zamanda orijinal olan list1’i de değiştirir. Ancak çoğu durumda orijinal listeyi değiştirmek istemeyiz, bunun yerine farklı bir kopya isteriz. Bu sorunu önlemenin yollarından biri _copy()_ kullanmaktır.
 
 ```py
-# syntax
+# sözdizimi
 lst = ['item1', 'item2']
 lst_copy = lst.copy()
 ```
@@ -381,14 +381,13 @@ fruits_copy = fruits.copy()
 print(fruits_copy)       # ['banana', 'orange', 'mango', 'lemon']
 ```
 
-### Joining Lists
+### Listleri Birleştirme
 
-There are several ways to join, or concatenate, two or more lists in Python.
-
-- Plus Operator (+)
+Python'da listleri birleştirmenin farklı yolları vardır
+- (+) operatörü:
 
 ```py
-# syntax
+# sözdizimi
 list3 = list1 + list2
 ```
 
@@ -404,11 +403,11 @@ fruits_and_vegetables = fruits + vegetables
 print(fruits_and_vegetables ) # ['banana', 'orange', 'mango', 'lemon', 'Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot']
 ```
 
-- Joining using extend() method
-  The *extend()* method allows to append list in a list. See the example below.
+- _extend()_ metodunu kullanarak:
+  *extend()* metodu listin sonuna list eklemeyi mümkün kılar. Aşağıdaki örneğe bakalım.
 
 ```py
-# syntax
+# sözdizimi
 list1 = ['item1', 'item2']
 list2 = ['item3', 'item4', 'item5']
 list1.extend(list2)
@@ -432,12 +431,12 @@ fruits.extend(vegetables)
 print('Fruits and vegetables:', fruits ) # Fruits and vegetables: ['banana', 'orange', 'mango', 'lemon', 'Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot']
 ```
 
-### Counting Items in a List
+### List İtemlerini Sayma
 
-The *count()* method returns the number of times an item appears in a list:
+*count()* metodu listteki item sayısını döner:
 
 ```py
-# syntax
+# sözdizimi
 lst = ['item1', 'item2']
 lst.count(item)
 ```
@@ -449,12 +448,12 @@ ages = [22, 19, 24, 25, 26, 24, 25, 24]
 print(ages.count(24))           # 3
 ```
 
-### Finding Index of an Item
+### Bir İtemin İndeksini Bulma
 
-The *index()* method returns the index of an item in the list:
+*index()* metodu listteki bir itemin indeksini döner:
 
 ```py
-# syntax
+# sözdizimi
 lst = ['item1', 'item2']
 lst.index(item)
 ```
@@ -463,15 +462,15 @@ lst.index(item)
 fruits = ['banana', 'orange', 'mango', 'lemon']
 print(fruits.index('orange'))   # 1
 ages = [22, 19, 24, 25, 26, 24, 25, 24]
-print(ages.index(24))           # 2, the first occurrence
+print(ages.index(24))           # 2, ilk karşılaşılan indeksi döner
 ```
 
-### Reversing a List
+### Listi Tersine Çevirme
 
-The *reverse()* method reverses the order of a list.
+*reverse()* metodu bir listin sıralamasını tersine çevirir.
 
 ```py
-# syntax
+# sözdizimi
 lst = ['item1', 'item2']
 lst.reverse()
 
@@ -486,25 +485,25 @@ ages.reverse()
 print(ages) # [24, 25, 24, 26, 25, 24, 19, 22]
 ```
 
-### Sorting List Items
+### List İtemlerini Sıralama
 
-To sort lists we can use _sort()_ method or _sorted()_ built-in functions. The _sort()_ method reorders the list items in ascending order and modifies the original list. If an argument of _sort()_ method reverse is equal to true, it will arrange the list in descending order.
+Listleri sıralamak için _sort()_ metodunu veya _sorted()_ built-in fonksiyonunu kullanabiliriz. sort() metodu list elemanlarını artan düzende yeniden sıralar ve orijinal listi değiştirir. Eğer _sort()_ metodunun reverse argümanı True olarak verilirse, list azalan düzende sıralanır.
 
-- sort(): this method modifies the original list
+- sort(): bu metod orijinal list üzerinde değişiklik yapar
 
   ```py
-  # syntax
+  # sözdizimi
   lst = ['item1', 'item2']
-  lst.sort()                # ascending
-  lst.sort(reverse=True)    # descending
+  lst.sort()                # artan
+  lst.sort(reverse=True)    # azalan
   ```
 
-  **Example:**
+  **Örnek:**
 
   ```py
   fruits = ['banana', 'orange', 'mango', 'lemon']
   fruits.sort()
-  print(fruits)             # sorted in alphabetical order, ['banana', 'lemon', 'mango', 'orange']
+  print(fruits)             # alfabetik olarak sıralandı, ['banana', 'lemon', 'mango', 'orange']
   fruits.sort(reverse=True)
   print(fruits) # ['orange', 'mango', 'lemon', 'banana']
   ages = [22, 19, 24, 25, 26, 24, 25, 24]
@@ -515,8 +514,8 @@ To sort lists we can use _sort()_ method or _sorted()_ built-in functions. The _
   print(ages) #  [26, 25, 25, 24, 24, 24, 22, 19]
   ```
 
-  sorted(): returns the ordered list without modifying the original list
-  **Example:**
+  sorted(): sıralanan listeyi, orijinal listeyi değiştirmeden döner
+  **Örnek:**
 
   ```py
   fruits = ['banana', 'orange', 'mango', 'lemon']
@@ -527,7 +526,7 @@ To sort lists we can use _sort()_ method or _sorted()_ built-in functions. The _
   print(fruits)     # ['orange', 'mango', 'lemon', 'banana']
   ```
 
-🌕 You are diligent and you have already achieved quite a lot. You have just completed day 5 challenges and you are 5 steps a head in to your way to greatness. Now do some exercises for your brain and muscles.
+🌕 Çalışkan birisin ve şimdiden oldukça çok şey başardın. 5. günün challengelarını tamamladın ve mükemmelliğe giden yolda 5 adım ilerledin. Şimdi beynin ve kasların için biraz alıştırma yapalım.
 
 ## 💻 Alıştırmalar: 5. Gün
 
@@ -565,11 +564,11 @@ To sort lists we can use _sort()_ method or _sorted()_ built-in functions. The _
     back_end = ['Node','Express', 'MongoDB']
     ```
 
-27. After joining the lists in question 26. Copy the joined list and assign it to a variable full_stack, then insert Python and SQL after Redux.
+27.  26. soruda listleri birleştirdikten sonra, bu birleştirilmiş listi kopyalayıp full_stack isimli bir değişkene ata, Redux’tan sonra Python ve SQL ekle
 
 ### Alıştırmalar: 2. Seviye
 
-1. The following is a list of 10 students ages:
+1. Aşağıdaki list 10 öğrencinin yaşlarını içeriyor:
 
 ```sh
 ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
@@ -582,9 +581,9 @@ ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
 - Yaşların aralığını bul (en büyük yaş – en küçük yaş)
 - (en küçük yaş – ortalama yaş) ve (en büyük yaş – ortalama yaş) değerlerini karşılaştır, _abs()_ metodunu kullan
 
-1. Find the middle country(ies) in the [countries list](https://github.com/Asabeneh/30-Days-Of-Python/tree/master/data/countries.py)
-1. Divide the countries list into two equal lists if it is even if not one more country for the first half.
-1. ['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']. Unpack the first three countries and the rest as scandic countries.
+1. [countries listindeki](https://github.com/Asabeneh/30-Days-Of-Python/tree/master/data/countries.py) orta sıradaki ülkeyi/ülkeleri bul
+1. countries listi 2 eşit liste böl. Eğer listte tek sayıda eleman varsa ilk list bir fazla ülke içersin
+1. ['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']. İlk 3 ülkeyi unpack et
 
 🎉 TEBRİKLER ! 🎉
 

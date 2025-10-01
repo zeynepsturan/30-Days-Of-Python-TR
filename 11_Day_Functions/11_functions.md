@@ -9,7 +9,7 @@
 
 <sub>Yazar:
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Second Edition: Temmuz, 2021</small>
+<small> İkinci Versiyon: Temmuz, 2021</small>
 </sub>
 
 </div>
@@ -20,50 +20,50 @@
 
 - [📘 11. Gün](#-day-11)
   - [Fonksiyonlar](#functions)
-    - [Defining a Function](#defining-a-function)
-    - [Declaring and Calling a Function](#declaring-and-calling-a-function)
+    - [Bir Fonksiyon Bildirmek](#defining-a-function)
+    - [Fonksiyonu Bildirmek ve Çağırmak](#declaring-and-calling-a-function)
     - [Parametresiz Fonksiyonlar](#function-without-parameters)
-    - [Function Returning a Value - Part 1](#function-returning-a-value---part-1)
+    - [Değer Dönen Fonksiyonlar - Kısım 1](#function-returning-a-value---part-1)
     - [Parametreli Fonksiyonlar](#function-with-parameters)
-    - [Passing Arguments with Key and Value](#passing-arguments-with-key-and-value)
-    - [Function Returning a Value - Part 2](#function-returning-a-value---part-2)
-    - [Function with Default Parameters](#function-with-default-parameters)
-    - [Arbitrary Number of Arguments](#arbitrary-number-of-arguments)
-    - [Default and Arbitrary Number of Parameters in Functions](#default-and-arbitrary-number-of-parameters-in-functions)
-    - [Function as a Parameter of Another Function](#function-as-a-parameter-of-another-function)
-  - [Testimony](#testimony)
-  - [💻 Exercises: Day 11](#-exercises-day-11)
-    - [Exercises: Level 1](#exercises-level-1)
-    - [Exercises: Level 2](#exercises-level-2)
-    - [Exercises: Level 3](#exercises-level-3)
+    - [Key ve Value ile Argüman Vermek](#passing-arguments-with-key-and-value)
+    - [Değer Dönen Fonksiyonlar - Kısım 2](#function-returning-a-value---part-2)
+    - [Varsayılan Parametreli Fonksiyon](#function-with-default-parameters)
+    - [Belirsiz Sayıda Argümanlar](#arbitrary-number-of-arguments)
+    - [Fonksiyonlarda Varsayılan ve Belirsiz Sayıda Argümanlar](#default-and-arbitrary-number-of-parameters-in-functions)
+    - [Bir Fonksiyonun Parametresi Olarak Başka Bir Fonksiyon](#function-as-a-parameter-of-another-function)
+  - [Değerlendirme](#testimony)
+  - [💻 Alıştırmalar: 11. Gün](#-exercises-day-11)
+    - [Alıştırmalar: 1. Seviye](#exercises-level-1)
+    - [Alıştırmalar: 2. Seviye](#exercises-level-2)
+    - [Alıştırmalar: 3. Seviye](#exercises-level-3)
 
 # 📘 11. Gün
 
 ## Fonksiyonlar
 
-So far we have seen many built-in Python functions. In this section, we will focus on custom functions. What is a function? Before we start making functions, let us learn what a function is and why we need them?
+Şimdiye kadar birçok built-in Python fonksiyonu gördük. Bu bölümde, özel fonksiyonlara odaklanacağız. Peki, fonksiyon nedir? Fonksiyonlar oluşturmaya başlamadan önce, bir fonksiyonun ne olduğunu ve neden ihtiyaç duyduğumuzu öğrenelim.
 
-### Defining a Function
+### Bir Fonksiyon Bildirmek
 
-A function is a reusable block of code or programming statements designed to perform a certain task. To define or declare a function, Python provides the _def_ keyword. The following is the syntax for defining a function. The function block of code is executed only if the function is called or invoked.
+Fonksiyon, belirli bir görevi yerine getirmek için tasarlanmış, yeniden kullanılabilir bir kod veya programlama ifadeleri bloğudur. Python, bir fonksiyon tanımlamak veya bildirmek için _def_ anahtar kelimesini sağlar. Bir fonksiyon tanımlamanın sözdizimi aşağıdaki gibidir. Fonksiyon bloğundaki kod, yalnızca fonksiyon çağrıldığında veya çalıştırıldığında yürütülür.
 
-### Declaring and Calling a Function
+###Fonksiyonu Bildirmek ve Çağırmak
 
-When we make a function, we call it declaring a function. When we start using the it,  we call it _calling_ or _invoking_ a function. Function can be declared with or without parameters.
+Bir fonksiyon oluşturduğumuzda, buna fonksiyon bildirimi (declare) diyoruz. Fonksiyonu kullanmaya başladığımızda ise buna fonksiyonu çağırmak (calling) veya çalıştırmak (invoking) denir. Fonksiyon, parametreli veya parametresiz olarak bildirilebilir.
 
 ```py
-# syntax
+# sözdizimi
 # Declaring a function
-def fonksiyon_adı():
-    codes
-    codes
+def function_name():
+    kod
+    kod
 # Calling a function
-fonksiyon_adı()
+function_name()
 ```
 
 ### Parametresiz Fonksiyonlar
 
-Function can be declared without parameters.
+Fonksiyonlar parametresiz tanımlanabilir.
 
 **Örnek:**
 
@@ -84,9 +84,9 @@ def add_two_numbers ():
 add_two_numbers()
 ```
 
-### Function Returning a Value - Part 1
+### Değer Dönen Fonksiyonlar - Kısım 1
 
-Function can also return values, if a function does not have a return statement, the value of the function is None. Let us rewrite the above functions using return. From now on, we get a value from a function when we call the function and print it.
+Fonksiyonlar değer döndürebilir. Eğer bir fonksiyonun return ifadesi yoksa fonksiyonun değeri None olur. Yukarıdaki fonksiyonları return kullanarak tekrar yazalım. Artık fonksiyonu çağırdığımızda fonksiyondan bir değer alır ve bunu print() ile yazdırabiliriz.
 
 ```py
 def generate_full_name ():
@@ -107,12 +107,12 @@ print(add_two_numbers())
 
 ### Parametreli Fonksiyonlar
 
-In a function we can pass different data types(number, string, boolean, list, tuple, dictionary or set) as a parameter
+Bir fonksiyonda farklı veri tiplerini (sayı, string, boolean, liste, tuple, sözlük veya set) parametre olarak geçirebiliriz.
 
-- Single Parameter: If our function takes a parameter we should call our function with an argument
+- Tek Parametre: Eğer fonksiyonumuz bir parametre alıyorsa onu argümanıyla birlikte çağırmalıyız:
 
 ```py
-  # syntax
+  # sözdizimi
   # Declaring a function
   def fonksiyon_adı(parameter):
     kod
@@ -154,10 +154,10 @@ print(sum_of_numbers(10)) # 55
 print(sum_of_numbers(100)) # 5050
 ```
 
-- Two Parameter: A function may or may not have a parameter or parameters. A function may also have two or more parameters. If our function takes parameters we should call it with arguments. Let us check a function with two parameters:
+- İki Parametre: Bir fonksiyonun hiç parametresi olmayabilir. Aynı zamanda birden fazla parametresi de olabilir. Eğer fonksiyonumuz parametre alıyorsa argümanlarıyla birlikte çağırmalıyız. İki parametreli bir fonksiyona bakalım:
 
 ```py
-  # syntax
+  # sözdizimi
   # Declaring a function
   def fonksiyon_adı(para1, para2):
     codes
@@ -187,18 +187,18 @@ def calculate_age (current_year, birth_year):
 print('Yaş: ', calculate_age(2021, 1819))
 
 def weight_of_object (mass, gravity):
-    weight = str(mass * gravity)+ ' N' # the value has to be changed to a string first
+    weight = str(mass * gravity)+ ' N' # value önce stringe çevrilmeli
     return weight
 print('Weight of an object in Newtons: ', weight_of_object(100, 9.81))
 ```
 
-### Passing Arguments with Key and Value
+### Key ve Value ile Argüman Vermek
 
-If we pass the arguments with key and value, the order of the arguments does not matter.
+Eğer argümanları key ve value ile verirsek, argümanların sırası önemli değildir.
 
 ```py
-# syntax
-# Declaring a function
+# sözdizimi
+# Fonksiyon bildirme
 def fonksiyon_adı(para1, para2):
     kod
     kod
@@ -221,11 +221,11 @@ def add_two_numbers (num1, num2):
 print(add_two_numbers(num2 = 3, num1 = 2)) # Order does not matter
 ```
 
-### Function Returning a Value - Part 2
+### Değer Dönen Fonksiyonlar - Kısım 2
 
-If we do not return a value with a function, then our function is returning _None_ by default. To return a value with a function we use the keyword _return_ followed by the variable we are returning. We can return any kind of data types from a function.
+Eğer bir fonksiyon değer dönmezse, fonksiyon varsayılan olarak _None_ döner. Fonksiyondan bir değer döndürmek için _return_ anahtar kelimesi kullanılır ve ardından döndürmek istediğimiz değişken belirtilir. Fonksiyondan herhangi bir veri tipi döndürülebilir.
 
-- Returning a string:
+- String döndürme:
 **Örnek:**
 
 ```py
@@ -240,7 +240,7 @@ def print_full_name(firstname, lastname):
 print_full_name(firstname='Asabeneh', lastname='Yetayeh')
 ```
 
-- Returning a number:
+- Sayı döndürme:
 
 **Örnek:**
 
@@ -256,20 +256,20 @@ def calculate_age (current_year, birth_year):
 print('Yaş: ', calculate_age(2019, 1819))
 ```
 
-- Returning a boolean:
+- Boolean döndürme:
   **Örnek:**
 
 ```py
 def is_even (n):
     if n % 2 == 0:
         print('çift')
-        return True    # return stops further execution of the function, similar to break 
+        return True    # return fonksiyonun çalışmasını durdurur, break'e benzer
     return False
 print(is_even(10)) # True
 print(is_even(7)) # False
 ```
 
-- Returning a list:
+- List döndürme:
   **Örnek:**
 
 ```py
@@ -282,19 +282,19 @@ def find_even_numbers(n):
 print(find_even_numbers(10))
 ```
 
-### Function with Default Parameters
+### Varsayılan Parametreli Fonksiyon
 
-Sometimes we pass default values to parameters, when we invoke the function. If we do not pass arguments when calling the function, their default values will be used.
+Bazen fonksiyonlara varsayılan değerler veririz. Eğer fonksiyonu çağırırken argümanlarını vermezsek varsayılan argüman değerleri kullanılır.
 
 ```py
-# syntax
-# Declaring a function
-def fonksiyon_adı(param = value):
+# sözdizimi
+# Fonksiyon bildirme
+def function_name(param = value):
     kod
     kod
-# Calling function
-fonksiyon_adı()
-fonksiyon_adı(arg)
+# Fonksiyon çağırma
+function_name()
+function_name(arg)
 ```
 
 **Örnek:**
@@ -320,23 +320,23 @@ def calculate_age (birth_year,current_year = 2021):
 print('Age: ', calculate_age(1821))
 
 def weight_of_object (mass, gravity = 9.81):
-    weight = str(mass * gravity)+ ' N' # the value has to be changed to string first
+    weight = str(mass * gravity)+ ' N' # value stringe çevrilmeli
     return weight
-print('Weight of an object in Newtons: ', weight_of_object(100)) # 9.81 - average gravity on Earth's surface
-print('Weight of an object in Newtons: ', weight_of_object(100, 1.62)) # gravity on the surface of the Moon
+print('Weight of an object in Newtons: ', weight_of_object(100)) # 9.81 - dünya yüzeyindeki ortalama yerçekimi
+print('Weight of an object in Newtons: ', weight_of_object(100, 1.62)) # ay yüzeyindeki yer çekimi
 ```
 
-### Arbitrary Number of Arguments
+### Belirsiz Sayıda Argümanlar
 
-If we do not know the number of arguments we pass to our function, we can create a function which can take arbitrary number of arguments by adding \* before the parameter name.
+Eğer fonksiyonumuza kaç tane argüman verileceğini bilmiyorsak, parametre adının önüne * ekleyerek istediğimiz sayıda argüman alabilen (arbitrary number of arguments) bir fonksiyon oluşturabiliriz.
 
 ```py
-# syntax
-# Declaring a function
+# sözdizimi
+# Fonksiyonu bildirme
 def fonksiyon_adı(*args):
     kod
     kod
-# Calling function
+# Fonksiyonu çağırma
 fonksiyon_adı(param1, param2, param3,..)
 ```
 
@@ -346,12 +346,12 @@ fonksiyon_adı(param1, param2, param3,..)
 def sum_all_nums(*nums):
     total = 0
     for num in nums:
-        total += num     # same as total = total + num 
+        total += num     # total = total + num 
     return total
 print(sum_all_nums(2, 3, 5)) # 10
 ```
 
-### Default and Arbitrary Number of Parameters in Functions
+### Fonksiyonlarda Varsayılan ve Belirsiz Sayıda Argümanlar
 
 ```py
 def generate_groups (team,*args):
@@ -361,10 +361,10 @@ def generate_groups (team,*args):
 print(generate_groups('Team-1','Asabeneh','Brook','David','Eyob'))
 ```
 
-### Function as a Parameter of Another Function
+### Bir Fonksiyonun Parametresi Olarak Başka Bir Fonksiyon
 
 ```py
-#You can pass functions around as parameters
+#Fonksiyonları parametre olarak verebiliriz
 def square_number (n):
     return n * n
 def do_something(f, x):
@@ -372,25 +372,25 @@ def do_something(f, x):
 print(do_something(square_number, 3)) # 27
 ```
 
-🌕 You achieved quite a lot so far.  Keep going! You have just completed day 11 challenges and you are 11 steps a head in to your way to greatness. Now do some exercises for your brain and muscles.
+🌕 Çok şey başardın, devam et! 11. günün challenge’larını tamamladın ve mükemmellik yolunda 11 adım ilerledin. Şimdi beynin ve kasların için biraz alıştırma yapalım.
 
-## Testimony
+## Değerlendirme
 
-Now it is time to express your thoughts about the Author and 30DaysOfPython. You can leave your testimonial on this [link](https://testimonial-s3sw.onrender.com/)
+Şimdi yazar ve 30DaysOfPython hakkındaki düşüncelerini ifade etme zamanı. Görüşlerini bu [link](https://testimonial-s3sw.onrender.com/) üzerinden paylaşabilirsin.
 
-## 💻 Exercises: 11. Gün
+## 💻 Alıştırmalar: 11. Gün
 
-### Exercises: Level 1
+### Alıştırmalar: 1. Seviye
 
-1. Declare a function _add_two_numbers_. It takes two parameters and it returns a sum.
-2. Area of a circle is calculated as follows: area = π x r x r. Write a function that calculates _area_of_circle_.
-3. Write a function called add_all_nums which takes arbitrary number of arguments and sums all the arguments. Check if all the list items are number types. If not do give a reasonable feedback.
-4. Temperature in °C can be converted to °F using this formula: °F = (°C x 9/5) + 32. Write a function which converts °C to °F, _convert_celsius_to-fahrenheit_.
-5. Write a function called check-season, it takes a month parameter and returns the season: Autumn, Winter, Spring or Summer.
-6. Write a function called calculate_slope which return the slope of a linear equation
-7. Quadratic equation is calculated as follows: ax² + bx + c = 0. Write a function which calculates solution set of a quadratic equation, _solve_quadratic_eqn_.
-8. Declare a function named print_list. It takes a list as a parameter and it prints out each element of the list.
-9. Declare a function named reverse_list. It takes an array as a parameter and it returns the reverse of the array (use loops).
+1. _add_two_numbers_ adında bir fonksiyon tanımla. İki parametre alır ve toplamını döndürür.
+2. Bir dairenin alanı şu şekilde hesaplanır: alan = π x r x r. _area_of_circle_ adında bir fonksiyon yaz
+3. _add_all_nums_ adında bir fonksiyon yaz; rastgele sayıda argüman alır ve tüm argümanları toplar. Listenin tüm elemanlarının sayı tipi olup olmadığını kontrol et. Değilse makul bir geri bildirim ver.
+4. Sıcaklık °C’den °F’ye şu formülle dönüştürülebilir: °F = (°C x 9/5) + 32. _convert_celsius_to_fahrenheit_ adında bir fonksiyon yaz.
+5. _check_season_ adında bir fonksiyon yaz; bir ay parametresi alır ve mevsimi döndürür: Sonbahar, Kış, İlkbahar veya Yaz.
+6. _calculate_slope_ adında bir fonksiyon yaz; bir doğrusal denklemin eğimini döndürür.
+7. Bir kuadratik denklem şu şekilde hesaplanır: ax² + bx + c = 0. _solve_quadratic_eqn_ adında bir fonksiyon yaz; kuadratik denklemin çözüm kümesini hesaplar.
+8. _print_list_ adında bir fonksiyon tanımla. Bir list parametresi alır ve listi her elemanını yazdırır.
+9. _reverse_list_ adında bir fonksiyon tanımla. Bir array parametresi alır ve arrayi ters çevirir (döngü kullanarak).
 
 ```py
 print(reverse_list([1, 2, 3, 4, 5]))
@@ -399,8 +399,8 @@ print(reverse_list1(["A", "B", "C"]))
 # ["C", "B", "A"]
 ```
 
-10. Declare a function named capitalize_list_items. It takes a list as a parameter and it returns a capitalized list of items
-11. Declare a function named add_item. It takes a list and an item parameters. It returns a list with the item added at the end.
+10. _capitalize_list_items_ adında bir fonksiyon tanımla. Bir list parametresi alır ve elemanları büyük harfe çevrilmiş bir list döndürür.
+11. _add_item_ adında bir fonksiyon tanımlayın. Bir list ve bir item parametresi alır. İtemi listin sonuna ekleyerek yeni listi döndürür.
 
 ```py
 food_staff = ['Potato', 'Tomato', 'Mango', 'Milk']
@@ -409,7 +409,7 @@ numbers = [2, 3, 7, 9]
 print(add_item(numbers, 5))      [2, 3, 7, 9, 5]
 ```
 
-12. Declare a function named remove_item. It takes a list and an item parameters. It returns a list with the item removed from it.
+12. _remove_item_ adında bir fonksiyon tanımla. Bir list ve bir item parametresi alır. Liste içinden itemi silerek yeni listi döndürür.
 
 ```py
 food_staff = ['Potato', 'Tomato', 'Mango', 'Milk']
@@ -418,7 +418,7 @@ numbers = [2, 3, 7, 9]
 print(remove_item(numbers, 3))  # [2, 7, 9]
 ```
 
-13. Declare a function named sum_of_numbers. It takes a number parameter and it adds all the numbers in that range.
+13. _sum_of_numbers_ adında bir fonksiyon tanımla. Bir sayı parametresi alır ve o sayıya kadar olan tüm sayıların toplamını döndürür.
 
 ```py
 print(sum_of_numbers(5))  # 15
@@ -426,12 +426,12 @@ print(sum_of_numbers(10)) # 55
 print(sum_of_numbers(100)) # 5050
 ```
 
-14. Declare a function named sum_of_odds. It takes a number parameter and it adds all the odd numbers in that range.
-15. Declare a function named sum_of_even. It takes a number parameter and it adds all the even numbers in that - range.
+14. _sum_of_odds_ adında bir fonksiyon tanımla. Bir sayı parametresi alır ve o sayıya kadar olan tüm tek sayıların toplamını döndürür.
+15. _sum_of_even_ adında bir fonksiyon tanımla. Bir sayı parametresi alır ve o sayıya kadar olan tüm çift sayıların toplamını döndürür.
 
-### Exercises: Level 2
+### Alıştırmalar: 2. Seviye
 
-1. Declare a function named evens_and_odds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+1. evens_and_odds adında bir fonksiyon tanımla. Bir pozitif tam sayı parametresi alır ve bu sayıdaki çift ve tek sayıların sayısını hesaplar.
 
 ```py
     print(evens_and_odds(100))
@@ -439,20 +439,20 @@ print(sum_of_numbers(100)) # 5050
     # The number of evens are 51.
 ```
 
-1. Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
-1. Call your function _is_empty_, it takes a parameter and it checks if it is empty or not
-1. Write different functions which take lists. They should calculate_mean, calculate_median, calculate_mode, calculate_range, calculate_variance, calculate_std (standard deviation).
+1. factorial adında bir fonksiyon çağır; bir tam sayı parametresi alır ve sayının faktöriyelini döndürür.
+2. _is_empty_ adında bir fonksiyon çağır; bir parametre alır ve boş olup olmadığını kontrol eder.
+3. Farklı fonksiyonlar yaz; bunlar listleri parametre olarak almalı ve aşağıdakileri hesaplamalı: calculate_mean (ortalama), calculate_median (medyan), calculate_mode (mod), calculate_range (aralık), calculate_variance (varyans), calculate_std (standart sapma).
 
-### Exercises: Level 3
+### Alıştırmalar: 3. Seviye
 
-1. Bir sayının asal olup olmadığını kontrol eden is_prime adlı bir fonksiyon yazın.
-1. Write a functions which checks if all items are unique in the list.
-1. Write a function which checks if all the items of the list are of the same data type.
-1. Write a function which check if provided variable is a valid python variable
-1. Go to the data folder and access the countries-data.py file.
+1. Bir sayının asal olup olmadığını kontrol eden is_prime adlı bir fonksiyon yaz.
+2. Listin tüm elemanlarının benzersiz olup olmadığını kontrol eden bir fonksiyon yaz.
+3. Listin tüm elemanlarının aynı veri tipinde olup olmadığını kontrol eden bir fonksiyon yaz.
+4. Verilen değişken isminin geçerli bir Python değişken ismi olup olmadığını kontrol eden bir fonksiyon yaz.
+5. data klasörüne gidin ve countries-data.py dosyasını aç.
 
-- Create a function called the most_spoken_languages in the world. It should return 10 or 20 most spoken languages in the world in descending order
-- Create a function called the most_populated_countries. It should return 10 or 20 most populated countries in descending order.
+- Dünyadaki en çok konuşulan 10 veya 20 dili azalan sırayla döndüren most_spoken_languages adında bir fonksiyon oluştur.
+- En çok nüfusa sahip 10 veya 20 ülkeyi azalan sırayla döndüren most_populated_countries adında bir fonksiyon oluştur.
 
 🎉 TEBRİKLER ! 🎉
 

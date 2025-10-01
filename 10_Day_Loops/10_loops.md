@@ -150,8 +150,8 @@ for iterator in lst:
 
 ```py
 numbers = [0, 1, 2, 3, 4, 5]
-for number in numbers: # number is temporary name to refer to the list's items, valid only inside this loop
-    print(number)       # the numbers will be printed line by line, from 0 to 5
+for number in numbers: # number, list itemlerini temsil eden geçici bir isim. Sadece bu döngü içerisinde geçerli
+    print(number)       # sayılar 0'dan 5'e satır satır yazdırılacak
 ```
 
 - String ile for döngüsü
@@ -191,7 +191,7 @@ for number in numbers:
 ```
 
 - Dictionary ile for döngüsü
-  Looping through a dictionary gives you the key of the dictionary.
+  Bir dictionary üzerinde döngü yapmak, sözlüğün keylerini verir.
 
 ```py
   # sözdizimi
@@ -218,7 +218,7 @@ for key in person:
     print(key)
 
 for key, value in person.items():
-    print(key, value) # this way we get both keys and values printed out
+    print(key, value) # bu yöntemle hem keyleri hem valueleri yazdırmış oluruz
 ```
 
 - Set ile döngüler
@@ -240,7 +240,7 @@ for company in it_companies:
 ### Break ve Continue - 2. Kısım
 
 Hatırlatma:
-_Break_: We use break when we like to stop our loop before it is completed.
+_Break_: Döngüden çıkmak istediğimizde break kullanırız
 
 ```py
 # sözdizimi
@@ -250,7 +250,7 @@ for iterator in sequence:
         break
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 numbers = (0,1,2,3,4,5)
@@ -260,9 +260,9 @@ for number in numbers:
         break
 ```
 
-In the above example, the loop stops when it reaches 3.
+Yukarıdaki örnekte 3'e gelinince döngü durur.
 
-Continue: We use continue when we like to skip some of the steps in the iteration of the loop.
+Continue: Mevcut iterasyonu atlayabilir ve bir sonraki iterasyona devam edebiliriz.
 
 ```py
   # sözdizimi
@@ -280,11 +280,11 @@ for number in numbers:
     print(number)
     if number == 3:
         continue
-    print('Next number should be ', number + 1) if number != 5 else print("loop's end") # for short hand conditions need both if and else statements
+    print('Next number should be ', number + 1) if number != 5 else print("loop's end") # short hand koşullar için hem if hem else yazılması gerekli
 print('outside the loop')
 ```
 
-In the example above, if the number equals 3, the step *after* the condition (but inside the loop) is skipped and the execution of the loop continues if there are any iterations left.
+Yukarıdaki örnekte, sayı 3’e eşitse, koşuldan sonraki adım atlanır ve döngüde kalan yinelemeler varsa yürütme devam eder.
 
 ### Range Fonksiyonu
 
@@ -294,7 +294,7 @@ range kullanarak sayı dizileri oluşturma örneği:
 ```py
 lst = list(range(11)) 
 print(lst) # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-st = set(range(1, 11))    # 2 arguments indicate start and end of the sequence, step set to default 1
+st = set(range(1, 11))    # 2 argüman start ve end için verilir, step varsayılan olarak 1'dir
 print(st) # {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 
 lst = list(range(0,11,2))
@@ -317,7 +317,7 @@ for number in range(11):
 
 ### İç İçe For Döngüsü
 
-We can write loops inside a loop.
+Döngü içinde döngü yazabiliriz
 
 ```py
 # sözdizimi
@@ -349,7 +349,7 @@ for key in person:
 
 ### For Else
 
-If we want to execute some message when the loop ends, we use else.
+Döngü bittikten sonra mesaj yazdırmak istersek else kullanırız.
 
 ```py
 # sözdizimi
@@ -363,14 +363,14 @@ else:
 
 ```py
 for number in range(11):
-    print(number)   # prints 0 to 10, not including 11
+    print(number)   # 0'dan 10'a kadar yazdırır, 11 dahil değil
 else:
     print('The loop stops at', number)
 ```
 
 ### Pass
 
-In python when statement is required (after semicolon), but we don't like to execute any code there, we can write the word _pass_ to avoid errors. Also we can use it as a placeholder, for future statements.
+Python'da iki noktadan sonra bir ifade gerektiğinde ama şu anlık boş bırakmamız lazımsa _pass_ yazabiliriz.
 
 **Örnek:**
 
@@ -428,7 +428,7 @@ for number in range(6):
    10 x 10 = 100
    ```
 
-6. Iterate through the list, ['Python', 'Numpy','Pandas','Django', 'Flask'] using a for loop and print out the items.
+6. For döngüsü kullanarak ['Python', 'Numpy','Pandas','Django', 'Flask'] bu list içinde gezin ve itemleri yazdır
 7. 0’dan 100’e kadar iterate etmek için for döngüsü kullan ve sadece çift sayıları yazdır
 8. 0’dan 100’e kadar iterate etmek için for döngüsü kullan ve sadece tek sayıları yazdır
    
@@ -450,10 +450,10 @@ for number in range(6):
 
 1. data klasörüne git ve and use the [countries.py](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries.py) file. Loop through the countries and extract all the countries containing the word _land_.
 1. Bu bir meyve listi, ['banana', 'orange', 'mango', 'lemon']. Döngü kullanarak listi tersine çevir
-2. Go to the data folder and use the [countries_data.py](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries-data.py) file. 
-   1. What are the total number of languages in the data
-   2. Find the ten most spoken languages from the data
-   3. Find the 10 most populated countries in the world
+2. data klasörüne git ve şu dosyayı kullan: [countries_data.py](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries-data.py) file. 
+   1. Dosyada toplam kaç tane dil var?
+   2. Dünyada en çok konuşulan 10 dili bul
+   3. Dünyadaki en kalabalık 10 ülkeyi bul
 
 🎉 TEBRİKLER ! 🎉
 

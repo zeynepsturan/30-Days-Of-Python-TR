@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> 30 Günde Python: 15. Gün - Python Hataları </h1>
+  <h1> 30 Günde Python: 15. Gün - Python'da Hatalar </h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -18,7 +18,7 @@
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 - [📘 15. Gün](#-day-15)
-  - [Python Veri Tipi Hataları](#python-error-types)
+  - [Python'da Hatalar](#python-error-types)
     - [Sözdizimi Hatası(SyntaxError)](#syntaxerror)
     - [İsim Hatası(NameError)](#nameerror)
     - [İndeks Hatası(IndexError)](#indexerror)
@@ -29,15 +29,15 @@
     - [ImportError](#importerror)
     - [Değer Hatası(ValueError)](#valueerror)
     - [Sıfıra Bölme Hatası(ZeroDivisionError)](#zerodivisionerror)
-  - [💻 Exercises: Day 15](#-exercises-day-15)
+  - [💻 Alıştırmalar: 15. Gün](#-exercises-day-15)
 
 # 📘 15. Gün
 
-## Python Hataları
+## Python'da Hatalar
 
-When we write code it is common that we make a typo or some other common error. If our code fails to run, the Python interpreter will display a message, containing feedback with information on where the problem occurs and the type of an error. It will also sometimes gives us suggestions on a possible fix. Understanding different types of errors in programming languages will help us to debug our code quickly and also it makes us better at what we do.
+Kod yazarken, yazım hatası (typo) veya diğer yaygın hataları yapmak sıkça görülür. Eğer kodumuz çalışmazsa, Python yorumlayıcısı bir mesaj gösterir; bu mesajda sorunun nerede meydana geldiği ve hata türü hakkında bilgi bulunur. Bazen ayrıca olası bir çözüm önerisi de verir. Programlama dillerindeki farklı hata türlerini anlamak, kodumuzu hızlıca hata ayıklamamıza yardımcı olur ve yaptığımız işte daha iyi olmamızı sağlar.
 
-Let us see the most common error types one by one. First let us open our Python interactive shell. Go to your you computer terminal and write 'python'. The python interactive shell will be opened.
+Şimdi en yaygın hata türlerini teker teker inceleyelim. Öncelikle Python interactive shelli açalım. Bilgisayarının terminaline git ve python yaz. Python interactive shell açılacaktır.
 
 ### Sözdizimi Hatası(SyntaxError)
 
@@ -56,7 +56,7 @@ SyntaxError: Missing parentheses in call to 'print'. Did you mean print('hello w
 >>>
 ```
 
-As you can see we made a syntax error because we forgot to enclose the string with parenthesis and Python already suggests the solution. Let us fix it.
+Gördüğün gibi bir _syntaxError_ döndü çünkü parantezi kapamayı unuttuk ve Python hemen çözüm önerisini sundu. Hatayı düzeltelim.
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -73,7 +73,7 @@ hello world
 >>>
 ```
 
-The error was a _SyntaxError_. After the fix our code was executed without a hitch. Let see more error types.
+Bu bir _SyntaxError'dı_. Düzeltmeden sonra kodumuz sorunsuz bir şekilde çalıştı. Şimdi diğer hata türlerine bakalım.
 
 ### İsim Hatası(NameError)
 
@@ -91,7 +91,7 @@ NameError: name 'age' is not defined
 >>>
 ```
 
-As you can see from the message above, name age is not defined. Yes, it is true that we did not define an age variable but we were trying to print it out as if we had had declared it. Now, lets fix this by declaring it and assigning with a value.
+Yukarıdaki mesajdan da görebileceğin gibi, age isimli değişken tanımlı değil. Evet, bir age değişkeni tanımlamamıştık ama sanki tanımlamışız gibi yazdırmaya çalışıyorduk. Şimdi bunu, değişkeni tanımlayıp bir değer atayarak düzelteceğiz.
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -108,7 +108,7 @@ NameError: name 'age' is not defined
 >>>
 ```
 
-The type of error was a _NameError_. We debugged the error by defining the variable name.
+Hata türü ise _NameError_ idi. Hatanın ayıklamasını, değişken adını tanımlayarak yaptık.
 
 ### İndeks Hatası(IndexError)
 
@@ -127,7 +127,7 @@ IndexError: list index out of range
 >>>
 ```
 
-In the example above, Python raised an _IndexError_, because the list has only indexes from 0 to 4 , so it was out of range.
+Yukarıdaki örnekte, Python bir _IndexError_ verdi çünkü listenin yalnızca 0’dan 4’e kadar indeksleri vardı, yani sınırların dışındaydı.
 
 ### ModuleNotFoundError
 
@@ -145,7 +145,7 @@ ModuleNotFoundError: No module named 'maths'
 >>>
 ```
 
-In the example above, I added an extra s to math deliberately and _ModuleNotFoundError_ was raised. Lets fix it by removing the extra s from math.
+Yukarıdaki örnekte, kasıtlı olarak math’e fazladan bir s ekledim ve bu nedenle _ModuleNotFoundError_ oluştu. Fazladan s’yi kaldırarak bunu düzeltebiliriz.
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -160,7 +160,7 @@ ModuleNotFoundError: No module named 'maths'
 >>>
 ```
 
-We fixed it, so let's use some of the functions from the math module.
+Düzeltmeyi yaptık, şimdi math modülündeki bazı fonksiyonları kullanabiliriz.
 
 ### AttributeError
 
@@ -183,7 +183,7 @@ AttributeError: module 'math' has no attribute 'PI'
 >>>
 ```
 
-As you can see, I made a mistake again! Instead of pi, I tried to call a PI function from maths module. It raised an attribute error, it means, that the function does not exist in the module. Lets fix it by changing from PI to pi.
+Gördüğün gibi, yine bir hata yaptım! pi yerine maths modülünden bir PI fonksiyonunu çağırmaya çalıştım. Bu bir _AttributeError’a_ yol açtı, yani modülde böyle bir fonksiyon yok. Bunu PI’yi pi ile değiştirerek düzeltebiliriz.
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -204,7 +204,7 @@ AttributeError: module 'math' has no attribute 'PI'
 >>>
 ```
 
-Now, when we call pi from the math module we got the result.
+math modülünden pi'yi çağırdık ve sonucu aldık.
 
 ### KeyError
 
@@ -225,7 +225,7 @@ KeyError: 'county'
 >>>
 ```
 
-As you can see, there was a typo in the key used to get the dictionary value. so, this is a key error and the fix is quite straight forward. Let's do this!
+Gördüğün gibi, dictionary valuesini almak için kullanılan keyin yazımında bir hata vardı. Bu bir _KeyError’dır_ ve çözümü oldukça basittir. Hadi bunu düzeltelim!
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -244,7 +244,7 @@ KeyError: 'county'
 >>>
 ```
 
-We debugged the error, our code ran and we got the value.
+Hatayı debug ettik, kodumuz çalıştı ve çıktımızı aldık.
 
 ### Veri Tipi Hatası(TypeError)
 
@@ -262,7 +262,7 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'
 >>>
 ```
 
-Yukarıdaki örnekte bir TypeError döndü çünkü bir sayıya string ekleyemeyiz. First solution would be to convert the string to int or float. Another solution would be converting the number to a string (the result then would be '43'). Şimdi sorunu çözelim.
+Yukarıdaki örnekte bir _TypeError_ döndü çünkü bir sayıya string ekleyemeyiz. İlk çözüm, string’i int veya float’a dönüştürmek olur. Bir diğer çözüm ise sayıyı string’e çevirmektir (sonuç bu durumda '43' olur). Şimdi sorunu çözelim.
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -329,7 +329,7 @@ ValueError: invalid literal for int() with base 10: '12a'
 >>>
 ```
 
-In this case we cannot change the given string to a number, because of the 'a' letter in it.
+Bu durumda, verilen string’i bir sayıya dönüştüremeyiz çünkü içinde 'a' harfi bulunuyor.
 
 ### Sıfıra Bölme Hatası(ZeroDivisionError)
 
@@ -348,9 +348,9 @@ ZeroDivisionError: division by zero
 Bir sayıyı sıfıra bölemeyiz.
 
 Python hata türlerinden bazılarını işledik. Eğer daha fazlasını öğrenmek istiyorsanız Python dokümantasyonundan Python hatalarını inceleyin. 
-If you are good at reading the error types then you will be able to fix your bugs fast and you will also become a better programmer.
+Hata türlerini okumada iyiysen, aynı zamanda iyi bir programcı olacaksın.
 
-🌕 Çok iyi ilerliyorsunuz. Challenge'ın 15. gününü tamamladınız ve başarıya giden yolun yarısını tamamladınız.You made it to half way to your way to greatness. Şimdi beyin ve kaslarınız için biraz akıştırma yapın.
+🌕 Çok iyi ilerliyorsunuz. Challenge'ın 15. gününü tamamladınız ve başarıya giden yolun yarısını tamamladınız.You made it to half way to your way to greatness. Şimdi beynin ve kasların için biraz alıştırma yapalım.
 
 ## 💻 Alıştırmalar: 15. Gün
 

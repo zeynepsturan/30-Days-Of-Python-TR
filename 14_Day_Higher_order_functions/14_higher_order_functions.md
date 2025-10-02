@@ -9,7 +9,7 @@
 
   <sub>Yazar:
   <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-  <small>Second Edition: Temmuz, 2021</small>
+  <small>İkinci Versiyon: Temmuz, 2021</small>
   </sub>
 </div>
 </div>
@@ -21,66 +21,66 @@
   - [Yüksek Mertebe Fonksiyonlar](#higher-order-functions)
     - [Parametre Olarak Fonksiyon](#function-as-a-parameter)
     - [Dönüş Değeri Olarak Fonksiyon](#function-as-a-return-value)
-  - [Python Closures](#python-closures)
-  - [Python Decoratorler](#python-decorators)
-    - [Creating Decorators](#creating-decorators)
-    - [Applying Multiple Decorators to a Single Function](#applying-multiple-decorators-to-a-single-function)
-    - [Accepting Parameters in Decorator Functions](#accepting-parameters-in-decorator-functions)
+  - [Python Kapanışlar (Closures)](#python-closures)
+  - [Python Dekoratörleri](#python-decorators)
+    - [Dekoratör Oluşturma](#creating-decorators)
+    - [Tek Bir Fonksiyona Birden Fazla Dekoratör Uygulama](#applying-multiple-decorators-to-a-single-function)
+    - [Dekoratör Fonksiyonlarda Parametre Kabul Etme](#accepting-parameters-in-decorator-functions)
   - [Built-in Yüksek Mertebe Fonksiyonlar](#built-in-higher-order-functions)
     - [Python - Map Fonksiyonu](#python---map-function)
     - [Python - Filter Fonksiyonu](#python---filter-function)
     - [Python - Reduce Fonksiyonu](#python---reduce-function)
   - [💻 Alıştırmalar: 14. Gün](#-exercises-day-14)
-    - [Alıştırmalar: Level 1](#exercises-level-1)
-    - [Alıştırmalar: Level 2](#exercises-level-2)
-    - [Alıştırmalar: Level 3](#exercises-level-3)
+    - [Alıştırmalar: 1. Seviye](#exercises-level-1)
+    - [Alıştırmalar: 2. Seviye](#exercises-level-2)
+    - [Alıştırmalar: 3. Seviye](#exercises-level-3)
 
 # 📘 14. Gün
 
 ## Yüksek Mertebe Fonksiyonlar
 
-In Python functions are treated as first class citizens, allowing you to perform the following operations on functions:
+Python’da fonksiyonlar üst sınıf vatandaş kabul edilir. Bu, fonksiyonlar üzerinde şu işlemleri yapabileceğimiz anlamına gelir:
 
-- A function can take one or more functions as parameters
-- A function can be returned as a result of another function
-- A function can be modified
-- A function can be assigned to a variable
+- Bir fonksiyon, parametre olarak bir veya daha fazla fonksiyon alabilir
+- Bir fonksiyon, başka bir fonksiyonun sonucu olarak geri döndürülebilir
+- Bir fonksiyon değiştirilebilir
+- Bir fonksiyon bir değişkene atanabilir
 
-In this section, we will cover:
+Bu bölümde şunları ele alacağız:
 
-1. Handling functions as parameters
-2. Returning functions as return value from another functions
-3. Using Python closures and decorators
+1. Fonksiyonları parametre olarak kullanma
+2. Bir fonksiyonu başka bir fonksiyondan dönüş değeri olarak döndürme
+3. Python closures (kapanışlar) ve dekoratörleri kullanma
 
-### Function as a Parameter
+### Parametre Olarak Fonksiyon
 
 ```py
-def sum_numbers(nums):  # normal function
-    return sum(nums)    # a sad function abusing the built-in sum function :<
+def sum_numbers(nums):  # normal fonksiyon
+    return sum(nums)    # built-in sum'ı üzüyor :( :<
 
-def higher_order_function(f, lst):  # function as a parameter
+def higher_order_function(f, lst):  # parametre olarak fonksiyon
     summation = f(lst)
     return summation
 result = higher_order_function(sum_numbers, [1, 2, 3, 4, 5])
 print(result)       # 15
 ```
 
-### Function as a Return Value
+### Dönüş Değeri Olarak Fonksiyon
 
 ```py
-def square(x):          # a square function
+def square(x):          # kare fonksiyonu
     return x ** 2
 
-def cube(x):            # a cube function
+def cube(x):            # küp fonksiyonu
     return x ** 3
 
-def absolute(x):        # an absolute value function
+def absolute(x):        # mutlak değer fonksiyonu
     if x >= 0:
         return x
     else:
         return -(x)
 
-def higher_order_function(type): # a higher order function returning a function
+def higher_order_function(type): # fonksiyon döndüren yüksek mertebe bir fonksiyon
     if type == 'square':
         return square
     elif type == 'cube':
@@ -96,13 +96,13 @@ result = higher_order_function('absolute')
 print(result(-3))      # 3
 ```
 
-You can see from the above example that the higher order function is returning different functions depending on the passed parameter
+Yukarıdaki örnekte görebileceğin gibi, üst seviye (higher order) fonksiyon, kendisine verilen parametreye bağlı olarak farklı fonksiyonlar döndürüyor.
 
-## Python Closures
+## Python Kapanışlar (Closures)
 
-Python allows a nested function to access the outer scope of the enclosing function. This is is known as a Closure. Let us have a look at how closures work in Python. In Python, closure is created by nesting a function inside another encapsulating function and then returning the inner function. See the example below.
+Python, iç içe fonksiyonlar tanımlamamıza ve içteki fonksiyonun dıştaki fonksiyonun kapsamına (scope’una) erişmesine izin verir. Buna Closure (kapanış) denir. Closure, bir fonksiyonun başka bir fonksiyonun içinde tanımlanması ve o iç fonksiyonun, kapsayıcı (outer) fonksiyon tarafından return edilmesiyle oluşur. Örneğe bakalım:
 
-**Example:**
+**Örnek:**
 
 ```py
 def add_ten():
@@ -116,18 +116,18 @@ print(closure_result(5))  # 15
 print(closure_result(10))  # 20
 ```
 
-## Python Decorators
+## Python Dekoratörleri
 
-A decorator is a design pattern in Python that allows a user to add new functionality to an existing object without modifying its structure. Decorators are usually called before the definition of a function you want to decorate.
+Dekoratör, Python’da mevcut bir nesneye yapısını değiştirmeden yeni işlevsellik eklemeyi sağlayan bir tasarım yoludur. Dekoratörler genellikle dekore etmek istediğiniz fonksiyonun tanımından önce çağrılır.
 
-### Creating Decorators
+### Dekoratör Oluşturma
 
-To create a decorator function, we need an outer function with an inner wrapper function.
+Dekoratör fonksiyonu oluşturmak için, içinde bir wrapper (sarmalayıcı) fonksiyon bulunan bir dış fonksiyona ihtiyacımız vardır.
 
 **Example:**
 
 ```py
-# Normal function
+# Normal fonksiyon
 def greeting():
     return 'Welcome to Python'
 def uppercase_decorator(function):
@@ -139,10 +139,11 @@ def uppercase_decorator(function):
 g = uppercase_decorator(greeting)
 print(g())          # WELCOME TO PYTHON
 
-## Let us implement the example above with a decorator
+## Yukarıdaki örneği dekoratör ile tekrar yazalım
 
-'''This decorator function is a higher order function
-that takes a function as a parameter'''
+'''Bu dekoratör fonksiyon, bir fonksiyonu parametre olarak alan
+yüksek mertebeli (higher-order) bir fonksiyondur.'''
+
 def uppercase_decorator(function):
     def wrapper():
         func = function()
@@ -156,14 +157,14 @@ print(greeting())   # WELCOME TO PYTHON
 
 ```
 
-### Applying Multiple Decorators to a Single Function
+### Tek Bir Fonksiyona Birden Fazla Dekoratör Uygulama
 
 ```py
 
-'''These decorator functions are higher order functions
-that take functions as parameters'''
+'''Bu dekoratör fonksiyonları, fonksiyonları parametre
+olarak alan yüksek mertebeli (higher order) fonksiyonlardır.'''
 
-# First Decorator
+# İlk Decorator
 def uppercase_decorator(function):
     def wrapper():
         func = function()
@@ -171,7 +172,7 @@ def uppercase_decorator(function):
         return make_uppercase
     return wrapper
 
-# Second decorator
+# İkinci decorator
 def split_string_decorator(function):
     def wrapper():
         func = function()
@@ -181,15 +182,15 @@ def split_string_decorator(function):
     return wrapper
 
 @split_string_decorator
-@uppercase_decorator     # order with decorators is important in this case - .upper() function does not work with lists
+@uppercase_decorator     # Dekoratörlerde sıranın önemli olduğunu unutmayın — bu durumda .upper() fonksiyonu listlerle çalışmaz.
 def greeting():
     return 'Welcome to Python'
 print(greeting())   # WELCOME TO PYTHON
 ```
 
-### Accepting Parameters in Decorator Functions
+### Dekoratör Fonksiyonlarda Parametre Kabul Etme
 
-Most of the time we need our functions to take parameters, so we might need to define a decorator that accepts parameters.
+Çoğu zaman fonksiyonlarımızın parametre almasını isteriz, bu yüzden parametre kabul eden bir dekoratör tanımlamamız gerekebilir.
 
 ```py
 def decorator_with_parameters(function):
@@ -206,21 +207,21 @@ def print_full_name(first_name, last_name, country):
 print_full_name("Asabeneh", "Yetayeh",'Finland')
 ```
 
-## Built-in Higher Order Functions
+## Built-in Yüksek Mertebe Fonksiyonlar
 
-Some of the built-in higher order functions that we cover in this part are _map()_, _filter_, and _reduce_.
-Lambda function can be passed as a parameter and the best use case of lambda functions is in functions like map, filter and reduce.
+Bu bölümde ele aldığımız built-in yüksek mertebe fonksiyonlardan bazıları _map_, _filter_ ve _reduce_’tır.
+Lambda fonksiyonları bir parametre olarak geçirilebilir ve lambda fonksiyonlarının en iyi kullanım alanı, map, filter ve reduce gibi fonksiyonlardır.
 
-### Python - Map Function
+### Python - Map Fonksiyonu
 
-The map() function is a built-in function that takes a function and iterable as parameters.
+map() fonksiyonu, bir built-in fonksiyon olup iki parametre alır: bir fonksiyon ve bir iterable (örneğin liste, tuple).
 
 ```py
-    # syntax
+    # sözdizimi
     map(function, iterable)
 ```
 
-**Example:1**
+**Örnek:1**
 
 ```py
 numbers = [1, 2, 3, 4, 5] # iterable
@@ -233,7 +234,7 @@ numbers_squared = map(lambda x : x ** 2, numbers)
 print(list(numbers_squared))    # [1, 4, 9, 16, 25]
 ```
 
-**Example:2**
+**Örnek:2**
 
 ```py
 numbers_str = ['1', '2', '3', '4', '5']  # iterable
@@ -241,7 +242,7 @@ numbers_int = map(int, numbers_str)
 print(list(numbers_int))    # [1, 2, 3, 4, 5]
 ```
 
-**Example:3**
+**Örnek:3**
 
 ```py
 names = ['Asabeneh', 'Lidiya', 'Ermias', 'Abraham']  # iterable
@@ -252,23 +253,23 @@ def change_to_upper(name):
 names_upper_cased = map(change_to_upper, names)
 print(list(names_upper_cased))    # ['ASABENEH', 'LIDIYA', 'ERMIAS', 'ABRAHAM']
 
-# Let us apply it with a lambda function
+# lambda fonksiyonu yazalım
 names_upper_cased = map(lambda name: name.upper(), names)
 print(list(names_upper_cased))    # ['ASABENEH', 'LIDIYA', 'ERMIAS', 'ABRAHAM']
 ```
 
-What actually map does is iterating over a list. For instance, it changes the names to upper case and returns a new list.
+Map’in yaptığı şey aslında bir liste üzerinde yineleme (iteration) yapmaktır. Örneğin, isimleri büyük harfe çevirir ve yeni bir liste döndürür.
 
 ### Python - Filter Fonksiyonu
 
-The filter() function calls the specified function which returns boolean for each item of the specified iterable (list). It filters the items that satisfy the filtering criteria.
+_filter()_ fonksiyonu, verilen iterabledaki (örneğin bir liste) her item için belirtilen fonksiyonu çağırır ve fonksiyon iterabledaki her item için bir boolean değer döndürür. Daha sonra fonksiyon, filtreleme kriterlerini karşılayan itemleri döndürür.
 
 ```py
-    # syntax
+    # sözdizimi
     filter(function, iterable)
 ```
 
-**Example:1**
+**Örnek:1**
 
 ```py
 # Lets filter only even nubers
@@ -283,7 +284,7 @@ even_numbers = filter(is_even, numbers)
 print(list(even_numbers))       # [2, 4]
 ```
 
-**Example:2**
+**Örnek:2**
 
 ```py
 numbers = [1, 2, 3, 4, 5]  # iterable
@@ -311,8 +312,9 @@ print(list(long_names))         # ['Asabeneh']
 
 ### Python - Reduce Fonksiyonu
 
-The _reduce()_ function is defined in the functools module and we should import it from this module. Like map and filter it takes two parameters, a function and an iterable. However, it does not return another iterable, instead it returns a single value.
-**Example:1**
+_reduce()_ fonksiyonu functools modülünde tanımlıdır ve bu modülden import etmemiz gerekir. map ve filter gibi iki parametre alır: bir fonksiyon ve bir iterable (üstünde iterasyon yapılabilen bir veri tipi). Ancak _reduce_, diğerleri gibi bir iterable döndürmez; bunun yerine tek bir değer döndürür.
+
+**Örnek:1**
 
 ```py
 numbers_str = ['1', '2', '3', '4', '5']  # iterable
@@ -331,39 +333,39 @@ names = ['Asabeneh', 'Lidiya', 'Ermias', 'Abraham']
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-### Alıştırmalar: Level 1
+### Alıştırmalar: 1. Seviye
 
-1. Explain the difference between map, filter, and reduce.
-2. Explain the difference between higher order function, closure and decorator
-3. Define a call function before map, filter or reduce, see examples.
-4. Use for loop to print each country in the countries list.
-5. Use for to print each name in the names list.
-6. Use for to print each number in the numbers list.
+1. map, filter ve reduce arasındaki farkı açıkla.
+2. Yüksek mertebeli fonksiyon (higher order function), closure ve decorator arasındaki farkı açıkla.
+3. map, filter veya reduce kullanmaya geçmeden önce bir fonksiyon tanımla, örneklerini göster.
+4. countries listi içindeki her ülkeyi for döngüsü ile yazdır.
+5. names listi içindeki her ismi for döngüsü ile yazdır.
+6. numbers listi içindeki her sayıyı for döngüsü ile yazdır.
 
-### Alıştırmalar: Level 2
+### Alıştırmalar: 2. Seviye
 
-1. Use map to create a new list by changing each country to uppercase in the countries list
-1. Use map to create a new list by changing each number to its square in the numbers list
-1. Use map to change each name to uppercase in the names list
-1. Use filter to filter out countries containing 'land'.
-1. Use filter to filter out countries having exactly six characters.
-1. Use filter to filter out countries containing six letters and more in the country list.
-1. Use filter to filter out countries starting with an 'E'
-1. Chain two or more list iterators (eg. arr.map(callback).filter(callback).reduce(callback))
-1. Declare a function called get_string_lists which takes a list as a parameter and then returns a list containing only string items.
-1. Use reduce to sum all the numbers in the numbers list.
-1. Use reduce to concatenate all the countries and to produce this sentence: Estonia, Finland, Sweden, Denmark, Norway, and Iceland are north European countries
-1. Declare a function called categorize_countries that returns a list of countries with some common pattern (you can find the [countries list](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries.py) in this repository as countries.js(eg 'land', 'ia', 'island', 'stan')).
-1. Create a function returning a dictionary, where keys stand for starting letters of countries and values are the number of country names starting with that letter.
-2. Declare a get_first_ten_countries function - it returns a list of first ten countries from the countries.js list in the data folder.
-1. Declare a get_last_ten_countries function that returns the last ten countries in the countries list.
+1. map kullanarak, countries listindeki her ülkeyi büyük harfe çevirip yeni bir list oluştur.
+2. map kullanarak, numbers listindeki her sayıyı karesine çevirip yeni bir list oluştur.
+3. map kullanarak, names listindeki her ismi büyük harfe çevir.
+4. filter kullanarak, içinde 'land' geçen ülkeleri filtrele.
+5. filter kullanarak, tam olarak 6 karakter uzunluğundaki ülkeleri filtrele.
+6. filter kullanarak, 6 harf veya daha fazla harften oluşan ülkeleri filtrele.
+7. filter kullanarak, 'E' harfi ile başlayan ülkeleri filtrele.
+8. Chain two or more list iterators (eg. arr.map(callback).filter(callback).reduce(callback))
+9. Declare a function called get_string_lists which takes a list as a parameter and then returns a list containing only string items.
+10. reduce kullanarak, numbers listesindeki tüm sayıların toplamını bul.
+11. reduce fonksiyonunu kullanarak tüm ülkeleri birleştir ve şu cümleyi üret: "Estonia, Finland, Sweden, Denmark, Norway, and Iceland are north European countries"
+12. Bazı ortak harf gruplarını içerenk ülkeleri dönen categorize_countries fonksiyonunu oluştur.([countries list](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries.py)  'land', 'ia', 'island', 'stan' gibi).
+13. Dictionary dönen bir fonksiyon oluştur. Keyler, ülkelerin isimlerinin baş harfleri olsun. Valueler, o harfle başlayan ülke sayısını göstersin.
+14. get_first_ten_countries adında bir fonksiyon tanımla – bu fonksiyon countries.js listesindeki ilk on ülkeyi döndürsün.
+15. get_last_ten_countries adında bir fonksiyon tanımla – bu fonksiyon countries listesindeki son on ülkeyi döndürsün.
 
-### Alıştırmalar: Level 3
+### Alıştırmalar: 3. Seviye
 
-1. Use the countries_data.py (https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries-data.py) file and follow the tasks below:
-   - Sort countries by name, by capital, by population
-   - Sort out the ten most spoken languages by location.
-   - Sort out the ten most populated countries.
+1. countries_data.py (https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries-data.py) dosyasını kullanarak aşağıdaki alıştırmaları yap:
+   - Ülkeleri adlarına, başkentlerine, nüfuslarına göre sırala.
+   - Konumlarına göre en çok konuşulan 10 dili sırala.
+   - En çok nüfusa sahip 10 ülkeyi sırala.
 
 🎉 TEBRİKLER ! 🎉
 

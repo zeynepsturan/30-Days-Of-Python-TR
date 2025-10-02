@@ -8,7 +8,7 @@
   </a>
 <sub>Yazar:
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small>Second Edition: Temmuz, 2021</small>
+<small>İkinci Versiyon: Temmuz, 2021</small>
 </sub>
 </div>
 
@@ -76,7 +76,7 @@ f.close()
 ```
 
 ```sh
-# output
+# çıktı
 <class 'str'>
 This is an example to show how to open a file and read.
 This is the second line of the text.
@@ -93,7 +93,7 @@ f.close()
 ```
 
 ```sh
-# output
+# çıktı
 <class 'str'>
 This is an
 ```
@@ -109,7 +109,7 @@ f.close()
 ```
 
 ```sh
-# output
+# çıktı
 <class 'str'>
 This is an example to show how to open a file and read.
 ```
@@ -125,7 +125,7 @@ f.close()
 ```
 
 ```sh
-# output
+# çıktı
 <class 'list'>
 ['This is an example to show how to open a file and read.\n', 'This is the second line of the text.']
 ```
@@ -141,7 +141,7 @@ f.close()
 ```
 
 ```sh
-# output
+# çıktı
 <class 'list'>
 ['This is an example to show how to open a file and read.', 'This is the second line of the text.']
 ```
@@ -156,7 +156,7 @@ with open('./files/reading_file_example.txt') as f:
 ```
 
 ```sh
-# output
+# çıktı
 <class 'list'>
 ['This is an example to show how to open a file and read.', 'This is the second line of the text.']
 ```
@@ -168,7 +168,7 @@ Var olan bir dosyaya yazmak için modu  _open()_ fonksiyonuna parametre olarak e
 - "a" - Sonuna Ekleme - Sonuna ekleme yapmak için dosyayı açar, dosya bulunamazsa dosyayı oluşturur
 - "w" - Yazma - Yazmak için dosyayı açar (dosya içeriğinin üstüne yazar), dosya bulunamazsa dosyayı oluşturur
 
-Let us append some text to the file we have been reading:
+Okuduğumuz dosyanın sonuna biraz metin ekleyelim:
 
 ```py
 with open('./files/reading_file_example.txt','a') as f:
@@ -206,12 +206,11 @@ else:
 
 ### txt Uzantılı Dosyalar
 
-File with _txt_ extension is a very common form of data and we have covered it in the previous section. Let us move to the JSON file
+.txt uzantılı dosyalar çok yaygın bir veri biçimidir ve bunu önceki bölümde ele almıştık. Şimdi JSON dosyalarına geçelim.
 
 ### json Uzantılı Dosyalar
 
-JSON JavaScript Object Notation'un kısaltmasıdır. Actually, it is a stringified JavaScript object or Python dictionary.
-
+JSON JavaScript Object Notation'un kısaltmasıdır. Aslında, bu bir stringe dönüştürülmüş JavaScript objesi ya da Python dictionarysidir.
 **Örnek:**
 
 ```py
@@ -222,10 +221,10 @@ person_dct= {
     "city":"Helsinki",
     "skills":["JavaScrip", "React","Python"]
 }
-# JSON: A string form a dictionary
+# JSON: dictionarynin string formu
 person_json = "{'name': 'Asabeneh', 'country': 'Finland', 'city': 'Helsinki', 'skills': ['JavaScrip', 'React', 'Python']}"
 
-# we use three quotes and make it multiple line to make it more readable
+# daha okunaklı olması için üçlü tırnak kullanarak çok satırlı yorum kullanıyoruz
 person_json = '''{
     "name":"Asabeneh",
     "country":"Finland",
@@ -236,7 +235,7 @@ person_json = '''{
 
 ### JSON’u Dictionary'ye Dönüştürme
 
-To change a JSON to a dictionary, first we import the json module and then we use _loads_ method.
+JSON'u dictionaryye dönüştürmek için json modülünü import edip _loads_ metodunu kullanırız.
 
 ```py
 import json
@@ -247,7 +246,7 @@ person_json = '''{
     "city": "Helsinki",
     "skills": ["JavaScrip", "React", "Python"]
 }'''
-# let's change JSON to dictionary
+# JSON'u dictionaryye dönüştürelim
 person_dct = json.loads(person_json)
 print(type(person_dct))
 print(person_dct)
@@ -255,7 +254,7 @@ print(person_dct['name'])
 ```
 
 ```sh
-# output
+# çıktı
 <class 'dict'>
 {'name': 'Asabeneh', 'country': 'Finland', 'city': 'Helsinki', 'skills': ['JavaScrip', 'React', 'Python']}
 Asabeneh
@@ -274,16 +273,16 @@ person = {
     "city": "Helsinki",
     "skills": ["JavaScrip", "React", "Python"]
 }
-# let's convert it to  json
+# şimdi json'a çevirelim
 person_json = json.dumps(person, indent=4) # indent could be 2, 4, 8. It beautifies the json
 print(type(person_json))
 print(person_json)
 ```
 
 ```sh
-# output
-# when you print it, it does not have the quote, but actually it is a string
-# JSON does not have type, it is a string type.
+# çıktı
+# yazdırdığında tırnaklar gözükmez ama aslında bir string
+# JSON diye bir veri tipi yok, string tipinde.
 <class 'str'>
 {
     "name": "Asabeneh",
@@ -299,7 +298,7 @@ print(person_json)
 
 ### Saving as JSON File
 
-Verilerimizi json dosyası olarak da kaydedebiliriz. Aşağıdaki adımları kullanarak json dosyası olarak kaydedelim. Bir json dosyası yazmak için json.dump() metodunu kullanırız. it can take dictionary, output file, ensure_ascii and indent.
+Verilerimizi json dosyası olarak da kaydedebiliriz. Aşağıdaki adımları kullanarak json dosyası olarak kaydedelim. Bir json dosyası yazmak için json.dump() metodunu kullanırız. Argüman olarak dictionary, çıktı dosyası, ensure_ascii ve indent(girinti) alabilir.
 
 ```py
 import json
@@ -314,11 +313,11 @@ with open('./files/json_example.json', 'w', encoding='utf-8') as f:
     json.dump(person, f, ensure_ascii=False, indent=4)
 ```
 
-In the code above, we use encoding and indentation. Indentation makes the json file easy to read.
+Yukarıdaki kodda encoding ve indentation kullandık. Indentation json dosyasını okumayı çok kolaylaştırır.
 
 ### csv Uzantılı Dosyalar
 
-CSV comma separated values'ın kısaltmasıdır. CSV is a simple file format used to store tabular data, such as a spreadsheet or database. CSV, veri biliminde çok yaygın kullanılan bir veri formatıdır.
+CSV comma separated values'ın kısaltmasıdır. CSV, elektronik tablo veya veritabanı gibi tabular verileri saklamak için kullanılan basit bir dosya formatıdır. CSV, veri biliminde çok yaygın kullanılan bir veri formatıdır.
 
 **Örnek:**
 
@@ -332,7 +331,7 @@ CSV comma separated values'ın kısaltmasıdır. CSV is a simple file format use
 ```py
 import csv
 with open('./files/csv_example.csv') as f:
-    csv_reader = csv.reader(f, delimiter=',') # w use, reader method to read csv
+    csv_reader = csv.reader(f, delimiter=',') # w okuma metodu
     line_count = 0
     for row in csv_reader:
         if line_count == 0:
@@ -346,7 +345,7 @@ with open('./files/csv_example.csv') as f:
 ```
 
 ```sh
-# output:
+# çıktı:
 Column names are :name, country, city, skills
         Asabeneh is a teacher. He lives in Finland, Helsinki.
 Number of lines:  2
@@ -365,7 +364,8 @@ print(excel_book.sheet_names)
 
 ### xml Uzantılı Dosyalar
 
-XML, HTML'e benzeyen başka bir yapılandırılmış(structured) veri formatıdır. In XML the tags are not predefined. The first line is an XML declaration. The person tag is the root of the XML. The person has a gender attribute.
+XML, HTML'e benzeyen başka bir yapılandırılmış(structured) veri formatıdır. XML’de etiketler önceden tanımlı değildir. İlk satır bir XML bildirimidir. person etiketi XML’in köküdür. person etiketi bir gender özelliğine sahiptir
+
 **Örnek:XML**
 
 ```xml
@@ -382,7 +382,7 @@ XML, HTML'e benzeyen başka bir yapılandırılmış(structured) veri formatıd�
 </person>
 ```
 
-For more information on how to read an XML file check the [documentation](https://docs.python.org/2/library/xml.etree.elementtree.html)
+XML dosyaları hakkında daha fazla bilgi için [dokümantasyona](https://docs.python.org/2/library/xml.etree.elementtree.html) bak.
 
 ```py
 import xml.etree.ElementTree as ET
@@ -395,7 +395,7 @@ for child in root:
 ```
 
 ```sh
-# output
+# çıktı
 Root tag: person
 Attribute: {'gender': 'male'}
 field: name
@@ -404,21 +404,21 @@ field: city
 field: skills
 ```
 
-🌕 Büyük bir ilerleme kaydediyorsunuz. Temponuzu düşürmeyin, böyle devam edin. Now do some exercises for your brain and muscles.
+🌕 Büyük bir ilerleme kaydediyorsun. Temponu düşürme, böyle devam et. Şimdi beynin ve kasların için biraz alıştırma yapalım.
 
 ## 💻 Alıştırmalar: 19. Gün
 
 ### Alıştırmalar: Level 1
 
-1. Bir metindeki satır ve kelime sayısını sayan bir fonksiyon yazın. All the files are in the data the folder:
-   a) Read obama_speech.txt file and count number of lines and words
-   b) Read michelle_obama_speech.txt file and count number of lines and words
-   c) Read donald_speech.txt file and count number of lines and words
-   d) Read melina_trump_speech.txt file and count number of lines and words
-2. Data klasöründeki countries_data.json dosyasını okuyun, en çok konuşulan 10 dili bulan bir fonksiyon yazın
+1. Bir metindeki satır ve kelime sayısını sayan bir fonksiyon yaz. Data klasöründeki şu dosyalar için:
+   a) obama_speech.txt dosyasını oku, kelime ve satır sayısını bul 
+   b) michelle_obama_speech.txt dosyasını oku, kelime ve satır sayısını bul 
+   c) donald_speech.txt dosyasını oku, kelime ve satır sayısını bul 
+   d) melina_trump_speech.txt dosyasını oku, kelime ve satır sayısını bul 
+2. Data klasöründeki countries_data.json dosyasını oku, en çok konuşulan 10 dili bulan bir fonksiyon yaz
 
    ```py
-   # Çıktınız böyle gözükmeli
+   # Çıktın böyle gözükmeli
    print(most_spoken_languages(filename='./data/countries_data.json', 10))
    [(91, 'English'),
    (45, 'French'),
@@ -432,7 +432,7 @@ field: skills
    (4, 'Swahili'),
    (4, 'Serbian')]
 
-   # Çıktınız böyle gözükmeli
+   # Çıktın böyle gözükmeli
    print(most_spoken_languages(filename='./data/countries_data.json', 3))
    [(91, 'English'),
    (45, 'French'),
@@ -442,7 +442,7 @@ field: skills
 3. Data klasöründeki countries_data.json dosyasını okuyun, en kalabalık 10 ülkeyi bulan bir fonksiyon yazın
 
    ```py
-   # Çıktınız böyle gözükmeli
+   # Çıktın böyle gözükmeli
    print(most_populated_countries(filename='./data/countries_data.json', 10))
 
    [
@@ -458,7 +458,7 @@ field: skills
    {'country': 'Japan', 'population': 126960000}
    ]
 
-   # Çıktınız böyle gözükmeli
+   # Çıktın böyle gözükmeli
 
    print(most_populated_countries(filename='./data/countries_data.json', 3))
    [
@@ -470,11 +470,10 @@ field: skills
 
 ### Alıştırmalar: Level 2
 
-4. Extract all incoming email addresses as a list from the email_exchange_big.txt file.
-5. Find the most common words in the English language. Call the name of your function find_most_common_words, it will take two parameters - a string or a file and a positive integer, indicating the number of words. Your function will return an array of tuples in descending order. Check the output
-
+4. email_exchange_big.txt dosyasından gelen tüm e-posta adreslerini bir list halinde çıkar.
+5. İngilizce dilindeki en yaygın kelimeleri bul. Fonksiyonu find_most_common_words olarak adlandır; iki parametre alacak: bir string veya dosya ve bir pozitif tamsayı (kelime sayısını gösterecek). Fonksiyonun azalan sırada bir dizi tuple döndürecek. Çıktıyı kontrol et.
 ```py
-    # Your output should look like this
+    # Çıktın böyle gözükmeli
     print(find_most_common_words('sample.txt', 10))
     [(10, 'the'),
     (8, 'be'),
@@ -487,7 +486,7 @@ field: skills
     (2, 'have'),
     (2, 'I')]
 
-    # Your output should look like this
+    # Çıktın böyle gözükmeli
     print(find_most_common_words('sample.txt', 5))
 
     [(10, 'the'),
@@ -498,16 +497,16 @@ field: skills
 ```
 
 6. find_most_frequent_words fonksiyonunu aşağıdakileri bulmak için kullanın:
-   a) The ten most frequent words used in [Obama's speech](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/obama_speech.txt)
-   b) The ten most frequent words used in [Michelle's speech](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/michelle_obama_speech.txt)
-   c) The ten most frequent words used in [Trump's speech](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/donald_speech.txt)
-   d) The ten most frequent words used in [Melina's speech](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/melina_trump_speech.txt)
-7. Write a python application that checks similarity between two texts. It takes a file or a string as a parameter and it will evaluate the similarity of the two texts. For instance check the similarity between the transcripts of [Michelle's](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/michelle_obama_speech.txt) and [Melina's](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/melina_trump_speech.txt) speech. You may need a couple of functions, function to clean the text(clean_text), function to remove support words(remove_support_words) and finally to check the similarity(check_text_similarity). List of [stop words](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/stop_words.py) are in the data directory
+   a) En sık kullanılan 10 kelime: [Obama's speech](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/obama_speech.txt)
+   b) En sık kullanılan 10 kelime: [Michelle's speech](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/michelle_obama_speech.txt)
+   c) En sık kullanılan 10 kelime: [Trump's speech](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/donald_speech.txt)
+   d) En sık kullanılan 10 kelime: [Melina's speech](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/melina_trump_speech.txt)
+7. Bir Python uygulaması yazın, bu uygulama iki metin arasındaki benzerliği kontrol etsin. Uygulama bir dosya veya string parametresi alır ve iki metnin benzerliğini değerlendirir.[Michelle](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/michelle_obama_speech.txt) ve [Melina'nın](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/melina_trump_speech.txt) konuşma metinleri arasındaki benzerliği kontrol edin. Şu fonksiyonlar gerekebilir: metni temizlemek için bir fonksiyon: clean_text, destekleyici kelimeleri (stop words) kaldırmak için bir fonksiyon: remove_support_words, son olarak benzerliği kontrol etmek için bir fonksiyon: check_text_similarity. [stop word listesi](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/stop_words.py)
 8. romeo_and_juliet.txt dosyasındaki en çok tekrarlanan 10 kelimeyi bulun
 9. [hacker news csv](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/hacker_news.csv) dosyasını okuyun ve aşağıdakileri bulun:
-   a) Count the number of lines containing python or Python
-   b) Count the number lines containing JavaScript, javascript or Javascript
-   c) Count the number lines containing Java and not JavaScript
+   a) İçinde 'python' veya 'Python' geçen satır sayısını bul
+   b) İçinde 'JavaScript', 'javascript' veya 'Javascript' geçen satır sayısını bul
+   c) İçinde 'Java' geçen ama 'JavaScript' geçmeyen satır sayısını bul
 
 🎉 TEBRİKLER ! 🎉
 

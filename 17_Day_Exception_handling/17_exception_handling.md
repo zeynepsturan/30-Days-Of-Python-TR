@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> 30 Days Of Python: Day 17 - Exception Handling </h1>
+  <h1> 30 Günde Python: 17. Gün - Exception Handling (İstisna Yönetimi) </h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -7,48 +7,48 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-  <sub>Author:
+  <sub>Yazar:
   <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-  <small> Second Edition: July, 2021</small>
+  <small> İkinci Versiyon: Temmuz, 2021</small>
   </sub>
 </div>
 
-[<< Day 16](../16_Day_Python_date_time/16_python_datetime.md) | [Day 18 >>](../18_Day_Regular_expressions/18_regular_expressions.md)
+[<< 16. Gün](../16_Day_Python_date_time/16_python_datetime.md) | [18. Gün >>](../18_Day_Regular_expressions/18_regular_expressions.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
 - [📘 Day 17](#-day-17)
-  - [Exception Handling](#exception-handling)
-  - [Packing and Unpacking Arguments in Python](#packing-and-unpacking-arguments-in-python)
+  - [Exception Handling (İstisna Yönetimi)](#exception-handling)
+  - [Python'da Argümanları Packing ve Unpacking Etme](#packing-and-unpacking-arguments-in-python)
     - [Unpacking](#unpacking)
-      - [Unpacking Lists](#unpacking-lists)
-      - [Unpacking Dictionaries](#unpacking-dictionaries)
+      - [Listleri Unpacking Etme](#unpacking-lists)
+      - [Dictionaryleri Unpacking Etme](#unpacking-dictionaries)
     - [Packing](#packing)
-    - [Packing Lists](#packing-lists)
-      - [Packing Dictionaries](#packing-dictionaries)
-  - [Spreading in Python](#spreading-in-python)
+    - [Listleri Packing Etme](#packing-lists)
+      - [Dictionaryleri Packing Etme](#packing-dictionaries)
+  - [Python'da Spreading](#spreading-in-python)
   - [Enumerate](#enumerate)
   - [Zip](#zip)
-  - [Exercises: Day 17](#exercises-day-17)
+  - [Alıştırmalar: 17. Gün](#exercises-day-17)
 
-# 📘 Day 17
+# 📘 17. Gün
 
-## Exception Handling
+## Exception Handling (İstisna Yönetimi)
 
-Python uses _try_ and _except_ to handle errors gracefully. A graceful exit (or graceful handling) of errors is a simple programming idiom - a program detects a serious error condition and "exits gracefully", in a controlled manner as a result. Often the program prints a descriptive error message to a terminal or log as part of the graceful exit, this makes our application more robust. The cause of an exception is often external to the program itself. An example of exceptions could be an incorrect input, wrong file name, unable to find a file, a malfunctioning IO device. Graceful handling of errors prevents our applications from crashing.
+Python, hataları "zarif" bir şekilde ele almak için _try_ ve _except_ yapısını kullanır. Hatalardan "zarif" bir şekilde çıkış yapmak (veya hataları "zarifçe" yönetmek), basit bir programlama yaklaşımıdır — program ciddi bir hata durumu tespit eder ve kontrollü bir şekilde "zarifçe" sonlanır. Çoğu zaman program, bu çıkış sırasında terminale veya log dosyasına açıklayıcı bir hata mesajı yazar; bu da uygulamamızı daha sağlam hale getirir. Bir istisnanın nedeni çoğunlukla programın kendisi dışındadır. İstisna örnekleri arasında hatalı giriş, yanlış dosya adı, dosyanın bulunamaması veya arızalı bir giriş/çıkış cihazı sayılabilir. Hataları zarif bir şekilde yönetmek, uygulamalarımızın çökmesini önler.
 
-We have covered the different Python _error_ types in the previous section. If we use _try_ and _except_ in our program, then it will not raise errors in those blocks.
+Önceki bölümde farklı Python hata türlerini ele aldık. Eğer programımızda _try_ ve _except_ yapısını kullanırsak, bu bloklarda hata oluşsa bile program hata vermez.
 
 ![Try and Except](../images/try_except.png)
 
 ```py
 try:
-    code in this block if things go well
+    işler yolunda giderse bu blok çalışır
 except:
-    code in this block run if things go wrong
+    bir şeyler yanlış olursa bu blok çalışır
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 try:
@@ -57,9 +57,9 @@ except:
     print('Something went wrong')
 ```
 
-In the example above the second operand is a string. We could change it to float or int to add it with the number to make it work. But without any changes, the second block, _except_, will be executed.
+Yukarıdaki örnekte, ikinci argüman bir string. Bunu sayıyla toplamak için float veya int’e çevirebilirdik ve işlem çalışırdı. Ama herhangi bir değişiklik yapmazsak, ikinci blok olan except çalıştırılacak.
 
-**Example:**
+**Örnek:**
 
 ```py
 try:
@@ -75,9 +75,9 @@ except:
 Something went wrong
 ```
 
-In the above example, the exception block will run and we do not know exactly the problem. To analyze the problem, we can use the different error types with except.
+Yukarıdaki örnekte, exception bloğu çalışacak fakat sorunun ne olduğunu tam olarak bilmiyoruz. Problemi analiz etmek için, farklı hata türlerini _except_ ile kullanabiliriz.
 
-In the following example, it will handle the error and will also tell us the kind of error raised.
+Aşağıdaki örnekte, hata bulunacak ve ayrıca hangi tür hatanın oluştuğunu bize bildirecek.
 
 ```py
 try:
@@ -99,8 +99,8 @@ Year you born:1920
 Type error occured
 ```
 
-In the code above the output is going to be _TypeError_.
-Now, let's add an additional block:
+Yukarıdaki kodda çıktı TypeError olacak.
+Şimdi, ek bir blok ekleyelim:
 
 ```py
 try:
@@ -128,7 +128,7 @@ I usually run with the try block
 I alway run.
 ```
 
-It is also shorten the above code as follows:
+Yukarıdaki kod şu şekilde kısaltılabilir:
 
 ```py
 try:
@@ -141,18 +141,18 @@ except Exception as e:
 
 ```
 
-## Packing and Unpacking Arguments in Python
+## Python'da Argümanları Packing ve Unpacking Etme
 
-We use two operators:
+İki operatör kullanıyoruz:
 
-- \* for tuples
-- \*\* for dictionaries
+- tuple için \* 
+- dictionary için \*\*
 
-Let us take as an example below. It takes only arguments but we have list. We can unpack the list and changes to argument.
+Aşağıdaki örneği inceleyelim. Fonksiyon sadece argüman alıyor ama elimizde bir list var. Listi açabiliriz (unpack) ve argümana dönüştürebiliriz.
 
 ### Unpacking
 
-#### Unpacking Lists
+#### Listleri Unpacking Etme
 
 ```py
 def sum_of_five_nums(a, b, c, d, e):
@@ -162,7 +162,7 @@ lst = [1, 2, 3, 4, 5]
 print(sum_of_five_nums(lst)) # TypeError: sum_of_five_nums() missing 4 required positional arguments: 'b', 'c', 'd', and 'e'
 ```
 
-When we run the this code, it raises an error, because this function takes numbers (not a list) as arguments. Let us unpack/destructure the list.
+Bu kodu çalıştırdığımızda bir hata verir, çünkü bu fonksiyon argüman olarak sayı alıyor (list değil). Listeyi unpack edip argümanları öyle verelim.
 
 ```py
 def sum_of_five_nums(a, b, c, d, e):
@@ -172,7 +172,7 @@ lst = [1, 2, 3, 4, 5]
 print(sum_of_five_nums(*lst))  # 15
 ```
 
-We can also use unpacking in the range built-in function that expects a start and an end.
+Başlangıç ve bitiş bekleyen _range_ built-in fonksiyonunda unpacking yöntemini kullanabiliriz.
 
 ```py
 numbers = range(2, 7)  # normal call with separate arguments
@@ -183,7 +183,7 @@ print(numbers)      # [2, 3, 4, 5,6]
 
 ```
 
-A list or a tuple can also be unpacked like this:
+Bir list veya tuple şu şekilde unpack edilebilir:
 
 ```py
 countries = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
@@ -194,7 +194,7 @@ one, *middle, last = numbers
 print(one, middle, last)      #  1 [2, 3, 4, 5, 6] 7
 ```
 
-#### Unpacking Dictionaries
+#### Dictionaryleri Unpacking Etme
 
 ```py
 def unpacking_person_info(name, country, city, age):
@@ -205,9 +205,9 @@ print(unpacking_person_info(**dct)) # Asabeneh lives in Finland, Helsinki. He is
 
 ### Packing
 
-Sometimes we never know how many arguments need to be passed to a python function. We can use the packing method to allow our function to take unlimited number or arbitrary number of arguments.
+Bazen bir Python fonksiyonuna kaç tane argüman geçileceğini önceden bilemeyiz. Fonksiyonumuzun sınırsız veya rastgele sayıda argümanı alabilmesini sağlamak için packing yöntemini kullanabiliriz.
 
-### Packing Lists
+### Listleri Packing Etme
 
 ```py
 def sum_all(*args):
@@ -219,7 +219,7 @@ print(sum_all(1, 2, 3))             # 6
 print(sum_all(1, 2, 3, 4, 5, 6, 7)) # 28
 ```
 
-#### Packing Dictionaries
+#### Dictionaryleri Packing Etme
 
 ```py
 def packing_person_info(**kwargs):
@@ -242,9 +242,9 @@ age = 250
 {'name': 'Asabeneh', 'country': 'Finland', 'city': 'Helsinki', 'age': 250}
 ```
 
-## Spreading in Python
+## Python'da Spreading 
 
-Like in JavaScript, spreading is possible in Python. Let us check it in an example below:
+JavaScript'te olduğu gibi, Python'da da spread (yayma) işlemi mümkündür. Aşağıdaki örnekte bunu inceleyelim:
 
 ```py
 lst_one = [1, 2, 3]
@@ -259,7 +259,7 @@ print(nordic_countries)  # ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
 
 ## Enumerate
 
-If we are interested in an index of a list, we use _enumerate_ built-in function to get the index of each item in the list.
+Eğer bir listin indeksleriyle ilgileniyorsak, listteki her itemin indeksini almak için _enumerate_ built-in fonksiyonunu kullanırız.
 
 ```py
 for index, item in enumerate([20, 30, 40]):
@@ -279,7 +279,7 @@ The country Finland has been found at index 1.
 
 ## Zip
 
-Sometimes we would like to combine lists when looping through them. See the example below:
+Bazen döngü sırasında listeleri birleştirmek isteyebiliriz. Aşağıdaki örneğe bakalım:
 
 ```py
 fruits = ['banana', 'orange', 'mango', 'lemon', 'lime']                    
@@ -295,12 +295,12 @@ print(fruits_and_veges)
 [{'fruit': 'banana', 'veg': 'Tomato'}, {'fruit': 'orange', 'veg': 'Potato'}, {'fruit': 'mango', 'veg': 'Cabbage'}, {'fruit': 'lemon', 'veg': 'Onion'}, {'fruit': 'lime', 'veg': 'Carrot'}]
 ```
 
-🌕 You are determined. You are 17 steps a head to your way to greatness. Now do some exercises for your brain and muscles.
+🌕 Kararlısın. 17. günün challenge’larını tamamladın ve mükemmellik yolunda 17 adım ilerledin. Şimdi beynin ve kasların için biraz alıştırma yapalım.
 
-## Exercises: Day 17
+## Alıştırmalar: 17. Gün
 
-1. names = ['Finland', 'Sweden', 'Norway','Denmark','Iceland', 'Estonia','Russia']. Unpack the first five countries and store them in a variable nordic_countries, store Estonia and Russia in es, and ru respectively.
+1. names = ['Finland', 'Sweden', 'Norway','Denmark','Iceland', 'Estonia','Russia']. Ülkeleri unpack et ve ilk 5 ülkeyi nordic_countries listinde, Estonia'yı es, Russia'yı ru değişkenlerinde tut.
 
-🎉 CONGRATULATIONS ! 🎉
+🎉 TEBRİKLER ! 🎉
 
-[<< Day 16](../16_Day_Python_date_time/16_python_datetime.md) | [Day 18 >>](../18_Day_Regular_expressions/18_regular_expressions.md)
+[<< 16. Gün](../16_Day_Python_date_time/16_python_datetime.md) | [18. Gün >>](../18_Day_Regular_expressions/18_regular_expressions.md)

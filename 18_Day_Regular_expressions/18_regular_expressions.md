@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> 30 Days Of Python: Day 18 - Regular Expressions </h1>
+  <h1> 30 Günde Python: 18. Gün - Regular Expressions </h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -7,21 +7,21 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-  <sub>Author:
+  <sub>Yazar:
   <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-  <small> First Edition: Nov 22 - Dec 22, 2019</small>
+  <small> İlk Versiyon: 22 Kasım - 22 Aralık, 2019</small>
   </sub>
 </div>
 </div>
 
-[<< Day 17](../17_Day_Exception_handling/17_exception_handling.md) | [Day 19>>](../19_Day_File_handling/19_file_handling.md)
+[<< 17. Gün](../17_Day_Exception_handling/17_exception_handling.md) | [19. Gün>>](../19_Day_File_handling/19_file_handling.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
-- [📘 Day 18](#-day-18)
+- [📘 18. Gün](#-day-18)
   - [Regular Expressions](#regular-expressions)
-    - [The *re* Module](#the-re-module)
-    - [Methods in *re* Module](#methods-in-re-module)
+    - [*re* Modülü](#the-re-module)
+    - [*re* Modülündeki Metodlar](#methods-in-re-module)
       - [Match](#match)
       - [Search](#search)
       - [Searching for All Matches Using *findall*](#searching-for-all-matches-using-findall)
@@ -36,39 +36,39 @@
     - [Zero or one time(?)](#zero-or-one-time)
     - [Quantifier in RegEx](#quantifier-in-regex)
     - [Cart ^](#cart-)
-  - [💻 Exercises: Day 18](#-exercises-day-18)
-    - [Exercises: Level 1](#exercises-level-1)
-    - [Exercises: Level 2](#exercises-level-2)
-    - [Exercises: Level 3](#exercises-level-3)
+  - [💻 Alıştırmalar: 18. Gün](#-exercises-day-18)
+    - [Alıştırmalar: 1. Seviye](#exercises-level-1)
+    - [Alıştırmalar: 2. Seviye](#exercises-level-2)
+    - [Alıştırmalar: 3. Seviye](#exercises-level-3)
 
-# 📘 Day 18
+# 📘 18. Gün
 
 ## Regular Expressions
 
-A regular expression or RegEx is a special text string that helps to find patterns in data. A RegEx can be used to check if some pattern exists in a different data type. To use RegEx in python first we should import the RegEx module which is called *re*.
+Bir regular expression (kısaca RegEx), verideki desenleri bulmaya yardımcı olan özel bir metin stringidir. RegEx, farklı veri tiplerinde belirli bir desenin var olup olmadığını kontrol etmek için kullanılabilir. Python’da RegEx kullanmak için önce *re* adlı RegEx modülünü import etmeliyiz.
 
-### The *re* Module
+### *re* Modülü
 
-After importing the module we can use it to detect or find patterns.
+Modülü import ettikten sonra tekrarlı desenler bulmak için kullanabiliriz.
 
 ```py
 import re
 ```
 
-### Methods in *re* Module
+### *re* Modülündeki Metodlar
 
-To find a pattern we use different set of *re* character sets that allows to search for a match in a string.
+Bir tekrarlayan deseni bulmak için, bir string içinde eşleşme aramamıza izin veren farklı *re* karakter setlerini kullanırız.
 
-- *re.match()*: searches only in the beginning of the first line of the string and returns matched objects if  found, else returns None.
-- *re.search*: Returns a match object if there is one anywhere in the string, including multiline strings.
-- *re.findall*: Returns a list containing all matches
-- *re.split*: Takes a string, splits it at the match points, returns a list
-- *re.sub*:  Replaces one or many matches within a string
+- *re.match()*: Sadece stringin ilk satırının başında arama yapar, eşleşme varsa bir match objesi döner, yoksa None döner.
+- *re.search*: Stringin herhangi bir yerinde (çok satırlı stringler dahil) arama yapar, eşleşme varsa bir match objesi döner.
+- *re.findall*: Tüm eşleşmeleri içeren bir liste döner.
+- *re.split*: Bir string’i, eşleşme noktalarından böler ve bir list döner.
+- *re.sub*:  Bir string içindeki bir veya birden fazla eşleşmeyi başka bir şeyle değiştirir.
 
 #### Match
 
 ```py
-# syntac
+# sözdizimi
 re.match(substring, string, re.I)
 # substring is a string or a pattern, string is the text we look for a pattern , re.I is case ignore
 ```
@@ -105,7 +105,7 @@ The string does not string with *I like to teach*, therefore there was no match 
 #### Search
 
 ```py
-# syntax
+# sözdizimi
 re.match(substring, string, re.I)
 # substring is a pattern, string is the text we look for a pattern , re.I is case ignore flag
 ```
@@ -386,11 +386,11 @@ matches = re.findall(regex_pattern, txt)
 print(matches)  # ['6,', '2019', '8', '2021']
 ```
 
-## 💻 Exercises: Day 18
+## 💻 Alıştırmalar: 18. Gün
 
-### Exercises: Level 1
+### Alıştırmalar: 1. Seviye
 
- 1. What is the most frequent word in the following paragraph?
+ 1. Aşağıdaki paragrafta en sık geçen kelime nedir?
 
 ```py
     paragraph = 'I love teaching. If you do not love teaching what else can you love. I love Python if you do not love something which can give you all the capabilities to develop an application what else can you love.
@@ -423,7 +423,7 @@ print(matches)  # ['6,', '2019', '8', '2021']
     ]
 ```
 
-2. The position of some particles on the horizontal x-axis are -12, -4, -3 and -1 in the negative direction, 0 at origin, 4 and 8 in the positive direction. Extract these numbers from this whole text and find the distance between the two furthest particles.
+2. Bazı parçacıkların yatay x-ekseni üzerindeki konumları negatif yönde -12, -4, -3 ve -1, orijinde 0, pozitif yönde 4 ve 8’dir. Bu sayıları bu metnin tamamından çıkar ve iki en uzak parçacık arasındaki mesafeyi bul.
 
 ```py
 points = ['-12', '-4', '-3', '-1', '0', '4', '8']
@@ -431,7 +431,7 @@ sorted_points =  [-12, -4, -3, -1, -1, 0, 2, 4, 8]
 distance = 8 -(-12) # 20
 ```
 
-### Exercises: Level 2
+### Alıştırmalar: 2. Seviye
 
 1. Write a pattern which identifies if a string is a valid python variable
 
@@ -442,9 +442,9 @@ distance = 8 -(-12) # 20
     is_valid_variable('firstname') # True
     ```
 
-### Exercises: Level 3
+### Alıştırmalar: 3. Seviye
 
-1. Clean the following text. After cleaning, count three most frequent words in the string.
+1. Aşağıdaki metni temizleyin. Temizledikten sonra, string içindeki en sık geçen üç kelimeyi sayın.
 
     ```py
     sentence = '''%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?'''
@@ -454,6 +454,6 @@ distance = 8 -(-12) # 20
     print(most_frequent_words(cleaned_text)) # [(3, 'I'), (2, 'teaching'), (2, 'teacher')]
     ```
 
-🎉 CONGRATULATIONS ! 🎉
+🎉 TEBRİKLER ! 🎉
 
-[<< Day 17](../17_Day_Exception_handling/17_exception_handling.md) | [Day 19>>](../19_Day_File_handling/19_file_handling.md)
+[<< 17. Gün](../17_Day_Exception_handling/17_exception_handling.md) | [19. Gün>>](../19_Day_File_handling/19_file_handling.md)

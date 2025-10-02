@@ -19,7 +19,7 @@
 | 13  |  [List Oluşturma Kısayolu](./13_Day_List_comprehension/13_list_comprehension.md)|
 | 14  |  [Yüksek Mertebe Fonksiyonlar](./14_Day_Higher_order_functions/14_higher_order_functions.md)|
 | 15  |  [Python'da Hatalar](./15_Day_Python_type_errors/15_python_type_errors.md)|
-| 16 |  [Python'da Tarih ve Zaman](./16_Day_Python_date_time/16_python_datetime.md) |
+| 16 |  [Python datetime](./16_Day_Python_date_time/16_python_datetime.md) |
 | 17 |  [İstisna Yakalama](./17_Day_Exception_handling/17_exception_handling.md)|
 | 18 |  [Düzenli İfadeler](./18_Day_Regular_expressions/18_regular_expressions.md)|
 | 19 |  [Dosya İşlemleri](./19_Day_File_handling/19_file_handling.md)|

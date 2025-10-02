@@ -9,7 +9,7 @@
 
   <sub>Yazar:
   <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-  <small>Second Edition: Temmuz, 2021</small>
+  <small>İkinci Versiyon: Temmuz, 2021</small>
   </sub>
 
 </div>
@@ -19,13 +19,13 @@
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 - [📘 16. Gün](#-day-16)
   - [Python *datetime*](#python-datetime)
-    - [Getting *datetime* Information](#getting-datetime-information)
+    - [*datetime* Bilgilerini Edinme](#getting-datetime-information)
     - [*strftime* Kullanarak Tarih Çıktısını Formatlamak](#formatting-date-output-using-strftime)
     - [*strptime* Kullanarak String'i Zamana Çevirmek](#string-to-time-using-strptime)
     - [*datetime* Modülünden *date*'i Kullanmak](#using-date-from-datetime)
-    - [Time Objects to Represent Time](#time-objects-to-represent-time)
-    - [Difference Between Two Points in Time Using](#difference-between-two-points-in-time-using)
-    - [Difference Between Two Points in Time Using *timedelta*](#difference-between-two-points-in-time-using-timedelta)
+    - [Zaman Temsili İçin Time Objeleri](#time-objects-to-represent-time)
+    - [*date* ve *datetime* Kullanarak İki Tarih Arasındaki Farkı Hesaplama](#difference-between-two-points-in-time-using)
+    - [*timedelta* Kullanarak İki Tarih Arasındaki Farkı Hesaplama](#difference-between-two-points-in-time-using-timedelta)
   - [💻 Alıştırmalar: 16. Gün](#-exercises-day-16)
 # 📘 16. Gün
 
@@ -36,12 +36,16 @@ Python'da tarih ve zaman işlemleri için _datetime_ modülü kullanılır.
 ```py
 import datetime
 print(dir(datetime))
+```
+
+```sh
+çıktı:
 ['MAXYEAR', 'MINYEAR', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'date', 'datetime', 'datetime_CAPI', 'sys', 'time', 'timedelta', 'timezone', 'tzinfo']
 ```
 
-With dir or help built-in commands it is possible to know the available functions in a certain module. As you can see, in the datetime module there are many functions, but we will focus on _date_, _datetime_, _time_ and _timedelta_. Let se see them one by one.
+_dir_ veya _help_ built-in komutları ile belirli bir modülde kullanılabilir fonksiyonları öğrenmek mümkündür. Gördüğünüz gibi, datetime modülünde birçok fonksiyon bulunuyor, ancak biz burada _date_, _datetime_, _time_ ve _timedelta_ fonksiyonlarına odaklanacağız. Şimdi bunları teker teker inceleyelim.
 
-### Getting *datetime* Information
+###*datetime* Bilgilerini Edinme
 
 ```py
 from datetime import datetime
@@ -59,9 +63,9 @@ print('timestamp', timestamp)
 print(f'{day}/{month}/{year}, {hour}:{minute}')  # 8/7/2021, 7:38
 ```
 
-Timestamp or Unix timestamp is the number of seconds elapsed from 1st of January 1970 UTC.
+Timestamp veya Unix timestamp, 1 Ocak 1970 UTC tarihinden itibaren geçen saniye sayısını ifade eder.
 
-### Formatting Date Output Using *strftime*
+### *strftime* Kullanarak Tarih Çıktısını Formatlamak
 
 ```py
 from datetime import datetime
@@ -100,7 +104,7 @@ time one: 12/05/2019, 01:05:01
 time two: 05/12/2019, 01:05:01
 ```
 
-Here are all the _strftime_ symbols we use to format time. An example of all the formats for this module.
+İşte zamanı formatlamak için kullandığımız tüm strftime sembolleri. Bu modül için tüm formatların bir örneği.
 
 ![strftime](../images/strftime.png)
 
@@ -134,7 +138,7 @@ print("Current month:", today.month) # 12
 print("Current day:", today.day)     # 5
 ```
 
-### Time Objects to Represent Time
+### Zaman Temsili İçin Time Objeleri
 
 ```py
 from datetime import time
@@ -152,13 +156,13 @@ d = time(10, 30, 50, 200555)
 print("d =", d)
 ```
 
-output  
+çıktı  
 a = 00:00:00  
 b = 10:30:50  
 c = 10:30:50  
 d = 10:30:50.200555
 
-### Difference Between Two Points in Time Using
+### *date* ve *datetime* Kullanarak İki Tarih Arasındaki Farkı Hesaplama
 
 ```py
 today = date(year=2019, month=12, day=5)
@@ -170,10 +174,10 @@ print('Time left for new year: ', time_left_for_newyear)
 t1 = datetime(year = 2019, month = 12, day = 5, hour = 0, minute = 59, second = 0)
 t2 = datetime(year = 2020, month = 1, day = 1, hour = 0, minute = 0, second = 0)
 diff = t2 - t1
-print('Time left for new year:', diff) # Time left for new year: 26 days, 23: 01: 00
+print('Time left for new year:', diff) # Yeni yıla kalan süre: 26 days, 23: 01: 00
 ```
 
-### Difference Between Two Points in Time Using *timedelta*
+### *timedelta* Kullanarak İki Tarih Arasındaki Farkı Hesaplama
 
 ```py
 from datetime import timedelta
@@ -189,7 +193,7 @@ print("t3 =", t3)
     t3 = 86 days, 22:56:50
 ```
 
-🌕 You are an extraordinary. You are 16 steps a head to your way to greatness. Now do some exercises for your brain and muscles.
+🌕 Sıradışısın. 16. günün challenge’larını tamamladın ve mükemmellik yolunda 16 adım ilerledin. Şimdi beynin ve kasların için biraz alıştırma yapalım.
 
 ## 💻 Alıştırmalar: 16. Gün
 
@@ -199,9 +203,9 @@ print("t3 =", t3)
 1. Yeni yıl ve bugün arasındaki tarih farkını bulun.
 1. Bugün ve 1 Ocak 1970 arasındaki tarih farkını bulun.
 1. datetime modülünü ne için kullanabileceğinizi düşünün. Örnekler:
-   - Time series analysis
-   - To get a timestamp of any activities in an application
-   - Adding posts on a blog 
+   - Zaman serisi analizi
+   - Bir uygulamadaki herhangi bir aktivitenin zaman damgasını (timestamp) almak
+   - Bir bloga gönderi eklemek
 
 🎉 TEBRİKLER ! 🎉
 

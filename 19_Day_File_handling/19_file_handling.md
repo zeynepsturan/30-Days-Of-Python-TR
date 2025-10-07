@@ -146,7 +146,8 @@ f.close()
 ['This is an example to show how to open a file and read.', 'This is the second line of the text.']
 ```
 
-Bir dosyayı açtıktan sonra onu mutlaka kapamalıyız.. There is a high tendency of forgetting to close them. There is a new way of opening files using _with_ - closes the files by itself. Bİr önceki örneği _with_ metoduyla tekrar yazalım:
+Bir dosyayı açtıktan sonra onu mutlaka kapamalıyız. Dosyaları kapatmayı unutma olasılığı oldukça yüksektir.
+Dosya açmanın yeni bir yöntemi olan _with_ ifadesi, dosyayı otomatik olarak kapatır. Bir önceki örneği _with_ metoduyla tekrar yazalım:
 
 ```py
 with open('./files/reading_file_example.txt') as f:

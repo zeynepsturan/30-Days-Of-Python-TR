@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> 30 Days Of Python: Day 20 - PIP </h1>
+  <h1> 30 Günde Python: 20. Gün - Python Paket Yöneticisi </h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -7,49 +7,47 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-<sub>Author:
+<sub>Yazar:
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small>Second Edition: July, 2021</small>
+<small>İkinci Versiyon: Temmuz, 2021</small>
 </sub>
 </div>
 
-[<< Day 19](../19_Day_File_handling/19_file_handling.md) | [Day 21 >>](../21_Day_Classes_and_objects/21_classes_and_objects.md)
+[<< 19. Gün](../19_Day_File_handling/19_file_handling.md) | [21. Gün >>](../21_Day_Classes_and_objects/21_classes_and_objects.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
-- [📘 Day 20](#-day-20)
-  - [Python PIP - Python Package Manager](#python-pip---python-package-manager)
-    - [What is PIP ?](#what-is-pip-)
-    - [Installing PIP](#installing-pip)
-    - [Installing packages using pip](#installing-packages-using-pip)
-    - [Uninstalling Packages](#uninstalling-packages)
-    - [List of Packages](#list-of-packages)
-    - [Show Package](#show-package)
+- [📘 20. Gün](#-day-20)
+  - [Python PIP - Python Paket Yöneticisi](#python-pip---python-package-manager)
+    - [PIP nedir?](#what-is-pip-)
+    - [PIP'i Yüklemek](#installing-pip)
+    - [pip Kullanarak Paket Yüklemek](#installing-packages-using-pip)
+    - [Paket Yüklemesini Silmeks](#uninstalling-packages)
+    - [Paket Listesi](#list-of-packages)
+    - [Paket Bilgisi Gösterme](#show-package)
     - [PIP Freeze](#pip-freeze)
-    - [Reading from URL](#reading-from-url)
-    - [Creating a Package](#creating-a-package)
+    - [URL'den Okumak](#reading-from-url)
+    - [Paket Oluşturmak](#creating-a-package)
     - [Further Information About Packages](#further-information-about-packages)
-  - [Exercises: Day 20](#exercises-day-20)
+  - [Alıştırmalar: 20. Gün](#exercises-day-20)
 
-# 📘 Day 20
+# 📘 20. Gün
 
-## Python PIP - Python Package Manager
+## Python PIP - Python Paket Yöneticisi
 
-### What is PIP ?
+### PIP nedir?
 
-PIP stands for Preferred installer program. We use _pip_ to install different Python packages.
-Package is a Python module that can contain one or more modules or other packages. A module or modules that we can install to our application is a package.
-In programming, we do not have to write every utility program, instead we install packages and import them to our applications.
+PIP, Preferred Installer Program (Tercih Edilen Yükleyici Program) anlamına gelir. Python’da farklı paketleri yüklemek için _pip_ kullanırız. Paket (package), bir veya birden fazla modül ya da başka paketler içerebilen bir Python modülüdür. Programlamada her yardımcı programı sıfırdan yazmamıza gerek yoktur; bunun yerine, hazır paketleri yükleyip uygulamalarımıza dahil ederiz.
 
-### Installing PIP
+### PIP'i Yüklemek
 
-If you did not install pip, let us install it now. Go to your terminal or command prompt and copy and paste this:
+Daha önce pip yüklemediysen şimdi yükleyelim. Terminalini veya komut istemcini aç ve şunu kopyalayıp yapıştır:
 
 ```sh
 asabeneh@Asabeneh:~$ pip install pip
 ```
 
-Check if pip is installed by writing
+pip kurulup kurulmadı mı kontrol etmek için şunu yaz
 
 ```sh
 pip --version
@@ -60,25 +58,25 @@ asabeneh@Asabeneh:~$ pip --version
 pip 21.1.3 from /usr/local/lib/python3.7/site-packages/pip (python 3.9.6)
 ```
 
-As you can see, I am using pip version 21.1.3, if you see some number a bit below or above that, means you have pip installed.
+Gördüğün gibi ben pip version 21.1.3 kullanıyorum, eğer buna yakın bir sayı gördüysen pip'i başarıyla yükledin demek.
 
-Let us check some of the packages used in the Python community for different purposes. Just to let you know that there are lots of packages available for use with different applications.
+Python topluluğunda farklı amaçlar için kullanılan bazı paketlere bakalım. Şunu söylemeliyim ki: farklı uygulamalarda kullanılabilecek çok sayıda paket vardır.
 
-### Installing packages using pip
+### pip Kullanarak Paket Yüklemek
 
-Let us try to install _numpy_, called numeric python. It is one of the most popular packages in machine learning and data science community.
+Şimdi NumPy (Numerical Python'ın kısaltması) adlı paketi kurmayı deneyelim. NumPy, makine öğrenimi ve veri bilimi alanlarında en popüler paketlerden biridir.
 
-- NumPy is the fundamental package for scientific computing with Python. It contains among other things:
-  - a powerful N-dimensional array object
-  - sophisticated (broadcasting) functions
-  - tools for integrating C/C++ and Fortran code
-  - useful linear algebra, Fourier transform, and random number capabilities
+- NumPy, Python ile bilimsel hesaplama için temel bir pakettir. Şunları içerir:
+  - Güçlü bir N-boyutlu array objesi
+  - Gelişmiş yayılma (broadcasting) fonksiyonları
+  - C/C++ ve Fortran kodlarıyla entegrasyon araçları
+  - Doğrusal cebir, Fourier dönüşümü ve rastgele sayı üretme yetenekleri
 
 ```sh
 asabeneh@Asabeneh:~$ pip install numpy
 ```
 
-Let us start using numpy. Open your python interactive shell, write python and then import numpy as follows:
+numpy kullanmaya başlayalım. Python interactive shelli aç python yaz ve numpy'ı şu şekilde import et:
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -101,7 +99,7 @@ array([3, 4, 5, 6, 7])
 >>>
 ```
 
-Pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language. Let us install the big brother of numpy, _pandas_:
+Pandas, açık kaynaklı ve BSD lisanslı bir kütüphanedir. Python programlama dili için yüksek performanslı, kullanımı kolay veri yapıları ve veri analizi araçları sağlar. Şimdi, NumPy’nin abisi olarak bilinen _pandas_ kütüphanesini kuralım::
 
 ```sh
 asabeneh@Asabeneh:~$ pip install pandas
@@ -115,14 +113,15 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> import pandas
 ```
 
-This section is not about numpy nor pandas, here we are trying to learn how to install packages and how to import them. If it is needed, we will talk about different packages in other sections.
+Bu bölüm NumPy veya Pandas hakkında değil — burada, paketlerin nasıl yükleneceğini ve içe aktarılacağını (import edileceğini) öğreniyoruz.
+Farklı kütüphanelerden diğer bölümlerde bahsedeceğiz.
 
-Let us import a web browser module, which can help us to open any website. We do not need to install this module, it is already installed by default with Python 3. For instance if you like to open any number of websites at any time or if you like to schedule something, this _webbrowser_ module can be used.
+Şimdi, web tarayıcısı modülünü (webbrowser) içe aktaralım. Bu modül, herhangi bir web sitesini doğrudan Python üzerinden açmamıza yardımcı olur. Ayrıca bu modül, Python 3 ile önceden yüklü olarak gelir, yani kurulum yapmamıza gerek yoktur. Örneğin, istediğin anda bir veya birden fazla siteyi açmak ya da belirli bir zamanı planlamak istiyorsan, _webbrowser_ modülünü kullanabilirsin.
 
 ```py
-import webbrowser # web browser module to open websites
+import webbrowser # web sitelerini açmak için web browser modülü
 
-# list of urls: python
+# url listi: python
 url_lists = [
     'http://www.python.org',
     'https://www.linkedin.com/in/asabeneh/',
@@ -130,30 +129,30 @@ url_lists = [
     'https://twitter.com/Asabeneh',
 ]
 
-# opens the above list of websites in a different tab
+# yukarıdaki listteki web sitelerini farklı sekmelerde açar
 for url in url_lists:
     webbrowser.open_new_tab(url)
 ```
 
-### Uninstalling Packages
+### Paket Yüklemesini Silmek
 
-If you do not like to keep the installed packages, you can remove them using the following command.
+Yüklü paketleri cihazında tutmak istemiyorsan aşağıdaki komutla paketleri silebilirsin.
 
 ```sh
 pip uninstall packagename
 ```
 
-### List of Packages
+### Paket Listesi
 
-To see the installed packages on our machine. We can use pip followed by list.
+Makinendeki tüm yüklü paketleri görmek için pip'i aşağıdaki gibi kullanabiliriz:
 
 ```sh
 pip list
 ```
 
-### Show Package
+### Paket Bilgisi Gösterme
 
-To show information about a package
+Bir paket hakkındaki bilgileri görmek için
 
 ```sh
 pip show packagename
@@ -173,7 +172,7 @@ Requires: python-dateutil, pytz, numpy
 Required-by:
 ```
 
-If we want even more details, just add --verbose
+Daha fazla detay için komuta --verbose ekleriz
 
 ```sh
 asabeneh@Asabeneh:~$ pip show --verbose pandas
@@ -209,7 +208,7 @@ Entry-points:
 
 ### PIP Freeze
 
-Generate installed Python packages with their version and the output is suitable to use it in a requirements file. A requirements.txt file is a file that should contain all the installed Python packages in a Python project.
+Yüklü Python paketlerini sürümleriyle birlikte listeler ve çıktısı, requirements dosyasında kullanılabilecek formattadır. requirements.txt dosyası, bir Python projesinde kullanılan tüm yüklü paketlerin ve sürümlerinin yer aldığı bir dosyadır. Bu dosya, projeyi başka bir ortamda çalıştırmak isteyenlerin aynı paketleri kolayca yüklemesini sağlar.
 
 ```sh
 asabeneh@Asabeneh:~$ pip freeze
@@ -220,37 +219,37 @@ Pygments==1.6
 Sphinx==1.2.2
 ```
 
-The pip freeze gave us the packages used, installed and their version. We use it with requirements.txt file for deployment.
+pip freeze kullanılan paketleri ve versiyonlarını verir. Bunu deployment (yayınlama/dağıtım) sırasında requirements.txt dosyasıyla birlikte kullanırız.
 
-### Reading from URL
+### URL'den Okumak
 
-By now you are familiar with how to read or write on a file located on you local machine. Sometimes, we would like to read from a website using url or from an API.
-API stands for Application Program Interface. It is a means to exchange structured data between servers primarily as json data. To open a network connection, we need a package called _requests_ - it allows to open a network connection and to implement CRUD(create, read, update and delete) operations. In this section, we will cover only reading ore getting part of a CRUD.
+Artık yerel makinenizdeki bir dosyayı nasıl okuyacağını veya yazacağını biliyorsun. Bazen bir web sitesinden veya API’den veri okumak isteriz.
+API (Application Program Interface), sunucular arasında genellikle JSON formatında yapılandırılmış veri alışverişi yapmamızı sağlayan bir arayüzdür.Bir ağ bağlantısı açmak için _requests_ paketini kullanırız. Bu paket, ağ bağlantısı kurmamıza ve CRUD (Create, Read, Update, Delete) operasyonlarını gerçekleştirmemize olanak tanır.
 
-Let us install _requests_:
+_requests_ yükleme:
 
 ```py
 asabeneh@Asabeneh:~$ pip install requests
 ```
 
-We will see _get_, _status_code_, _headers_, _text_ and _json_ methods in _requests_ module:
-  - _get()_: to open a network and fetch data from url - it returns a response object
-  - _status_code_: After we fetched data, we can check the status of the operation (success, error, etc)
-  - _headers_: To check the header types
-  - _text_: to extract the text from the fetched response object 
-  - _json_: to extract json data
-Let's read a txt file from this website, https://www.w3.org/TR/PNG/iso_8859-1.txt.
+_requests_ modülünde _get_, _status_code_, _headers_, _text_ and _json_ metodlarını görüyor olacağız:
+  - _get()_: Bir URL’den veri çekmek (ağ bağlantısı açmak) için kullanılır — bir response nesnesi döndürür.
+  - _status_code_: Veriyi çektikten sonra işlemin durumunu kontrol etmek için kullanılır (başarılı mı, hata mı vb.)
+  - _headers_: Gelen responseun başlık (header) bilgilerini görmek için kullanılır.
+  - _text_: Response nesnesinden metin içeriğini almak için kullanılır.
+  - _json_: JSON verisini almak için kullanılır.
+https://www.w3.org/TR/PNG/iso_8859-1.txt sitesinden bir txt dosyası okuyalım.
 
 ```py
-import requests # importing the request module
+import requests # request modülünü import etme
 
-url = 'https://www.w3.org/TR/PNG/iso_8859-1.txt' # text from a website
+url = 'https://www.w3.org/TR/PNG/iso_8859-1.txt' # web sitesinden bir metin dosyası
 
-response = requests.get(url) # opening a network and fetching a data
+response = requests.get(url) # bağlantı açma ve veri çekme
 print(response)
 print(response.status_code) # status code, success:200
-print(response.headers)     # headers information
-print(response.text) # gives all the text from the page
+print(response.headers)     # header bilgisi
+print(response.text) # sayfadaki tüm metinleri verir
 ```
 
 ```sh
@@ -259,16 +258,16 @@ print(response.text) # gives all the text from the page
 {'date': 'Sun, 08 Dec 2019 18:00:31 GMT', 'last-modified': 'Fri, 07 Nov 2003 05:51:11 GMT', 'etag': '"17e9-3cb82080711c0;50c0b26855880-gzip"', 'accept-ranges': 'bytes', 'cache-control': 'max-age=31536000', 'expires': 'Mon, 07 Dec 2020 18:00:31 GMT', 'vary': 'Accept-Encoding', 'content-encoding': 'gzip', 'access-control-allow-origin': '*', 'content-length': '1616', 'content-type': 'text/plain', 'strict-transport-security': 'max-age=15552000; includeSubdomains; preload', 'content-security-policy': 'upgrade-insecure-requests'}
 ```
 
-- Let us read from an API. API stands for Application Program Interface. It is a means to exchange structure data between servers primarily a json data. An example of an API:https://restcountries.eu/rest/v2/all. Let us read this API using _requests_ module.
+- Bir API'den okuma yapalım. API, Application Programming Interface (Uygulama Programlama Arayüzü) anlamına gelir. Sunucular arasında yapılandırılmış veriyi (çoğunlukla JSON formatında) değiş tokuş etmenin bir yoludur. Örnek API: https://restcountries.eu/rest/v2/all. _requests_ modülünü kullanarak bu API'yi okuyalım.
 
 ```py
 import requests
-url = 'https://restcountries.eu/rest/v2/all'  # countries api
-response = requests.get(url)  # opening a network and fetching a data
-print(response) # response object
+url = 'https://restcountries.eu/rest/v2/all'  # ülke api'si
+response = requests.get(url)  # bağlantı açma ve veri çekme
+print(response) # response objesi
 print(response.status_code)  # status code, success:200
 countries = response.json()
-print(countries[:1])  # we sliced only the first country, remove the slicing to see all countries
+print(countries[:1])  # sadece ilk ülkeyi aldık. Tüm ülkeleri görmek için bu slicingi kaldırın.
 ```
 
 ```sh
@@ -325,13 +324,15 @@ print(countries[:1])  # we sliced only the first country, remove the slicing to 
 
 We use _json()_ method from response object, if the we are fetching JSON data. For txt, html, xml and other file formats we can use _text_.
 
-### Creating a Package
+### Paket Oluşturmak
 
-We organize a large number of files in different folders and sub-folders based on some criteria, so that we can find and manage them easily. As you know, a module can contain multiple objects, such as classes, functions, etc. A package can contain one or more relevant modules. A package is actually a folder containing one or more module files. Let us create a package named mypackage, using the following steps:
+Çok sayıda dosyayı belirli kriterlere göre farklı klasörler ve alt klasörlerde organize ederiz, böylece onları kolayca bulabilir ve yönetebiliriz. Bildiğin gibi, bir modül birden fazla obje içerebilir; örneğin classlar, fonksiyonlar vb. Bir paket, bir veya daha fazla ilgili modül içerebilir.
 
-Create a new folder named mypacakge inside 30DaysOfPython folder
-Create an empty **__init__**.py file in the mypackage folder.
-Create modules arithmetic.py and greet.py with following code:
+Aslında bir paket, bir veya daha fazla modül dosyası içeren bir klasördür. Şimdi aşağıdaki adımları kullanarak mypackage adlı bir paket oluşturalım:
+
+30GundePython klasörünün içinde mypackage adlı yeni bir klasör oluşturun.
+mypackage klasöründe boş bir **__init__**.py dosyası oluşturun.
+arithmetic.py ve greet.py modüllerini aşağıdaki kodlarla oluşturun:
 
 ```py
 # mypackage/arithmetics.py
@@ -370,7 +371,7 @@ def greet_person(firstname, lastname):
     return f'{firstname} {lastname}, welcome to 30DaysOfPython Challenge!'
 ```
 
-The folder structure of your package should look like this:
+Paketinin klasör yapısı bu şekilde gözükmeli:
 
 ```sh
 ─ mypackage
@@ -379,7 +380,7 @@ The folder structure of your package should look like this:
     └── greet.py
 ```
 
-Now let's open the python interactive shell and try the package we have created:
+Python interactive shelli açalım ve oluşturduğumuz paketi deneyelim:
 
 ```sh
 asabeneh@Asabeneh:~/Desktop/30DaysOfPython$ python
@@ -441,7 +442,7 @@ The **__init__**.py exposes specified resources from its modules to be imported 
 
 🌕 You are always progressing and you are a head of 20 steps to your way to greatness. Now do some exercises for your brain and muscles.
 
-## Exercises: Day 20
+## Alıştırmalar: 20. Gün
 
 1. Read this url and find the 10 most frequent words. romeo_and_juliet = 'http://www.gutenberg.org/files/1112/1112.txt'
 2. Read the cats API and cats_api = 'https://api.thecatapi.com/v1/breeds' and find :
@@ -454,6 +455,6 @@ The **__init__**.py exposes specified resources from its modules to be imported 
    3. the total number of languages in the countries API
 4. UCI is one of the most common places to get data sets for data science and machine learning. Read the content of UCL (https://archive.ics.uci.edu/ml/datasets.php). Without additional libraries it will be difficult, so you may try it with BeautifulSoup4
 
-🎉 CONGRATULATIONS ! 🎉
+🎉 TEBRİKLER ! 🎉
 
-[<< Day 19](../19_Day_File_handling/19_file_handling.md) | [Day 21 >>](../21_Day_Classes_and_objects/21_classes_and_objects.md)
+[<< 19. Gün](../19_Day_File_handling/19_file_handling.md) | [21. Gün >>](../21_Day_Classes_and_objects/21_classes_and_objects.md)

@@ -28,7 +28,7 @@
     - [PIP Freeze](#pip-freeze)
     - [URL'den Okumak](#reading-from-url)
     - [Paket Oluşturmak](#creating-a-package)
-    - [Further Information About Packages](#further-information-about-packages)
+    - [Paketlerle İlgili İleri Bilgiler](#further-information-about-packages)
   - [Alıştırmalar: 20. Gün](#exercises-day-20)
 
 # 📘 20. Gün
@@ -406,54 +406,56 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
 
-As you can see our package works perfectly. The package folder contains a special file called **__init__**.py - it stores the package's content. If we put **__init__**.py in the package folder, python start recognizes it as a package.
-The **__init__**.py exposes specified resources from its modules to be imported to other python files. An empty **__init__**.py file makes all functions available when a package is imported. The **__init__**.py is essential for the folder to be recognized by Python as a package.
+Gördüğün gibi paketimiz mükemmel şekilde çalışıyor. Paket klasörü, **_init_**.py adında özel bir dosya içerir — bu dosya paketin içeriğini saklar. Bir klasörün içine **_init_**.py dosyasını koyduğumuzda, Python o klasörü bir paket olarak tanımaya başlar.
 
-### Further Information About Packages
+**_init_**.py dosyası, paket içindeki belirli modülleri veya kaynakları diğer Python dosyalarına aktarılabilir hâle getirir. Boş bir **_init_**.py dosyası, paket içe aktarıldığında tüm fonksiyonların kullanılabilir olmasını sağlar.
+**_init_**.py dosyası, bir klasörün Python tarafından paket olarak tanınması için gereklidir
 
-- Database
-  - SQLAlchemy or SQLObject - Object oriented access to several different database systems
+### Paketlerle İlgili İleri Bilgiler
+
+- Veri tabanı
+  - SQLAlchemy or SQLObject - Farklı veri tabanı sistemlerine nesne tabanlı erişim
     - _pip install SQLAlchemy_
-- Web Development
-  - Django - High-level web framework.
+- Web Geliştirme
+  - Django - Yüksek seviye web frameworkü
     - _pip install django_
-  - Flask - micro framework for Python based on Werkzeug, Jinja 2. (It's BSD licensed)
+  - Flask - Werkzeug ve Jinja2 üzerine kurulmuş, BSD lisanslı bir Python mikro frameworkü
     - _pip install flask_
 - HTML Parser
-  - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) - HTML/XML parser designed for quick turnaround projects like screen-scraping, will accept bad markup.
+  - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) - HTML/XML ayrıştırıcısıdır; özellikle web scraping gibi hızlı dönüş gerektiren projeler için tasarlanmıştır. Hatalı (bozuk) işaretlemeyi bile kabul eder.
     - _pip install beautifulsoup4_
-  - PyQuery - implements jQuery in Python; faster than BeautifulSoup, apparently.
+  - PyQuery - Python içinde jQuery benzeri bir sözdizimi sağlar; BeautifulSoup’tan daha hızlı olduğu söylenir.
 
-- XML Processing
-  - ElementTree - The Element type is a simple but flexible container object, designed to store hierarchical data structures, such as simplified XML infosets, in memory. --Note: Python 2.5 and up has ElementTree in the Standard Library
-- GUI
-  - PyQt - Bindings for the cross-platform Qt framework.
-  - TkInter - The traditional Python user interface toolkit.
-- Data Analysis, Data Science and Machine learning
-  - Numpy: Numpy(numeric python) is known as one of the most popular machine learning library in Python.
-  - Pandas: is a data analysis, data science and a machine learning library in Python that provides data structures of high-level and a wide variety of tools for analysis.
-  - SciPy: SciPy is a machine learning library for application developers and engineers. SciPy library contains modules for optimization, linear algebra, integration, image processing, and statistics.
-  - Scikit-Learn: It is NumPy and SciPy. It is considered as one of the best libraries for working with complex data.
-  - TensorFlow: is a machine learning library built by Google.
-  - Keras: is considered as one of the coolest machine learning libraries in Python. It provides an easier mechanism to express neural networks. Keras also provides some of the best utilities for compiling models, processing data-sets, visualization of graphs, and much more.
-- Network:
-  - requests: is a package which we can use to send requests to a server(GET, POST, DELETE, PUT)
+- XML İşleme (XML Processing)
+  - ElementTree - Element tipi, hiyerarşik veri yapıları (örneğin basitleştirilmiş XML verileri) bellekte depolamak için tasarlanmış basit ama esnek bir kapsayıcı nesnedir. Not: Python 2.5 ve üzeri sürümlerde ElementTree, standart kütüphane ile birlikte gelir.
+- Grafik Arayüz (GUI)
+  - PyQt - Çapraz platform Qt frameworkü için Python bağlamalarıdır.
+  - TkInter - Python’un geleneksel kullanıcı arayüzü araç kitidir.
+- Veri Analizi, Veri Bilimi ve Makine Öğrenmesi
+  - Numpy: Numpy(numeric python), Python’daki en popüler bilimsel hesaplama ve makine öğrenimi kütüphanelerinden biridir.
+  - Pandas: Veri analizi, veri bilimi ve makine öğrenimi için yüksek seviyeli veri yapıları ve geniş analiz araçları sağlar.
+  - SciPy: Uygulama geliştiriciler ve mühendisler için tasarlanmış bir makine öğrenimi kütüphanesidir. Optimizasyon, lineer cebir, integrasyon, görüntü işleme ve istatistik modülleri içerir.
+  - Scikit-Learn: NumPy ve SciPy üzerine inşa edilmiştir. Karmaşık veri ile çalışmak için en güçlü kütüphanelerden biridir.
+  - TensorFlow: Google tarafından geliştirilmiş açık kaynaklı bir makine öğrenimi kütüphanesidir.
+  - Keras: Nöral ağlarını tanımlamak için kolay bir arayüz sağlar. Model derleme, veri işleme, grafik görselleştirme gibi birçok güçlü yardımcı aracı içerir.
+- Ağ Programlama (Network):
+  - requests: Sunucuya HTTP istekleri (GET, POST, DELETE, PUT) göndermek için kullanılan bir pakettir.
     - _pip install requests_
 
-🌕 You are always progressing and you are a head of 20 steps to your way to greatness. Now do some exercises for your brain and muscles.
+🌕 Gelişme kaydediyorsun. 20. günün challenge’larını tamamladın ve mükemmellik yolunda 20 adım ilerledin. Şimdi beynin ve kasların için biraz alıştırma yapalım.
 
 ## Alıştırmalar: 20. Gün
 
-1. Read this url and find the 10 most frequent words. romeo_and_juliet = 'http://www.gutenberg.org/files/1112/1112.txt'
-2. Read the cats API and cats_api = 'https://api.thecatapi.com/v1/breeds' and find :
-   1. the min, max, mean, median, standard deviation of cats' weight in metric units.
-   2. the min, max, mean, median, standard deviation of cats' lifespan in years.
-   3. Create a frequency table of country and breed of cats
-3. Read the [countries API](https://restcountries.eu/rest/v2/all) and find
-   1. the 10 largest countries
-   2. the 10 most spoken languages
-   3. the total number of languages in the countries API
-4. UCI is one of the most common places to get data sets for data science and machine learning. Read the content of UCL (https://archive.ics.uci.edu/ml/datasets.php). Without additional libraries it will be difficult, so you may try it with BeautifulSoup4
+1. Bu URL’yi oku ve en sık geçen 10 kelimeyi bul: romeo_and_juliet = 'http://www.gutenberg.org/files/1112/1112.txt'
+2. Cats API’sını oku: cats_api = 'https://api.thecatapi.com/v1/breeds' ve şunları bul:
+   1. Kedilerin kilogram cinsinden ağırlığının min, max, ortalama (mean), medyan ve standart sapmasını
+   2. Kedilerin ömür sürelerinin (yıl olarak) min, max, ortalama (mean), medyan ve standart sapmasını
+   3. Ülke ve kedi ırkı için frekans tablosu oluştur
+3. Countries API’sını oku: [countries API](https://restcountries.eu/rest/v2/all) ve şunları bul:
+   1. En büyük 10 ülke
+   2. En çok konuşulan 10 dil
+   3. Countries API’daki toplam dil sayısı
+4. UCI (veri bilimi / makine öğrenmesi için sık kullanılan veri kaynaklarından biri) sitesini oku:(https://archive.ics.uci.edu/ml/datasets.php). Ek kütüphaneler olmadan bu iş zor olabilir; bu yüzden BeautifulSoup4 kullanmayı deneyebilirsin.
 
 🎉 TEBRİKLER ! 🎉
 

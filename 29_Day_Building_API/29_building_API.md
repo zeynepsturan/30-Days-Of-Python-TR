@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> 30 Days Of Python: Day 29 - Building an API </h1>
+  <h1> 30 Günde Python: 29. Gün - API Oluşturma </h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -7,76 +7,79 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-<sub>Author:
+<sub>Yazar:
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small>Second Edition: July, 2021</small>
+<small>İkinci Versiyon: Temmuz, 2021</small>
 </sub>
 
 </div>
 
-[<< Day 28](../28_Day_API/28_API.md) | [Day 29 >>](../30_Day_Conclusions/30_conclusions.md)
+[<< 28. Gün](../28_Day_API/28_API.md) | [30. Gün >>](../30_Day_Conclusions/30_conclusions.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
-- [Day 29](#day-29)
-- [Building API](#building-api)
-  - [Structure of an API](#structure-of-an-api)
-  - [Retrieving data using get](#retrieving-data-using-get)
+- [29. Gün](#day-29)
+- [API Oluşturma](#building-api)
+  - [API Yapısı](#structure-of-an-api)
+  - [Get Kullanarak Veri Elde Etme](#retrieving-data-using-get)
   - [Getting a document by id](#getting-a-document-by-id)
   - [Creating data using POST](#creating-data-using-post)
   - [Updating using PUT](#updating-using-put)
   - [Deleting a document using Delete](#deleting-a-document-using-delete)
-- [💻 Exercises: Day 29](#-exercises-day-29)
+- [💻 Alıştırmalar: 29. Gün](#-exercises-day-29)
 
-## Day 29
+## 29. Gün
 
-## Building API
+## API Oluşturma
 
 
-In this section, we will cove a RESTful API that uses HTTP request methods to GET, PUT, POST and DELETE data.
+Bu bölümde, HTTP request yöntemlerini (GET, PUT, POST, DELETE) kullanarak veri işlemleri yapan RESTful API'yi ele alacağız.
 
-RESTful API is an application program interface (API) that uses HTTP requests to GET, PUT, POST and DELETE data. In the previous sections, we have learned about python, flask and mongoDB. We will use the knowledge we acquire to develop a RESTful API using python flask and mongoDB. Every application which has CRUD(Create, Read, Update, Delete) operation has an API to create data, to get data, to update data or to delete data from database.
+RESTful API, HTTP isteklerini kullanarak veri alma (GET), ekleme (POST), güncelleme (PUT) ve silme (DELETE) işlemlerini gerçekleştiren bir uygulama programlama arayüzüdür (API). Önceki bölümlerde Python, Flask ve MongoDB hakkında bilgi edindik.
+Bu bilgileri kullanarak, Python, Flask ve MongoDB ile bir RESTful API geliştireceğiz. Her uygulama, CRUD (Create, Read, Update, Delete) işlemlerine sahiptir ve bir API, veri oluşturmak, almak, güncellemek veya silmek için kullanılır.
 
-The browser can handle only get request. Therefore, we have to have a tool which can help us to handle all request methods(GET, POST, PUT, DELETE).
+Tarayıcı yalnızca GET isteklerini işleyebilir. Bu nedenle, tüm istek yöntemlerini (GET, POST, PUT, DELETE) yönetmemize yardımcı olacak bir araca ihtiyacımız vardır.
 
-Examples of API
+API Örneği
 
 - Countries API: https://restcountries.eu/rest/v2/all
 - Cats breed API: https://api.thecatapi.com/v1/breeds
 
-[Postman](https://www.getpostman.com/) is a very popular tool when it comes to API development. So, if you like to do this section you need to [download postman](https://www.getpostman.com/). An alternative of Postman is [Insomnia](https://insomnia.rest/download).
+[Postman](https://www.getpostman.com/) API geliştirme söz konusu olduğunda çok popüler bir araçtır. Bu bölümü yapmak istiyorsanız, [Postman’i indirin](https://www.getpostman.com/). Postman’in bir alternatifi: [Insomnia](https://insomnia.rest/download).
 
 ![Postman](../images/postman.png)
 
-### Structure of an API
+### API Yapısı
 
-An API end point is a URL which can help to retrieve, create, update or delete a resource. The structure looks like this:
-Example:
+Bir API uç noktası (endpoint), bir kaynağı almak (retrieve), oluşturmak (create), güncellemek (update) veya silmek (delete) için kullanılan bir URL’dir. Yapısı şu şekildedir:
+
+Örnek:
 https://api.twitter.com/1.1/lists/members.json
-Returns the members of the specified list. Private list members will only be shown if the authenticated user owns the specified list.
-The name of the company name followed by version followed by the purpose of the API.
-The methods:
-HTTP methods & URLs
 
-The API uses the following HTTP methods for object manipulation:
+Belirtilen listenin üyelerini döndürür. Özel liste üyeleri, yalnızca kimliği doğrulanmış kullanıcı söz konusu listenin sahibi ise gösterilir.
+Metotlar:
+HTTP metotları ve URL’ler
+
+API, nesne işlemleri için aşağıdaki HTTP metotlarını kullanır:
 
 ```sh
-GET        Used for object retrieval
-POST       Used for object creation and object actions
-PUT        Used for object update
-DELETE     Used for object deletion
+GET        Nesne elde etme (retrieval) için kullanılır
+POST       Nesne oluşturma (creation) ve nesne işlemleri için kullanılır
+PUT        Nesne güncelleme (update) için kullanılır
+DELETE     Nesne silme (deletion) için kullanılır
 ```
 
-Let us build an API which collects information about 30DaysOfPython students. We will collect the name, country, city, date of birth, skills and bio.
+Şimdi, 30GündePython öğrencileri hakkında bilgi toplayan bir API oluşturalım.
+Toplayacağımız bilgiler: name, country, city, date of birth, skills ve bio.
 
-To implement this API, we will use:
+Bu API’yi uygulamak için kullanacağımız araçlar:
 
 - Postman
 - Python
 - Flask
 - MongoDB
 
-### Retrieving data using get
+### Get Kullanarak Veri Elde Etme 
 
 In this step, let us use dummy data and return it as a json. To return it as json, will use json module and Response module.
 
@@ -493,10 +496,10 @@ if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=port)
 ```
 
-## 💻 Exercises: Day 29
+## 💻 Alıştırmalar: 29. Gün
 
 1. Implement the above example and develop [this](https://thirtydayofpython-api.herokuapp.com/)
 
-🎉 CONGRATULATIONS ! 🎉
+🎉 TEBRİKLER ! 🎉
 
-[<< Day 28](../28_Day_API/28_API.md) | [Day 30 >>](../30_Day_Conclusions/30_conclusions.md)
+[<< 28. Gün](../28_Day_API/28_API.md) | [30. Gün >>](../30_Day_Conclusions/30_conclusions.md)

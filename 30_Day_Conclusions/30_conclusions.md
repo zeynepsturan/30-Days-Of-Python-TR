@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1> 30 Days Of Python: Day 30- Conclusions</h1>
+  <h1> 30 Günde Python: 30. Gün- Kapanış</h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -9,33 +9,33 @@
   </a>
 
   
-<sub>Author:
+<sub>Yazar:
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small>Second Edition: July, 2021</small>
+<small>İkinci Versiyon: Temmuz, 2021</small>
 </sub>
 
 </div>
 
-[<< Day 29](../29_Day_Building_API/29_building_API.md)
+[<< 29. Gün](../29_Day_Building_API/29_building_API.md)
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
-- [Day 30](#day-30)
-  - [Conclusions](#conclusions)
-  - [Testimony](#testimony)
+- [30. Gün](#day-30)
+  - [Kapanış](#conclusions)
+  - [Değerlendirme](#testimony)
 
-# Day 30
+# 30. Gün
 
 
-## Conclusions
+## Kapanış
 
-In the process of preparing this material I  have learned quite a lot and you have inspired me to do more. Congratulations for making it to this level. If you have done all the exercise and the projects, now you are capable to go to  a data analysis, data science, machine learning or web development paths. [Support the author for more educational materials](https://www.paypal.com/paypalme/asabeneh).
+Bu materyali hazırlama sürecinde çok şey öğrendim ve sen de beni daha fazlasını yapmaya teşvik ettin. Bu seviyeye ulaştığın için tebrikler! Tüm alıştırmaları ve projeleri tamamladıysan, artık veri analizi, veri bilimi, makine öğrenimi veya web geliştirme alanlarına geçmeye hazırsın. [Daha fazla eğitim materyali için yazarı destekle](https://www.paypal.com/paypalme/asabeneh).
 
-## Testimony
-Now it is time to express your thoughts about the Author and 30DaysOfPyhton. You can leave your testimonial on this [link](https://www.asabeneh.com/testimonials)
+## Değerlendirme
+30GündePyhton ve yazar hakkındaki düşüncelerini paylaşma vakti. Değerlendirmeni bu [linkten](https://www.asabeneh.com/testimonials) yapabilirsin
 
-GIVE FEEDBACK:
+FEEDBACK VER:
 http://thirtydayofpython-api.herokuapp.com/feedback
 
-🎉 CONGRATULATIONS ! 🎉
+🎉 TEBRİKLER ! 🎉
 
-[<< Day 29](../29_Day_Building_API/29_building_API.md)
+[<< 29. Gün](../29_Day_Building_API/29_building_API.md)

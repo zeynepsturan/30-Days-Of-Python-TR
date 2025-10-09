@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> 30 Days Of Python: Day 24 - Statistics</h1>
+  <h1> 30 Günde Python: 24. Gün - İstatistik</h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -7,79 +7,79 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-<sub>Author:
+<sub>Yazar:
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small>Second Edition: July, 2021</small>
+<small>İkinci Versiyon: Temmuz, 2021</small>
 </sub>
 </div>
 
-[<< Day 23](../23_Day_Virtual_environment/23_virtual_environment.md) | [Day 25 >>](../25_Day_Pandas/25_pandas.md)
+[<< 23. Gün](../23_Day_Virtual_environment/23_virtual_environment.md) | [25. Gün >>](../25_Day_Pandas/25_pandas.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
-- [📘 Day 24](#-day-24)
-  - [Python for Statistical Analysis](#python-for-statistical-analysis)
-  - [Statistics](#statistics)
-  - [Data](#data)
-  - [Statistics Module](#statistics-module)
+- [📘 24. Gün](#-day-24)
+  - [İstatistiksel Analiz için Python](#python-for-statistical-analysis)
+  - [İstatistik](#statistics)
+  - [Veri](#data)
+  - [Statistics Modülü](#statistics-module)
 - [NumPy](#numpy)
 
-# 📘 Day 24
+# 📘 24. Gün
 
-## Python for Statistical Analysis
+## İstatistiksel Analiz için Python
 
-## Statistics
+## İstatistik
 
-Statistics is the discipline that studies the _collection_, _organization_, _displaying_, _analysing_, _interpretation_ and _presentation_ of data.
-Statistics is a branch of Mathematics that is recommended to be a prerequisite for data science and machine learning. Statistics is a very broad field but we will focus in this section only on the most relevant part.
-After completing this challenge, you may go onto the web development, data analysis, machine learning and data science path. Whatever path you may follow, at some point in your career you will get data which you may work on. Having some statistical knowledge will help you to make decisions based on data, _data tells as they say_.
+İstatistik, verilerin _toplanması_, _düzenlenmesi_, _görselleştirilmesi_, _analiz edilmesi_, _yorumlanması_ ve _sunulması_ ile ilgilenen bir disiplindir. İstatistik, matematiğin bir dalıdır ve veri bilimi (data science) ile makine öğrenimi (machine learning) için ön bilgi olarak önerilir. İstatistik çok geniş bir alan olsa da, bu bölümde yalnızca en ilgili kısımlara odaklanacağız.
 
-## Data
+Bu challenge’ı tamamladıktan sonra, web geliştirme, veri analizi, makine öğrenimi veya veri bilimi yollarından birine geçebilirsin. Hangi yolu seçersen seç, kariyerinin bir noktasında üzerinde çalışabileceğin verilerle karşılaşacaksın. Bir miktar istatistiksel bilgiye sahip olmak, veriye dayalı karar vermene yardımcı olacaktır.
 
-What is data? Data is any set of characters that is gathered and translated for some purpose, usually analysis. It can be any character, including text and numbers, pictures, sound, or video. If data is not put in a context, it doesn't make any sense to a human or computer. To make sense from data we need to work on the data using different tools.
+## Veri
 
-The work flow of data analysis, data science or machine learning starts from data. Data can be provided from some data source or it can be created. There are structured and unstructured data.
+Veri nedir? Veri, genellikle analiz amacıyla toplanan ve yorumlanan herhangi bir karakter kümesidir. Veri, metin, sayılar, resimler, ses veya video gibi herhangi bir karakter türü olabilir. Eğer veri bir bağlam içine yerleştirilmezse, ne insan ne de bilgisayar için anlam ifade eder. Veriden anlam çıkarmak için farklı araçlarla veri üzerinde çalışmamız gerekir.
 
-Data can be found in small or big format. Most of the data types we will get have been covered in the file handling section.
+Veri analizi, veri bilimi (data science) veya makine öğrenimi (machine learning) süreçleri veri ile başlar. Veri, bir veri kaynağından sağlanabilir veya oluşturulabilir. Veriler yapılandırılmış (structured) ve yapılandırılmamış (unstructured) olabilir.
 
-## Statistics Module
+Veriler küçük veya büyük boyutlarda olabilir. Bölümdeki veri türlerinin çoğu, dosya işlemleri (file handling) bölümünde ele alınmıştır.
 
-The Python _statistics_ module provides functions for calculating mathematical statistics of numerical data. The module is not intended to be a competitor to third-party libraries such as NumPy, SciPy, or proprietary full-featured statistics packages aimed at professional statisticians such as Minitab, SAS and Matlab. It is aimed at the level of graphing and scientific calculators.
+## Statistics Modülü
+
+Pythonun _statistics_ modülü, sayısal verilerin matematiksel istatistiklerini hesaplamak için fonksiyonlar sağlar. Bu modül, NumPy, SciPy gibi üçüncü taraf kütüphaneler veya Minitab, SAS, Matlab gibi profesyonel istatistikçiler için tasarlanmış tam özellikli istatistik paketleriyle rekabet etmeyi amaçlamaz. Modül, daha çok grafik çizme ve bilimsel hesap makinesi seviyesinde kullanım için uygundur.
 
 # NumPy
 
-In the first section we defined Python as a great general-purpose programming language on its own, but with the help of other popular libraries as(numpy, scipy, matplotlib, pandas etc) it becomes a powerful environment for scientific computing.
+İlk bölümde Pythonu, kendi başına harika bir genel amaçlı programlama dili olarak tanımladık, ancak NumPy, SciPy, Matplotlib, Pandas gibi popüler kütüphanelerin yardımıyla, Python bilimsel hesaplamalar için güçlü bir ortam haline gelir.
 
-NumPy is the core library for scientific computing in Python. It provides a high-performance multidimensional array object, and tools for working with arrays.
+NumPy, Python’daki bilimsel hesaplamaların temel kütüphanesidir. Yüksek performanslı çok boyutlu array (multidimensional array) objeleri ve bu arraylerle çalışmak için araçlar sağlar.
 
-So far, we have been using vscode but from now on I would recommend using Jupyter Notebook. To access jupyter notebook let's install [anaconda](https://www.anaconda.com/). If you are using anaconda most of the common packages are included and you don't have install packages if you installed anaconda.
+Şimdiye kadar VSCode kullandık, ancak bundan sonra Jupyter Notebook kullanmanı öneririm. Jupyter Notebook’a erişmek için [anaconda](https://www.anaconda.com/) ükleyelim. Eğer Anaconda kullanıyorsan, çoğu yaygın paket önceden dahil edilmiştir, bu yüzden paketleri ayrıca yüklemen gerekmez.
 
 ```sh
 asabeneh@Asabeneh:~/Desktop/30DaysOfPython$ pip install numpy
 ```
 
-## Importing NumPy
+## NumPy Import Etme
 
-Jupyter notebook is available if your are in favor of [jupyter notebook](https://github.com/Asabeneh/data-science-for-everyone/blob/master/numpy/numpy.ipynb)
+Jupyter Notebook, eğer istersen buradan kullanabilirsin: [jupyter notebook](https://github.com/Asabeneh/data-science-for-everyone/blob/master/numpy/numpy.ipynb)
 
 ```py
-    # How to import numpy
+    # numpyı import etme
     import numpy as np
-    # How to check the version of the numpy package
+    # numpy paketinin versiyonunu kontrol etme
     print('numpy:', np.__version__)
-    # Checking the available methods
+    # metodları listeleme
     print(dir(np))
 ```
 
-## Creating numpy array using
+## Numpy Arrayi Oluşturma
 
-### Creating int numpy arrays
+### Int Numpy Arrayi Oluşturma
 
 ```py
-    # Creating python List
+    # python list oluşturma
     python_list = [1,2,3,4,5]
 
-    # Checking data types
+    # veri tipi kontrolü
     print('Type:', type (python_list)) # <class 'list'>
     #
     print(python_list) # [1, 2, 3, 4, 5]
@@ -88,16 +88,16 @@ Jupyter notebook is available if your are in favor of [jupyter notebook](https:/
 
     print(two_dimensional_list)  # [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
 
-    # Creating Numpy(Numerical Python) array from python list
+    # python listten numpy arrayi oluşturma
 
     numpy_array_from_list = np.array(python_list)
     print(type (numpy_array_from_list))   # <class 'numpy.ndarray'>
     print(numpy_array_from_list) # array([1, 2, 3, 4, 5])
 ```
 
-### Creating float numpy arrays
+### Float Numpy Arrayi Oluşturma
 
-Creating a float numpy array from list with a float data type parameter
+Bir listten float veri tipli NumPy array oluşturma
 
 ```py
     # Python list
@@ -107,18 +107,18 @@ Creating a float numpy array from list with a float data type parameter
     print(numy_array_from_list2) # array([1., 2., 3., 4., 5.])
 ```
 
-### Creating boolean numpy arrays
+### Boolean Numpy Arrayi Oluşturma
 
-Creating a boolean a numpy array from list
+Listten boolean numpy arrayi oluşturma
 
 ```py
     numpy_bool_array = np.array([0, 1, -1, 0, 0], dtype=bool)
     print(numpy_bool_array) # array([False,  True,  True, False, False])
 ```
 
-### Creating multidimensional array using numpy
+### Numpy Kullanarak Çok boyutlu (multidimensional) Array Oluşturma
 
-A numpy array may have one or multiple rows and columns
+Bir numpy array bir veya birden fazla satır ve sütun içerebilir
 
 ```py
     two_dimensional_list = [[0,1,2], [3,4,5], [6,7,8]]
@@ -134,10 +134,10 @@ A numpy array may have one or multiple rows and columns
      [6 7 8]]
 ```
 
-### Converting numpy array to list
+### Numpy arrayi liste dönüştürme
 
 ```python
-# We can always convert an array back to a python list using tolist().
+# tolist() kullanarak bir arrayi her zaman python listine geri dönüştürebiliriz
 np_to_list = numpy_array_from_list.tolist()
 print(type (np_to_list))
 print('one dimensional array:', np_to_list)
@@ -150,11 +150,11 @@ print('two dimensional array: ', numpy_two_dimensional_list.tolist())
     two dimensional array:  [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
 ```
 
-### Creating numpy array from tuple
+### Tupledan Numpy Array Oluşturma
 
 ```py
-# Numpy array from tuple
-# Creating tuple in Python
+# tupledan numpy array
+# pythonda tupple oluşturma
 python_tuple = (1,2,3,4,5)
 print(type (python_tuple)) # <class 'tuple'>
 print('python_tuple: ', python_tuple) # python_tuple:  (1, 2, 3, 4, 5)
@@ -164,9 +164,9 @@ print(type (numpy_array_from_tuple)) # <class 'numpy.ndarray'>
 print('numpy_array_from_tuple: ', numpy_array_from_tuple) # numpy_array_from_tuple:  [1 2 3 4 5]
 ```
 
-### Shape of numpy array
+### NumPy Arrayin Şekli (Shape)
 
-The shape method provide the shape of the array as a tuple. The first is the row and the second is the column. If the array is just one dimensional it returns the size of the array.
+shape metodu, arrayin boyutlarını (shape) bir tuple olarak verir. İlk değer satır sayısını (row), ikinci değer sütun sayısını (column) gösterir. Eğer array tek boyutlu ise, yalnızca arrayin boyutunu (size) döndürür.
 
 ```py
     nums = np.array([1, 2, 3, 4, 5])
@@ -190,9 +190,9 @@ The shape method provide the shape of the array as a tuple. The first is the row
     (3, 4)
 ```
 
-### Data type of numpy array
+### Numpy Arrayin Veri Tipi
 
-Type of data types: str, int, float, complex, bool, list, None
+Veri tipleri: str, int, float, complex, bool, list, None
 
 ```py
 int_lists = [-3, -2, -1, 0, 1, 2,3]
@@ -212,9 +212,9 @@ print(float_array.dtype)
     float64
 ```
 
-### Size of a numpy array
+### Numpy Array'in Boyutu (Size)
 
-In numpy to know the number of items in a numpy array list we use size
+NumPy’da, bir arraydaki item sayısını öğrenmek için size metodunu kullanırız.
 
 ```py
 numpy_array_from_list = np.array([1, 2, 3, 4, 5])
@@ -234,22 +234,22 @@ print('The size:', two_dimensional_list.size)  # 3
 
 ## Mathematical Operation using numpy
 
-NumPy array is not like exactly like python list. To do mathematical operation in Python list we have to loop through the items but numpy can allow to do any mathematical operation without looping.
-Mathematical Operation:
+NumPy array, tam olarak Python listi gibi değildir. Python listlerinde matematiksel işlem yapmak için itemler üzerinde döngü kullanmamız gerekir, ancak NumPy ile herhangi bir matematiksel işlemi döngü kullanmadan gerçekleştirebiliriz.
+Matematiksel İşlemler:
 
-- Addition (+)
-- Subtraction (-)
-- Multiplication (\*)
-- Division (/)
-- Modules (%)
-- Floor Division(//)
-- Exponential(\*\*)
+- Toplama (+)
+- Çıkarma (-)
+- Çarpma (\*)
+- Bölme (/)
+- Mod alma (%)
+- Kalansız (tam) bölme (//)
+- Üs alma (\*\*)
 
-### Addition
+### Toplama
 
 ```py
-# Mathematical Operation
-# Addition
+# Matematiksel İşlemler
+# Toplama
 numpy_array_from_list = np.array([1, 2, 3, 4, 5])
 print('original array: ', numpy_array_from_list)
 ten_plus_original = numpy_array_from_list  + 10
@@ -262,10 +262,10 @@ print(ten_plus_original)
     [11 12 13 14 15]
 ```
 
-### Subtraction
+### Çıkarma
 
 ```python
-# Subtraction
+# Çıkarma
 numpy_array_from_list = np.array([1, 2, 3, 4, 5])
 print('original array: ', numpy_array_from_list)
 ten_minus_original = numpy_array_from_list  - 10
@@ -277,10 +277,10 @@ print(ten_minus_original)
     [-9 -8 -7 -6 -5]
 ```
 
-### Multiplication
+### Çarpma
 
 ```python
-# Multiplication
+# Çarpma
 numpy_array_from_list = np.array([1, 2, 3, 4, 5])
 print('original array: ', numpy_array_from_list)
 ten_times_original = numpy_array_from_list * 10
@@ -292,10 +292,10 @@ print(ten_times_original)
     [10 20 30 40 50]
 ```
 
-### Division
+### Bölme
 
 ```python
-# Division
+# Bölme
 numpy_array_from_list = np.array([1, 2, 3, 4, 5])
 print('original array: ', numpy_array_from_list)
 ten_times_original = numpy_array_from_list / 10
@@ -307,10 +307,10 @@ print(ten_times_original)
     [0.1 0.2 0.3 0.4 0.5]
 ```
 
-### Modulus
+### Mod alma
 
 ```python
-# Modulus; Finding the remainder
+# Mod alma, yani kalanı bulma
 numpy_array_from_list = np.array([1, 2, 3, 4, 5])
 print('original array: ', numpy_array_from_list)
 ten_times_original = numpy_array_from_list % 3
@@ -322,20 +322,20 @@ print(ten_times_original)
     [1 2 0 1 2]
 ```
 
-### Floor Division
+### Kalansız (tam) bölme
 
 ```py
-# Floor division: the division result without the remainder
+# Kalansız (tam) bölme: bölme sonucunu kalan olmadan tam sayı verir
 numpy_array_from_list = np.array([1, 2, 3, 4, 5])
 print('original array: ', numpy_array_from_list)
 ten_times_original = numpy_array_from_list // 10
 print(ten_times_original)
 ```
 
-### Exponential
+### Üs alma
 
 ```py
-# Exponential is finding some number the power of another:
+# Üs alma
 numpy_array_from_list = np.array([1, 2, 3, 4, 5])
 print('original array: ', numpy_array_from_list)
 ten_times_original = numpy_array_from_list  ** 2
@@ -347,10 +347,10 @@ print(ten_times_original)
     [ 1  4  9 16 25]
 ```
 
-## Checking data types
+## Veri tipi kontrol etme
 
 ```py
-#Int,  Float numbers
+#Int,  Float sayılar
 numpy_int_arr = np.array([1,2,3,4])
 numpy_float_arr = np.array([1.1, 2.0,3.2])
 numpy_bool_arr = np.array([-3, -2, 0, 1,2,3], dtype='bool')
@@ -366,11 +366,11 @@ print(numpy_bool_arr.dtype)
     bool
 ```
 
-### Converting types
+### Tür Dönüşümü
 
-We can convert the data types of numpy array
+NumPy arrayin veri tipini dönüştürebiliriz.
 
-1. Int to Float
+1. Int -> Float
 
 ```py
 numpy_int_arr = np.array([1,2,3,4], dtype = 'float')
@@ -379,7 +379,7 @@ numpy_int_arr
 
     array([1., 2., 3., 4.])
 
-2. Float to Int
+2. Float -> Int
 
 ```py
 numpy_int_arr = np.array([1., 2., 3., 4.], dtype = 'int')
@@ -390,7 +390,7 @@ numpy_int_arr
     array([1, 2, 3, 4])
 ```
 
-3. Int ot boolean
+3. Int -> boolean
 
 ```py
 np.array([-3, -2, 0, 1,2,3], dtype='bool')
@@ -401,7 +401,7 @@ np.array([-3, -2, 0, 1,2,3], dtype='bool')
     array([ True,  True, False,  True,  True,  True])
 ```
 
-4. Int to str
+4. Int -> str
 
 ```py
 numpy_float_list.astype('int').astype('str')
@@ -411,10 +411,10 @@ numpy_float_list.astype('int').astype('str')
     array(['1', '2', '3'], dtype='<U21')
 ```
 
-## Multi-dimensional Arrays
+## Çok boyutlu (multidimensional) Arrayler
 
 ```py
-# 2 Dimension Array
+# 2 boyutlu array
 two_dimension_array = np.array([(1,2,3),(4,5,6), (7,8,9)])
 print(type (two_dimension_array))
 print(two_dimension_array)
@@ -433,10 +433,10 @@ print('Data type:', two_dimension_array.dtype)
     Data type: int64
 ```
 
-### Getting items from a numpy array
+### Numpy array itemlerine erişme
 
 ```py
-# 2 Dimension Array
+# 2 boyutlu array
 two_dimension_array = np.array([[1,2,3],[4,5,6], [7,8,9]])
 first_row = two_dimension_array[0]
 second_row = two_dimension_array[1]
@@ -472,9 +472,9 @@ print(two_dimension_array)
      [7 8 9]]
 ```
 
-## Slicing Numpy array
+## Numpy arrayi bölme (slicing)
 
-Slicing in numpy is similar to slicing in python list
+numpyda slicing, python list slicing'e çok benzerdir
 
 ```py
 two_dimension_array = np.array([[1,2,3],[4,5,6], [7,8,9]])
@@ -487,7 +487,7 @@ print(first_two_rows_and_columns)
      [4 5]]
 ```
 
-### How to reverse the rows and the whole array?
+### Satırlar ve tüm array nasıl tersine çevirilir?
 
 ```py
 two_dimension_array[::]
@@ -499,7 +499,7 @@ two_dimension_array[::]
            [7, 8, 9]])
 ```
 
-### Reverse the row and column positions
+### Satır ve sütun pozisyonlarını tersine çevirme
 
 ```py
     two_dimension_array = np.array([[1,2,3],[4,5,6], [7,8,9]])
@@ -512,7 +512,7 @@ two_dimension_array[::]
            [3, 2, 1]])
 ```
 
-## How to represent missing values ?
+## Eksik değerler nasıl gösterilir?
 
 ```python
     print(two_dimension_array)
@@ -587,7 +587,7 @@ flattened
 ```
 
 ```py
-    ## Horitzontal Stack
+    ## Yatay Stack
     np_list_one = np.array([1,2,3])
     np_list_two = np.array([4,5,6])
 
@@ -602,7 +602,7 @@ flattened
 ```
 
 ```py
-    ## Vertical Stack
+    ## Dikey Stack
     print('Vertical Append:', np.vstack((np_list_one, np_list_two)))
 ```
 
@@ -611,10 +611,10 @@ flattened
      [4 5 6]]
 ```
 
-#### Generating Random Numbers
+#### Rastgele Sayı Üretme
 
 ```py
-    # Generate a random float  number
+    # rastgele float sayı üretme
     random_float = np.random.random()
     random_float
 ```
@@ -624,7 +624,7 @@ flattened
 ```
 
 ```py
-    # Generate a random float  number
+    # rastgele float sayılar üretme
     random_floats = np.random.random(5)
     random_floats
 ```
@@ -634,7 +634,7 @@ flattened
 ```
 
 ```py
-    # Generating a random integers between 0 and 10
+    # 0 - 10 arasında rastgele integerler üretme
 
     random_int = np.random.randint(0, 11)
     random_int
@@ -645,7 +645,7 @@ flattened
 ```
 
 ```py
-    # Generating a random integers between 2 and 11, and creating a one row array
+    # 2 - 11 arası rastgele integerler üretme ve bir satır arrayi oluşturma
     random_int = np.random.randint(2,10, size=4)
     random_int
 ```
@@ -655,7 +655,7 @@ flattened
 ```
 
 ```py
-    # Generating a random integers between 0 and 10
+    # 0 - 10 arasında rastgele integerler üretme
     random_int = np.random.randint(2,10, size=(3,3))
     random_int
 ```
@@ -666,7 +666,7 @@ flattened
            [2, 3, 3]])
 ```
 
-### Generationg random numbers
+### Rastgele Sayı Üretme
 
 ```py
     # np.random.normal(mu, sigma, size)
@@ -698,7 +698,7 @@ flattened
             70.81087439,  83.90130623,  87.58555972,  59.95462521])
 ```
 
-## Numpy and Statistics
+## Numpy ve Statistics
 
 ```py
 import matplotlib.pyplot as plt
@@ -727,7 +727,7 @@ plt.hist(normal_array, color="grey", bins=50)
      <a list of 50 Patch objects>)
 ```
 
-### Matrix in numpy
+### Numpy'da Matrix
 
 ```py
 
@@ -760,12 +760,12 @@ matrix([[1., 1., 1., 1.],
 
 ### Numpy numpy.arange()
 
-#### What is Arrange?
+#### Arrange nedir?
 
-Sometimes, you want to create values that are evenly spaced within a defined interval. For instance, you want to create values from 1 to 10; you can use numpy.arange() function
+Bazen, belirli bir aralık içinde eşit aralıklı değerler oluşturmak isteyebilirsiniz.  Örneğin, 1’den 10’a kadar değerler oluşturmak istiyorsanız, NumPy’nin arange() fonksiyonunu kullanabilirsiniz.
 
 ```py
-# creating list using range(starting, stop, step)
+# range(starting, stop, step) kullanarak list oluşturma
 lst = range(0, 11, 2)
 lst
 ```
@@ -788,7 +788,7 @@ for l in lst:
 ```
 
 ```py
-# Similar to range arange numpy.arange(start, stop, step)
+# range fonksiyonuna benzer şekilde numpy.arange(start, stop, step)
 whole_numbers = np.arange(0, 20, 1)
 whole_numbers
 ```
@@ -821,12 +821,12 @@ even_numbers
     array([ 2,  4,  6,  8, 10, 12, 14, 16, 18])
 ```
 
-### Creating sequence of numbers using linspace
+### linspace kullanarak sayı dizisi oluşturmak
 
 ```py
 # numpy.linspace()
-# numpy.logspace() in Python with Example
-# For instance, it can be used to create 10 values from 1 to 5 evenly spaced.
+# numpy.logspace()
+# Örneğin, 1- 5 arası eşit aralıklı 10 değer oluşturmak için kullanılabilir.
 np.linspace(1.0, 5.0, num=10)
 ```
 
@@ -836,7 +836,7 @@ np.linspace(1.0, 5.0, num=10)
 ```
 
 ```py
-# not to include the last value in the interval
+# aralıktaki son değeri dahil etmemek için
 np.linspace(1.0, 5.0, num=5, endpoint=False)
 ```
 
@@ -846,9 +846,9 @@ array([1. , 1.8, 2.6, 3.4, 4.2])
 
 ```py
 # LogSpace
-# LogSpace returns even spaced numbers on a log scale. Logspace has the same parameters as np.linspace.
+# LogSpace logaritmik ölçekli eşit aralıklı sayılar döner. logspace, np.linspace ile aynı parametrelere sahiptir.
 
-# Syntax:
+# Sözdizimi:
 
 # numpy.logspace(start, stop, num, endpoint)
 
@@ -861,7 +861,7 @@ array([  100.        ,   464.15888336,  2154.43469003, 10000.        ])
 ```
 
 ```py
-# to check the size of an array
+# array boyutunu öğrenmek için
 x = np.array([1,2,3], dtype=np.complex128)
 ```
 
@@ -882,7 +882,7 @@ x.itemsize
 ```
 
 ```py
-# indexing and Slicing NumPy Arrays in Python
+# Pythonda NumPy Arrayleri indeksleme ve slice etme
 np_list = np.array([(1,2,3), (4,5,6)])
 np_list
 
@@ -918,21 +918,18 @@ print('Third column: ', np_list[:,2])
     Third column:  [3 6]
 ```
 
-### NumPy Statistical Functions with Example
+### NumPy İstatistiksel Fonksiyonları ve Örnek
 
-NumPy has quite useful statistical functions for finding minimum, maximum, mean, median, percentile,standard deviation and variance, etc from the given elements in the array.
-The functions are explained as follows −
-Statistical function
-Numpy is equipped with the robust statistical function as listed below
+NumPy, bir array’deki minimum, maksimum, ortalama, medyan, yüzde, standart sapma ve varyans gibi değerleri bulmak için oldukça kullanışlı istatistiksel fonksiyonlar sunar. Fonksiyonlar şu şekildedir:
 
-- Numpy Functions
+- NumPy Fonksiyonları:
   - Min np.min()
   - Max np.max()
-  - Mean np.mean()
-  - Median np.median()
-  - Varience
-  - Percentile
-  - Standard deviation np.std()
+  - Mean (Ortalama) np.mean()
+  - Median (Medyan) np.median()
+  - Varience (Varyans)
+  - (Yüzdelik): np.percentile()
+  - Standard Deviation (Standart Sapma): np.std()
 
 ```python
 np_normal_dis = np.random.normal(5, 0.5, 100)
@@ -975,15 +972,17 @@ print('Row with maximum: ', np.amax(two_dimension_array,axis=1))
     Row with minimum:  [1 4 7]
     Row with maximum:  [ 3 55  9]
 
-### How to create repeating sequences?
+### ChatGPT:
+
+### Tekrarlayan diziler nasıl oluşturulur?
 
 ```python
 a = [1,2,3]
 
-# Repeat whole of 'a' two times
+# 'a' dizisinin tamamını iki kez tekrarlama
 print('Tile:   ', np.tile(a, 2))
 
-# Repeat each element of 'a' two times
+# 'a' dizisinin her bir elemanını iki kez tekrarlama
 print('Repeat: ', np.repeat(a, 2))
 
 ```
@@ -991,10 +990,10 @@ print('Repeat: ', np.repeat(a, 2))
     Tile:    [1 2 3 1 2 3]
     Repeat:  [1 1 2 2 3 3]
 
-### How to generate random numbers?
+### Rastgele sayılar nasıl üretilir?
 
 ```python
-# One random number between [0,1)
+# [0,1) arası bir rastgele sayı
 one_random_num = np.random.random()
 one_random_in = np.random
 print(one_random_num)
@@ -1009,7 +1008,7 @@ print(one_random_num)
     0.4763968133790438
 
 ```python
-# Random numbers between [0,1) of shape 2,3
+# [0,1) arası, shapei 2,3 olan rastgele sayılar
 r = np.random.random(size=[2,3])
 print(r)
 ```
@@ -1030,7 +1029,7 @@ print(np.random.choice(['a', 'e', 'i', 'o', 'u'], size=10))
     ['iueoaieuoi']
 
 ```python
-## Random numbers between [0, 1] of shape 2, 2
+## [0, 1] arası, shapei 2, 2 olan rastgele sayılar
 rand = np.random.rand(2,2)
 rand
 ```
@@ -1091,32 +1090,34 @@ plt.show()
 ![png](../test_files/test_121_0.png)
 
 ```python
-# numpy.dot(): Dot Product in Python using Numpy
-# Dot Product
-# Numpy is powerful library for matrices computation. For instance, you can compute the dot product with np.dot
+# numpy.dot(): Numpy kullanarak skaler (dot) çarpım
+# Skaler Çarpım
+# ChatGPT:
 
-# Syntax
+NumPy, matris hesaplamaları için güçlü bir kütüphanedir. Örneğin, np.dot ile iki matrisin skaler çarpımını (dot product) hesaplayabilirsiniz.
+
+# Sözdizimi
 
 # numpy.dot(x, y, out=None)
 ```
 
-### Linear Algebra
+### Doğrusal Cebir
 
-1. Dot Product
+1. Skaler Çarpım
 
 ```python
-## Linear algebra
-### Dot product: product of two arrays
+## Doğrusal Cebir
+### Skaler Çarpım: iki arrayin çarpımı
 f = np.array([1,2,3])
 g = np.array([4,5,3])
 ### 1*4+2*5 + 3*6
 np.dot(f, g)  # 23
 ```
 
-### NumPy Matrix Multiplication with np.matmul()
+### np.matmul() ile NumPy Matrix Çarpımı 
 
 ```python
-### Matmul: matruc product of two arrays
+### Matmul: iki arrayin matrix çarpımı
 h = [[1,2],[3,4]]
 i = [[5,6],[7,8]]
 ### 1*5+2*7 = 19
@@ -1130,7 +1131,7 @@ np.matmul(h, i)
 ```
 
 ```py
-## Determinant 2*2 matrix
+## 2*2 matrixin determinantı
 ### 5*8-7*6np.linalg.det(i)
 ```
 
@@ -1182,7 +1183,7 @@ np_arr + 2
 
 array([ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
 
-We use linear equation for quantities which have linear relationship. Let's see the example below:
+Lineer ilişkiye sahip nicelikler için lineer denklemler (linear equations) kullanırız. Aşağıdaki örneğe bakalım:
 
 ```python
 temp = np.array([1,2,3,4,5])
@@ -1203,7 +1204,7 @@ plt.show()
 
 ![png](../test_files/test_141_0.png)
 
-To draw the Gaussian normal distribution using numpy. As you can see below, the numpy can generate random numbers. To create random sample, we need the mean(mu), sigma(standard deviation), mumber of data points.
+NumPy kullanarak Gaussian (normal) dağılımı) çizmek için aşağıda görebildipin gibi, NumPy rastgele sayılar üretebilir. Rastgele bir örnek (random sample) oluşturmak için ortalama (mu), sigma (standart sapma) ve veri sayısı (number of data points) gerekir.
 
 ```python
 mu = 28
@@ -1218,20 +1219,20 @@ plt.show()
 
 ![png](../test_files/test_143_0.png)
 
-# Summary
+# Özet
 
-To summarize, the main differences with python lists are:
+Özetlemek gerekirse, Python listleri ile arasındaki başlıca farklar şunlardır:
 
-1. Arrays support vectorized operations, while lists don’t.
-1. Once an array is created, you cannot change its size. You will have to create a new array or overwrite the existing one.
-1. Every array has one and only one dtype. All items in it should be of that dtype.
-1. An equivalent numpy array occupies much less space than a python list of lists.
-1. numpy arrays support boolean indexing.
+1. Arrayler vektörleştirilmiş işlemleri (vectorized operations) destekler, listler ise desteklemez.
+2. Bir array oluşturulduktan sonra boyutu değiştirilemez. Yeni bir array oluşturmanız veya mevcut olanı üzerine yazmanız gerekir.
+3. Her arrayin yalnızca bir dtypeı vardır. İçindeki tüm öğeler bu dtype ile uyumlu olmalıdır.
+4. Eşdeğer bir NumPy array, iç içe listlerden oluşan bir Python listine göre çok daha az yer kaplar.
+5. NumPy arrayler boolean indekslemeyi destekler.
 
-## 💻 Exercises: Day 24
+## 💻 Exercises: 24. Gün
 
-1. Repeat all the examples
+1. Tüm örnekleri tekrarla
 
-🎉 CONGRATULATIONS ! 🎉
+🎉 TEBRİKLER ! 🎉
 
-[<< Day 23](../23_Day_Virtual_environment/23_virtual_environment.md) | [Day 25 >>](../25_Day_Pandas/25_pandas.md)
+[<< 23. Gün](../23_Day_Virtual_environment/23_virtual_environment.md) | [25. Gün >>](../25_Day_Pandas/25_pandas.md)

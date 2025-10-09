@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> 30 Days Of Python: Day 21 - Classes and Objects</h1>
+  <h1> 30 Günde Python: 21. Gün - Classlar ve Objeler</h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -7,40 +7,40 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-<sub>Author:
+<sub>Yazar:
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small>Second Edition: July, 2021</small>
+<small>İkinci Versiyon: Temmuz, 2021</small>
 </sub>
 
 </div>
 
-[<< Day 20](../20_Day_Python_package_manager/20_python_package_manager.md) | [Day 22 >>](../22_Day_Web_scraping/22_web_scraping.md)
+[<< 20. Gün](../20_Day_Python_package_manager/20_python_package_manager.md) | [22. Gün >>](../22_Day_Web_scraping/22_web_scraping.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
-- [📘 Day 21](#-day-21)
-  - [Classes and Objects](#classes-and-objects)
-    - [Creating a Class](#creating-a-class)
-    - [Creating an Object](#creating-an-object)
+- [📘 21. Gün](#-day-21)
+  - [Classlar ve Objeler](#classes-and-objects)
+    - [Class Oluşturma](#creating-a-class)
+    - [Obje Oluşturma](#creating-an-object)
     - [Class Constructor](#class-constructor)
-    - [Object Methods](#object-methods)
-    - [Object Default Methods](#object-default-methods)
-    - [Method to Modify Class Default Values](#method-to-modify-class-default-values)
-    - [Inheritance](#inheritance)
-    - [Overriding parent method](#overriding-parent-method)
-  - [💻 Exercises: Day 21](#-exercises-day-21)
-    - [Exercises: Level 1](#exercises-level-1)
-    - [Exercises: Level 2](#exercises-level-2)
-    - [Exercises: Level 3](#exercises-level-3)
+    - [Obje Metodları](#object-methods)
+    - [Varsayılan Obje Metodları](#object-default-methods)
+    - [Varsayılan Class Değerlerini Değiştiren Metod](#method-to-modify-class-default-values)
+    - [Kalıtım (Inheritance)](#inheritance)
+    - [Parent Metodu Override Etme](#overriding-parent-method)
+  - [💻 Alıştırmalar: 21. Gün](#-exercises-day-21)
+    - [Alıştırmalar: 1. Seviye](#exercises-level-1)
+    - [Alıştırmalar: 2. Seviye](#exercises-level-2)
+    - [Alıştırmalar: 3. Seviye](#exercises-level-3)
 
-# 📘 Day 21
+# 📘 21. Gün
 
-## Classes and Objects
+## Classlar ve Objeler
 
-Python is an object oriented programming language. Everything in Python is an object, with its properties and methods. A number, string, list, dictionary, tuple, set etc. used in a program is an object of a corresponding built-in class. We create class to create an object. A class is like an object constructor, or a "blueprint" for creating objects. We instantiate a class to create an object. The class defines attributes and the behavior of the object, while the object, on the other hand, represents the class.
+Python nesne yönelimli (object-oriented) bir programlama dilidir. Python’daki her şey bir nesnedir (object) ve her nesnenin kendi özellikleri (properties) ve metotları (methods) vardır. Bir sayı, string, list, dictionary, tuple, set vb. programda kullanıldığında, bunların her biri ilgili built-in classın örneğidir (instance). Objeler oluşturabilmek için class oluştururuz. Bir class, obje oluşturmak için bir şablon ya da blueprint gibidir. Class, bir objenin özelliklerini (attributes) ve davranışlarını (behaviors) tanımlar; obje ise bu classın somut bir örneğidir.
 
-We have been working with classes and objects right from the beginning of this challenge unknowingly. Every element in a Python program is an object of a class.
-Let us check if everything in python is a class:
+Aslında bu zamana kadar, farkında olmadan classlar ve objelerle çalıştık. Python programındaki her öğe bir classın objesidir.
+Şimdi, Python'daki her şeyin gerçekten bir class olup olmadığını kontrol edelim:
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -70,17 +70,17 @@ Type "help", "copyright", "credits" or "license" for more information.
 <class 'dict'>
 ```
 
-### Creating a Class
+### Class Oluşturma
 
-To create a class we need the key word **class** followed by the name and colon. Class name should be **CamelCase**.
+Bir sınıf oluşturmak için **class** anahtar kelimesini, ardından class adını ve iki nokta (:) kullanırız. Class adı **CamelCase** olmalıdır.
 
 ```sh
-# syntax
+# sözdizimi
 class ClassName:
-  code goes here
+  kod kod kod kod
 ```
 
-**Example:**
+**Örnek:**
 
 ```py
 class Person:
@@ -92,9 +92,9 @@ print(Person)
 <__main__.Person object at 0x10804e510>
 ```
 
-### Creating an Object
+### Obje Oluşturma
 
-We can create an object by calling the class.
+Classı çağırarak bir obje oluşturabiliriz.
 
 ```py
 p = Person()
@@ -103,13 +103,14 @@ print(p)
 
 ### Class Constructor
 
-In the examples above, we have created an object from the Person class. However, a class without a constructor is not really useful in real applications. Let us use constructor function to make our class more useful. Like the constructor function in Java or JavaScript, Python has also a built-in **__init__**() constructor function. The **__init__** constructor function has self parameter which is a reference to the current instance of the class
-**Examples:**
+Yukarıdaki örneklerde, Person classından bir obje oluşturduk.Ancak, yapıcı (constructor) olmadan bir sınıf gerçek uygulamalarda pek kullanışlı değildir. Python’da, Java veya JavaScript’te olduğu gibi, built-in bir constructor fonksiyon vardır: **__init__**() fonksiyonu. Bu fonksiyon, classın yeni bir örneği (instance) oluşturulduğunda otomatik olarak çağrılır. Ayrıca, _self_ parametresi — oluşturulan class örneğine (objeye) bir referanstır.
+
+**Örnek:**
 
 ```py
 class Person:
       def __init__ (self, name):
-        # self allows to attach parameter to the class
+        # self, classa parametre eklemeye izin verir
           self.name =name
 
 p = Person('Asabeneh')
@@ -118,12 +119,12 @@ print(p)
 ```
 
 ```sh
-# output
+# çıktı
 Asabeneh
 <__main__.Person object at 0x2abf46907e80>
 ```
 
-Let us add more parameters to the constructor function.
+Constructor fonksiyona daha fazla parametre ekleyelim.
 
 ```py
 class Person:
@@ -144,7 +145,7 @@ print(p.city)
 ```
 
 ```sh
-# output
+# çıktı
 Asabeneh
 Yetayeh
 250
@@ -152,11 +153,11 @@ Finland
 Helsinki
 ```
 
-### Object Methods
+### Obje Metodları
 
-Objects can have methods. The methods are functions which belong to the object.
+Objelerin metodları olabilir. Metod, bir objeye ait olan fonksiyonlara denir.
 
-**Example:**
+**Örnek:**
 
 ```py
 class Person:
@@ -174,15 +175,15 @@ print(p.person_info())
 ```
 
 ```sh
-# output
+# çıktı
 Asabeneh Yetayeh is 250 years old. He lives in Helsinki, Finland
 ```
 
-### Object Default Methods
+### Varsayılan Obje Metodları
 
-Sometimes, you may want to have a default values for your object methods. If we give default values for the parameters in the constructor, we can avoid errors when we call or instantiate our class without parameters. Let's see how it looks:
+Bazen, obje metodların için varsayılan değerler belirlemek isteyebilirsin. Eğer constructor içindeki parametrelere varsayılan değerler verirsek classımızı parametre olmadan çağırdığımızda veya örneklediğimizde hatalardan kaçınabiliriz. Nasıl göründüğüne bakalım:
 
-**Example:**
+**Örnek:**
 
 ```py
 class Person:
@@ -203,14 +204,14 @@ print(p2.person_info())
 ```
 
 ```sh
-# output
+# çıktı
 Asabeneh Yetayeh is 250 years old. He lives in Helsinki, Finland.
 John Doe is 30 years old. He lives in Noman city, Nomanland.
 ```
 
-### Method to Modify Class Default Values
+### Varsayılan Class Değerlerini Değiştiren Metod
 
-In the example below, the person class, all the constructor parameters have default values. In addition to that, we have skills parameter, which we can access using a method. Let us create add_skill method to add skills to the skills list.
+Aşağıdaki örnekte, Person classındaki tüm constructor parametrelerin varsayılan değerleri var. Buna ek olarak, skills adında bir parametre var ve buna bir metod ile erişebiliriz. skills listine yetenek eklemek için bir add_skill metodu oluşturalım.
 
 ```py
 class Person:
@@ -239,17 +240,18 @@ print(p2.skills)
 ```
 
 ```sh
-# output
+# çıktı
 Asabeneh Yetayeh is 250 years old. He lives in Helsinki, Finland.
 John Doe is 30 years old. He lives in Noman city, Nomanland.
 ['HTML', 'CSS', 'JavaScript']
 []
 ```
 
-### Inheritance
+### Kalıtım (Inheritance)
 
-Using inheritance we can reuse parent class code. Inheritance allows us to define a class that inherits all the methods and properties from parent class. The parent class or super or base class is the class which gives all the methods and properties. Child class is the class that inherits from another or parent class.
-Let us create a student class by inheriting from person class.
+Kalıtım (inheritance) kullanarak, üst classın (parent class) kodunu yeniden kullanabiliriz. Inheritance, bir classın, üst classın tüm metodlarını ve özelliklerini almasını sağlar. Üst class (parent class) ya da temel class (base class), tüm metodları ve özellikleri veren sınıftır. Alt class (child class) ise başka bir sınıftan veya üst sınıftan miras alan sınıftır. 
+
+Şimdi, Person classını miras alarak bir Student classı oluşturalım.
 
 ```py
 class Student(Person):
@@ -273,17 +275,20 @@ print(s2.skills)
 ```
 
 ```sh
-output
+çıktı
 Eyob Yetayeh is 30 years old. He lives in Helsinki, Finland.
 ['JavaScript', 'React', 'Python']
 Lidiya Teklemariam is 28 years old. He lives in Espoo, Finland.
 ['Organizing', 'Marketing', 'Digital Marketing']
 ```
 
-We did not call the **__init__**() constructor in the child class. If we didn't call it then we can still access all the properties from the parent. But if we do call the constructor we can access the parent properties by calling _super_.  
-We can add a new method to the child or we can override the parent class methods by creating the same method name in the child class. When we add the **__init__**() function, the child class will no longer inherit the parent's **__init__**() function.
+Child classta **__init__**() constructorunu çağırmadık. Eğer çağırmazsak, yine de parent classın tüm özelliklerine erişebiliriz. Ancak çağırırsak, üst classın özelliklerine _super_ anahtar kelimesi ile erişebiliriz.
 
-### Overriding parent method
+Ayrıca alt classa yeni bir metod ekleyebilir veya üst classta var olan bir metodu aynı isimle yeniden tanımlayarak (override ederek) davranışını değiştirebiliriz.
+
+Dikkat edilmesi gereken bir nokta: Alt classa **__init__**() fonksiyonunu eklediğimizde, artık üst classın **__init__**() fonksiyonu otomatik olarak miras alınmaz. Bu durumda, üst sınıfın consturctorundaki özellikleri kullanmak istiyorsak, super().__init__() komutunu manuel olarak çağırmamız gerekir.
+
+### Parent Metodu Override Etme
 
 ```py
 class Student(Person):
@@ -316,15 +321,15 @@ Lidiya Teklemariam is 28 years old. She lives in Espoo, Finland.
 ['Organizing', 'Marketing', 'Digital Marketing']
 ```
 
-We can use super() built-in function or the parent name Person to automatically inherit the methods and properties from its parent. In the example above we override the parent method. The child method has a different feature, it can identify, if the gender is male or female and assign the proper pronoun(He/She).
+Built-in super() fonksiyonunu veya üst classın adını (Person) kullanarak, üst classın metodlarını ve özelliklerini (properties) otomatik olarak miras alabiliriz. Yukarıdaki örnekte, ebeveyn classın metodunu **override** (geçersiz kılma) işlemi yaptık.
+Alt classtaki metod farklı bir özelliğe sahiptir: cinsiyetin erkek mi kadın mı olduğunu belirleyebilir ve buna uygun zamiri (He/She) atayabilir.
+🌕 Programlama konusunda süper bir güçle donanmış durumdasın. Şimdi beynin ve kasların için biraz alıştırma yapalım.
 
-🌕 Now, you are fully charged with a super power of programming.  Now do some exercises for your brain and muscles.
+## 💻 Alıştırmalar: 21. Gün
 
-## 💻 Exercises: Day 21
+### Alıştırmalar: 1. Seviye
 
-### Exercises: Level 1
-
-1. Python has the module called _statistics_ and we can use this module to do all the statistical calculations. However, to learn how to make function and reuse function let us try to develop a program, which calculates the measure of central tendency of a sample (mean, median, mode) and measure of variability (range, variance, standard deviation). In addition to those measures, find the min, max, count, percentile, and frequency distribution of the sample. You can create a class called Statistics and create all the functions that do statistical calculations as methods for the Statistics class. Check the output below.
+1. Python’da _statistics_ adında bir modül vardır ve bu modülü kullanarak tüm istatistiksel hesaplamaları yapabiliriz. Ancak fonksiyon oluşturmayı ve yeniden kullanmayı öğrenmek için, kendi programımızı geliştirelim:Bu program örneklem (sample) verisinin merkezi eğilim ölçülerini (mean, median, mode) ve dağılım ölçülerini (range, variance, standard deviation) hesaplasın. Bunlara ek olarak: min, max, count, percentile ve frekans dağılımını da bulsun. Bunu yapmak için bir Statistics sınıfı oluşturabilir ve tüm istatistiksel hesaplamaları yapan fonksiyonları sınıfın metodları olarak ekleyebiliriz.
 
 ```py
 ages = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26]
@@ -343,7 +348,7 @@ print('Frequency Distribution: ', data.freq_dist()) # [(20.0, 26), (16.0, 27), (
 ```
 
 ```sh
-# you output should look like this
+# çıktın böyle gözükmeli
 print(data.describe())
 Count: 25
 Sum:  744
@@ -358,13 +363,13 @@ Standard Deviation:  4.2
 Frequency Distribution: [(20.0, 26), (16.0, 27), (12.0, 32), (8.0, 37), (8.0, 34), (8.0, 33), (8.0, 31), (8.0, 24), (4.0, 38), (4.0, 29), (4.0, 25)]
 ```
 
-### Exercises: Level 2
+### Alıştırmalar: 2. Seviye
 
-1. Create a class called PersonAccount. It has firstname, lastname, incomes, expenses properties and it has total_income, total_expense, account_info, add_income, add_expense and account_balance methods. Incomes is a set of incomes and its description. The same goes for expenses.
+1. PersonAccount adında bir class oluştur. firstname, lastname, incomes, expenses propertyleri olsun ve total_income, total_expense, account_info, add_income, add_expense, account_balance metodları olsun. Incomes (gelirler), gelirlerin ve açıklamalarının bulunduğu settir. Aynı şekilde, expenses (giderler) de giderlerin ve onların açıklamalarının bulunduğu bir settir.
 
-### Exercises: Level 3
+### Alıştırmalar: 3. Seviye
 
 
-🎉 CONGRATULATIONS ! 🎉
+🎉 TEBRİKLER ! 🎉
 
-[<< Day 20](../20_Day_Python_package_manager/20_python_package_manager.md) | [Day 22 >>](../22_Day_Web_scraping/22_web_scraping.md)
+[<< 20. Gün](../20_Day_Python_package_manager/20_python_package_manager.md) | [22. Gün >>](../22_Day_Web_scraping/22_web_scraping.md)

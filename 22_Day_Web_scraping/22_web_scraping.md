@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> 30 Days Of Python: Day 22 - Web Scraping </h1>
+  <h1> 30 Günde Python: 22. Gün - Web Scraping </h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -7,49 +7,49 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-<sub>Author:
+<sub>Yazar:
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Second Edition: July, 2021</small>
+<small> İkinci Versiyon: Temmuz, 2021</small>
 </sub>
 </div>
 
-[<< Day 21](../21_Day_Classes_and_objects/21_classes_and_objects.md) | [Day 23 >>](../23_Day_Virtual_environment/23_virtual_environment.md)
+[<< 21. Gün](../21_Day_Classes_and_objects/21_classes_and_objects.md) | [23. Gün >>](../23_Day_Virtual_environment/23_virtual_environment.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
-- [📘 Day 22](#-day-22)
+- [📘 22. Gün](#-day-22)
   - [Python Web Scraping](#python-web-scraping)
-    - [What is Web Scrapping](#what-is-web-scrapping)
-  - [💻 Exercises: Day 22](#-exercises-day-22)
+    - [Web Scrapping Nedir?](#what-is-web-scrapping)
+  - [💻 Alıştırmalar: 22. Gün](#-exercises-day-22)
 
-# 📘 Day 22
+# 📘 22. Gün
 
 ## Python Web Scraping
 
-### What is Web Scrapping
+### Web Scrapping Nedir?
 
-The internet is full of huge amount of data which can be used for different purposes. To collect this data we need to know how to scrape data from a website.
+İnternet, farklı amaçlar için kullanılabilecek büyük miktarda veriyle doludur. Bu verileri toplamak için, bir web sitesinden veri kazımanın (scraping) nasıl yapıldığını bilmemiz gerekir.
 
-Web scraping is the process of extracting and collecting data from websites and storing it on a local machine or in a database.
+Web scraping, web sitelerinden veri çıkarma ve toplama, ardından bu verileri yerel makineye veya bir veri tabanına kaydetme işlemidir.
 
-In this section, we will use beautifulsoup and requests package to scrape data. The package version we are using is beautifulsoup 4.
+Bu bölümde, scraping için BeautifulSoup ve requests paketlerini kullanacağız. Kullandığımız BeautifulSoup sürümü BeautifulSoup 4’tür.
 
-To start scraping websites you need _requests_, _beautifoulSoup4_ and a _website_.
+Web sitelerinden veri kazımaya başlamak için _requests_, _BeautifulSoup4_ ve bir _web sitesi_ gereklidir.
 
 ```sh
 pip install requests
 pip install beautifulsoup4
 ```
 
-To scrape data from websites, basic understanding of HTML tags and CSS selectors is needed. We target content from a website using HTML tags, classes or/and ids.
-Let us import the requests and BeautifulSoup module
+Web sitelerinden veri kazımak için, HTML tagleri ve CSS selectorları hakkında temel bir anlayışa sahip olmak gerekir. Bir web sitesindeki içeriği hedeflemek için HTML taglerini, classları ve/veya idleri kullanırız.
+Şimdi requests ve BeautifulSoup modüllerini içe aktaralım.
 
 ```py
 import requests
 from bs4 import BeautifulSoup
 ```
 
-Let us declare url variable for the website which we are going to scrape.
+Scraping işlemini yapacağımız web sitesi için bir url değişkeni tanımlayalım.
 
 ```py
 
@@ -57,19 +57,19 @@ import requests
 from bs4 import BeautifulSoup
 url = 'https://archive.ics.uci.edu/ml/datasets.php'
 
-# Lets use the requests get method to fetch the data from url
+# urlden veri çekmek için requests get metodunu kullanalım
 
 response = requests.get(url)
-# lets check the status
+# başarı statusünü kontrol edelim
 status = response.status_code
-print(status) # 200 means the fetching was successful
+print(status) # 200 başarılı demek
 ```
 
 ```sh
 200
 ```
 
-Using beautifulSoup to parse content from the page
+Sayfadaki içeriği BeautifulSoup kullanarak parse etme işlemini yapalım.
 
 ```py
 import requests
@@ -77,32 +77,33 @@ from bs4 import BeautifulSoup
 url = 'https://archive.ics.uci.edu/ml/datasets.php'
 
 response = requests.get(url)
-content = response.content # we get all the content from the website
-soup = BeautifulSoup(content, 'html.parser') # beautiful soup will give a chance to parse
+content = response.content # sitedeki tüm içeriği alma
+soup = BeautifulSoup(content, 'html.parser') # beautiful soup parse etmeyi sağlayacak
 print(soup.title) # <title>UCI Machine Learning Repository: Data Sets</title>
 print(soup.title.get_text()) # UCI Machine Learning Repository: Data Sets
-print(soup.body) # gives the whole page on the website
+print(soup.body) # tüm sayfayı verir
 print(response.status_code)
 
 tables = soup.find_all('table', {'cellpadding':'3'})
-# We are targeting the table with cellpadding attribute with the value of 3
-# We can select using id, class or HTML tag , for more information check the beautifulsoup doc
-table = tables[0] # the result is a list, we are taking out data from it
+# Hücre aralığı (cellpadding) özelliği 3 olan tabloyu hedefliyoruz.
+# Seçimi id, class veya HTML tagi kullanarak yapabiliriz. Daha fazla bilgi için BeautifulSoup dokümanına (docs) göz atın.
+table = tables[0] # sonuç list olarak döner, veriyi burdan alıyoruz
 for td in table.find('tr').find_all('td'):
     print(td.text)
 ```
 
-If you run this code, you can see that the extraction is half done. You can continue doing it because it is part of exercise 1.
-For reference check the [beautifulsoup documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#quick-start)
+Bu kodu çalıştırırsan, veri çıkarma işleminin yarısının tamamlandığını görebilirsin.
+Bu işlemi kendin devam ettirebilirsin çünkü bu 1. alıştırmanın bir parçasıdır.
+Referans olarak [BeautifulSoup belgelerine](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#quick-start) bakabilirsin.
 
-🌕 You are so special, you are progressing everyday. You are left with only eight days to your way to greatness. Now do some exercises for your brain and muscles.
+🌕 Çok iyisin, gün gün ilerliyorsun. Mükemellik yolunda sadece 8 günün kaldı. Şimdi beynin ve kasların için biraz alıştırma yapalım.
 
-## 💻 Exercises: Day 22
+## 💻 Alıştırmalar: 22. Gün
 
-1. Scrape the following website and store the data as json file(url = 'http://www.bu.edu/president/boston-university-facts-stats/').
-1. Extract the table in this url (https://archive.ics.uci.edu/ml/datasets.php) and change it to a json file
-2. Scrape the presidents table and store the data as json(https://en.wikipedia.org/wiki/List_of_presidents_of_the_United_States). The table is not very structured and the scrapping may take very long time.
+1. Bu web sitesinden veriyi kazı ve veriyi JSON dosyası olarak kaydet: (url = 'http://www.bu.edu/president/boston-university-facts-stats/').
+1. Bu URL’deki tabloyu çıkar ve tabloyu JSON dosyası olarak dönüştür: (https://archive.ics.uci.edu/ml/datasets.php)
+2. ABD başkanlarının tablosunu kazı ve JSON dosyası olarak kaydet: (https://en.wikipedia.org/wiki/List_of_presidents_of_the_United_States). Tablo çok düzenli değil, bu yüzden kazıma işlemi uzun sürebilir.
 
-🎉 CONGRATULATIONS ! 🎉
+🎉 TEBRİKLER ! 🎉
 
-[<< Day 21](../21_Day_Web_scraping/21_class_and_object.md) | [Day 23 >>](../23_Day_Virtual_environment/23_virtual_environment.md)
+[<< 21. Gün](../21_Day_Web_scraping/21_class_and_object.md) | [23. Gün >>](../23_Day_Virtual_environment/23_virtual_environment.md)

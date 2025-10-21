@@ -22,10 +22,10 @@
 - [API Oluşturma](#building-api)
   - [API Yapısı](#structure-of-an-api)
   - [Get Kullanarak Veri Elde Etme](#retrieving-data-using-get)
-  - [Getting a document by id](#getting-a-document-by-id)
-  - [Creating data using POST](#creating-data-using-post)
-  - [Updating using PUT](#updating-using-put)
-  - [Deleting a document using Delete](#deleting-a-document-using-delete)
+  - [ID ile Dokümana Erişmek](#getting-a-document-by-id)
+  - [POST Kullanarak Veri Oluşturma](#creating-data-using-post)
+  - [PUT Kullanarak Güncelleme](#updating-using-put)
+  - [Delete Kullanarak Doküman Silme](#deleting-a-document-using-delete)
 - [💻 Alıştırmalar: 29. Gün](#-exercises-day-29)
 
 ## 29. Gün
@@ -81,10 +81,10 @@ Bu API’yi uygulamak için kullanacağımız araçlar:
 
 ### Get Kullanarak Veri Elde Etme 
 
-In this step, let us use dummy data and return it as a json. To return it as json, will use json module and Response module.
+Bu adımda sahte veriler kullanıp bunları JSON olarak döndürelim. JSON olarak döndürmek için json modülünü ve Response modülünü kullanacağız.
 
 ```py
-# let's import the flask
+# flask'ı import edelim
 
 from flask import Flask,  Response
 import json
@@ -117,24 +117,24 @@ def students ():
 
 
 if __name__ == '__main__':
-    # for deployment
-    # to make it work for both production and development
+    # deployment için
+    # Hem üretim (production) hem de geliştirme (development) ortamlarında çalışacak şekilde
     port = int(os.environ.get("PORT", 5000))
     app.run(debug=True, host='0.0.0.0', port=port)
 ```
 
-When you request the http://localhost:5000/api/v1.0/students url on the browser you will get this:
+Tarayıcıda http://localhost:5000/api/v1.0/students adresine request gönderdiğinizde şu sonucu alırsınız:
 
 ![Get on browser](../images/get_on_browser.png)
 
-When you request the http://localhost:5000/api/v1.0/students url on the browser you will get this:
+Postman üzerinden http://localhost:5000/api/v1.0/students adresine request gönderdiğinizde ise şu sonucu alırsınız:
 
 ![Get on postman](../images/get_on_postman.png)
 
-In stead of displaying dummy data let us connect the flask application with MongoDB and get data from mongoDB database.
+Artık sahte verileri görüntülemek yerine Flask uygulamasını MongoDB ile bağlayalım ve verileri MongoDB veri tabanından alalım.
 
 ```py
-# let's import the flask
+# flask'ı import edelim
 
 from flask import Flask,  Response
 import json
@@ -146,7 +146,7 @@ app = Flask(__name__)
 #
 MONGODB_URI='mongodb+srv://asabeneh:your_password@30daysofpython-twxkr.mongodb.net/test?retryWrites=true&w=majority'
 client = pymongo.MongoClient(MONGODB_URI)
-db = client['thirty_days_of_python'] # accessing the database
+db = client['thirty_days_of_python'] # veri tababına erişme
 
 @app.route('/api/v1.0/students', methods = ['GET'])
 def students ():
@@ -161,7 +161,7 @@ if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=port)
 ```
 
-By connecting the flask, we can fetch students collection data from the thirty_days_of_python database.
+Flask’ı bağlayarak, thirty_days_of_python veri tabanındaki students koleksiyonundaki verileri çekebiliriz.
 
 ```sh
 [
@@ -195,13 +195,13 @@ By connecting the flask, we can fetch students collection data from the thirty_d
 ]
 ```
 
-### Getting a document by id
+### ID ile Dokümana Erişmek
 
-We can access signle document using an id, let's access Asabeneh using his id.
+Bir belgeye (dokümana) id kullanarak erişebiliriz. Şimdi Asabeneh’e onun id'siyle erişelim:
 http://localhost:5000/api/v1.0/students/5df68a21f106fe2d315bbc8b
 
 ```py
-# let's import the flask
+# flask'ı import edelim
 
 from flask import Flask,  Response
 import json
@@ -216,7 +216,7 @@ app = Flask(__name__)
 #
 MONGODB_URI='mongodb+srv://asabeneh:your_password@30daysofpython-twxkr.mongodb.net/test?retryWrites=true&w=majority'
 client = pymongo.MongoClient(MONGODB_URI)
-db = client['thirty_days_of_python'] # accessing the database
+db = client['thirty_days_of_python'] # veri tabanına erişme
 
 @app.route('/api/v1.0/students', methods = ['GET'])
 def students ():
@@ -228,7 +228,7 @@ def single_student (id):
     return Response(dumps(student), mimetype='application/json')
 
 if __name__ == '__main__':
-    # for deployment
+    # deployment için
     # to make it work for both production and development
     port = int(os.environ.get("PORT", 5000))
     app.run(debug=True, host='0.0.0.0', port=port)
@@ -248,12 +248,12 @@ if __name__ == '__main__':
 ]
 ```
 
-### Creating data using POST
+### POST Kullanarak Veri Oluşturma
 
 We use the POST request method to create data
 
 ```py
-# let's import the flask
+# flask'ı import edelim
 
 from flask import Flask,  Response
 import json
@@ -269,7 +269,7 @@ app = Flask(__name__)
 #
 MONGODB_URI='mongodb+srv://asabeneh:your_password@30daysofpython-twxkr.mongodb.net/test?retryWrites=true&w=majority'
 client = pymongo.MongoClient(MONGODB_URI)
-db = client['thirty_days_of_python'] # accessing the database
+db = client['thirty_days_of_python'] # veri tabanına erişme
 
 @app.route('/api/v1.0/students', methods = ['GET'])
 def students ():
@@ -302,16 +302,16 @@ def create_student ():
     return ;
 def update_student (id):
 if __name__ == '__main__':
-    # for deployment
-    # to make it work for both production and development
+    # deployment için
+    # Hem üretim (production) hem de geliştirme (development) ortamlarında çalışacak şekilde
     port = int(os.environ.get("PORT", 5000))
     app.run(debug=True, host='0.0.0.0', port=port)
 ```
 
-### Updating using PUT
+### PUT Kullanarak Güncelleme
 
 ```py
-# let's import the flask
+# flask'ı import edelim
 
 from flask import Flask,  Response
 import json
@@ -392,7 +392,7 @@ if __name__ == '__main__':
 ### Deleting a document using Delete
 
 ```py
-# let's import the flask
+# flask'ı import edelim
 
 from flask import Flask,  Response
 import json
@@ -498,7 +498,7 @@ if __name__ == '__main__':
 
 ## 💻 Alıştırmalar: 29. Gün
 
-1. Implement the above example and develop [this](https://thirtydayofpython-api.herokuapp.com/)
+1. Yukarıdaki örneği uygulayın ve [bunu](https://thirtydayofpython-api.herokuapp.com/) geliştirin.
 
 🎉 TEBRİKLER ! 🎉
 

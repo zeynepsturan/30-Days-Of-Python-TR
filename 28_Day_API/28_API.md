@@ -27,7 +27,7 @@
   - [HTTP Yapısı](#structure-of-http)
   - [Request Başlangıç Satırı (Status Line)](#initial-request-linestatus-line)
     - [Response Başlangıç Satırı (Status Line)](#initial-response-linestatus-line)
-    - [Header Fields](#header-fields)
+    - [Başlık Alanları (Header Fields)](#header-fields)
     - [The message body](#the-message-body)
     - [Request Metodları](#request-methods)
   - [💻 Alıştırmalar: 28. Gün](#-exercises-day-28)
@@ -112,11 +112,11 @@ Response başlangıç satırı, status line olarak adlandırılır ve boşluklar
 En yaygın durum kodları:
 200 OK: İstek başarılı, ve sonuçta oluşan kaynak (dosya veya script çıktısı) mesaj bodysinde döndürülür.
 500 Server Error: Sunucu hatası.
-A complete list of HTTP status code can be found [here](https://httpstatuses.com/). It can be also found [here](https://httpstatusdogs.com/).
+Tüm HTTP durum kodlarının listesine [buradan](https://httpstatuses.com/) veya [buradan](https://httpstatusdogs.com/) ulaşabilirsin.
 
-### Header Fields
+### Başlık Alanları (Header Fields)
 
-As you have seen in the above screenshot, header lines provide information about the request or response, or about the object sent in the message body.
+Yukarıdaki ekran görüntüsünde gördüğünüz gibi, başlık satırları (header lines), request veya responsea dair bilgileri veya mesaj gövdesinde gönderilen nesne hakkında bilgileri sağlar.
 
 ```sh
 GET / HTTP/1.1

@@ -250,7 +250,7 @@ if __name__ == '__main__':
 
 ### POST Kullanarak Veri Oluşturma
 
-We use the POST request method to create data
+Veri oluşturmak için POST request metodunu kullanırız.
 
 ```py
 # flask'ı import edelim
@@ -327,7 +327,7 @@ app = Flask(__name__)
 #
 MONGODB_URI='mongodb+srv://asabeneh:your_password@30daysofpython-twxkr.mongodb.net/test?retryWrites=true&w=majority'
 client = pymongo.MongoClient(MONGODB_URI)
-db = client['thirty_days_of_python'] # accessing the database
+db = client['thirty_days_of_python'] # veri tabanına erişme
 
 @app.route('/api/v1.0/students', methods = ['GET'])
 def students ():
@@ -358,7 +358,7 @@ def create_student ():
     }
     db.students.insert_one(student)
     return
-@app.route('/api/v1.0/students/<id>', methods = ['PUT']) # this decorator create the home route
+@app.route('/api/v1.0/students/<id>', methods = ['PUT']) # bu dekoratör, home reouteunu oluşturur
 def update_student (id):
     query = {"_id":ObjectId(id)}
     name = request.form['name']
@@ -389,7 +389,7 @@ if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=port)
 ```
 
-### Deleting a document using Delete
+### Delete Kullanarak Doküman Silme
 
 ```py
 # flask'ı import edelim
@@ -439,7 +439,7 @@ def create_student ():
     }
     db.students.insert_one(student)
     return
-@app.route('/api/v1.0/students/<id>', methods = ['PUT']) # this decorator create the home route
+@app.route('/api/v1.0/students/<id>', methods = ['PUT']) # bu dekoratör, home routeunu oluşturur
 def update_student (id):
     query = {"_id":ObjectId(id)}
     name = request.form['name']
@@ -462,7 +462,7 @@ def update_student (id):
     db.students.update_one(query, student)
     # return Response(dumps({"result":"a new student has been created"}), mimetype='application/json')
     return
-@app.route('/api/v1.0/students/<id>', methods = ['PUT']) # this decorator create the home route
+@app.route('/api/v1.0/students/<id>', methods = ['PUT']) # bu dekoratör, home routeunu oluşturur
 def update_student (id):
     query = {"_id":ObjectId(id)}
     name = request.form['name']
@@ -498,7 +498,7 @@ if __name__ == '__main__':
 
 ## 💻 Alıştırmalar: 29. Gün
 
-1. Yukarıdaki örneği uygulayın ve [bunu](https://thirtydayofpython-api.herokuapp.com/) geliştirin.
+1. Yukarıdaki örneği uygula ve [bunu](https://thirtydayofpython-api.herokuapp.com/) geliştir.
 
 🎉 TEBRİKLER ! 🎉
 
